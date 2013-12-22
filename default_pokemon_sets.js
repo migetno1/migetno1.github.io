@@ -3,6 +3,7 @@ var DEFAULT_POKEMON_SETS = {
       {
          name : 'None',
          nature : 'Hardy',
+         item: '',
          ev : [ 0, 0, 0, 0, 0, 0 ],
       },
       {
@@ -34,6 +35,7 @@ var DEFAULT_POKEMON_SETS = {
       {
          name : 'None',
          nature : 'Hardy',
+         item: '',
          ev : [ 0, 0, 0, 0, 0, 0 ],
       },
       {
