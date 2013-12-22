@@ -1,14 +1,19 @@
 var DEFAULT_POKEMON_SETS = {
    'ATTACKER' : [
       {
-         name : 'Physical Sweeper',
+         name : 'None',
          nature : 'Hardy',
+         ev : [ 0, 0, 0, 0, 0, 0 ],
+      },
+      {
+         name : 'Physical Sweeper',
+         nature : 'Hasty',
          item : 'Life Orb',
          ev : [ 0, 252, 0, 4, 0, 252 ],
       },
       {
          name : 'Special Sweeper',
-         nature : 'Hardy',
+         nature : 'Hasty',
          item : 'Life Orb',
          ev : [ 0, 4, 0, 252, 0, 252 ],
       },
@@ -26,6 +31,11 @@ var DEFAULT_POKEMON_SETS = {
       },
    ],
    'TARGET' : [
+      {
+         name : 'None',
+         nature : 'Hardy',
+         ev : [ 0, 0, 0, 0, 0, 0 ],
+      },
       {
          name : 'Physically Defensive',
          nature : 'Bold',
