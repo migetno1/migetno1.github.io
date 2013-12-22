@@ -36,6 +36,8 @@ var ENVIRONMENT_RAIN = 2;
 var ENVIRONMENT_SAND = 3;
 var ENVIRONMENT_HAIL = 4;
 
+var ENVIRONMENT_ID_TO_NAME = [ 'Normal', 'Sun', 'Rain', 'Sand', 'Hail' ];
+
 var GENDER_MALE = 0;
 var GENDER_FEMALE = 1;
 var GENDER_GENDERLESS = 2;

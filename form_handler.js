@@ -4,6 +4,7 @@ $(document).ready(function() {
    };
 
    var environment = new Environment();
+   var printOuts = {};
 
    // initiate sliders
    $(".cHPSlider").slider({
@@ -87,25 +88,39 @@ $(document).ready(function() {
       console.log('retrieving object...');
       environment = new Environment(
             JSON.parse(localStorage.getItem('sweeperCalcEnvironment')));
-      updateStaticData();
-      updateForm();
-      updateTable();
    };
-
+   updateStaticData();
+   updateForm();
+   updateTable();
+   saveData();
 
    // on change in pokemon input
    $(".input").on('change keyup keydown paste mouseup autocompleteselect autocompletechange', function(event, ui) {
       handlePokemonInputChange($(this));
    });
 
+   // on change of sets input
+   $('.input-set').on('change', function(event, ui) {
+      // if blank set is chosen, do nothing
+      if (! $(this).val()) {
+         return;
+      };
+      handlePokemonSetChange($(this));
+   });
+
    // on popover load
    $(".tdpopover").on('click', function (e) {
       $(".tdpopover").not(this).popover('hide');
+      // show the print out
+      var id = $(this).attr('id');
+      if (typeof printOuts[id] !== 'undefined') {
+         $("#output").html(printOuts[id]);
+      };
    });
 
    function handlePokemonInputChange(inputDOM) {
       var pokemonData = inputDOM.closest('.pokemon');
-      if(validatePokemonData(pokemonData)) {
+      if (validatePokemonData(pokemonData)) {
          // completely valid input for a Pokemon
          // update pokemon
          updatePokemon(pokemonData, true);
@@ -116,6 +131,59 @@ $(document).ready(function() {
       updateTable();
       saveData();
    };
+
+   function handlePokemonSetChange(setsInput) {
+      var id = setsInput.val();
+      var res = id.split(':');
+      if (res.length !== 2) {
+         // error
+         return;
+      };
+      var pokemonName = res[0];
+      var setID = res[1];
+      var pokemonData = setsInput.closest('.pokemon');
+      var setData;
+      if (pokemonName == 'ATTACKER' || pokemonName == 'TARGET') {
+         setData = DEFAULT_POKEMON_SETS[pokemonName][setID];
+      } else {
+         setData = POKEMON_SETS[pokemonName][setID];
+      };
+      if (setData.nature) {
+         pokemonData.find('.nature').val(setData.nature);
+      };
+      if (setData.ability) {
+         pokemonData.find('.ability').val(setData.ability);
+      };
+      if (setData.item) {
+         pokemonData.find('.pokemon-item').val(setData.item);
+      };
+      if (typeof setData.moves !== 'undefined') {
+         for (var i = 0; i < setData.moves.length; i++) {
+            if (setData.moves[i]) {
+               pokemonData.find('.move-' + i).val(setData.moves[i]);
+            };
+         };
+      };
+      if (typeof setData.ev !== 'undefined') {
+         for (var i = 0; i < setData.ev.length; i++) {
+            if (isValidEV(setData.ev[i])) {
+               pokemonData.find('.ev-' + i).val(setData.ev[i]);
+            };
+         };
+      };
+      if (typeof setData.iv !== 'undefined') {
+         for (var i = 0; i < setData.iv.length; i++) {
+            if (isValidIV(setData.iv[i])) {
+               pokemonData.find('.iv-' + i).val(setData.iv[i]);
+            };
+         };
+      };
+      handlePokemonInputChange(setsInput);
+   };
+
+         
+
+      
 
    // on change in environment input
    $(".input-enviro").on('change keyup keydown mouseup', function() {
@@ -398,8 +466,10 @@ $(document).ready(function() {
       // note: we only want to update something if it is different because
       // changing some of them changes current HP.
       // update name
-      if (isDifferent(pokemonData.find('.pokemon-name').val(), pokemon.name))
+      if (isDifferent(pokemonData.find('.pokemon-name').val(), pokemon.name)) {
          pokemon.changeName(pokemonData.find('.pokemon-name').val());
+         updatePokemonSets(pokemon, pokemonData);
+      };
       // update moves
       for (var i = 0; i < 4; i++) {
          if (isDifferent(pokemonData.find('.move-' + i).val(), pokemon.moves[i]))
@@ -432,7 +502,6 @@ $(document).ready(function() {
          if (isDifferent(pokemonData.find('.statBoost-' + i).val(), pokemon.statBoost[i]))
             pokemon.changestatBoost(i, pokemonData.find('.statBoost-' + i).val());
       };
-      // TODO rest of attributes
    };
 
    /**
@@ -452,6 +521,49 @@ $(document).ready(function() {
          return null;
       };
       return environment.pokemons[res[1]][res[2]];
+   };
+
+   /**
+     * Updates the Pokemon sets dropdown menu.
+     * This is called upon change in Pokemon.
+     * @param pokemon the Pokemon object.
+     * @param pokemonData the DOM object corresponding to that Pokemon.
+     */
+   function updatePokemonSets(pokemon, pokemonData) {
+      var id = pokemonData.attr('id');
+      var res = id.split('-');
+      if (res[0] != 'pokemon' || res.length !== 3) {
+         // error
+         return;
+      };
+      // determine if attacker or target.
+      var team = res[1];
+      // pokemonName is the key.
+      var pokemonName = POKEMON_DATA[pokemon.name].name;
+      var setsInput = pokemonData.find('.input-set');
+      // remove current sets
+      setsInput.find('option').remove();
+      // add blank set
+      setsInput.append("<option value=''></option>");
+      // add default attacker/target sets
+      if (team == 0) {
+         team = 'ATTACKER';
+      } else {
+         team = 'TARGET';
+      };
+      for (var i = 0; i < DEFAULT_POKEMON_SETS[team].length; i++) {
+         setsInput.append('<option value="' + team + ':' + i + '">' +
+               DEFAULT_POKEMON_SETS[team][i].name + "</option>");
+      };
+      // add the pokemon specific sets
+      if (typeof POKEMON_SETS[pokemonName] !== 'undefined') {
+         for (var i = 0; i < POKEMON_SETS[pokemonName].length; i++) {
+            setsInput.append('<option value="' + pokemonName + ':' + i + '">' + 
+                  POKEMON_SETS[pokemonName][i].name + "</option>");
+         };
+      };
+      // set value to blank
+      setsInput.val('');
    };
 
    /**
@@ -483,6 +595,7 @@ $(document).ready(function() {
          var pokemonFormData = $(id);
          if (isValidPokemonName(pokemon.name)) {
             pokemonFormData.find('.pokemon-name').val(POKEMON_DATA[pokemon.name].name);
+            updatePokemonSets(pokemon, pokemonFormData);
          } else {
             pokemonFormData.find('.pokemon-name').val('');
          };
@@ -523,6 +636,9 @@ $(document).ready(function() {
      * Updates the table based on data in the model.
      */
    function updateTable() {
+      printOuts = {};
+      $("#output").html('');
+      var printOutDisplayed = false;
       for (var i = 0; i < environment.pokemons.length; i++) {
          for (var j = 0; j < environment.pokemons[i].length; j++) {
             var pokemon = environment.pokemons[i][j];
@@ -547,6 +663,11 @@ $(document).ready(function() {
                continue;
             };
             var results = getAttackResults(attacker, target, environment);
+            printOuts['square-' + i + '-' + j] = results.description;
+            if (!printOutDisplayed) {
+               printOutDisplayed = true;
+               $("#output").html(results.description);
+            };
             updateCell(i, j, true, results);
          };
       };
@@ -562,7 +683,6 @@ $(document).ready(function() {
    function updateCell(row, col, isValid, results) {
       var cell_id = '#square-' + row + '-' + col;
       $(cell_id).popover('destroy');
-      // TODO a lot more info will go into these cells later.
       if (!isValid) {
          $(cell_id).css("background-color", '');
          $(cell_id).removeClass("triangle");

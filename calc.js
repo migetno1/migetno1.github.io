@@ -136,7 +136,7 @@ function getStat(pokemon, stat) {
   * @param environment Environment object
   * @return the base power of the attack.
 */
-function getBasePower(attacker, target, move, environment) {
+function getBasePower(description, attacker, target, move, environment) {
    var power = move.power;
    if (move.category !== MOVE_PHYSICAL && move.category !== MOVE_SPECIAL) {
       return 0;
@@ -155,6 +155,7 @@ function getBasePower(attacker, target, move, environment) {
       } else {
          power = 50;
       };
+      description.moveBP = power;
    // TODOn avalanche
    } else if (move.name === 'Gyro Ball') {
       var tmp_power = Math.floor(25 * getStat(target, STAT_SPE) / 
@@ -164,8 +165,10 @@ function getBasePower(attacker, target, move, environment) {
       } else {
          power = 150;
       };
+      description.moveBP = power;
    } else if (move.name === 'Water Spout' || move.name === 'Eruption') {
       power = (150 * attacker.currentHP) / getStat(attacker, STAT_HP);
+      description.moveBP = power;
    } else if (move.name === 'Punishment') {
       var statupTotal = 0;
       for (var stat = 0; stat < 6; stat++) {
@@ -179,6 +182,7 @@ function getBasePower(attacker, target, move, environment) {
       } else {
          power = 120;
       };
+      description.moveBP = power;
    // TODOn fury cutter
    } else if (move.name === 'Grass Knot' || move.name === 'Low Kick') {
       var weight = getWeight(attacker);
@@ -195,22 +199,27 @@ function getBasePower(attacker, target, move, environment) {
       } else {
          power = 20;
       };
+      description.moveBP = power;
    } else if (move.name === 'Echoed Voice') {
       // TODOn dunno..
-      return 40;
+      power =  40;
+      description.moveBP = power;
    } else if (move.name === 'Hex') {
       if (target.status === STATUS_NORMAL) {
          power = 65;
       } else {
          power = 130;
       };
+      description.moveBP = power;
    } else if (move.name === 'Wring Out' || move.name === 'Crush Grip') {
       var targetHPPercentage = (target.currentHP * 0x1000) /
          (getStat(target, STAT_HP) * 0x1000) * 100;
       power = Math.floor(Math.round(120 * targetHPPercentage) / 100);
+      description.moveBP = power;
    } else if (move.name === 'Assurance') {
       // TODOn dunno..
       power = 60;
+      description.moveBP = power;
    } else if (move.name === 'Heavy Slam' || move.name === 'Heat Crash') {
       var weightRatio = Math.floor(getWeight(attacker) / getWeight(target));
       if (weightRatio >= 5) {
@@ -224,6 +233,7 @@ function getBasePower(attacker, target, move, environment) {
       } else {
          power = 40;
       };
+      description.moveBP = power;
    } else if (move.name === 'Stored Power') {
       var statupTotal = 0;
       for (var stat = 0; stat < 6; stat++) {
@@ -231,7 +241,8 @@ function getBasePower(attacker, target, move, environment) {
             statupTotal += attacker.statBoost[stat];
          };
       };
-      var power = 20 + 20 * statupTotal;
+      power = 20 + 20 * statupTotal;
+      description.moveBP = power;
    } else if (move.name === 'Acrobatics') {
       if (! attacker.item ||
             attacker.item.match(/berry|gem/i)) {
@@ -240,10 +251,13 @@ function getBasePower(attacker, target, move, environment) {
       } else {
          power = 55;
       };
+      description.moveBP = power;
    } else if (move.name === 'Trump Card') {
-      return 40;
+      power = 40;
+      description.moveBP = power;
    } else if (move.name === 'Round') {
-      return 60;
+      power = 60;
+      description.moveBP = power;
    // TODOn triple kick
    } else if (move.name === 'Wake-Up Slap') {
       if (target.status === STATUS_SLEEP) {
@@ -251,18 +265,22 @@ function getBasePower(attacker, target, move, environment) {
       } else {
          power = 70;
       };
+      description.moveBP = power;
    } else if (move.name === 'Smelling Salts') {
       if (target.status === STATUS_PARALYSE) {
          power = 140;
       } else {
          power = 70;
       };
+      description.moveBP = power;
    } else if (move.name === 'Weather Ball') {
       if (environment.weather === ENVIRONMENT_NORMAL) {
          power = 50;
       } else {
+         description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
          power = 100;
       };
+      description.moveBP = power;
    } else if (move.name === 'Beat Up') {
       // TODOn check if correct (or if anyone cares)
       power = 0;
@@ -272,34 +290,46 @@ function getBasePower(attacker, target, move, environment) {
             power += basePower;
          };
       };
+      description.moveBP = power;
    } else if (move.name === 'Spit Up') {
       // TODOn
       power = 0;
+      description.moveBP = power;
    } else if (move.name === 'Pursuit') {
       // TODOn
       power = 40;
+      description.moveBP = power;
    } else if (move.name === 'Present') {
       // assume min
       power = 40;
+      description.moveBP = power;
    } else if (move.name === 'Natural Gift') {
+      if (target.ability === 'unnerve') {
+         description.defenderAbility = ABILITIES[target.ability].name;
+      };
       if (typeof NATURAL_GIFT_BERRIES[attacker.item] === 'undefined' ||
          target.ability === 'unnerve' ||
          attacker.ability === 'klutz') {
          power = 0;
       } else {
+         description.attackerItem = ITEMS[attacker.item].name;
          power = NATURAL_GIFT_BERRIES[attacker.item].power;
       };
+      description.moveBP = power;
    } else if (move.name === 'Magnitude') {
       // dumb move
       power = 10;
+      description.moveBP = power;
    } else if (move.name === 'Rollout') {
       power = 30;
+      description.moveBP = power;
    } else if (move.name === 'Fling') {
       // TODO actually can do
       power = 40;
+      description.moveBP = power;
    };
    // TODOn water pledge
-   power = applyBasePowerModifiers(power, attacker, target, move, environment);
+   power = applyBasePowerModifiers(power, description, attacker, target, move, environment);
    return power;
 };
 
@@ -312,35 +342,44 @@ function getBasePower(attacker, target, move, environment) {
   * @param environment Environment object
   * @return the new base power.
 */
-function applyBasePowerModifiers(power, attacker, target, move, environment) {
+function applyBasePowerModifiers(power, description, attacker, target, move, environment) {
    var modifiers = [];
    if (attacker.ability === 'technician' && move.power <= 60) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'aerilate' && move.type === TYPE_NAME_TO_ID.Normal) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    }
    if (attacker.ability === 'refrigerate' && move.type === TYPE_NAME_TO_ID.Normal) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    };
    if (attacker.ability === 'pixilate' && move.type === TYPE_NAME_TO_ID.Normal) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    };
    if (attacker.ability === 'strong jaw' && 
          typeof STRONG_JAW_MOVES[move.name] !== 'undefined') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'mega launcher' &&
          typeof MEGA_LAUNCHER_MOVES[move.name] !== 'undefined') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'tough claws' &&
          isContactMove(move)) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    };
    if (attacker.ability === 'dark aura' &&
          move.type === TYPE_NAME_TO_ID.Dark) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       if (target.ability === 'aura break') {
+         description.defenderAbility = ABILITIES[target.ability].name;
          modifiers.push(0xAAA);
       } else {
          modifiers.push(0x1555);
@@ -348,7 +387,9 @@ function applyBasePowerModifiers(power, attacker, target, move, environment) {
    };
    if (attacker.ability === 'fairy aura' &&
          move.type === TYPE_NAME_TO_ID.Fairy) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       if (target.ability === 'aura break') {
+         description.defenderAbility = ABILITIES[target.ability].name;
          modifiers.push(0xAAA);
       } else {
          modifiers.push(0x1555);
@@ -356,23 +397,28 @@ function applyBasePowerModifiers(power, attacker, target, move, environment) {
    };
    if (attacker.ability === 'flare boost' && attacker.status === STATUS_BURN &&
          move.category === MOVE_SPECIAL) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'analytic' && move.name !== 'Future Sight'
          && move.name !== 'Doom Desire'
          && ! attackerStrikeFirst(attacker, target, environment)) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    };
    if (attacker.ability === 'reckless' && 
          typeof RECKLESS_MOVES[move.name] !== 'undefined') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1333);
    };
    if (attacker.ability === 'iron fist' && 
          typeof IRON_FIST_MOVES[move.name] !== 'undefined') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1333);
    };
    if (attacker.ability === 'toxic boost' && attacker.status === 
          STATUS_POISON && move.category === MOVE_PHYSICAL) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'rivalry') {
@@ -380,52 +426,67 @@ function applyBasePowerModifiers(power, attacker, target, move, environment) {
             target.gender === GENDER_GENDERLESS) {
          modifiers.push(0x1000);
       } else if (attacker.gender === target.gender) {
+         description.attackerAbility = ABILITIES[attacker.ability].name;
          modifiers.push(0x1400);
       } else {
+         description.attackerAbility = ABILITIES[attacker.ability].name;
          modifiers.push(0xC00);
       };
    };
    if (attacker.ability === 'sand force' && 
          (move.type === TYPE_NAME_TO_ID.Rock || move.type === TYPE_NAME_TO_ID.Ground ||
           move.type === TYPE_NAME_TO_ID.Steel) && environment.weather === ENVIRONMENT_SAND) {
+      description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    };
    if (target.ability === 'heatproof' && move.type === TYPE_NAME_TO_ID.Fire) {
+      description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x800);
    };
    if (target.ability === 'dry skin' && move.type === TYPE_NAME_TO_ID.Fire) {
+      description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x1400);
    };
    if (attacker.ability === 'sheer force' && typeof SHEER_FORCE_MOVES[move.name] !== 'undefined') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    };
    if (typeof TYPE_BOOSTING_ITEMS[attacker.item] !== 'undefined' && move.type === TYPE_BOOSTING_ITEMS[attacker.item]) {
       // we have a type boosting item.
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1333);
    };
    if (attacker.item === 'muscle band' && move.category === MOVE_PHYSICAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1199);
    };
    if (attacker.name === 'palkia' && attacker.item === 'lustrous orb' &&
          (move.type === TYPE_NAME_TO_ID.Water || move.type === TYPE_NAME_TO_ID.Dragon)) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1333);
    };
    if (attacker.item === 'wise glasses' && move.category === MOVE_SPECIAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1199);
    };
    if (attacker.name.match(/giratina/i) && attacker.item === 'griseous orb' &&
          (move.type === TYPE_NAME_TO_ID.Ghost || move.type === TYPE_NAME_TO_ID.Dragon)) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1333);
    };
    if (attacker.item === 'odd incense' && move.type === TYPE_NAME_TO_ID.Psychic) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1333);
    };
    if (attacker.name === 'dialga' && attacker.item === 'adamant orb' &&
          (move.type === TYPE_NAME_TO_ID.Steel || move.type === TYPE_NAME_TO_ID.Dragon)) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1333);
    };
    if (typeof GEMS[attacker.item] !== 'undefined' && move.type === GEMS[attacker.item]) {
       // we have a type boosting gem
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1800);
    };
    if (move.name === 'Facade' && (attacker.status === STATUS_PARALYSE ||
@@ -441,6 +502,7 @@ function applyBasePowerModifiers(power, attacker, target, move, environment) {
    };
    if (move.name === 'Solar Beam' && environment.weather !== ENVIRONMENT_NORMAL
          && environment.weather !== ENVIRONMENT_SUN) {
+      description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
       modifiers.push(0x800);
    };
    if (move.name === 'Knock Off' &&
@@ -448,7 +510,9 @@ function applyBasePowerModifiers(power, attacker, target, move, environment) {
             typeof MULTITYPE_PLATES[target.item] !== 'undefined') &&
          ! (target.name === 'giratina' &&
             target.item === 'griseous orb') && */
+         target.item !== null &&
          typeof MEGA_STONES[target.item] === 'undefined') {
+      description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
    // TODO water sport/mud sport
@@ -464,11 +528,12 @@ function applyBasePowerModifiers(power, attacker, target, move, environment) {
   * @param environment Environment object
   * @return the attack (power).
 */
-function getAttack(attacker, target, move, environment) {
+function getAttack(description, attacker, target, move, environment) {
    var attack;
    var statPokemon = attacker;
    var stat;
    if (attacker.ability === 'foul play') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       statPokemon = target;
    };
    if (move.category == MOVE_PHYSICAL) {
@@ -478,15 +543,34 @@ function getAttack(attacker, target, move, environment) {
    };
 
    attack = getStat(statPokemon, stat);
+
+   // for description
+   description.attackEVs = statPokemon.ev[stat];
+   var natureMod = getNatureMod(statPokemon.nature, stat);
+   if (natureMod === 9) {
+      description.attackEVs += '-';
+   } else if (natureMod === 11) {
+      description.attackEVs += '+';
+   };
+   description.attackEVs += ' ';
+   if (stat === STAT_ATT) {
+      description.attackEVs += 'Atk';
+   } else {
+      description.attackEVs += 'SpA';
+   };
    
+   if (target.ability === 'unaware') {
+      description.defenderAbility = ABILITIES[target.ability].name;
+   };
    if (target.ability != 'unaware') {
       // apply stat boosts
-      var statboost = attacker.statBoost[stat];
+      var statboost = statPokemon.statBoost[stat];
+      description.attackBoost = statboost;
       attack = attack * getBoostNumerator(statboost);
       attack = attack / getBoostDenominator(statboost);
    };
 
-   attack = applyAttackModifiers(attack, attacker, target, move, environment);
+   attack = applyAttackModifiers(attack, description, attacker, target, move, environment);
    return attack;
 };
 
@@ -499,87 +583,107 @@ function getAttack(attacker, target, move, environment) {
   * @param environment Environment object
   * @return the new attack (power).
 */
-function applyAttackModifiers(attack, attacker, target, move, environment) {
+function applyAttackModifiers(attack, description, attacker, target, move, environment) {
    var modifiers = [];
    if (target.ability === 'thick fat' && 
          (move.type === TYPE_NAME_TO_ID.Fire || move.type === TYPE_NAME_TO_ID.Ice)) {
+      description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x800);
    };
    if (attacker.ability === 'torrent' && 
          attacker.currentHP < getStat(attacker, STAT_HP) / 3 &&
          move.type === TYPE_NAME_TO_ID.Water) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'guts' && attacker.status !== STATUS_NORMAL
          && move.category === MOVE_PHYSICAL) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'swarm' &&
          attacker.currentHP < getStat(attacker, STAT_HP) / 3 &&
          move.type === TYPE_NAME_TO_ID.Bug) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'overgrow' &&
          attacker.currentHP < getStat(attacker, STAT_HP) / 3 &&
          move.type === TYPE_NAME_TO_ID.Grass) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    // TODOn Plus/Minus
    if (attacker.ability === 'blaze' &&
          attacker.currentHP < getStat(attacker, STAT_HP) / 3 &&
          move.type === TYPE_NAME_TO_ID.Fire) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'defeatist' &&
          attacker.currentHP < getStat(attacker, STAT_HP) / 2) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x800);
    };
    if (attacker.ability === 'pure power' || attacker.ability === 'huge power') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x2000);
    };
    if (attacker.ability === 'solar power' && 
          environment.weather === ENVIRONMENT_SUN &&
          move.category === MOVE_SPECIAL) {
+      description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if (attacker.ability === 'hustle' &&
          move.category === MOVE_PHYSICAL) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       attack = applyModifier(attack, 0x1800);
    };
    // TODOn flash fire...
    if (attacker.ability === 'slow start' &&
          move.category === MOVE_PHYSICAL) {
       // TODOn this actually is inaccurate but whatever
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x800);
    };
    if (attacker.ability === 'flower gift' &&
          environment.weather === ENVIRONMENT_SUN &&
          move.category === MOVE_PHYSICAL) {
+      description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x1800);
    };
    if ((attacker.name === 'cubone' || attacker.name === 'marowak') &&
          attacker.item === 'thick club' &&
          move.category === MOVE_PHYSICAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x2000);
    };
    if (attacker.name === 'clamperl' &&
          attacker.item === 'deep sea tooth' &&
          move.category === MOVE_SPECIAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x2000);
    };
    if (attacker.name === 'pikachu' &&
          attacker.item === 'light ball') {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x2000);
    };
    if ((attacker.name === 'latios' || attacker.name === 'latias') &&
          attacker.item === 'soul dew' &&
          move.category === MOVE_SPECIAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1800);
    };
    if (attacker.item === 'choice band' && move.category === MOVE_PHYSICAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1800);
    };
    if (attacker.item === 'choice specs' && move.category === MOVE_SPECIAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1800);
    };
    var modifier = chainMultipleModifiers(modifiers);
@@ -594,7 +698,7 @@ function applyAttackModifiers(attack, attacker, target, move, environment) {
   * @param environment Environment object
   * @return the defence (power).
 */
-function getDefence(attacker, target, move, environment) {
+function getDefence(description, attacker, target, move, environment) {
    var defence;
    var statPokemon = target;
    var stat;
@@ -611,14 +715,34 @@ function getDefence(attacker, target, move, environment) {
 
    defence = getStat(statPokemon, stat);
    
+   // for description
+   description.defenseEVs = statPokemon.ev[stat];
+   var natureMod = getNatureMod(statPokemon.nature, stat);
+   if (natureMod === 9) {
+      description.defenseEVs += '-';
+   } else if (natureMod === 11) {
+      description.defenseEVs += '+';
+   };
+   description.defenseEVs += ' ';
+   if (stat === STAT_DEF) {
+      description.defenseEVs += 'Def';
+   } else {
+      description.defenseEVs += 'SpD';
+   };
    if (attacker.ability != 'unaware' && move.name != 'Chip Away') {
       // apply stat boosts
-      defence = defence * getBoostNumerator(attacker.statBoost[stat]);
-      defence = defence / getBoostDenominator(attacker.statBoost[stat]);
+      var statboost = statPokemon.statBoost[stat];
+      description.defenseBoost = statboost;
+      defence = defence * getBoostNumerator(statboost);
+      defence = defence / getBoostDenominator(statboost);
+   };
+   // for description
+   if (attacker.ability === 'unaware') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
    };
 
-   defence = applySandstormModifier(defence, attacker, target, move, environment);
-   defence = applyDefenceModifiers(defence, attacker, target, move, environment);
+   defence = applySandstormModifier(defence, description, attacker, target, move, environment);
+   defence = applyDefenceModifiers(defence, description, attacker, target, move, environment);
 
    return defence;
 };
@@ -632,12 +756,13 @@ function getDefence(attacker, target, move, environment) {
   * @param environment Environment object
   * @return the new defence (power).
 */
-function applySandstormModifier(defence, attacker, target, move, environment) {
+function applySandstormModifier(defence, description, attacker, target, move, environment) {
    if (environment.weather === ENVIRONMENT_SAND) {
       for (var i = 0; i < POKEMON_DATA[attacker.name].type.length; i++) {
          var type = POKEMON_DATA[attacker.name].type[i];
          if (type === TYPE_NAME_TO_ID.Rock && 
                move.category === MOVE_SPECIAL) {
+            description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
             defence = applyModifier(defence, 0x1800);
          };
       };
@@ -654,34 +779,46 @@ function applySandstormModifier(defence, attacker, target, move, environment) {
   * @param environment Environment object
   * @return the new defence (power).
 */
-function applyDefenceModifiers(defence, attacker, target, move, environment) {
+function applyDefenceModifiers(defence, description, attacker, target, move, environment) {
    var modifiers = [];
    if (target.ability === 'marvel scale' &&
          target.status !== STATUS_NORMAL &&
          move.category === MOVE_PHYSICAL) {
+      description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x1800);
    };
-   // TODOn cherrim and flower gift
+   if (target.ability === 'flower gift' &&
+         environment.weather === ENVIRONMENT_SUN &&
+         move.category === MOVE_SPECIAL) {
+      description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
+      description.defenderAbility = ABILITIES[target.ability].name;
+      modifiers.push(0x1800);
+   };
    if (target.name === 'clamperl' &&
          target.item === 'deep sea scale' &&
          move.category === MOVE_SPECIAL) {
+      description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
    if (target.name === 'ditto' &&
          target.item === 'metal powder') {
+      description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x2000);
    };
    if (target.item === 'eviolite' && 
          typeof FULLY_EVOLVED[target.name] === 'undefined') {
+      description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
    if ((target.name === 'latias' || target.name === 'latios') &&
          target.item === 'soul dew' &&
          move.category === MOVE_SPECIAL) {
+      description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
    if (target.item === 'assault vest' && 
          move.category === MOVE_SPECIAL) {
+      description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
    var modifier = chainMultipleModifiers(modifiers);
@@ -771,9 +908,9 @@ function applySpeedModifiers(speed, pokemon, environment) {
   * @param random RNG seed
   * @return the modified base damage.
 */
-function applyBaseModifiers(baseDamage, attacker, target, move, environment, random) {
+function applyBaseModifiers(baseDamage, description, attacker, target, move, environment, random) {
    // Multi target modifier (but this calc is for singles only atm...)
-   baseDamage = applyWeatherModifier(baseDamage, attacker, target, move, environment);
+   baseDamage = applyWeatherModifier(baseDamage, description, attacker, target, move, environment);
    // todo??  Critical hits
    baseDamage = applyRandomFactor(baseDamage, random);
    return baseDamage;
@@ -788,17 +925,21 @@ function applyBaseModifiers(baseDamage, attacker, target, move, environment, ran
   * @param environment Environment object
   * @return the modified base damage.
 */
-function applyWeatherModifier(baseDamage, attacker, target, move, environment) {
+function applyWeatherModifier(baseDamage, description, attacker, target, move, environment) {
    if (environment.weather === ENVIRONMENT_SUN) {
       if (move.type === TYPE_NAME_TO_ID.Fire) {
+         description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
          baseDamage = applyModifier(baseDamage, 0x1800);
       } else if (move.type === TYPE_NAME_TO_ID.Water) {
+         description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
          baseDamage = applyModifier(baseDamage, 0x800);
       };
    } else if (environment.weather === ENVIRONMENT_RAIN) {
       if (move.type === TYPE_NAME_TO_ID.Water) {
+         description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
          baseDamage = applyModifier(baseDamage, 0x1800);
       } else if (move.type === TYPE_NAME_TO_ID.Fire) {
+         description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
          baseDamage = applyModifier(baseDamage, 0x800);
       };
    };
@@ -823,12 +964,13 @@ function applyRandomFactor(baseDamage, random) {
   * @param move Move object that the attacker is using.
   * @return the modified base damage.
 */
-function applySTAB(baseDamage, attacker, target, move) {
+function applySTAB(baseDamage, description, attacker, target, move) {
    for (var i = 0; i < POKEMON_DATA[attacker.name].type.length; i++) {
       var _type = POKEMON_DATA[attacker.name].type[i];
       if (move.type === _type) {
          var modifier = 0x1800;
          if (attacker.ability === 'adaptability') {
+            description.attackerAbility = ABILITIES[attacker.ability].name;
             modifier = 0x2000;
          }
          return applyModifier(baseDamage, modifier);
@@ -846,9 +988,10 @@ function applySTAB(baseDamage, attacker, target, move) {
   * @param environment Environment object
   * @return the modified base damage.
 */
-function applyTypeEffectiveness(baseDamage, attacker, target, move, environment) {
-   var effectiveness = getMoveEffectiveness(attacker, target, move, environment);
+function applyTypeEffectiveness(baseDamage, description, attacker, target, move, environment) {
+   var effectiveness = getMoveEffectiveness(description, attacker, target, move, environment);
    if (target.ability === 'wonder guard' && effectiveness <= EFFECTIVENESS_NORMAL) {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return 0;
    };
    switch(effectiveness) {
@@ -875,41 +1018,55 @@ function applyTypeEffectiveness(baseDamage, attacker, target, move, environment)
   * @param environment Environment object
   * @return a value (based on constants) determining effectiveness.
 */
-function getMoveEffectiveness(attacker, target, move, environment) {
+function getMoveEffectiveness(description, attacker, target, move, environment) {
    // take into account levitate
+   // for description
+   if (target.item === 'iron ball') {
+      description.defenderItem = ITEMS[target.item].name;
+   };
    if (move.type === TYPE_NAME_TO_ID.Ground && 
          target.ability === 'levitate' &&
          target.item !== 'iron ball') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Ground && 
          target.item === 'air balloon') {
+      description.defenderItem = ITEMS[target.item].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    // take into account volt absorb, water absorb and flash fire
    // and other moves that reduce to no effectiveness
    if (move.type === TYPE_NAME_TO_ID.Electric && target.ability === 'volt absorb') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Electric && target.ability === 'motor drive') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Electric && target.ability === 'lightning rod') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Water && target.ability === 'water absorb') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Water && target.ability === 'storm drain') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Water && target.ability === 'dry skin') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Fire && target.ability === 'flash fire') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    if (move.type === TYPE_NAME_TO_ID.Grass && target.ability === 'sap sipper') {
+      description.defenderAbility = ABILITIES[target.ability].name;
       return EFFECTIVENESS_NO_EFFECT;
    };
    var totalEffectiveness = EFFECTIVENESS_NORMAL;
@@ -919,6 +1076,10 @@ function getMoveEffectiveness(attacker, target, move, environment) {
       // take into account freeze dry
       if (move.name === 'Freeze-Dry' && _type === TYPE_NAME_TO_ID.Water) {
          effectiveness = 2;
+      };
+      // for description
+      if (attacker.ability === 'scrappy') {
+         description.attackerAbility = ABILITIES[attacker.ability].name;
       };
       if (effectiveness == 0 &&
             // take into account scrappy
@@ -954,10 +1115,16 @@ function getMoveEffectiveness(attacker, target, move, environment) {
   * @param move Move object that the attacker is using.
   * @return the modified base damage.
 */
-function applyBurnEffect(baseDamage, attacker, target, move) {
+function applyBurnEffect(baseDamage, description, attacker, target, move) {
+   // for description
+   if (attacker.ability === 'guts') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
+   };
+
    if (move.category === MOVE_PHYSICAL
          && attacker.status == STATUS_BURN
          && attacker.ability !== 'guts') {
+      description.isBurned = true;
       baseDamage = baseDamage >> 1;
    };
    return baseDamage;
@@ -972,51 +1139,68 @@ function applyBurnEffect(baseDamage, attacker, target, move) {
   * @param environment Environment object
   * @return the modified base damage.
 */
-function applyFinalModifiers(baseDamage, attacker, target, move, environment) {
+function applyFinalModifiers(baseDamage, description, attacker, target, move, environment) {
    var modifiers = [];
+   // for description
+   if (attacker.ability === 'infiltrator') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
+   };
    if (environment.reflect && move.category === MOVE_PHYSICAL &&
          attacker.ability !== 'infiltrator') {
       // TODO critical mod if we ever implement crit
       // TODO change mod if it is a doubles battle...
+      description.isReflect = true;
       modifiers.push(0x800);
    };
    if (environment.lightScreen && move.category === MOVE_SPECIAL &&
          attacker.ability !== 'infiltrator') {
+      description.isLightScreen = true;
       modifiers.push(0x800);
    };
    if (target.ability === 'multiscale' 
          && target.currentHP === getStat(target, STAT_HP)) {
+      description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x800);
    };
    if (attacker.ability === 'tinted lens' && 
-         getMoveEffectiveness(attacker, target, move, environment) 
+         getMoveEffectiveness(description, attacker, target, move, environment) 
             < EFFECTIVENESS_NORMAL) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x2000);
    };
    // TODO friend guard in double battles...
    // TODO sniper ability and crit hits...
    if ((attacker.ability === 'solid rock' || attacker.ability === 'filter')
-         && getMoveEffectiveness(attacker, target, move, environment) >
+         && getMoveEffectiveness(description, attacker, target, move, environment) >
             EFFECTIVENESS_NORMAL) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0xC00);
    };
    // TODO metronome ability
    if (attacker.item === 'expert belt' && 
-         getMoveEffectiveness(attacker, target, move, environment)
+         getMoveEffectiveness(description, attacker, target, move, environment)
             > EFFECTIVENESS_NORMAL) {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x1333);
    };
    if (attacker.item === 'life orb') {
+      description.attackerItem = ITEMS[attacker.item].name;
       modifiers.push(0x14CC);
+   };
+   // for description
+   if (attacker.ability === 'unnerve') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
    };
    if (typeof DAMAGE_REDUCING_BERRIES[target.item] !== 'undefined'
          && move.type === DAMAGE_REDUCING_BERRIES[target.item]
-         && getMoveEffectiveness(attacker, target, move, environment)
+         && getMoveEffectiveness(description, attacker, target, move, environment)
          > EFFECTIVENESS_NORMAL
          && attacker.ability !== 'unnerve') {
+      description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x800);
    };
    if (target.ability === 'fur coat' && move.category === MOVE_PHYSICAL) {
+      description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x800);
    };
    // TODO random move modifiers
@@ -1033,7 +1217,7 @@ function applyFinalModifiers(baseDamage, attacker, target, move, environment) {
   * @param environment Environment object
   * @return the modified base damage.
 */
-function applySpecialCases(baseDamage, attacker, target, move, environment) {
+function applySpecialCases(baseDamage, description, attacker, target, move, environment) {
    var specialCase = false;
    if (move.name === 'Psywave') {
       // not entire accurate, min damage only
@@ -1078,6 +1262,7 @@ function applySpecialCases(baseDamage, attacker, target, move, environment) {
       baseDamage = 0;
    };
    if (specialCase && attacker.ability === 'parental bond') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       baseDamage = baseDamage * 2;
    };
    return baseDamage;
@@ -1092,7 +1277,7 @@ function applySpecialCases(baseDamage, attacker, target, move, environment) {
   * @param random RNG seed
   * @return the amount of damage dealt onto the target.
 */
-function getDamageAmount(attacker, target, move, environment, random) {
+function getDamageAmount(description, attacker, target, move, environment, random) {
    if (debug) {
       console.log('attacker: ' + JSON.stringify(attacker, null, '\t'));
       console.log('target: ' + JSON.stringify(target, null, '\t'));
@@ -1109,60 +1294,82 @@ function getDamageAmount(attacker, target, move, environment, random) {
    var attackerItem = attacker.item;
    // klutz
    if (attacker.ability === 'klutz') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       attacker.item = null;
    };
    // hidden power
    if (move.name === 'Hidden Power') {
       move.type = getHiddenPowerType(attacker);
+      description.moveType = move.type;
    };
    // protean
    if (attacker.ability === 'protean') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       POKEMON_DATA[attacker.name].type = [ move.type ];
    };
    // multitype
    if (attacker.ability === 'multitype' &&
          typeof MULTITYPE_PLATES[attacker.item] !== undefined) {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
+      description.attackerItem = ITEMS[attacker.item].name;
       POKEMON_DATA[attacker.name].type = [ MULTITYPE_PLATES[attacker.item] ];
    };
    // take into account mold breaker
    var moldbreaker = (attacker.ability === 'mold breaker' ||
          attacker.ability === 'turboblaze' ||
          attacker.ability === 'teravolt');
-   if (moldbreaker) { target.ability = null; };
+   if (moldbreaker) { 
+      description.attackerAbility = ABILITIES[attacker.ability].name;
+      target.ability = null; 
+   };
    // take into account natural gift typing
    if (move.name === 'Natural Gift' &&
          typeof NATURAL_GIFT_BERRIES[attacker.item] !== 'undefined' &&
          target.ability !== 'unnerve' &&
          attacker.ability !== 'klutz') {
+      description.attackerItem = ITEMS[attacker.item].name;
       move.type = NATURAL_GIFT_BERRIES[attacker.item].type;
+      description.moveType = move.type;
    };
    // take into account normalize
    if (attacker.ability === 'normalize') {
-      console.log('woohoo, normalize');
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Normal;
+      description.moveType = move.type;
    };
    // take into account drives
    if (attacker.item === 'shock drive' &&
          move.name === 'Techno Blast') {
+      description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Electric;
+      description.moveType = move.type;
    };
    if (attacker.item === 'burn drive' &&
          move.name === 'Techno Blast') {
+      description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Fire;
+      description.moveType = move.type;
    };
    if (attacker.item === 'chill drive' &&
          move.name === 'Techno Blast') {
+      description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Ice;
+      description.moveType = move.type;
    };
    if (attacker.item === 'douse drive' &&
          move.name === 'Techno Blast') {
+      description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Water;
+      description.moveType = move.type;
    };
    // multitype and judgement
    if (attacker.ability === 'multitype' &&
          move.name === 'Judgement' &&
          typeof MULTITYPE_PLATES[attacker.item] !== 'undefined') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
+      description.attackerItem = ITEMS[attacker.item].name;
       move.type = MULTITYPE_PLATES[attacker.item];
+      description.moveType = move.type;
    };
    // weather ball
    if (move.name === 'Weather Ball') {
@@ -1171,35 +1378,46 @@ function getDamageAmount(attacker, target, move, environment, random) {
             move.type = TYPE_NAME_TO_ID.Normal;
             break;
          case ENVIRONMENT_SUN:
+            description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
             move.type = TYPE_NAME_TO_ID.Fire;
             break;
          case ENVIRONMENT_RAIN:
+            description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
             move.type = TYPE_NAME_TO_ID.Water;
             break;
          case ENVIRONMENT_HAIL:
+            description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
             move.type = TYPE_NAME_TO_ID.Ice;
             break;
          case ENVIRONMENT_SAND:
+            description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
             move.type = TYPE_NAME_TO_ID.Rock;
             break;
       };
+      description.moveType = move.type;
    };
    var level = attacker.level;
-   var basePower = getBasePower(attacker, target, move, environment);
+   var basePower = getBasePower(description, attacker, target, move, environment);
    if (attacker.ability === 'aerilate' && 
          move.type === TYPE_NAME_TO_ID.Normal) { 
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Flying; 
+      description.moveType = move.type;
    };
    if (attacker.ability === 'refrigerate' && 
          move.type === TYPE_NAME_TO_ID.Normal) { 
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Ice; 
+      description.moveType = move.type;
    };
    if (attacker.ability === 'pixilate' && 
          move.type === TYPE_NAME_TO_ID.Normal) { 
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Fairy; 
+      description.moveType = move.type;
    };
-   var attack = getAttack(attacker, target, move, environment);
-   var defence = getDefence(attacker, target, move, environment);
+   var attack = getAttack(description, attacker, target, move, environment);
+   var defence = getDefence(description, attacker, target, move, environment);
    if (debug) {
       console.log('level: ' + level);
       console.log('basePower: ' + basePower);
@@ -1215,21 +1433,21 @@ function getDamageAmount(attacker, target, move, environment, random) {
    baseDamage = Math.floor(baseDamage / 50);
    baseDamage += 2;
    if (debug) console.log('Base damage.. base: ' + baseDamage);
-   baseDamage = applyBaseModifiers(baseDamage, attacker, target, move, environment, random);
+   baseDamage = applyBaseModifiers(baseDamage, description, attacker, target, move, environment, random);
    if (debug) console.log('Base damage.. after base modifiers: ' + baseDamage);
-   baseDamage = applySTAB(baseDamage, attacker, target, move);
+   baseDamage = applySTAB(baseDamage, description, attacker, target, move);
    if (debug) console.log('Base damage.. after applying STAB: ' + baseDamage);
-   baseDamage = applyTypeEffectiveness(baseDamage, attacker, target, move, environment);
+   baseDamage = applyTypeEffectiveness(baseDamage, description, attacker, target, move, environment);
    if (debug) console.log('Base damage.. after applying type effectiveness: ' + baseDamage);
-   baseDamage = applyBurnEffect(baseDamage, attacker, target, move);
-   if (baseDamage < 1 && getMoveEffectiveness(attacker, target, move, environment)
+   baseDamage = applyBurnEffect(baseDamage, description, attacker, target, move);
+   if (baseDamage < 1 && getMoveEffectiveness(description, attacker, target, move, environment)
          !== EFFECTIVENESS_NO_EFFECT &&
-         ! (getMoveEffectiveness(attacker, target, move, environment) <=
+         ! (getMoveEffectiveness(description, attacker, target, move, environment) <=
             EFFECTIVENESS_NORMAL && target.ability === 'wonder guard')
          && basePower > 0) {
       baseDamage = 1;
    };
-   baseDamage = applyFinalModifiers(baseDamage, attacker, target, move, environment);
+   baseDamage = applyFinalModifiers(baseDamage, description, attacker, target, move, environment);
 
    // bulletproof immunity
    if (target.ability === 'bulletproof' &&
@@ -1255,6 +1473,7 @@ function getDamageAmount(attacker, target, move, environment, random) {
    };
 
    if (attacker.ability === 'parental bond') {
+      description.attackerAbility = ABILITIES[attacker.ability].name;
       baseDamage = baseDamage + (preSturdyDamage >> 1);
    };
    
@@ -1267,8 +1486,7 @@ function getDamageAmount(attacker, target, move, environment, random) {
    // return normal item after calculation
    attacker.item = attackerItem;
    
-   baseDamage = applySpecialCases(baseDamage, attacker, target, move, environment);
-   // account for multi hit moves
+   baseDamage = applySpecialCases(baseDamage, description, attacker, target, move, environment);
    if (debug) {
       console.log('Damage dealt: ' + baseDamage);
    }
@@ -1285,12 +1503,13 @@ function getDamageAmount(attacker, target, move, environment, random) {
   * @param multiHit - true if you want to calculate multi hit damage or false if not
   * @return the percentage of damage dealt onto the target.
 */
-function getDamagePercentage(attacker, target, move, environment, random, multiHit) {
-   var damage = getDamageAmount(attacker, target, move, environment, random);
+function getDamagePercentage(description, attacker, target, move, environment, random, multiHit) {
+   var damage = getDamageAmount(description, attacker, target, move, environment, random);
    if (typeof TWO_FIVE_STRIKE_MOVES[move.name] !== 'undefined' && multiHit) {
       // 2-5 strike move
       var minHits = 2;
       if (attacker.ability === 'skill link') {
+         description.attackerAbility = ABILITIES[attacker.ability].name;
          minHits = 5;
       };
       var maxHits = 5;
@@ -1307,7 +1526,17 @@ function getDamagePercentage(attacker, target, move, environment, random, multiH
       // TODO
       damage = damage * 3;
    };
+   // for description
+   description.HPEVs = target.ev[STAT_HP];
+   description.HPEVs += ' HP';
    var percentage = damage * 100 / getStat(target, STAT_HP);
+   if (random === RANDOM_MIN) {
+      description.minDamage = damage;
+      description.minPercent = Math.floor(percentage);
+   } else if (random === RANDOM_MAX) {
+      description.maxDamage = damage;
+      description.maxPercent = Math.floor(percentage);
+   };
    return percentage;
 
 };
@@ -1341,7 +1570,7 @@ function attackerStrikeFirst(attacker, target, environment) {
 };
       
 /**
-  * Determines the possible outcomes of attacker vs. targer
+  * Determines the possible outcomes of attacker vs. target
   * @param attacker Attacker Pokemon object
   * @param target Target Pokemon object
   * @return a list of results with percentage damage dealt and move used
@@ -1356,35 +1585,44 @@ function getAttackResults(attacker, target, environment) {
          environment);
    for (var moveNum = 0; moveNum < attacker.moves.length; moveNum++) {
       var result = {};
+      var description = {};
       moveName = attacker.moves[moveNum];
       if (! moveName) continue;
       result.move = moveName;
       var move = MOVE_DATA[moveName];
+
+      description.attackerName = POKEMON_DATA[attacker.name].name;
+      description.moveName = move.name;
+      description.defenderName = POKEMON_DATA[target.name].name;
+      
       if (move.category !== MOVE_PHYSICAL && move.category !== MOVE_SPECIAL) {
+         description.noDamage = true;
          result.damagePercentage = ['-', '-'];
       } else {
          result.damagePercentage = [];
          result.damagePercentageSingleHit = [];
          // min
          result.damagePercentage.push(
-            Math.floor(getDamagePercentage(attacker, target, move, environment, RANDOM_MIN, true) * 10) / 10);
+            Math.floor(getDamagePercentage(description, attacker, target, move, environment, RANDOM_MIN, true) * 10) / 10);
          // max
          result.damagePercentage.push(
-            Math.floor(getDamagePercentage(attacker, target, move, environment, RANDOM_MAX, true) * 10) / 10);
+            Math.floor(getDamagePercentage(description, attacker, target, move, environment, RANDOM_MAX, true) * 10) / 10);
          // multi-hit
          if (typeof TWO_FIVE_STRIKE_MOVES[move.name] !== 'undefined' ||
                typeof TWO_STRIKE_MOVES[move.name] !== 'undefined' ||
                typeof THREE_STRIKE_MOVES[move.name] !== 'undefined') {
+            var description_dummy = {};
             // min single hit
             result.damagePercentageSingleHit.push(
-               Math.floor(getDamagePercentage(attacker, target, move, environment, RANDOM_MIN, false) * 10 / 10)
+               Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MIN, false) * 10 / 10)
             );
             // max single hit
             result.damagePercentageSingleHit.push(
-               Math.floor(getDamagePercentage(attacker, target, move, environment, RANDOM_MAX, false) * 10 / 10)
+               Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MAX, false) * 10 / 10)
             );
          };
       };
+      result.description = buildDescription(description);
       results.attacks.push(result);
    };
    results.attacks.sort(function(a, b) {
@@ -1396,6 +1634,7 @@ function getAttackResults(attacker, target, environment) {
          return b.damagePercentage[0] - a.damagePercentage[0];
       }
    });
+   results.description = results.attacks[0].description;
    if (debug) console.log(JSON.stringify(results, null, '\t'));
    return results;
 }
