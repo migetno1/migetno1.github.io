@@ -236,7 +236,6 @@ Pokemon.prototype.changeStatBoost = function(stat, boost) {
   */
 Pokemon.prototype.changeGender = function(gender) {
    if (!isValidGender(this.name, gender)) {
-      console.log('but this is not valid...');
       return;
    };
    this.gender = gender;

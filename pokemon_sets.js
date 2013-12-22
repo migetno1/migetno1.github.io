@@ -2,7 +2,7 @@ var POKEMON_SETS = {
    'Abomasnow' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Mild',
          ability : 'Snow Warning',
          item : '',
@@ -26,7 +26,7 @@ var POKEMON_SETS = {
    'Absol' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Justified',
          item : '',
@@ -50,7 +50,7 @@ var POKEMON_SETS = {
    'Aegislash-Blade' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Stance Change',
          item : 'Leftovers',
@@ -62,7 +62,7 @@ var POKEMON_SETS = {
    'Aegislash' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Stance Change',
          item : 'Leftovers',
@@ -74,7 +74,7 @@ var POKEMON_SETS = {
    'Aerodactyl' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Rock Head',
          item : '',
@@ -86,7 +86,7 @@ var POKEMON_SETS = {
    'Aggron' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Sturdy',
          item : '',
@@ -110,7 +110,7 @@ var POKEMON_SETS = {
    'Alakazam' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Magic Guard',
          item : 'Focus Sash',
@@ -182,7 +182,7 @@ var POKEMON_SETS = {
    'Ampharos' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Static',
          item : '',
@@ -206,7 +206,7 @@ var POKEMON_SETS = {
    'Arcanine' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Intimidate',
          item : 'Leftovers',
@@ -374,7 +374,7 @@ var POKEMON_SETS = {
    'Azumarill' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Huge Power',
          item : 'Choice Band',
@@ -530,7 +530,7 @@ var POKEMON_SETS = {
    'Bisharp' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Defiant',
          item : 'Leftovers',
@@ -566,7 +566,7 @@ var POKEMON_SETS = {
    'Blissey' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Natural Cure',
          item : 'Leftovers',
@@ -626,7 +626,7 @@ var POKEMON_SETS = {
    'Breloom' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Technician',
          item : 'Life Orb',
@@ -806,7 +806,7 @@ var POKEMON_SETS = {
    'Celebi' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Natural Cure',
          item : 'Leftovers',
@@ -818,7 +818,7 @@ var POKEMON_SETS = {
    'Chandelure' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Flash Fire',
          item : 'Choice Scarf',
@@ -830,7 +830,7 @@ var POKEMON_SETS = {
    'Chansey' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Natural Cure',
          item : 'Eviolite',
@@ -842,7 +842,7 @@ var POKEMON_SETS = {
    'Charizard' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Blaze',
          item : '',
@@ -1010,7 +1010,7 @@ var POKEMON_SETS = {
    'Clefable' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Magic Guard',
          item : 'Leftovers',
@@ -1034,7 +1034,7 @@ var POKEMON_SETS = {
    'Cloyster' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Skill Link',
          item : 'Focus Sash',
@@ -1070,7 +1070,7 @@ var POKEMON_SETS = {
    'Conkeldurr' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Guts',
          item : 'Leftovers',
@@ -1166,7 +1166,7 @@ var POKEMON_SETS = {
    'Crobat' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Infiltrator',
          item : 'Black Sludge',
@@ -1346,7 +1346,7 @@ var POKEMON_SETS = {
    'Deoxys-Defense' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Pressure',
          item : 'Leftovers',
@@ -1358,7 +1358,7 @@ var POKEMON_SETS = {
    'Deoxys-Speed' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Pressure',
          item : 'Focus Sash',
@@ -1370,7 +1370,7 @@ var POKEMON_SETS = {
    'Dialga' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Modest',
          ability : 'Pressure',
          item : 'Leftovers',
@@ -1382,7 +1382,7 @@ var POKEMON_SETS = {
    'Diggersby' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Huge Power',
          item : 'Life Orb',
@@ -1406,7 +1406,7 @@ var POKEMON_SETS = {
    'Ditto' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Imposter',
          item : 'Choice Scarf',
@@ -1430,7 +1430,7 @@ var POKEMON_SETS = {
    'Donphan' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Sturdy',
          item : 'Leftovers',
@@ -1466,7 +1466,7 @@ var POKEMON_SETS = {
    'Dragonite' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Multiscale',
          item : 'Weakness Policy',
@@ -1790,7 +1790,7 @@ var POKEMON_SETS = {
    'Espeon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Magic Bounce',
          item : 'Leftovers',
@@ -1814,7 +1814,7 @@ var POKEMON_SETS = {
    'Excadrill' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Mold Breaker',
          item : 'Air Balloon',
@@ -1850,7 +1850,7 @@ var POKEMON_SETS = {
    'Exploud' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Scrappy',
          item : 'Choice Specs',
@@ -1910,7 +1910,7 @@ var POKEMON_SETS = {
    'Ferrothorn' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Impish',
          ability : 'Iron Barbs',
          item : 'Leftovers',
@@ -1970,7 +1970,7 @@ var POKEMON_SETS = {
    'Florges' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Flower Veil',
          item : 'Leftovers',
@@ -2006,7 +2006,7 @@ var POKEMON_SETS = {
    'Forretress' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Sturdy',
          item : 'Leftovers',
@@ -2078,7 +2078,7 @@ var POKEMON_SETS = {
    'Galvantula' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Compound Eyes',
          item : 'Focus Sash',
@@ -2090,7 +2090,7 @@ var POKEMON_SETS = {
    'Garchomp' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Rough Skin',
          item : '',
@@ -2126,7 +2126,7 @@ var POKEMON_SETS = {
    'Gastrodon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Storm Drain',
          item : 'Leftovers',
@@ -2138,7 +2138,7 @@ var POKEMON_SETS = {
    'Genesect' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Hasty',
          ability : 'Download',
          item : 'Choice Scarf',
@@ -2150,10 +2150,10 @@ var POKEMON_SETS = {
    'Gengar' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Levitate',
-         item : '',
+         item : 'Life Orb',
          moves : [ 'Shadow Ball', 'Sludge Bomb', 'Focus Blast', 'Substitute', ],
          ev : [ 4, 0, 0, 252, 0, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
@@ -2258,7 +2258,7 @@ var POKEMON_SETS = {
    'Gliscor' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Impish',
          ability : 'Poison Heal',
          item : 'Toxic Orb',
@@ -2330,7 +2330,7 @@ var POKEMON_SETS = {
    'Goodra' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Gooey',
          item : 'Assault Vest',
@@ -2414,7 +2414,7 @@ var POKEMON_SETS = {
    'Gourgeist-Super' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Impish',
          ability : 'Frisk',
          item : 'Leftovers',
@@ -2438,7 +2438,7 @@ var POKEMON_SETS = {
    'Greninja' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Protean',
          item : 'Life Orb',
@@ -2462,7 +2462,7 @@ var POKEMON_SETS = {
    'Groudon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Adamant',
          ability : 'Drought',
          item : 'Leftovers',
@@ -2498,7 +2498,7 @@ var POKEMON_SETS = {
    'Gyarados' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Intimidate',
          item : 'Leftovers',
@@ -2534,7 +2534,7 @@ var POKEMON_SETS = {
    'Hawlucha' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Unburden',
          item : 'Flying Gem',
@@ -2546,7 +2546,7 @@ var POKEMON_SETS = {
    'Haxorus' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Mold Breaker',
          item : 'Lum Berry',
@@ -2558,7 +2558,7 @@ var POKEMON_SETS = {
    'Heatran' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Flash Fire',
          item : 'Leftovers',
@@ -2570,7 +2570,7 @@ var POKEMON_SETS = {
    'Heliolisk' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Dry Skin',
          item : 'Choice Scarf',
@@ -2618,7 +2618,7 @@ var POKEMON_SETS = {
    'Hippowdon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Impish',
          ability : 'Sand Stream',
          item : 'Leftovers',
@@ -2762,7 +2762,7 @@ var POKEMON_SETS = {
    'Hydreigon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Levitate',
          item : 'Life Orb',
@@ -2786,7 +2786,7 @@ var POKEMON_SETS = {
    'Infernape' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Iron Fist',
          item : 'Life Orb',
@@ -2810,7 +2810,7 @@ var POKEMON_SETS = {
    'Jellicent' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Water Absorb',
          item : 'Leftovers',
@@ -2822,7 +2822,7 @@ var POKEMON_SETS = {
    'Jirachi' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Serene Grace',
          item : 'Leftovers',
@@ -2834,7 +2834,7 @@ var POKEMON_SETS = {
    'Jolteon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Volt Absorb',
          item : 'Choice Specs',
@@ -2942,7 +2942,7 @@ var POKEMON_SETS = {
    'Keldeo' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Justified',
          item : 'Choice Scarf',
@@ -2954,7 +2954,7 @@ var POKEMON_SETS = {
    'Kingdra' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Swift Swim',
          item : 'Life Orb',
@@ -2978,7 +2978,7 @@ var POKEMON_SETS = {
    'Klefki' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Impish',
          ability : 'Prankster',
          item : 'Leftovers',
@@ -3038,7 +3038,7 @@ var POKEMON_SETS = {
    'Kyogre' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Timid',
          ability : 'Drizzle',
          item : 'Choice Scarf',
@@ -3062,7 +3062,7 @@ var POKEMON_SETS = {
    'Kyurem-Black' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Teravolt',
          item : 'Leftovers',
@@ -3086,7 +3086,7 @@ var POKEMON_SETS = {
    'Landorus' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Sheer Force',
          item : 'Life Orb',
@@ -3098,7 +3098,7 @@ var POKEMON_SETS = {
    'Landorus-Therian' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Intimidate',
          item : 'Leftovers',
@@ -3158,7 +3158,7 @@ var POKEMON_SETS = {
    'Latias' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Levitate',
          item : 'Leftovers',
@@ -3170,7 +3170,7 @@ var POKEMON_SETS = {
    'Latios' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Levitate',
          item : 'Choice Specs',
@@ -3338,10 +3338,10 @@ var POKEMON_SETS = {
    'Lucario' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Justified',
-         item : '',
+         item : 'Life Orb',
          moves : [ 'Close Combat', 'Swords Dance', 'Bullet Punch', 'Crunch', ],
          ev : [ 0, 252, 0, 0, 4, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
@@ -3470,7 +3470,7 @@ var POKEMON_SETS = {
    'Magnezone' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Magnet Pull',
          item : 'Choice Specs',
@@ -3494,7 +3494,7 @@ var POKEMON_SETS = {
    'Malamar' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Contrary',
          item : 'Leftovers',
@@ -3506,7 +3506,7 @@ var POKEMON_SETS = {
    'Mamoswine' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Thick Fat',
          item : 'Focus Sash',
@@ -3518,7 +3518,7 @@ var POKEMON_SETS = {
    'Manaphy' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Hydration',
          item : 'Leftovers',
@@ -3530,7 +3530,7 @@ var POKEMON_SETS = {
    'Mandibuzz' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Impish',
          ability : 'Overcoat',
          item : 'Leftovers',
@@ -3674,7 +3674,7 @@ var POKEMON_SETS = {
    'Aggron-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Filter',
          item : '',
@@ -3686,7 +3686,7 @@ var POKEMON_SETS = {
    'Alakazam-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Trace',
          item : '',
@@ -3698,7 +3698,7 @@ var POKEMON_SETS = {
    'Ampharos-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Mold Breaker',
          item : '',
@@ -3710,7 +3710,7 @@ var POKEMON_SETS = {
    'Banette-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Prankster',
          item : '',
@@ -3722,7 +3722,7 @@ var POKEMON_SETS = {
    'Blastoise-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Mega Launcher',
          item : '',
@@ -3746,7 +3746,7 @@ var POKEMON_SETS = {
    'Charizard-Mega-X' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Tough Claws',
          item : '',
@@ -3758,7 +3758,7 @@ var POKEMON_SETS = {
    'Charizard-Mega-Y' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Drought',
          item : '',
@@ -3770,7 +3770,7 @@ var POKEMON_SETS = {
    'Garchomp-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Sand Force',
          item : '',
@@ -3782,7 +3782,7 @@ var POKEMON_SETS = {
    'Gardevoir-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Pixilate',
          item : '',
@@ -3794,7 +3794,7 @@ var POKEMON_SETS = {
    'Gengar-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Shadow Tag',
          item : '',
@@ -3806,7 +3806,7 @@ var POKEMON_SETS = {
    'Gyarados-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Mold Breaker',
          item : '',
@@ -3818,7 +3818,7 @@ var POKEMON_SETS = {
    'Heracross-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Skill Link',
          item : '',
@@ -3830,7 +3830,7 @@ var POKEMON_SETS = {
    'Houndoom-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Solar Power',
          item : '',
@@ -3854,7 +3854,7 @@ var POKEMON_SETS = {
    'Lucario-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Adaptability',
          item : '',
@@ -3862,11 +3862,41 @@ var POKEMON_SETS = {
          ev : [ 0, 252, 0, 0, 4, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
+      {
+         name : 'Physical Sweeper',
+         tier : 'OU',
+         nature : 'Jolly',
+         ability : 'Adaptability',
+         item : '',
+         moves : [ 'Close Combat', 'Swords Dance', 'Bullet Punch', 'Crunch', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+      {
+         name : 'Special Sweeper',
+         tier : 'OU',
+         nature : 'Timid',
+         ability : 'Adaptability',
+         item : '',
+         moves : [ 'Aura Sphere', 'Dark Pulse', 'Flash Cannon', '', ],
+         ev : [ 0, 0, 0, 252, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+      {
+         name : 'Mixed Wallbreaker',
+         tier : 'OU',
+         nature : 'Naive',
+         ability : 'Adaptability',
+         item : '',
+         moves : [ 'Close Combat', 'Aura Sphere', 'Flash Cannon', 'Dark Pulse', ],
+         ev : [ 0, 4, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
    ],
    'Manectric-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Intimidate',
          item : '',
@@ -3878,7 +3908,7 @@ var POKEMON_SETS = {
    'Mawile-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Huge Power',
          item : '',
@@ -3890,7 +3920,7 @@ var POKEMON_SETS = {
    'Medicham-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Pure Power',
          item : '',
@@ -3926,7 +3956,7 @@ var POKEMON_SETS = {
    'Pinsir-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Aerilate',
          item : '',
@@ -3938,7 +3968,7 @@ var POKEMON_SETS = {
    'Scizor-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Technician',
          item : '',
@@ -3950,7 +3980,7 @@ var POKEMON_SETS = {
    'Tyranitar-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Sand Stream',
          item : '',
@@ -3962,7 +3992,7 @@ var POKEMON_SETS = {
    'Venusaur-Mega' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Thick Fat',
          item : '',
@@ -4034,7 +4064,7 @@ var POKEMON_SETS = {
    'Metagross' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Clear Body',
          item : 'Leftovers',
@@ -4322,7 +4352,7 @@ var POKEMON_SETS = {
    'Ninetales' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Drought',
          item : 'Leftovers',
@@ -4358,7 +4388,7 @@ var POKEMON_SETS = {
    'Noivern' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Infiltrator',
          item : 'Choice Specs',
@@ -4682,7 +4712,7 @@ var POKEMON_SETS = {
    'Politoed' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Drizzle',
          item : 'Leftovers',
@@ -4970,7 +5000,7 @@ var POKEMON_SETS = {
    'Rayquaza' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Adamant',
          ability : 'Air Lock',
          item : 'Life Orb',
@@ -5042,7 +5072,7 @@ var POKEMON_SETS = {
    'Reshiram' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Modest',
          ability : 'Turboblaze',
          item : 'Leftovers',
@@ -5054,7 +5084,7 @@ var POKEMON_SETS = {
    'Reuniclus' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Magic Guard',
          item : 'Life Orb',
@@ -5150,7 +5180,7 @@ var POKEMON_SETS = {
    'Rotom-Heat' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Levitate',
          item : 'Leftovers',
@@ -5162,7 +5192,7 @@ var POKEMON_SETS = {
    'Rotom-Wash' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Levitate',
          item : 'Leftovers',
@@ -5186,7 +5216,7 @@ var POKEMON_SETS = {
    'Sableye' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Prankster',
          item : 'Leftovers',
@@ -5198,7 +5228,7 @@ var POKEMON_SETS = {
    'Salamence' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Hasty',
          ability : 'Moxie',
          item : 'Choice Scarf',
@@ -5306,7 +5336,7 @@ var POKEMON_SETS = {
    'Scolipede' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Speed Boost',
          item : 'Focus Sash',
@@ -5390,7 +5420,7 @@ var POKEMON_SETS = {
    'Serperior' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Contrary',
          item : 'Leftovers',
@@ -5438,7 +5468,7 @@ var POKEMON_SETS = {
    'Shaymin-Sky' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Timid',
          ability : 'Serene Grace',
          item : 'Leftovers',
@@ -5582,7 +5612,7 @@ var POKEMON_SETS = {
    'Skarmory' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Impish',
          ability : 'Sturdy',
          item : 'Leftovers',
@@ -5666,7 +5696,7 @@ var POKEMON_SETS = {
    'Slowbro' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Regenerator',
          item : 'Leftovers',
@@ -5726,7 +5756,7 @@ var POKEMON_SETS = {
    'Smeargle' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Own Tempo',
          item : 'Focus Sash',
@@ -5954,7 +5984,7 @@ var POKEMON_SETS = {
    'Starmie' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Natural Cure',
          item : 'Leftovers',
@@ -6110,7 +6140,7 @@ var POKEMON_SETS = {
    'Sylveon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Pixilate',
          item : 'Leftovers',
@@ -6134,7 +6164,7 @@ var POKEMON_SETS = {
    'Talonflame' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Gale Wings',
          item : 'Flying Gem',
@@ -6194,7 +6224,7 @@ var POKEMON_SETS = {
    'Tentacool' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'NU',
          nature : 'Bold',
          ability : 'Liquid Ooze',
          item : 'Eviolite',
@@ -6206,7 +6236,7 @@ var POKEMON_SETS = {
    'Tentacruel' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Liquid Ooze',
          item : 'Black Sludge',
@@ -6230,7 +6260,7 @@ var POKEMON_SETS = {
    'Terrakion' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Justified',
          item : 'Choice Scarf',
@@ -6242,7 +6272,7 @@ var POKEMON_SETS = {
    'Thundurus' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Prankster',
          item : 'Life Orb',
@@ -6254,7 +6284,7 @@ var POKEMON_SETS = {
    'Thundurus-Therian' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Volt Absorb',
          item : 'Life Orb',
@@ -6290,7 +6320,7 @@ var POKEMON_SETS = {
    'Togekiss' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Calm',
          ability : 'Serene Grace',
          item : 'Leftovers',
@@ -6338,7 +6368,7 @@ var POKEMON_SETS = {
    'Tornadus' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Prankster',
          item : 'Leftovers',
@@ -6350,7 +6380,7 @@ var POKEMON_SETS = {
    'Tornadus-Therian' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Hasty',
          ability : 'Regenerator',
          item : 'Life Orb',
@@ -6422,7 +6452,7 @@ var POKEMON_SETS = {
    'Trevenant' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Careful',
          ability : 'Harvest',
          item : 'Sitrus Berry',
@@ -6482,7 +6512,7 @@ var POKEMON_SETS = {
    'Tyranitar' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Sand Stream',
          item : '',
@@ -6494,7 +6524,7 @@ var POKEMON_SETS = {
    'Tyrantrum' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Rock Head',
          item : 'Leftovers',
@@ -6530,7 +6560,7 @@ var POKEMON_SETS = {
    'Umbreon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Careful',
          ability : 'Synchronize',
          item : 'Leftovers',
@@ -6578,7 +6608,7 @@ var POKEMON_SETS = {
    'Vaporeon' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Bold',
          ability : 'Water Absorb',
          item : 'Leftovers',
@@ -6698,7 +6728,7 @@ var POKEMON_SETS = {
    'Volcarona' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Modest',
          ability : 'Flame Body',
          item : 'Leftovers',
@@ -6710,7 +6740,7 @@ var POKEMON_SETS = {
    'Voltorb' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'NU',
          nature : 'Timid',
          ability : 'Aftermath',
          item : 'Life Orb',
@@ -6782,7 +6812,7 @@ var POKEMON_SETS = {
    'Weavile' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Jolly',
          ability : 'Pressure',
          item : 'Focus Sash',
@@ -6806,7 +6836,7 @@ var POKEMON_SETS = {
    'Whimsicott' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Prankster',
          item : 'Leftovers',
@@ -6914,7 +6944,7 @@ var POKEMON_SETS = {
    'Xerneas' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Timid',
          ability : 'Fairy Aura',
          item : 'Power Herb',
@@ -6962,7 +6992,7 @@ var POKEMON_SETS = {
    'Yveltal' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Hasty',
          ability : 'Dark Aura',
          item : 'Life Orb',
@@ -6986,7 +7016,7 @@ var POKEMON_SETS = {
    'Zapdos' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Timid',
          ability : 'Pressure',
          item : 'Leftovers',
@@ -6998,7 +7028,7 @@ var POKEMON_SETS = {
    'Zekrom' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'Uber',
          nature : 'Jolly',
          ability : 'Teravolt',
          item : 'Choice Scarf',
@@ -7058,7 +7088,7 @@ var POKEMON_SETS = {
    'Zygarde' : [
       {
          name : 'Most Common',
-         tier : '',
+         tier : 'OU',
          nature : 'Adamant',
          ability : 'Aura Break',
          item : 'Leftovers',

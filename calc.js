@@ -1532,10 +1532,10 @@ function getDamagePercentage(description, attacker, target, move, environment, r
    var percentage = damage * 100 / getStat(target, STAT_HP);
    if (random === RANDOM_MIN) {
       description.minDamage = damage;
-      description.minPercent = Math.floor(percentage);
+      description.minPercent = Math.floor(percentage * 10) / 10;
    } else if (random === RANDOM_MAX) {
       description.maxDamage = damage;
-      description.maxPercent = Math.floor(percentage);
+      description.maxPercent = Math.floor(percentage * 10) / 10;
    };
    return percentage;
 

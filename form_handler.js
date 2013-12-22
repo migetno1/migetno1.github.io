@@ -545,16 +545,12 @@ $(document).ready(function() {
       // remove current sets
       setsInput.find('option').remove();
       // add blank set
-      setsInput.append("<option value=''></option>");
+      setsInput.append("<option value=''> </option>");
       // add default attacker/target sets
       if (team == 0) {
          team = 'ATTACKER';
       } else {
          team = 'TARGET';
-      };
-      for (var i = 0; i < DEFAULT_POKEMON_SETS[team].length; i++) {
-         setsInput.append('<option value="' + team + ':' + i + '">' +
-               DEFAULT_POKEMON_SETS[team][i].name + "</option>");
       };
       // add the pokemon specific sets
       if (typeof POKEMON_SETS[pokemonName] !== 'undefined') {
@@ -562,6 +558,11 @@ $(document).ready(function() {
             setsInput.append('<option value="' + pokemonName + ':' + i + '">' + 
                   POKEMON_SETS[pokemonName][i].name + "</option>");
          };
+      };
+      // add default sets
+      for (var i = 0; i < DEFAULT_POKEMON_SETS[team].length; i++) {
+         setsInput.append('<option value="' + team + ':' + i + '">' +
+               DEFAULT_POKEMON_SETS[team][i].name + "</option>");
       };
       // set value to blank
       setsInput.val('');

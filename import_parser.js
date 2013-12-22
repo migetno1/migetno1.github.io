@@ -45,6 +45,7 @@ function importPokemon(textArray, i) {
    var pokemonName = null;
    var item = null;
    var ability = null;
+   var gender = null;
    var nature = getDefaultNature();
    var ev = [ 0, 0, 0, 0, 0, 0, ];
    var iv = [ 31, 31, 31, 31, 31, 31];
@@ -53,12 +54,16 @@ function importPokemon(textArray, i) {
    // Line 1: (name) @ (item)
    if (debug) console.log('Line 1: (name) @ (item)');
    if (debug) console.log(textArray[i]);
-   var regexPattern = /^([\w-]+)( @ (.*))?$/;
+   var regexPattern = /^(\w[\w-]+)( \(([MF])\))?( @ (.*))?$/;
    var match = regexPattern.exec(textArray[i]);
    if (match === null) {
-      // error
-      console.log('error' + textArray[i]);
-      return pokemon;
+      regexPattern = /^.*\((\w[\w-]+)\)( \(([MF])\))?( @ (.*))?$/;
+      match = regexPattern.exec(textArray[i]);
+      if (match === null) {
+         // error
+         console.log('error' + textArray[i]);
+         return pokemon;
+      };
    };
    pokemonName = match[1];
    if (! isValidPokemonName(pokemonName)) {
@@ -66,7 +71,10 @@ function importPokemon(textArray, i) {
       pokemon.valid = false;
    };
    if (match[3]) {
-      item = match[3];
+      gender = getGender(match[3]);
+   };
+   if (match[5]) {
+      item = match[5];
       item = item.replace(/\s+$/,'');
       if (! isValidItem(item)) {
          item = null;
@@ -192,6 +200,9 @@ function importPokemon(textArray, i) {
          pokemon.changeMove(moveNum, moves[moveNum]);
       };
    };
+   if (gender !== null) {
+      pokemon.changeGender(gender);
+   };
    return pokemon;
 };
 
@@ -209,6 +220,21 @@ function convertShowdownStat(evStat) {
          return STAT_SPD;
       case 'Spd':
          return STAT_SPE;
+   };
+};
+
+/** 
+  * Converts gender into the gender constant
+  * @param gender M or F
+  * @return the corresponding constant.
+  */
+function getGender(gender) {
+   if (gender === 'M') {
+      return GENDER_MALE;
+   } else if (gender === 'F') {
+      return GENDER_FEMALE;
+   } else {
+      return GENDER_GENDERLESS;
    };
 };
 
