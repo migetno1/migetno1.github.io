@@ -3,7 +3,7 @@ $(document).ready(function() {
       return this.length !== 0;
    };
 
-   var environment = new Environment();
+   var environment = new Environment(6, 6);
    var printOuts = {};
 
    // initiate sliders
@@ -86,8 +86,9 @@ $(document).ready(function() {
    // retrieve saved data if it exists.
    if (localStorage.getItem('sweeperCalcEnvironment')) {
       console.log('retrieving object...');
-      environment = new Environment(
+      environment = new Environment(6, 6,
             JSON.parse(localStorage.getItem('sweeperCalcEnvironment')));
+      console.log(JSON.stringify(environment, null, '\t'));
    };
    updateStaticData();
    updateForm();

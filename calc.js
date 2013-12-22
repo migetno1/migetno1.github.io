@@ -1591,6 +1591,10 @@ function getAttackResults(attacker, target, environment) {
       result.move = moveName;
       var move = MOVE_DATA[moveName];
 
+      /*console.log(attacker.name);
+      if (attacker.name === null) {
+         console.log(JSON.stringify(attacker, null, '\t'));
+      };*/
       description.attackerName = POKEMON_DATA[attacker.name].name;
       description.moveName = move.name;
       description.defenderName = POKEMON_DATA[target.name].name;
@@ -1689,7 +1693,7 @@ function getHiddenPowerType(pokemon) {
 };
 
 function getWeight(pokemon) {
-   var weight = POKEMON[pokemon.name].weight;
+   var weight = POKEMON_DATA[pokemon.name].weight;
    // TODOn account for autotomize
    // items
    if (pokemon.item === 'float stone') {

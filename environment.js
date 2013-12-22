@@ -2,14 +2,19 @@
   * Initialises the environment object.
   * @param environment a saved JSON environment object
   */
-function Environment(environment) {
+function Environment(numAttackers, numTargets, environment) {
    if (typeof(environment) === 'undefined') {
-      this.pokemons = [
-         [new Pokemon(), new Pokemon(), new Pokemon(), 
-            new Pokemon(), new Pokemon(), new Pokemon()],
-         [new Pokemon(), new Pokemon(), new Pokemon(), 
-            new Pokemon(), new Pokemon(), new Pokemon()],
-      ];
+      this.numAttackers = numAttackers;
+      this.numTargets = numTargets;
+      this.pokemons = [];
+      this.pokemons[0] = [];
+      for (var i = 0; i < numAttackers; i++) {
+         this.pokemons[0].push(new Pokemon());
+      };
+      this.pokemons[1] = [];
+      for (var i = 0; i < numTargets; i++) {
+         this.pokemons[1].push(new Pokemon());
+      };
       this.weather = 0;
       this.trickRoom = 0;
       this.lightScreen = 0;
@@ -36,9 +41,16 @@ function Environment(environment) {
   * @param teamNum the team number (0 = yours, 1 = target)
   */
 Environment.prototype.resetTeam = function(teamNum) {
-   this.pokemons[teamNum] = 
-         [new Pokemon(), new Pokemon(), new Pokemon(), 
-            new Pokemon(), new Pokemon(), new Pokemon()];
+   this.pokemons[teamNum] = [];
+   var numPokemon;
+   if (teamNum == 0) {
+      numPokemon = this.numAttackers;
+   } else {
+      numPokemon = this.numTargets;
+   };
+   for (var i = 0; i < numPokemon; i++) {
+      this.pokemons[teamNum].push(new Pokemon());
+   };
 };
 
 /**

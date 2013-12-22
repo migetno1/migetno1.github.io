@@ -235,7 +235,6 @@ Pokemon.prototype.changeStatBoost = function(stat, boost) {
   * @param gender gender to change to
   */
 Pokemon.prototype.changeGender = function(gender) {
-   console.log('changing gender from ' + this.gender + ' to ' + gender);
    if (!isValidGender(this.name, gender)) {
       console.log('but this is not valid...');
       return;
@@ -296,9 +295,7 @@ Pokemon.prototype.validate = function() {
   */
 function getDefaultGender(name) {
    var defaultGender = POKEMON_DATA[name].gender;
-   console.log('the default gender is: ' + defaultGender);
    if (defaultGender === null) {
-      console.log('gender has been changed to: ' + GENDER_MALE);
       return GENDER_MALE;
    } else {
       return defaultGender;

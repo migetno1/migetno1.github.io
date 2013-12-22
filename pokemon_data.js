@@ -6272,7 +6272,7 @@ var POKEMON_DATA = {
       'gender' : null,
       'stats' : [ 62, 48, 54, 63, 60, 68, ],
    },
-   'meowstic-m' : {
+   'meowstic' : {
       'num' : '#678',
       'name' : 'Meowstic-M',
       'type' : [ 10,  ],
@@ -6803,7 +6803,7 @@ var POKEMON_DATA = {
       'gender' : null,
       'stats' : [ 80, 135, 85, 70, 95, 150, ],
    },
-   'mewtwo-meta-x' : {
+   'mewtwo-mega-x' : {
       'num' : '',
       'name' : 'Mewtwo-Meta-X',
       'type' : [ 10, 6 ],

@@ -5,6 +5,10 @@
   * @return True if the Pokemon is a valid Pokemon, or false otherwise.
   */
 function isValidPokemonName(id) {
+   if (id === 'Mewtwo-Mega-X') {
+      console.log(id);
+      console.log(POKEMON_DATA[id.toLowerCase()]);
+   };
    if (typeof id === 'undefined' || id == null) {
       return false;
    };
