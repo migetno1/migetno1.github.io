@@ -903,7 +903,7 @@ $(document).ready(function() {
       } else {
          $("#showresults").removeClass('btn-warning').addClass('btn-success');
          $("#showresults").html('<span class="glyphicon glyphicon-ok"></span>' +
-               ' Table up-to-date');
+               ' Up-to-date');
       };
    };
 
