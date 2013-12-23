@@ -1485,6 +1485,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    POKEMON_DATA[attacker.name].type = attackerType.slice(0);
    // return normal item after calculation
    attacker.item = attackerItem;
+   // return normal stat boosts
    
    baseDamage = applySpecialCases(baseDamage, description, attacker, target, move, environment);
    if (debug) {
@@ -1575,9 +1576,18 @@ function attackerStrikeFirst(attacker, target, environment) {
   * @param target Target Pokemon object
   * @return a list of results with percentage damage dealt and move used
   */
-function getAttackResults(attacker, target, environment) {
+function getAttackResults(attacker, target, environment, attackerStatBoosts) {
    if (attacker.hasNoMoves()) {
       return null;
+   };
+   var attackerOriginalStatBoosts = [];
+   if (! attackerStatBoosts) {
+      for (var i = 0; i < 6; i++) {
+         attackerOriginalStatBoosts.push(attacker.statBoost[i]);
+      };
+      for (var i = 0; i < 6; i++) {
+         attacker.statBoost[i] = 0;
+      };
    };
    var results = {};
    results.attacks = [];
@@ -1604,7 +1614,6 @@ function getAttackResults(attacker, target, environment) {
          result.damagePercentage = ['-', '-'];
       } else {
          result.damagePercentage = [];
-         result.damagePercentageSingleHit = [];
          // min
          result.damagePercentage.push(
             Math.floor(getDamagePercentage(description, attacker, target, move, environment, RANDOM_MIN, true) * 10) / 10);
@@ -1616,6 +1625,7 @@ function getAttackResults(attacker, target, environment) {
                typeof TWO_STRIKE_MOVES[move.name] !== 'undefined' ||
                typeof THREE_STRIKE_MOVES[move.name] !== 'undefined') {
             var description_dummy = {};
+            result.damagePercentageSingleHit = [];
             // min single hit
             result.damagePercentageSingleHit.push(
                Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MIN, false) * 10 / 10)
@@ -1639,6 +1649,11 @@ function getAttackResults(attacker, target, environment) {
       }
    });
    results.description = results.attacks[0].description;
+   if (! attackerStatBoosts) {
+      for (var i = 0; i < 6; i++) {
+         attacker.statBoost[i] = attackerOriginalStatBoosts[i];
+      };
+   };
    if (debug) console.log(JSON.stringify(results, null, '\t'));
    return results;
 }

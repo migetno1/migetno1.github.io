@@ -191,15 +191,15 @@ Pokemon.prototype.changeEV = function(stat, ev) {
   * @param stat stat to be changed
   * @param statboost new statBoost
   */
-Pokemon.prototype.changestatBoost = function(stat, statboost) {
+Pokemon.prototype.changeStatBoost = function(stat, statBoost) {
    if (!isValidStat(stat)) {
       return;
    };
-   statboost = parseInt(statboost);
-   if (statboost < -6 || statboost > 6) {
+   statBoost = parseInt(statBoost);
+   if (statBoost < -6 || statBoost > 6) {
       return;
    };
-   this.statBoost[stat] = statboost;
+   this.statBoost[stat] = statBoost;
 };
 
 /**

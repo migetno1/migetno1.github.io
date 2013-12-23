@@ -19,12 +19,16 @@ function Environment(numAttackers, numTargets, environment) {
       this.trickRoom = 0;
       this.lightScreen = 0;
       this.reflect = 0;
+      this.multiHit = MULTI_HIT_FULL;
    } else {
+      this.numAttackers = environment.numAttackers;
+      this.numTargets = environment.numTargets;
       this.pokemons = environment.pokemons;
       this.weather = environment.weather;
       this.trickRoom = environment.trickRoom;
       this.lightScreen = environment.lightScreen;
       this.reflect = environment.reflect;
+      this.multiHit = environment.multiHit;
       for (var i = 0; i < environment.pokemons.length; i++) {
          for (var j = 0; j < environment.pokemons[i].length; j++) {
             // retrieve the pokemon
@@ -48,6 +52,7 @@ Environment.prototype.resetTeam = function(teamNum) {
    } else {
       numPokemon = this.numTargets;
    };
+   console.log(numPokemon);
    for (var i = 0; i < numPokemon; i++) {
       this.pokemons[teamNum].push(new Pokemon());
    };
@@ -60,4 +65,7 @@ Environment.prototype.switchTeams = function () {
    var tmp = this.pokemons[0];
    this.pokemons[0] = this.pokemons[1];
    this.pokemons[1] = tmp;
+   var tmp2 = this.numAttackers;
+   this.numAttackers = this.numTargets;
+   this.numTargets = tmp2;
 };

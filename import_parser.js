@@ -13,7 +13,7 @@ function importTeam(text) {
    var i = 0, pokemonNum = 0;
    while (i < textArray.length && pokemonNum < 6) {
       // find the start of the pokemon
-      var pattern = /^Ability: (.*)$/;
+      var pattern = /^(Trait|Ability): (.*)$/;
       while (! pattern.test(textArray[i]) && i < textArray.length) {
          i++;
       };
@@ -50,14 +50,15 @@ function importPokemon(textArray, i) {
    var ev = [ 0, 0, 0, 0, 0, 0, ];
    var iv = [ 31, 31, 31, 31, 31, 31];
    var moves = [ null, null, null, null ];
+   var level = null;
 
    // Line 1: (name) @ (item)
    if (debug) console.log('Line 1: (name) @ (item)');
    if (debug) console.log(textArray[i]);
-   var regexPattern = /^(\w[\w-]+)( \(([MF])\))?( @ (.*))?$/;
+   var regexPattern = /^(\w[\w.' -]+)($|( \(([MF])\))?( @ ([\w ']+))?$)/;
    var match = regexPattern.exec(textArray[i]);
    if (match === null) {
-      regexPattern = /^.*\((\w[\w-]+)\)( \(([MF])\))?( @ (.*))?$/;
+      regexPattern = /^.*\((\w[\w.' -]+)\)($|( \(([MF])\))?( @ ([\w ']+))?$)/;
       match = regexPattern.exec(textArray[i]);
       if (match === null) {
          // error
@@ -70,11 +71,11 @@ function importPokemon(textArray, i) {
       pokemonName = null;
       pokemon.valid = false;
    };
-   if (match[3]) {
-      gender = getGender(match[3]);
+   if (match[4]) {
+      gender = getGender(match[4]);
    };
-   if (match[5]) {
-      item = match[5];
+   if (match[6]) {
+      item = match[6];
       item = item.replace(/\s+$/,'');
       if (! isValidItem(item)) {
          item = null;
@@ -87,11 +88,11 @@ function importPokemon(textArray, i) {
    // Line 2: Ability: (ability)
    if (debug) console.log('Line 2: Ability: (ability)');
    if (debug) console.log(textArray[i]);
-   regexPattern = /^Ability: (.*)$/;
+   regexPattern = /^(Trait|Ability): (.*)$/;
    match = regexPattern.exec(textArray[i]);
    if (match !== null) {
       // we have an ability.
-      ability = match[1];
+      ability = match[2];
       ability = ability.replace(/\s+$/,'');
       if (! isValidAbility(ability)) {
          ability = null;
@@ -100,8 +101,43 @@ function importPokemon(textArray, i) {
    };
    if (debug) console.log('Ability: ' + ability);
 
-   // Line 3: EVs
-   if (debug) console.log('Line 3: EVs');
+
+   // Line 3: Level
+   if (debug) console.log('Line 3: level');
+   if (debug) console.log(textArray[i]);
+   regexPattern = /^Level: (\d+)\s*$/;
+   match = regexPattern.exec(textArray[i]);
+   if (match !== null) {
+      // we have a level
+      level = parseInt(match[1]);
+      if (! isValidLevel(level)) {
+         level = null;
+      };
+      i++;
+   };
+
+   // Line 4: Shinyness
+   if (debug) console.log('Line 4: shinyness');
+   if (debug) console.log(textArray[i]);
+   regexPattern = /^Shiny: Yes\s*$/;
+   match = regexPattern.exec(textArray[i]);
+   if (match !== null) {
+      // we do nothing
+      i++;
+   };
+
+   // Line 5: Happiness
+   if (debug) console.log('Line 5: happiness');
+   if (debug) console.log(textArray[i]);
+   regexPattern = /^Happiness: (\d+)\s*$/;
+   match = regexPattern.exec(textArray[i]);
+   if (match !== null) {
+      // we do nothing
+      i++;
+   };
+
+   // Line 6: EVs
+   if (debug) console.log('Line 6: EVs');
    if (debug) console.log(textArray[i]);
    regexPattern = /^EVs:/;
    match = regexPattern.exec(textArray[i]);
@@ -124,10 +160,10 @@ function importPokemon(textArray, i) {
    };
    if (debug) console.log('EVs ' + JSON.stringify(ev, null, '\t'));
 
-   // Line 4: (nature) Nature
-   if (debug) console.log('Line 4: (nature) Nature');
+   // Line 7: (nature) Nature
+   if (debug) console.log('Line 7: (nature) Nature');
    if (debug) console.log(textArray[i]);
-   regexPattern = /^(\w+) Nature$/;
+   regexPattern = /^(\w+) Nature\s*$/;
    match = regexPattern.exec(textArray[i]);
    if (match !== null) {
       // we have a nature.
@@ -139,8 +175,8 @@ function importPokemon(textArray, i) {
    };
    if (debug) console.log('Nature: ' + nature);
 
-   // Line 5: IVs
-   if (debug) console.log('Line 5: IVs');
+   // Line 8: IVs
+   if (debug) console.log('Line 8: IVs');
    if (debug) console.log(textArray[i]);
    regexPattern = /^IVs:/;
    match = regexPattern.exec(textArray[i]);
@@ -163,15 +199,15 @@ function importPokemon(textArray, i) {
    };
    if (debug) console.log('IVs ' + JSON.stringify(iv, null, '\t'));
    
-   // Lines 6-9: moves
-   if (debug) console.log('Lines 6-9: Moves');
+   // Lines 9-12: moves
+   if (debug) console.log('Lines 9-12: Moves');
    for (var j = 0; j < 4; j++) {
       if (debug) console.log(textArray[i+j]);
-      regexPattern = /^- (.*)$/;
+      regexPattern = /^([-*] ?)?([\w' -]+)$/;
       match = regexPattern.exec(textArray[i+j]);
       if (match === null) continue;
       // we have a move
-      moves[j] = match[1];
+      moves[j] = match[2];
       moves[j] = moves[j].replace(/\s+$/,'');
       if (! isValidMoveName(moves[j])) {
          moves[j] = null;
@@ -190,6 +226,9 @@ function importPokemon(textArray, i) {
    };
    if (nature !== null) {
       pokemon.changeNature(nature);
+   };
+   if (level !== null) {
+      pokemon.changeLevel(level);
    };
    for (var stat = 0; stat < 6; stat++) {
       pokemon.changeEV(stat, ev[stat]);
