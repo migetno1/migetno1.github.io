@@ -212,23 +212,6 @@ Pokemon.prototype.changeCurrentHP = function(hp) {
    };
    this.currentHP = hp;
 };
-   
-/**
-  * Changes the stat boosts of the Pokemon
-  * @param stat stat to be changed
-  * @param boost new boost
-  */
-Pokemon.prototype.changeStatBoost = function(stat, boost) {
-   if (!isValidStat(stat)) {
-      // TODO throw exception
-      return;
-   };
-   if (boost < -6 || boost > 6) {
-      // TODO throw exception
-      return;
-   };
-   this.statBoost[stat] = boost;
-};
 
 /**
   * Changes the gender of the Pokemon.

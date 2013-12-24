@@ -88,7 +88,6 @@ $(document).ready(function() {
       console.log('retrieving object...');
       environment = new Environment(6, 6,
             JSON.parse(localStorage.getItem('sweeperCalcEnvironment')));
-      console.log(JSON.stringify(environment, null, '\t'));
    };
    updateStaticData();
    updateForm();
