@@ -17,14 +17,17 @@
       <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
       <script src="abilities_list.js"></script>
       <script src="item_list.js"></script>
       <script src="moves_list.js"></script>
       <script src="multi_hit_moves.js"></script>
+      <script src="mega_evos.js"></script>
       <script src="pokemon_list.js"></script>
       <script src="pokemon_sets.js"></script>
       <script src="default_pokemon_sets.js"></script>
       <script src="items.js"></script>
+      <script src="hidden_power.js"></script>
       <script src="abilities.js"></script>
       <script src="moves_data.js"></script>
       <script src="fully_evolved.js"></script>
@@ -146,10 +149,10 @@
                         </div>
                         <div class="col-xs-6">
                            <h2 class="align-right">
-                              <button class="btn btn-success btn-xs" data-toggle="collapse" data-target="#team0">Collapse</button>
+                              <button class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#team0" id="collapseTeam0">Collapse</button>
                               <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Import</button>
-                              <button class="btn btn-info btn-xs reset-team" id="reset-0">Reset</button>
-                              <button class="btn btn-success btn-xs switch">Switch</button>
+                              <button class="btn btn-warning btn-xs switch">Switch</button>
+                              <button class="btn btn-danger btn-xs reset-team" id="reset-0">Reset</button>
                            </h2>
                         </div>
                      </div>
@@ -465,7 +468,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -793,7 +796,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -1121,7 +1124,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -1449,7 +1452,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -1777,7 +1780,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -2105,7 +2108,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -2137,9 +2140,9 @@
                         </div>
                         <div class="col-xs-5">
                            <h2 class="align-right">
-                              <button class="btn btn-success btn-xs" data-toggle="collapse" data-target="#team1">Collapse</button>
+                              <button class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#team1" id="collapseTeam1">Collapse</button>
                               <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Import</button>
-                              <button class="btn btn-info btn-xs reset-team" id="reset-1">Reset</button>
+                              <button class="btn btn-danger btn-xs reset-team" id="reset-1">Reset</button>
                            </h2>
                         </div>
                      </div>
@@ -2431,7 +2434,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -2759,7 +2762,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -3087,7 +3090,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -3415,7 +3418,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -3743,7 +3746,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -4071,7 +4074,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -4166,6 +4169,7 @@
                                     <select class="form-control input-enviro input-xs input-nopadding" id="setLevels">
                                        <option value="100" selected>100</option>
                                        <option value="50">50</option>
+                                       <option value="5">5</option>
                                     </select>
                                  </div>
                               </div>
@@ -4179,22 +4183,11 @@
                                  </div>
                               </div>
                            </form>
-                              <div class="row">
-                                 <div class="col-xs-4 col-padding">
-                                 </div>
+                              <div class="form-group form-margin">
+                                 <label class="col-xs-4 control-label col-padding"> </label>
                                  <div class="col-xs-8 col-padding">
-                                    <div class="row">
-                                       <div class="col-xs-4">
-                                          <button class="btn btn-warning btn-sm btn-block" data-toggle="collapse" data-target="#resetButton">Reset All?</button>
-                                       </div>
-                                       <div class="col-xs-4 col-padding">
-                                          <div class="collapse" id="resetButton">
-                                             <button class="btn btn-danger btn-sm" id="reset-all">EMERGENCY RESET</button>
-                                          </div>
-                                       </div>
-                                       <div class="col-xs-4">
-                                       </div>
-                                    </div>
+                                    <button class="btn btn-warning btn-sm in" id="pre-reset">Reset All</button>
+                                    <button class="btn btn-danger btn-sm collapse" id="reset-all">Are You Sure?</button>
                                  </div>
                               </div>
                         </div><!-- close sm 12 -->

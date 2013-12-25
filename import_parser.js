@@ -62,14 +62,21 @@ function importPokemon(textArray, i) {
       match = regexPattern.exec(textArray[i]);
       if (match === null) {
          // error
-         console.log('error' + textArray[i]);
+         console.log('error: ' + textArray[i]);
+         pokemon.valid = false;
          return pokemon;
       };
    };
    pokemonName = match[1];
+   // check for arceus
+   if (typeof ARCEUS[pokemonName.toLowerCase()] !== 'undefined') {
+      pokemonName = 'Arceus';
+      item = ARCEUS[pokemonName.toLowerCase()];
+   };
    if (! isValidPokemonName(pokemonName)) {
       pokemonName = null;
       pokemon.valid = false;
+      return pokemon;
    };
    if (match[4]) {
       gender = getGender(match[4]);
@@ -81,6 +88,14 @@ function importPokemon(textArray, i) {
          item = null;
       };
    }
+   // check for mega evo
+   if (typeof MEGA_EVOS[pokemonName.toLowerCase()] !== 'undefined' &&
+         item &&
+         typeof MEGA_EVOS[pokemonName.toLowerCase()][item.toLowerCase()] !== 'undefined') {
+      pokemonName = MEGA_EVOS[pokemonName.toLowerCase()][item.toLowerCase()];
+   };
+
+
    if (debug) console.log('Pokemon name: ' + pokemonName);
    if (debug) console.log('item: ' + item);
    i++;
@@ -203,12 +218,23 @@ function importPokemon(textArray, i) {
    if (debug) console.log('Lines 9-12: Moves');
    for (var j = 0; j < 4; j++) {
       if (debug) console.log(textArray[i+j]);
-      regexPattern = /^([-*] ?)?([\w' -]+)$/;
+      regexPattern = /^([-*] ?)?([\w' -\[\]]+)$/;
       match = regexPattern.exec(textArray[i+j]);
       if (match === null) continue;
       // we have a move
       moves[j] = match[2];
       moves[j] = moves[j].replace(/\s+$/,'');
+      // check for hidden power
+      regexPattern = /Hidden Power \[?(\w+)\]?/i;
+      match = regexPattern.exec(moves[j]);
+      if (match !== null) {
+         // we have a hidden power.
+         moves[j] = 'Hidden Power';
+         if (typeof HIDDEN_POWER[match[1].toLowerCase()] !== 'undefined' && isDefaultIVs(iv)) {
+            // we will change the ivs to match the hidden power
+            iv = changeIVs(iv, HIDDEN_POWER[match[1].toLowerCase()]);
+         };
+      };
       if (! isValidMoveName(moves[j])) {
          moves[j] = null;
       };
@@ -255,9 +281,15 @@ function convertShowdownStat(evStat) {
          return STAT_DEF;
       case 'SAtk':
          return STAT_SPA;
+      case 'SpA':
+         return STAT_SPA;
       case 'SDef':
          return STAT_SPD;
+      case 'SpD':
+         return STAT_SPD;
       case 'Spd':
+         return STAT_SPE;
+      case 'Spe':
          return STAT_SPE;
    };
 };
@@ -277,9 +309,29 @@ function getGender(gender) {
    };
 };
 
-/*
-   Faggot things people do
-   Give random nicknames
-   Put IVs and EVs in wrong order
-   Add gender
-*/
+/**
+  * Determines if all IVs are at 31.
+  * @param iv an array of 6 ivs
+  * @return true if all ivs == 31, or false otherwise.
+  */
+function isDefaultIVs(iv) {
+   for (var i = 0; i < iv.length; i++) {
+      if (iv[i] !== 31) {
+         return false;
+      };
+   }; 
+   return true;
+};
+
+/** 
+  * changes the ivs of the first array to match the second.
+  * @param iv the original array
+  * @param newIV the new IVs.
+  * @return the new iv array.
+  */
+function changeIVs(iv, newIV) {
+   for (var i = 0; i < iv.length; i++) {
+      iv[i] = newIV[i];
+   };
+   return iv;
+};

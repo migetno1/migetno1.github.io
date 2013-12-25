@@ -8,3 +8,14 @@
 .rmt-btn{
    margin-bottom:5px;
 }
+.a-form-control{
+   display:block;
+   width:100%;
+   padding:6px 0px 0px 0px;
+   font-size:14px;
+   line-height:1.428571429;
+   vertical-align:middle;
+   background-color:#fff;
+   border:1px solid #FFF;
+   border-radius:4px;
+}

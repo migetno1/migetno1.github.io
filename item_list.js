@@ -194,4 +194,6 @@ var ITEMS_LIST = [
     'Scizorite',
     'Tyranitarite',
     'Venusaurite',
+    'Aggronite',
+    'Weakness Policy',
 ];

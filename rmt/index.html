@@ -22,10 +22,12 @@
       <script src="../item_list.js"></script>
       <script src="../moves_list.js"></script>
       <script src="../multi_hit_moves.js"></script>
+      <script src="../mega_evos.js"></script>
       <script src="../pokemon_list.js"></script>
       <script src="../pokemon_sets.js"></script>
       <script src="../default_pokemon_sets.js"></script>
       <script src="../items.js"></script>
+      <script src="../hidden_power.js"></script>
       <script src="../abilities.js"></script>
       <script src="../moves_data.js"></script>
       <script src="../fully_evolved.js"></script>
@@ -84,33 +86,41 @@
                         <div class="col-xs-12">
                            <form class="form-horizontal" role="form">
                               <div class="form-group form-margin">
-                                 <label class="col-xs-8 control-label col-padding">Uber</label>
+                                 <label class="col-xs-8 control-label col-padding">Tier Selection</label>
                                  <div class="col-xs-4 col-padding">
-                                 <input type="checkbox" class="input-tier e-check" id="uber">   
+                                    <a data-toggle="collapse" href="#collapseTier" id="expandTier" class="a-form-control">Expand</a>
                                  </div>
                               </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-8 control-label col-padding">OU</label>
-                                 <div class="col-xs-4 col-padding">
-                                 <input type="checkbox" class="input-tier e-check" id="ou" checked>   
+                              <div id="collapseTier" class="panel-collapse collapse">
+                                 <div class="form-group form-margin">
+                                    <label class="col-xs-8 control-label col-padding">Uber</label>
+                                    <div class="col-xs-4 col-padding">
+                                    <input type="checkbox" class="input-tier e-check" id="uber">   
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-8 control-label col-padding">UU</label>
-                                 <div class="col-xs-4 col-padding">
-                                 <input type="checkbox" class="input-tier e-check" id="uu" checked>   
+                                 <div class="form-group form-margin">
+                                    <label class="col-xs-8 control-label col-padding">OU</label>
+                                    <div class="col-xs-4 col-padding">
+                                    <input type="checkbox" class="input-tier e-check" id="ou" checked>   
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-8 control-label col-padding">RU</label>
-                                 <div class="col-xs-4 col-padding">
-                                 <input type="checkbox" class="input-tier e-check" id="ru" checked>   
+                                 <div class="form-group form-margin">
+                                    <label class="col-xs-8 control-label col-padding">UU</label>
+                                    <div class="col-xs-4 col-padding">
+                                    <input type="checkbox" class="input-tier e-check" id="uu" checked>   
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-8 control-label col-padding">NU</label>
-                                 <div class="col-xs-4 col-padding">
-                                 <input type="checkbox" class="input-tier e-check" id="nu" checked>   
+                                 <div class="form-group form-margin">
+                                    <label class="col-xs-8 control-label col-padding">RU</label>
+                                    <div class="col-xs-4 col-padding">
+                                    <input type="checkbox" class="input-tier e-check" id="ru" checked>   
+                                    </div>
+                                 </div>
+                                 <div class="form-group form-margin">
+                                    <label class="col-xs-8 control-label col-padding">NU</label>
+                                    <div class="col-xs-4 col-padding">
+                                    <input type="checkbox" class="input-tier e-check" id="nu" checked>   
+                                    </div>
                                  </div>
                               </div>
                               <div class="form-group form-margin">
@@ -133,6 +143,16 @@
                                     </select>
                                  </div>
                               </div>
+                              <div class="form-group form-margin">
+                                 <label class="col-xs-8 control-label col-padding">Set Levels</label>
+                                 <div class="col-xs-4 col-padding">
+                                    <select class="form-control input-enviro input-xs input-nopadding" id="setLevels">
+                                       <option value="100" selected>100</option>
+                                       <option value="50">50</option>
+                                       <option value="5">5</option>
+                                    </select>
+                                 </div>
+                              </div>
                            </form>
                         </div><!-- close sm 12 -->
                      </div>
@@ -149,14 +169,14 @@
                      <div class="row">
                         <div class="col-xs-12">
                               <button class="btn btn-success btn-xs showresults rmt-btn" id="showresults"><span class="glyphicon glyphicon-ok"></span> Up-to-date</button>
-                              <button class="btn btn-success btn-xs rmt-btn" data-toggle="collapse" data-target="#team1">Collapse</button>
+                              <button class="btn btn-primary btn-xs rmt-btn" data-toggle="collapse" data-target="#team1" id="collapseTeam1">Collapse</button>
                               <button class="btn btn-primary btn-xs rmt-btn" data-toggle="modal" data-target="#myModal">Import</button>
-                              <button class="btn btn-info btn-xs reset-team rmt-btn" id="reset-1">Reset</button>
+                              <button class="btn btn-danger btn-xs reset-team rmt-btn" id="reset-1">Reset</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <div id="team1" class="collapse in">
+               <div id="team1" class="in">
                   <form class="form-horizontal" role="form">
          <div class="pokemon" id="pokemon-1-0">
             <div class="panel panel-default">
@@ -442,7 +462,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -770,7 +790,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -1098,7 +1118,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -1426,7 +1446,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -1754,7 +1774,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -2082,7 +2102,7 @@
                            </div>
                         </div>   
                         <div class="form-group form-margin">
-                           <label class="col-xs-3 control-label col-padding">cHP</label>
+                           <label class="col-xs-3 control-label col-padding">cHP <span data-toggle="tooltip" class="glyphicon glyphicon-question-sign cHPTooltip"></span></label>
                            <div class="col-xs-7 col-padding slider-padding">
                               <div class="cHPSlider">
                               </div>
@@ -2169,15 +2189,6 @@
                                  <label class="col-xs-4 control-label col-padding">Trick Room</label>
                                  <div class="col-xs-8 col-padding">
                                  <input type="checkbox" class="input-enviro e-check" id="trickRoom">   
-                                 </div>
-                              </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-4 control-label col-padding">Set Levels</label>
-                                 <div class="col-xs-8 col-padding">
-                                    <select class="form-control input-enviro input-xs input-nopadding" id="setLevels">
-                                       <option value="100" selected>100</option>
-                                       <option value="50">50</option>
-                                    </select>
                                  </div>
                               </div>
                            </form>

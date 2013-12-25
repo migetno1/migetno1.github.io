@@ -493,3 +493,23 @@ var NON_CONTACT_PHYSICAL_MOVES = {
    'Stone Edge' : true,
    'Twineedle' : true,
 };
+
+var ARCEUS = {
+   'arceus-bug' : 'insect plate',
+   'arceus-electric' : 'zap plate',
+   'arceus-fighting' : 'fist plate',
+   'arceus-fire' : 'flame plate',
+   'arceus-flying' : 'sky plate',
+   'arceus-ghost' : 'spooky plate',
+   'arceus-grass' : 'meadow plate',
+   'arceus-ground' : 'earth plate',
+   'arceus-ice' : 'icicle plate',
+   'arceus-poison' : 'toxic plate',
+   'arceus-psychic' : 'mind plate',
+   'arceus-rock' : 'stone plate',
+   'arceus-steel' : 'iron plate',
+   'arceus-water' : 'splash plate',
+   'arceus-dark' : 'dread plate',
+   'arceus-dragon' : 'draco plate',
+   'arceus-fairy' : 'pixie plate',
+};

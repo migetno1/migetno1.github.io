@@ -1301,7 +1301,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    // hidden power
    if (move.name === 'Hidden Power') {
       move.type = getHiddenPowerType(attacker);
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    // protean
    if (attacker.ability === 'protean') {
@@ -1336,38 +1336,38 @@ function getDamageAmount(description, attacker, target, move, environment, rando
          attacker.ability !== 'klutz') {
       description.attackerItem = ITEMS[attacker.item].name;
       move.type = NATURAL_GIFT_BERRIES[attacker.item].type;
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    // take into account normalize
    if (attacker.ability === 'normalize') {
       description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Normal;
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    // take into account drives
    if (attacker.item === 'shock drive' &&
          move.name === 'Techno Blast') {
       description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Electric;
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    if (attacker.item === 'burn drive' &&
          move.name === 'Techno Blast') {
       description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Fire;
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    if (attacker.item === 'chill drive' &&
          move.name === 'Techno Blast') {
       description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Ice;
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    if (attacker.item === 'douse drive' &&
          move.name === 'Techno Blast') {
       description.attackerItem = ITEMS[attacker.item].name;
       move.type = TYPE_NAME_TO_ID.Water;
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    // multitype and judgement
    if (attacker.ability === 'multitype' &&
@@ -1376,7 +1376,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
       description.attackerAbility = ABILITIES[attacker.ability].name;
       description.attackerItem = ITEMS[attacker.item].name;
       move.type = MULTITYPE_PLATES[attacker.item];
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    // weather ball
    if (move.name === 'Weather Ball') {
@@ -1401,7 +1401,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
             move.type = TYPE_NAME_TO_ID.Rock;
             break;
       };
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    var level = attacker.level;
    var basePower = getBasePower(description, attacker, target, move, environment);
@@ -1409,19 +1409,19 @@ function getDamageAmount(description, attacker, target, move, environment, rando
          move.type === TYPE_NAME_TO_ID.Normal) { 
       description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Flying; 
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    if (attacker.ability === 'refrigerate' && 
          move.type === TYPE_NAME_TO_ID.Normal) { 
       description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Ice; 
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    if (attacker.ability === 'pixilate' && 
          move.type === TYPE_NAME_TO_ID.Normal) { 
       description.attackerAbility = ABILITIES[attacker.ability].name;
       move.type = TYPE_NAME_TO_ID.Fairy; 
-      description.moveType = move.type;
+      description.moveType = TYPE_ID_TO_NAME[move.type];
    };
    var attack = getAttack(description, attacker, target, move, environment);
    var defence = getDefence(description, attacker, target, move, environment);
@@ -1643,6 +1643,10 @@ function getAttackResults(attacker, target, environment, attackerStatBoosts) {
                Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MAX, false) * 10 / 10)
             );
          };
+      };
+      if (typeof description.moveType !== 'undefined') {
+         // we should include this somewhere
+         result.moveType = description.moveType;
       };
       result.description = buildDescription(description);
       results.attacks.push(result);

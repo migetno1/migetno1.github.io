@@ -194,4 +194,6 @@ var ITEMS = {
    'scizorite' : { 'name' : 'Scizorite', },
    'tyranitarite' : { 'name' : 'Tyranitarite', },
    'venusaurite' : { 'name' : 'Venusaurite', },
+   'aggronite' : { 'name' : 'Aggronite', },
+   'weakness policy' : { 'name' : 'Weakness Policy', },
 };

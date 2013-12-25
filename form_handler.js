@@ -21,6 +21,12 @@ $(document).ready(function() {
          saveData();
       }
    });
+   
+   //initialise tooltips
+   $('.cHPTooltip').tooltip({
+      placement: 'top',
+      title: 'Current HP',
+   });
 
    /**
      * Initialise autocomplete
@@ -150,17 +156,25 @@ $(document).ready(function() {
       };
       if (setData.nature) {
          pokemonData.find('.nature').val(setData.nature);
+      } else {
+         pokemonData.find('.nature').val('');
       };
       if (setData.ability) {
          pokemonData.find('.ability').val(setData.ability);
+      } else {
+         pokemonData.find('.ability').val('');
       };
       if (setData.item) {
          pokemonData.find('.pokemon-item').val(setData.item);
+      } else {
+         pokemonData.find('.pokemon-item').val('');
       };
       if (typeof setData.moves !== 'undefined') {
          for (var i = 0; i < setData.moves.length; i++) {
             if (setData.moves[i]) {
                pokemonData.find('.move-' + i).val(setData.moves[i]);
+            } else {
+               pokemonData.find('.move-' + i).val('');
             };
          };
       };
@@ -241,6 +255,10 @@ $(document).ready(function() {
    });
 
    // on click of reset all
+   $("#pre-reset").on('click', function() {
+      $(this).removeClass('in').addClass('collapse');
+      $("#reset-all").removeClass('collapse').addClass('in');
+   });
    $("#reset-all").on('click', function() {
       environment = new Environment(6, 6);
       printOuts = {};
@@ -248,6 +266,8 @@ $(document).ready(function() {
       updateForm();
       updateTable();
       saveData();
+      $(this).removeClass('in').addClass('collapse');
+      $("#pre-reset").removeClass('collapse').addClass('in');
    });
 
    // on click of switch
@@ -706,6 +726,9 @@ $(document).ready(function() {
             percentage_max = results.attacks[0].damagePercentageSingleHit[1];
          };
          var move = MOVE_DATA[results.attacks[0].move].name;
+         if (move === 'Hidden Power') {
+            move += ' ' + results.attacks[0].moveType;
+         };
          $(cell_id).css("background-color", getCellColor(percentage_min));
          $(cell_id).html(percentage_min + ' - ' + percentage_max + "%<br>" + move);
          if (results.attackerStrikeFirst) {
@@ -724,8 +747,11 @@ $(document).ready(function() {
                percent_min = results.attacks[i].damagePercentageSingleHit[0];
                percent_max = results.attacks[i].damagePercentageSingleHit[1];
             };
-               var mv = MOVE_DATA[results.attacks[i].move].name;
-               string += mv + ': ' + percent_min + ' - ' + percent_max + '%<br>';
+            var mv = MOVE_DATA[results.attacks[i].move].name;
+            if (mv === 'Hidden Power') {
+               mv += ' ' + results.attacks[i].moveType;
+            };
+            string += mv + ': ' + percent_min + ' - ' + percent_max + '%<br>';
             };
          $(cell_id).popover({
             placement: "auto top",
@@ -744,7 +770,7 @@ $(document).ready(function() {
    function getCellColor(percentage) {
       if (percentage <= 50 || typeof percentage !== 'number') {
          return '#f2dede';
-      } else if (percentage <= 100) {
+      } else if (percentage < 100) {
          return '#fcf8e3';
       } else {
          return '#dff0d8';
@@ -763,4 +789,32 @@ $(document).ready(function() {
       };
       return null;
    };
+   
+   //Expand and collapse buttons
+   $('#team1').on('shown.bs.collapse', function () {
+      if ($("#team1").hasClass('in') || $("#team1").hasClass('collapsing')){
+         $("#collapseTeam1").html('Collapse');
+         $("#collapseTeam1").removeClass('btn-info').addClass('btn-primary');
+      };
+   })
+   $('#team1').on('hidden.bs.collapse', function () {
+      if ($("#team1").hasClass('collapsing') || $("#team1").hasClass('collapse')){
+         $("#collapseTeam1").html('Expand');
+         $("#collapseTeam1").removeClass('btn-primary').addClass('btn-info');
+      };
+   })
+   $('#team0').on('shown.bs.collapse', function () {
+      if ($("#team0").hasClass('in') || $("#team0").hasClass('collapsing')){
+         $("#collapseTeam0").html('Collapse');
+         $("#collapseTeam0").removeClass('btn-info').addClass('btn-primary');
+      };
+   })
+   $('#team0').on('hidden.bs.collapse', function () {
+      if ($("#team0").hasClass('collapsing') || $("#team0").hasClass('collapse')){
+         $("#collapseTeam0").html('Expand');
+         $("#collapseTeam0").removeClass('btn-primary').addClass('btn-info');
+      };
+   })
+
+   
 });

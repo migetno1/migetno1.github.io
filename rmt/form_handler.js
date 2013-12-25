@@ -43,6 +43,10 @@ $(document).ready(function() {
       placement: 'top',
       title: 'This filters out Pokemon that do not outspeed at least this many Pokemon on your team.',
    });
+   $('.cHPTooltip').tooltip({
+      placement: 'top',
+      title: 'Current HP',
+   });
 
    /**
      * Initialise autocomplete
@@ -245,17 +249,25 @@ $(document).ready(function() {
       };
       if (setData.nature) {
          pokemonData.find('.nature').val(setData.nature);
+      } else {
+         pokemonData.find('.nature').val('');
       };
       if (setData.ability) {
          pokemonData.find('.ability').val(setData.ability);
+      } else {
+         pokemonData.find('.ability').val('');
       };
       if (setData.item) {
          pokemonData.find('.pokemon-item').val(setData.item);
+      } else {
+         pokemonData.find('.pokemon-item').val('');
       };
       if (typeof setData.moves !== 'undefined') {
          for (var i = 0; i < setData.moves.length; i++) {
             if (setData.moves[i]) {
                pokemonData.find('.move-' + i).val(setData.moves[i]);
+            } else {
+               pokemonData.find('.move-' + i).val('');
             };
          };
       };
@@ -843,6 +855,9 @@ $(document).ready(function() {
          var percentage_min = results.attacks[0].damagePercentage[0];
          var percentage_max = results.attacks[0].damagePercentage[1];
          var move = MOVE_DATA[results.attacks[0].move].name;
+         if (move === 'Hidden Power') {
+            move += ' ' + results.attacks[0].moveType;
+         };
          $(cell_id).css("background-color", getCellColor(percentage_min));
          $(cell_id).html(percentage_min + ' - ' + percentage_max + "%<br>" + move);
          if (results.attackerStrikeFirst) {
@@ -856,6 +871,9 @@ $(document).ready(function() {
             var percent_min = results.attacks[i].damagePercentage[0];
             var percent_max = results.attacks[i].damagePercentage[1];
             var mv = MOVE_DATA[results.attacks[i].move].name;
+            if (mv === 'Hidden Power') {
+               mv += ' ' + results.attacks[i].moveType;
+            };
             string += mv + ': ' + percent_min + ' - ' + percent_max + '%<br>';
          };
          $(cell_id).popover({
@@ -875,7 +893,7 @@ $(document).ready(function() {
    function getCellColor(percentage) {
       if (percentage <= 50 || typeof percentage !== 'number') {
          return '#dff0d8';
-      } else if (percentage <= 100) {
+      } else if (percentage < 100) {
          return '#fcf8e3';
       } else {
          return '#f2dede';
@@ -906,6 +924,25 @@ $(document).ready(function() {
                ' Up-to-date');
       };
    };
-
+   
+   //Expand and collapse buttons
+   $('#collapseTier').on('shown.bs.collapse', function () {
+      $("#expandTier").html('Collapse');
+   })
+   $('#collapseTier').on('hidden.bs.collapse', function () {
+      $("#expandTier").html('Expand');
+   })
+   $('#team1').on('shown.bs.collapse', function () {
+      if ($("#team1").hasClass('in') || $("#team1").hasClass('collapsing')){
+         $("#collapseTeam1").html('Collapse');
+         $("#collapseTeam1").removeClass('btn-info').addClass('btn-primary');
+      };
+   })
+   $('#team1').on('hidden.bs.collapse', function () {
+      if ($("#team1").hasClass('collapsing') || $("#team1").hasClass('collapse')){
+         $("#collapseTeam1").html('Expand');
+         $("#collapseTeam1").removeClass('btn-primary').addClass('btn-info');
+      };
+   })
    
 });
