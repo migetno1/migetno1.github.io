@@ -1292,6 +1292,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    var moveType = move.type;
    var attackerType = POKEMON_DATA[attacker.name].type.slice(0);
    var attackerItem = attacker.item;
+   var targetType = POKEMON_DATA[target.name].type.slice(0);
    // klutz
    if (attacker.ability === 'klutz') {
       description.attackerAbility = ABILITIES[attacker.ability].name;
@@ -1313,6 +1314,12 @@ function getDamageAmount(description, attacker, target, move, environment, rando
       description.attackerAbility = ABILITIES[attacker.ability].name;
       description.attackerItem = ITEMS[attacker.item].name;
       POKEMON_DATA[attacker.name].type = [ MULTITYPE_PLATES[attacker.item] ];
+   };
+   if (target.ability === 'multitype' &&
+         typeof MULTITYPE_PLATES[target.item] !== undefined) {
+      description.defenderAbility = ABILITIES[target.ability].name;
+      description.defenderItem = ITEMS[target.item].name;
+      POKEMON_DATA[target.name].type = [ MULTITYPE_PLATES[target.item] ];
    };
    // take into account mold breaker
    var moldbreaker = (attacker.ability === 'mold breaker' ||
@@ -1483,6 +1490,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    move.type = moveType;
    // return normal pokemon type after calculation
    POKEMON_DATA[attacker.name].type = attackerType.slice(0);
+   POKEMON_DATA[target.name].type = targetType.slice(0);
    // return normal item after calculation
    attacker.item = attackerItem;
    // return normal stat boosts
