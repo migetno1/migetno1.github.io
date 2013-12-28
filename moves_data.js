@@ -3819,7 +3819,7 @@ var MOVE_DATA = {
       'name' : 'Techno Blast',
       'type' : 0,
       'category' : 1,
-      'power' : 85,
+      'power' : 120,
    },
    'relic song' : {
       'num' : '547',

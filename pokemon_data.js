@@ -3734,9 +3734,9 @@ var POKEMON_DATA = {
       'gender' : null,
       'stats' : [ 40, 29, 45, 29, 45, 36, ],
    },
-   'wormadam-plant' : {
+   'wormadam' : {
       'num' : '#413',
-      'name' : 'Wormadam-Plant',
+      'name' : 'Wormadam',
       'type' : [ 11, 4 ],
       'mega' : null,
       'weight' : 6.5,
@@ -5048,18 +5048,18 @@ var POKEMON_DATA = {
       'gender' : 1,
       'stats' : [ 70, 60, 75, 110, 75, 90, ],
    },
-   'basculin-r' : {
+   'basculin' : {
       'num' : '#550',
-      'name' : 'Basculin-R',
+      'name' : 'Basculin',
       'type' : [ 2,  ],
       'mega' : null,
       'weight' : 18,
       'gender' : null,
       'stats' : [ 70, 92, 65, 80, 55, 98, ],
    },
-   'basculin-b' : {
+   'basculin-blue-striped' : {
       'num' : '#550',
-      'name' : 'Basculin-B',
+      'name' : 'Basculin-Blue-Striped',
       'type' : [ 2,  ],
       'mega' : null,
       'weight' : 18,
@@ -6274,11 +6274,11 @@ var POKEMON_DATA = {
    },
    'meowstic' : {
       'num' : '#678',
-      'name' : 'Meowstic-M',
+      'name' : 'Meowstic',
       'type' : [ 10,  ],
       'mega' : null,
       'weight' : 8.5,
-      'gender' : null,
+      'gender' : 0,
       'stats' : [ 74, 48, 76, 83, 81, 104, ],
    },
    'meowstic-f' : {
@@ -6287,7 +6287,7 @@ var POKEMON_DATA = {
       'type' : [ 10,  ],
       'mega' : null,
       'weight' : 8.5,
-      'gender' : null,
+      'gender' : 1,
       'stats' : [ 74, 48, 76, 83, 81, 104, ],
    },
    'honedge' : {
@@ -6805,7 +6805,7 @@ var POKEMON_DATA = {
    },
    'mewtwo-mega-x' : {
       'num' : '',
-      'name' : 'Mewtwo-Meta-X',
+      'name' : 'Mewtwo-Mega-X',
       'type' : [ 10, 6 ],
       'mega' : 1,
       'weight' : 127,

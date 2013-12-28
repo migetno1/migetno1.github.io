@@ -24,6 +24,7 @@
       <script src="multi_hit_moves.js"></script>
       <script src="mega_evos.js"></script>
       <script src="pokemon_list.js"></script>
+      <script src="aliases.js"></script>
       <script src="pokemon_sets.js"></script>
       <script src="default_pokemon_sets.js"></script>
       <script src="items.js"></script>
@@ -150,7 +151,7 @@
                         <div class="col-xs-6">
                            <h2 class="align-right">
                               <button class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#team0" id="collapseTeam0">Collapse</button>
-                              <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Import</button>
+                              <button class="btn btn-primary btn-xs import-btn" data-toggle="modal" data-target="#ModalTeam0">Import</button>
                               <button class="btn btn-warning btn-xs switch">Switch</button>
                               <button class="btn btn-danger btn-xs reset-team" id="reset-0">Reset</button>
                            </h2>
@@ -2141,7 +2142,7 @@
                         <div class="col-xs-5">
                            <h2 class="align-right">
                               <button class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#team1" id="collapseTeam1">Collapse</button>
-                              <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Import</button>
+                              <button class="btn btn-primary btn-xs import-btn" data-toggle="modal" data-target="#ModalTeam1">Import</button>
                               <button class="btn btn-danger btn-xs reset-team" id="reset-1">Reset</button>
                            </h2>
                         </div>
@@ -4198,22 +4199,42 @@
             </div>
          </div>
       </div><!-- close container -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="ModalTeam0" tabindex="-1" role="dialog" aria-labelledby="ModalLabelTeam0" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel">Import from Pokemon Showdown</h4>
+              <h4 class="modal-title" id="ModalLabelTeam0">Import from Pokemon Showdown</h4>
             </div>
             <div class="modal-body">
                <form>
-                  <textarea class="form-control" rows="20" id="import-text" placeholder="Paste here! NO HIDDEN POWERS! MEGAS SHOULD BE POKEMONNAME-MEGA!"></textarea>
+                  <textarea class="form-control" rows="20" id="import-text-0" placeholder="Paste here!"></textarea>
                </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="import btn btn-primary" id="import-0" data-dismiss="modal">Your Team</button>
-              <button type="button" class="import btn btn-danger" id="import-1" data-dismiss="modal">Other Team</button>
+              <button type="button" class="export btn btn-primary" id="export-0">Export from Your Team</button>
+              <button type="button" class="import btn btn-success" id="import-0" data-dismiss="modal">Import to Your Team</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      <div class="modal fade" id="ModalTeam1" tabindex="-1" role="dialog" aria-labelledby="ModalLabelTeam1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="ModalLabelTeam1">Import from Pokemon Showdown</h4>
+            </div>
+            <div class="modal-body">
+               <form>
+                  <textarea class="form-control" rows="20" id="import-text-1" placeholder="Paste here!"></textarea>
+               </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="export btn btn-primary" id="export-1">Export from Target Team</button>
+              <button type="button" class="import btn btn-success" id="import-1" data-dismiss="modal">Import to Target Team</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

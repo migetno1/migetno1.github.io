@@ -32,6 +32,25 @@ function importTeam(text) {
 };
 
 /**
+  * Converts a Pokemon team into a string.
+  * The string is in standard showdown format.
+  * It currently does not produce nicknames.
+  * @param pokemonTeam an array of Pokemon
+  * @return the export text.
+  */
+function exportTeam(pokemonTeam) {
+   var text = '';
+   for (var i = 0; i < pokemonTeam.length; i++) {
+      var pokemon = pokemonTeam[i];
+      if (pokemon.valid) {
+         // export it
+         text += exportPokemon(pokemon);
+      };
+   };
+   return text;
+};
+
+/**
   * Converts an array of strings into a Pokemon
   * the string is in standard showdown format.
   * @param textArray array of strings
@@ -39,7 +58,7 @@ function importTeam(text) {
   * @return a Pokemon object
   */
 function importPokemon(textArray, i) {
-   var debug = true;
+   var debug = false;
    var pokemon = new Pokemon();
    pokemon.valid = true;
    var pokemonName = null;
@@ -72,6 +91,10 @@ function importPokemon(textArray, i) {
    if (typeof ARCEUS[pokemonName.toLowerCase()] !== 'undefined') {
       pokemonName = 'Arceus';
       item = ARCEUS[pokemonName.toLowerCase()];
+   };
+   // check for aliases
+   if (typeof ALIAS_POKEMON[pokemonName.toLowerCase()] !== 'undefined') {
+      pokemonName = ALIAS_POKEMON[pokemonName.toLowerCase()];
    };
    if (! isValidPokemonName(pokemonName)) {
       pokemonName = null;
@@ -235,6 +258,10 @@ function importPokemon(textArray, i) {
             iv = changeIVs(iv, HIDDEN_POWER[match[1].toLowerCase()]);
          };
       };
+      // check for aliases
+      if (typeof ALIAS_MOVES[moves[j].toLowerCase()] !== 'undefined') {
+         moves[j] = ALIAS_MOVES[moves[j].toLowerCase()];
+      };
       if (! isValidMoveName(moves[j])) {
          moves[j] = null;
       };
@@ -271,6 +298,78 @@ function importPokemon(textArray, i) {
    return pokemon;
 };
 
+/**
+  * Converts a Pokemon into standard
+  * Showdown format.
+  * @param pokemon valid Pokemon to export
+  * @return a string that descripes the Pokemon.
+  */
+function exportPokemon(pokemon) {
+   var text = '';
+   // PokemonName (F) @ Item
+   text += POKEMON_DATA[pokemon.name].name;
+   if (pokemon.gender !== GENDER_GENDERLESS) {
+      text += ' (';
+      if (pokemon.gender === GENDER_MALE) {
+         text += 'M';
+      } else {
+         text += 'F';
+      };
+      text += ')';
+   };
+   if (pokemon.item) {
+      text += ' @ ' + ITEMS[pokemon.item].name;
+   };
+   text += '\n';
+   // Ability: (ability)
+   if (pokemon.ability) {
+      text += 'Ability: ' + ABILITIES[pokemon.ability].name + '\n';
+   };
+   // Level: 100
+   if (pokemon.level !== 100) {
+      text += 'Level: ' + pokemon.level + '\n';
+   };
+   // EVs: 
+   if (! isDefaultEVs(pokemon.ev)) {
+      // export EVs
+      var evs = [];
+      for (var stat = 0; stat < 6; stat++) {
+         if (pokemon.ev[stat] !== 0) {
+            evs.push(pokemon.ev[stat] + ' ' + getShowdownStat(stat));
+         };
+      };
+      text += 'EVs: ';
+      text += evs.join(' / ');
+      text += '\n';
+   };
+   // Bold Nature
+   if (pokemon.nature) {
+      text += NATURES[pokemon.nature].name + ' Nature\n';
+   };
+   // IVs:
+   if (! isDefaultIVs(pokemon.iv)) {
+      // export IVs
+      var ivs = [];
+      for (var stat = 0; stat < 6; stat++) {
+         if (pokemon.iv[stat] !== 31) {
+            ivs.push(pokemon.iv[stat] + ' ' + getShowdownStat(stat));
+         };
+      };
+      text += 'IVs: ';
+      text += ivs.join(' / ');
+      text += '\n';
+   };
+   // Moves:
+   for (var moveNum = 0; moveNum < 4; moveNum++) {
+      if (pokemon.moves[moveNum]) {
+         // we have a move
+         text += '- ' + MOVE_DATA[pokemon.moves[moveNum]].name + '\n';
+      };
+   };
+   text += '\n';
+   return text;
+};
+
 function convertShowdownStat(evStat) {
    switch (evStat) {
       case 'HP':
@@ -291,6 +390,23 @@ function convertShowdownStat(evStat) {
          return STAT_SPE;
       case 'Spe':
          return STAT_SPE;
+   };
+};
+
+function getShowdownStat(stat) {
+   switch (stat) {
+      case STAT_HP:
+         return 'HP';
+      case STAT_ATT:
+         return 'Atk';
+      case STAT_DEF:
+         return 'Def';
+      case STAT_SPA:
+         return 'SAtk';
+      case STAT_SPD:
+         return 'SDef';
+      case STAT_SPE:
+         return 'Spd';
    };
 };
 
@@ -317,6 +433,20 @@ function getGender(gender) {
 function isDefaultIVs(iv) {
    for (var i = 0; i < iv.length; i++) {
       if (iv[i] !== 31) {
+         return false;
+      };
+   }; 
+   return true;
+};
+
+/**
+  * Determines if all EVs are at 0.
+  * @param ev an array of 6 evs
+  * @return true if all evs == 0, or false otherwise.
+  */
+function isDefaultEVs(ev) {
+   for (var i = 0; i < ev.length; i++) {
+      if (ev[i] !== 0) {
          return false;
       };
    }; 

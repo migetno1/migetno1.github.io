@@ -226,7 +226,7 @@ $(document).ready(function() {
          return null;
       };
       var teamID = res[1];
-      var text = $("#import-text").val();
+      var text = $("#import-text-" + teamID).val();
       var team = importTeam(text);
       if (team === null) {
          return;
@@ -236,6 +236,26 @@ $(document).ready(function() {
       updateStaticData();
       updateTable();
       saveData();
+   });
+
+   // on click of import button
+   $(".import-btn").on('click', function() {
+      // clear the modal text boxes
+      $("#import-text-0").val('');
+      $("#import-text-1").val('');
+   });
+
+   // on submit of export
+   $(".export").on('click', function() {
+      var id = $(this).attr('id');
+      var res = id.split('-');
+      if (res[0] != 'export' || res.length !== 2) {
+         // error
+         return null;
+      };
+      var teamID = res[1];
+      var text = exportTeam(environment.pokemons[teamID]);
+      $("#import-text-" + teamID).val(text);
    });
 
    // on click of reset

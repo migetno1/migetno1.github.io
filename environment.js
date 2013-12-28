@@ -52,7 +52,6 @@ Environment.prototype.resetTeam = function(teamNum) {
    } else {
       numPokemon = this.numTargets;
    };
-   console.log(numPokemon);
    for (var i = 0; i < numPokemon; i++) {
       this.pokemons[teamNum].push(new Pokemon());
    };

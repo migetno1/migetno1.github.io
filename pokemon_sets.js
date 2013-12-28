@@ -1144,7 +1144,7 @@ var POKEMON_SETS = {
          tier : 'ou',
          nature : 'Adamant',
          ability : 'Tough Claws',
-         item : 'Charizardite-X',
+         item : 'Charizardite X',
          moves : [ 'Dragon Dance', 'Flare Blitz', 'Outrage', 'Roost', ],
          ev : [ 0, 252, 0, 0, 0, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
@@ -1157,7 +1157,7 @@ var POKEMON_SETS = {
          tier : 'ou',
          nature : 'Timid',
          ability : 'Drought',
-         item : 'Charizardite-Y',
+         item : 'Charizardite Y',
          moves : [ 'Fire Blast', 'Focus Blast', 'Solar Beam', 'Dragon Pulse', ],
          ev : [ 0, 0, 4, 252, 0, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
@@ -1168,7 +1168,7 @@ var POKEMON_SETS = {
          tier : 'ou',
          nature : 'Naughty',
          ability : 'Drought',
-         item : 'Charizardite-Y',
+         item : 'Charizardite Y',
          moves : [ 'Fire Blast', 'Focus Blast', 'Flare Blitz', 'Hidden Power', ],
          ev : [ 0, 252, 0, 4, 0, 252, ],
          iv : [ 31, 30, 30, 31, 31, 31, ],
@@ -1873,7 +1873,7 @@ var POKEMON_SETS = {
    ],
    'Dragonite' : [
       {
-         name : 'Offensive DDance',
+         name : 'Dragon Dance',
          tier : 'ou',
          nature : 'Adamant',
          ability : 'Multiscale',
@@ -2654,7 +2654,7 @@ var POKEMON_SETS = {
    'Gengar-Mega' : [
       {
          name : 'Most Common',
-         tier : 'ou',
+         tier : 'uber',
          nature : 'Timid',
          ability : 'Shadow Tag',
          item : '',
@@ -4032,7 +4032,7 @@ var POKEMON_SETS = {
          nature : 'Timid',
          ability : 'Adaptability',
          item : 'Lucarionite',
-         moves : [ 'Aura Sphere', 'Dark Pulse', 'Flash Cannon', '', ],
+         moves : [ 'Aura Sphere', 'Dark Pulse', 'Flash Cannon', 'Nasty Plot', ],
          ev : [ 0, 0, 0, 252, 4, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 0, 0, 2, 0, 0, ],

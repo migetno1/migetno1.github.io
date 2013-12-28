@@ -332,7 +332,7 @@ $(document).ready(function() {
          return null;
       };
       var teamID = res[1];
-      var text = $("#import-text").val();
+      var text = $("#import-text-" + teamID).val();
       var team = importTeam(text);
       if (team === null) {
          return;
@@ -342,6 +342,25 @@ $(document).ready(function() {
       updateStaticData();
       updateTable();
       saveData();
+   });
+
+   // on click of import button
+   $(".import-btn").on('click', function() {
+      // clear the modal text boxes
+      $("#import-text-1").val('');
+   });
+
+   // on submit of export
+   $(".export").on('click', function() {
+      var id = $(this).attr('id');
+      var res = id.split('-');
+      if (res[0] != 'export' || res.length !== 2) {
+         // error
+         return null;
+      };
+      var teamID = res[1];
+      var text = exportTeam(environment.pokemons[teamID]);
+      $("#import-text-" + teamID).val(text);
    });
 
    // on click of reset
@@ -808,6 +827,13 @@ $(document).ready(function() {
             $(cell_id).html(num + ':');
          };
       };
+      // fill in rest of table with blank cells
+      for (var i = infoArray.length; i < 100; i++) {
+         var cell_id = '#pokeman-0-' + i;
+         var num = i + 1;
+         $(cell_id).html(num + ':');
+      };
+
       for (var i = 0; i < environment.pokemons[1].length; i++) {
          var pokemon = environment.pokemons[1][i];
          var cell_id = '#pokeman-1-' + i;
@@ -833,6 +859,12 @@ $(document).ready(function() {
                $("#output").html(results.description);
             };
             updateCell(i, j, true, results);
+         };
+      };
+      // fill in the rest of table with blank cells
+      for (var i = infoArray.length; i < 100; i++) {
+         for (var j = 0; j < environment.pokemons[1].length; j++) {
+            updateCell(i, j, false);
          };
       };
    };
