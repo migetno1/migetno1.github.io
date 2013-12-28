@@ -711,7 +711,7 @@ $(document).ready(function() {
                updateCell(i, j, false);
                continue;
             };
-            var results = getAttackResults(attacker, target, environment, true);
+            var results = getAttackResults(attacker, target, environment, true, false);
             printOuts['square-' + i + '-' + j] = results.description;
             if (!printOutDisplayed) {
                printOutDisplayed = true;

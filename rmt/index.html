@@ -58,7 +58,7 @@
             <div class="col-xs-12">
                <h1>bReakMyTeam <em>(Beta)</em></h1>
                <em>A Pokemon damage calculator used for finding out weaknesses in your team</em>
-               <em class="em-right"><a href="../index.html">SweeperCalc</a> | <a href="mailto:sweepercalc@gmail.com">Give Feedback</a> | <a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a> | <a data-toggle="modal" data-target="#myModal2">Not Yet Implemented</a></em>
+               <em class="em-right"><a href="../index.html">SweeperCalc</a> | <a href="mailto:sweepercalc@gmail.com">Give Feedback</a> | <a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a> | <a data-toggle="modal" data-target="#myModal2">Notes</a></em>
                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
                   <input type="hidden" name="cmd" value="_donations">
                   <input type="hidden" name="business" value="sweepercalc@gmail.com">
@@ -127,7 +127,13 @@
                               <div class="form-group form-margin">
                                  <label class="col-xs-8 control-label col-padding">Boosted Sweepers <span id="bSweepersTooltip" data-toggle="tooltip" class="glyphicon glyphicon-question-sign"></span></label>
                                  <div class="col-xs-4 col-padding">
-                                 <input type="checkbox" class="input-tier e-check" id="boostedsweeper">   
+                                 <input type="checkbox" class="input-tier e-check" id="boostedSweeper">   
+                                 </div>
+                              </div>
+                              <div class="form-group form-margin">
+                                 <label class="col-xs-8 control-label col-padding">Enable Priority <span id="priorityTooltip" data-toggle="tooltip" class="glyphicon glyphicon-question-sign"></span></label>
+                                 <div class="col-xs-4 col-padding">
+                                 <input type="checkbox" class="input-tier e-check" id="enablePriority">   
                                  </div>
                               </div>
                               <div class="form-group form-margin">
@@ -152,6 +158,55 @@
                                        <option value="50">50</option>
                                        <option value="5">5</option>
                                     </select>
+                                 </div>
+                              </div>
+                           </form>
+                        </div><!-- close sm 12 -->
+                     </div>
+                  </div><!-- close panel body -->
+               </div><!-- close panel collapse id -->
+            </div><!-- close panel div -->
+            <div class="panel panel-default enviropanel">
+               <div class="panel-heading environment-padding" data-toggle="collapse" data-target="#enviro">
+                     <div class="form-group form-margin">
+                        <div class="col-xs-12">
+                           <h4 class="h4padding">Other Variables</h4>
+                        </div>
+                     </div>
+               </div><!-- close panel heading -->
+               <div id="enviro" class="panel-collapse collapse">
+                  <div class="panel-body"> 
+                     <div class="row">
+                        <div class="col-xs-12">
+                           <form class="form-horizontal" role="form">
+                              <div class="form-group form-margin">
+                                 <label class="col-xs-4 control-label col-padding">Weather</label>
+                                 <div class="col-xs-8 col-padding">
+                                    <select class="form-control input-enviro input-xs input-nopadding" id="weather">
+                                       <option value="0">None</option>
+                                       <option value="1">Sun</option>
+                                       <option value="2">Rain</option>
+                                       <option value="3">Sand</option>
+                                       <option value="4">Hail</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-group form-margin">
+                                 <label class="col-xs-4 control-label col-padding">Light Screen</label>
+                                 <div class="col-xs-8 col-padding">
+                                 <input type="checkbox" class="input-enviro e-check" id="lightScreen">   
+                                 </div>
+                              </div>
+                              <div class="form-group form-margin">
+                                 <label class="col-xs-4 control-label col-padding">Reflect</label>
+                                 <div class="col-xs-8 col-padding">
+                                 <input type="checkbox" class="input-enviro e-check" id="reflect">   
+                                 </div>
+                              </div>
+                              <div class="form-group form-margin">
+                                 <label class="col-xs-4 control-label col-padding">Trick Room</label>
+                                 <div class="col-xs-8 col-padding">
+                                 <input type="checkbox" class="input-enviro e-check" id="trickRoom">   
                                  </div>
                               </div>
                            </form>
@@ -2149,55 +2204,6 @@
          </div><!-- close pokemon div -->
                   </form>
                </div>
-            <div class="panel panel-default enviropanel">
-               <div class="panel-heading environment-padding" data-toggle="collapse" data-target="#enviro">
-                     <div class="form-group form-margin">
-                        <div class="col-xs-12">
-                           <h4 class="h4padding">Other Variables</h4>
-                        </div>
-                     </div>
-               </div><!-- close panel heading -->
-               <div id="enviro" class="panel-collapse collapse in">
-                  <div class="panel-body"> 
-                     <div class="row">
-                        <div class="col-xs-12">
-                           <form class="form-horizontal" role="form">
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-4 control-label col-padding">Weather</label>
-                                 <div class="col-xs-8 col-padding">
-                                    <select class="form-control input-enviro input-xs input-nopadding" id="weather">
-                                       <option value="0">None</option>
-                                       <option value="1">Sun</option>
-                                       <option value="2">Rain</option>
-                                       <option value="3">Sand</option>
-                                       <option value="4">Hail</option>
-                                    </select>
-                                 </div>
-                              </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-4 control-label col-padding">Light Screen</label>
-                                 <div class="col-xs-8 col-padding">
-                                 <input type="checkbox" class="input-enviro e-check" id="lightScreen">   
-                                 </div>
-                              </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-4 control-label col-padding">Reflect</label>
-                                 <div class="col-xs-8 col-padding">
-                                 <input type="checkbox" class="input-enviro e-check" id="reflect">   
-                                 </div>
-                              </div>
-                              <div class="form-group form-margin">
-                                 <label class="col-xs-4 control-label col-padding">Trick Room</label>
-                                 <div class="col-xs-8 col-padding">
-                                 <input type="checkbox" class="input-enviro e-check" id="trickRoom">   
-                                 </div>
-                              </div>
-                           </form>
-                        </div><!-- close sm 12 -->
-                     </div>
-                  </div><!-- close panel body -->
-               </div><!-- close panel collapse id -->
-            </div><!-- close panel div -->
             </div>
             <div class="col-xs-8 col-lg-9">
                <table class="table table-bordered">
@@ -3142,12 +3148,19 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel2">Not Yet Implemented</h4>
+              <h4 class="modal-title" id="myModalLabel2">Notes</h4>
             </div>
             <div class="modal-body">
+               <b>Little Triangles</b>
+               <p>The little triangles in the top-right corner indicate that the offensive pokemon is faster than the defensive pokemon.</p>
+               
+               <b>Importing</b>
+               <p>The importer can ignore text between individual Pokemon (eg notes for Pokemon in RMTs). Just make sure that the Pokemon are in Pokemon Showdown's import/export format</p>
+               <br />
+               <h4><u>Not Yet Implemented</u></h4>
                <b>Moves</b>
                      <ul>
-                        <li>Autonomize</li>
+                        <li>Autotomize (weight portion)</li>
                         <li>Metal Burst</li>
                         <li>Bide</li>
                         <li>Counter</li>

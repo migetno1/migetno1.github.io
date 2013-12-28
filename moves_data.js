@@ -5,6 +5,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'karate chop' : {
       'num' : '2',
@@ -12,6 +13,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'double slap' : {
       'num' : '3',
@@ -19,6 +21,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'comet punch' : {
       'num' : '4',
@@ -26,6 +29,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 18,
+      'priority' : 0,
    },
    'mega punch' : {
       'num' : '5',
@@ -33,6 +37,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'pay day' : {
       'num' : '6',
@@ -40,6 +45,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'fire punch' : {
       'num' : '7',
@@ -47,6 +53,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'ice punch' : {
       'num' : '8',
@@ -54,6 +61,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'thunder punch' : {
       'num' : '9',
@@ -61,6 +69,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'scratch' : {
       'num' : '10',
@@ -68,6 +77,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'vice grip' : {
       'num' : '11',
@@ -75,6 +85,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 55,
+      'priority' : 0,
    },
    'guillotine' : {
       'num' : '12',
@@ -82,6 +93,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'razor wind' : {
       'num' : '13',
@@ -89,6 +101,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'swords dance' : {
       'num' : '14',
@@ -96,6 +109,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'cut' : {
       'num' : '15',
@@ -103,6 +117,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'gust' : {
       'num' : '16',
@@ -110,6 +125,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'wing attack' : {
       'num' : '17',
@@ -117,6 +133,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'whirlwind' : {
       'num' : '18',
@@ -124,6 +141,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : -6,
    },
    'fly' : {
       'num' : '19',
@@ -131,6 +149,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'bind' : {
       'num' : '20',
@@ -138,6 +157,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'slam' : {
       'num' : '21',
@@ -145,6 +165,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'vine whip' : {
       'num' : '22',
@@ -152,6 +173,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 45,
+      'priority' : 0,
    },
    'stomp' : {
       'num' : '23',
@@ -159,6 +181,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'double kick' : {
       'num' : '24',
@@ -166,6 +189,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 30,
+      'priority' : 0,
    },
    'mega kick' : {
       'num' : '25',
@@ -173,6 +197,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'jump kick' : {
       'num' : '26',
@@ -180,6 +205,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'rolling kick' : {
       'num' : '27',
@@ -187,6 +213,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'sand attack' : {
       'num' : '28',
@@ -194,6 +221,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'headbutt' : {
       'num' : '29',
@@ -201,6 +229,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'horn attack' : {
       'num' : '30',
@@ -208,6 +237,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'fury attack' : {
       'num' : '31',
@@ -215,6 +245,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'horn drill' : {
       'num' : '32',
@@ -222,6 +253,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'tackle' : {
       'num' : '33',
@@ -229,6 +261,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'body slam' : {
       'num' : '34',
@@ -236,6 +269,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 85,
+      'priority' : 0,
    },
    'wrap' : {
       'num' : '35',
@@ -243,6 +277,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'take down' : {
       'num' : '36',
@@ -250,6 +285,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'thrash' : {
       'num' : '37',
@@ -257,6 +293,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'double-edge' : {
       'num' : '38',
@@ -264,6 +301,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'tail whip' : {
       'num' : '39',
@@ -271,6 +309,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'poison sting' : {
       'num' : '40',
@@ -278,6 +317,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'twineedle' : {
       'num' : '41',
@@ -285,6 +325,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 25,
+      'priority' : 0,
    },
    'pin missile' : {
       'num' : '42',
@@ -292,6 +333,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 25,
+      'priority' : 0,
    },
    'leer' : {
       'num' : '43',
@@ -299,6 +341,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'bite' : {
       'num' : '44',
@@ -306,6 +349,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'growl' : {
       'num' : '45',
@@ -313,6 +357,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'roar' : {
       'num' : '46',
@@ -320,6 +365,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : -6,
    },
    'sing' : {
       'num' : '47',
@@ -327,6 +373,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'supersonic' : {
       'num' : '48',
@@ -334,6 +381,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sonic boom' : {
       'num' : '49',
@@ -341,6 +389,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'disable' : {
       'num' : '50',
@@ -348,6 +397,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'acid' : {
       'num' : '51',
@@ -355,6 +405,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'ember' : {
       'num' : '52',
@@ -362,6 +413,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'flamethrower' : {
       'num' : '53',
@@ -369,6 +421,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'mist' : {
       'num' : '54',
@@ -376,6 +429,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'water gun' : {
       'num' : '55',
@@ -383,6 +437,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'hydro pump' : {
       'num' : '56',
@@ -390,6 +445,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 110,
+      'priority' : 0,
    },
    'surf' : {
       'num' : '57',
@@ -397,6 +453,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'ice beam' : {
       'num' : '58',
@@ -404,6 +461,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'blizzard' : {
       'num' : '59',
@@ -411,6 +469,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 110,
+      'priority' : 0,
    },
    'psybeam' : {
       'num' : '60',
@@ -418,6 +477,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'bubble beam' : {
       'num' : '61',
@@ -425,6 +485,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'aurora beam' : {
       'num' : '62',
@@ -432,6 +493,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'hyper beam' : {
       'num' : '63',
@@ -439,6 +501,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 150,
+      'priority' : 0,
    },
    'peck' : {
       'num' : '64',
@@ -446,6 +509,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 35,
+      'priority' : 0,
    },
    'drill peck' : {
       'num' : '65',
@@ -453,6 +517,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'submission' : {
       'num' : '66',
@@ -460,6 +525,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'low kick' : {
       'num' : '67',
@@ -467,6 +533,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'counter' : {
       'num' : '68',
@@ -474,6 +541,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 0,
+      'priority' : -5,
    },
    'seismic toss' : {
       'num' : '69',
@@ -481,6 +549,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'strength' : {
       'num' : '70',
@@ -488,6 +557,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'absorb' : {
       'num' : '71',
@@ -495,6 +565,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 20,
+      'priority' : 0,
    },
    'mega drain' : {
       'num' : '72',
@@ -502,6 +573,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'leech seed' : {
       'num' : '73',
@@ -509,6 +581,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'growth' : {
       'num' : '74',
@@ -516,6 +589,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'razor leaf' : {
       'num' : '75',
@@ -523,6 +597,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 55,
+      'priority' : 0,
    },
    'solar beam' : {
       'num' : '76',
@@ -530,6 +605,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'poison powder' : {
       'num' : '77',
@@ -537,6 +613,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'stun spore' : {
       'num' : '78',
@@ -544,6 +621,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sleep powder' : {
       'num' : '79',
@@ -551,6 +629,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'petal dance' : {
       'num' : '80',
@@ -558,6 +637,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'string shot' : {
       'num' : '81',
@@ -565,6 +645,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'dragon rage' : {
       'num' : '82',
@@ -572,6 +653,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'fire spin' : {
       'num' : '83',
@@ -579,6 +661,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 35,
+      'priority' : 0,
    },
    'thunder shock' : {
       'num' : '84',
@@ -586,6 +669,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'thunderbolt' : {
       'num' : '85',
@@ -593,6 +677,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'thunder wave' : {
       'num' : '86',
@@ -600,6 +685,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'thunder' : {
       'num' : '87',
@@ -607,6 +693,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 110,
+      'priority' : 0,
    },
    'rock throw' : {
       'num' : '88',
@@ -614,6 +701,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'earthquake' : {
       'num' : '89',
@@ -621,6 +709,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'fissure' : {
       'num' : '90',
@@ -628,6 +717,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'dig' : {
       'num' : '91',
@@ -635,6 +725,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'toxic' : {
       'num' : '92',
@@ -642,6 +733,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'confusion' : {
       'num' : '93',
@@ -649,6 +741,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'psychic' : {
       'num' : '94',
@@ -656,6 +749,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'hypnosis' : {
       'num' : '95',
@@ -663,6 +757,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'meditate' : {
       'num' : '96',
@@ -670,6 +765,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'agility' : {
       'num' : '97',
@@ -677,6 +773,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'quick attack' : {
       'num' : '98',
@@ -684,6 +781,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 40,
+      'priority' : 1,
    },
    'rage' : {
       'num' : '99',
@@ -691,6 +789,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 20,
+      'priority' : 0,
    },
    'teleport' : {
       'num' : '100',
@@ -698,6 +797,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'night shade' : {
       'num' : '101',
@@ -705,6 +805,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'mimic' : {
       'num' : '102',
@@ -712,6 +813,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'screech' : {
       'num' : '103',
@@ -719,6 +821,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'double team' : {
       'num' : '104',
@@ -726,6 +829,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'recover' : {
       'num' : '105',
@@ -733,6 +837,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'harden' : {
       'num' : '106',
@@ -740,6 +845,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'minimize' : {
       'num' : '107',
@@ -747,6 +853,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'smokescreen' : {
       'num' : '108',
@@ -754,6 +861,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'confuse ray' : {
       'num' : '109',
@@ -761,6 +869,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'withdraw' : {
       'num' : '110',
@@ -768,6 +877,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'defense curl' : {
       'num' : '111',
@@ -775,6 +885,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'barrier' : {
       'num' : '112',
@@ -782,6 +893,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'light screen' : {
       'num' : '113',
@@ -789,6 +901,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'haze' : {
       'num' : '114',
@@ -796,6 +909,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'reflect' : {
       'num' : '115',
@@ -803,6 +917,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'focus energy' : {
       'num' : '116',
@@ -810,6 +925,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'bide' : {
       'num' : '117',
@@ -817,6 +933,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 1,
    },
    'metronome' : {
       'num' : '118',
@@ -824,6 +941,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'mirror move' : {
       'num' : '119',
@@ -831,6 +949,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'self-destruct' : {
       'num' : '120',
@@ -838,6 +957,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 200,
+      'priority' : 0,
    },
    'egg bomb' : {
       'num' : '121',
@@ -845,6 +965,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'lick' : {
       'num' : '122',
@@ -852,6 +973,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 0,
       'power' : 30,
+      'priority' : 0,
    },
    'smog' : {
       'num' : '123',
@@ -859,6 +981,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 30,
+      'priority' : 0,
    },
    'sludge' : {
       'num' : '124',
@@ -866,6 +989,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'bone club' : {
       'num' : '125',
@@ -873,6 +997,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'fire blast' : {
       'num' : '126',
@@ -880,6 +1005,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 110,
+      'priority' : 0,
    },
    'waterfall' : {
       'num' : '127',
@@ -887,6 +1013,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'clamp' : {
       'num' : '128',
@@ -894,6 +1021,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 35,
+      'priority' : 0,
    },
    'swift' : {
       'num' : '129',
@@ -901,6 +1029,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'skull bash' : {
       'num' : '130',
@@ -908,6 +1037,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 130,
+      'priority' : 0,
    },
    'spike cannon' : {
       'num' : '131',
@@ -915,6 +1045,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 20,
+      'priority' : 0,
    },
    'constrict' : {
       'num' : '132',
@@ -922,6 +1053,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 10,
+      'priority' : 0,
    },
    'amnesia' : {
       'num' : '133',
@@ -929,6 +1061,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'kinesis' : {
       'num' : '134',
@@ -936,6 +1069,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'soft-boiled' : {
       'num' : '135',
@@ -943,6 +1077,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'high jump kick' : {
       'num' : '136',
@@ -950,6 +1085,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 130,
+      'priority' : 0,
    },
    'glare' : {
       'num' : '137',
@@ -957,6 +1093,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'dream eater' : {
       'num' : '138',
@@ -964,6 +1101,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'poison gas' : {
       'num' : '139',
@@ -971,6 +1109,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'barrage' : {
       'num' : '140',
@@ -978,6 +1117,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'leech life' : {
       'num' : '141',
@@ -985,6 +1125,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 20,
+      'priority' : 0,
    },
    'lovely kiss' : {
       'num' : '142',
@@ -992,6 +1133,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sky attack' : {
       'num' : '143',
@@ -999,6 +1141,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 140,
+      'priority' : 0,
    },
    'transform' : {
       'num' : '144',
@@ -1006,6 +1149,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'bubble' : {
       'num' : '145',
@@ -1013,6 +1157,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'dizzy punch' : {
       'num' : '146',
@@ -1020,6 +1165,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'spore' : {
       'num' : '147',
@@ -1027,6 +1173,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'flash' : {
       'num' : '148',
@@ -1034,6 +1181,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'psywave' : {
       'num' : '149',
@@ -1041,6 +1189,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'splash' : {
       'num' : '150',
@@ -1048,6 +1197,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'acid armor' : {
       'num' : '151',
@@ -1055,6 +1205,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'crabhammer' : {
       'num' : '152',
@@ -1062,6 +1213,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'explosion' : {
       'num' : '153',
@@ -1069,6 +1221,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 250,
+      'priority' : 0,
    },
    'fury swipes' : {
       'num' : '154',
@@ -1076,6 +1229,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 18,
+      'priority' : 0,
    },
    'bonemerang' : {
       'num' : '155',
@@ -1083,6 +1237,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'rest' : {
       'num' : '156',
@@ -1090,6 +1245,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'rock slide' : {
       'num' : '157',
@@ -1097,6 +1253,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'hyper fang' : {
       'num' : '158',
@@ -1104,6 +1261,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'sharpen' : {
       'num' : '159',
@@ -1111,6 +1269,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'conversion' : {
       'num' : '160',
@@ -1118,6 +1277,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'tri attack' : {
       'num' : '161',
@@ -1125,6 +1285,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'super fang' : {
       'num' : '162',
@@ -1132,6 +1293,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'slash' : {
       'num' : '163',
@@ -1139,6 +1301,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'substitute' : {
       'num' : '164',
@@ -1146,6 +1309,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'struggle' : {
       'num' : '165',
@@ -1153,6 +1317,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'sketch' : {
       'num' : '166',
@@ -1160,6 +1325,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'triple kick' : {
       'num' : '167',
@@ -1167,6 +1333,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 10,
+      'priority' : 0,
    },
    'thief' : {
       'num' : '168',
@@ -1174,6 +1341,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'spider web' : {
       'num' : '169',
@@ -1181,6 +1349,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'mind reader' : {
       'num' : '170',
@@ -1188,6 +1357,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'nightmare' : {
       'num' : '171',
@@ -1195,6 +1365,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'flame wheel' : {
       'num' : '172',
@@ -1202,6 +1373,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'snore' : {
       'num' : '173',
@@ -1209,6 +1381,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'curse' : {
       'num' : '174',
@@ -1216,6 +1389,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'flail' : {
       'num' : '175',
@@ -1223,6 +1397,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'conversion 2' : {
       'num' : '176',
@@ -1230,6 +1405,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'aeroblast' : {
       'num' : '177',
@@ -1237,6 +1413,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'cotton spore' : {
       'num' : '178',
@@ -1244,6 +1421,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'reversal' : {
       'num' : '179',
@@ -1251,6 +1429,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'spite' : {
       'num' : '180',
@@ -1258,6 +1437,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'powder snow' : {
       'num' : '181',
@@ -1265,6 +1445,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'protect' : {
       'num' : '182',
@@ -1272,6 +1453,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 4,
    },
    'mach punch' : {
       'num' : '183',
@@ -1279,6 +1461,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 40,
+      'priority' : 1,
    },
    'scary face' : {
       'num' : '184',
@@ -1286,6 +1469,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'feint attack' : {
       'num' : '185',
@@ -1293,6 +1477,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'sweet kiss' : {
       'num' : '186',
@@ -1300,6 +1485,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'belly drum' : {
       'num' : '187',
@@ -1307,6 +1493,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sludge bomb' : {
       'num' : '188',
@@ -1314,6 +1501,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'mud-slap' : {
       'num' : '189',
@@ -1321,6 +1509,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 1,
       'power' : 20,
+      'priority' : 0,
    },
    'octazooka' : {
       'num' : '190',
@@ -1328,6 +1517,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'spikes' : {
       'num' : '191',
@@ -1335,6 +1525,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'zap cannon' : {
       'num' : '192',
@@ -1342,6 +1533,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'foresight' : {
       'num' : '193',
@@ -1349,6 +1541,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'destiny bond' : {
       'num' : '194',
@@ -1356,6 +1549,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'perish song' : {
       'num' : '195',
@@ -1363,6 +1557,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'icy wind' : {
       'num' : '196',
@@ -1370,6 +1565,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 55,
+      'priority' : 0,
    },
    'detect' : {
       'num' : '197',
@@ -1377,6 +1573,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 2,
       'power' : 0,
+      'priority' : 4,
    },
    'bone rush' : {
       'num' : '198',
@@ -1384,6 +1581,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 25,
+      'priority' : 0,
    },
    'lock-on' : {
       'num' : '199',
@@ -1391,6 +1589,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'outrage' : {
       'num' : '200',
@@ -1398,6 +1597,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'sandstorm' : {
       'num' : '201',
@@ -1405,6 +1605,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'giga drain' : {
       'num' : '202',
@@ -1412,6 +1613,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 75,
+      'priority' : 0,
    },
    'endure' : {
       'num' : '203',
@@ -1419,6 +1621,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 3,
    },
    'charm' : {
       'num' : '204',
@@ -1426,6 +1629,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'rollout' : {
       'num' : '205',
@@ -1433,6 +1637,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 30,
+      'priority' : 0,
    },
    'false swipe' : {
       'num' : '206',
@@ -1440,6 +1645,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'swagger' : {
       'num' : '207',
@@ -1447,6 +1653,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'milk drink' : {
       'num' : '208',
@@ -1454,6 +1661,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'spark' : {
       'num' : '209',
@@ -1461,6 +1669,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'fury cutter' : {
       'num' : '210',
@@ -1468,6 +1677,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'steel wing' : {
       'num' : '211',
@@ -1475,6 +1685,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'mean look' : {
       'num' : '212',
@@ -1482,6 +1693,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'attract' : {
       'num' : '213',
@@ -1489,6 +1701,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sleep talk' : {
       'num' : '214',
@@ -1496,6 +1709,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'heal bell' : {
       'num' : '215',
@@ -1503,6 +1717,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'return' : {
       'num' : '216',
@@ -1510,6 +1725,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 102,
+      'priority' : 0,
    },
    'present' : {
       'num' : '217',
@@ -1517,6 +1733,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'frustration' : {
       'num' : '218',
@@ -1524,6 +1741,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 102,
+      'priority' : 0,
    },
    'safeguard' : {
       'num' : '219',
@@ -1531,6 +1749,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'pain split' : {
       'num' : '220',
@@ -1538,6 +1757,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sacred fire' : {
       'num' : '221',
@@ -1545,6 +1765,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'magnitude' : {
       'num' : '222',
@@ -1552,6 +1773,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'dynamic punch' : {
       'num' : '223',
@@ -1559,6 +1781,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'megahorn' : {
       'num' : '224',
@@ -1566,6 +1789,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'dragon breath' : {
       'num' : '225',
@@ -1573,6 +1797,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'baton pass' : {
       'num' : '226',
@@ -1580,6 +1805,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'encore' : {
       'num' : '227',
@@ -1587,6 +1813,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'pursuit' : {
       'num' : '228',
@@ -1594,6 +1821,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 40,
+      'priority' : 7,
    },
    'rapid spin' : {
       'num' : '229',
@@ -1601,6 +1829,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 20,
+      'priority' : 0,
    },
    'sweet scent' : {
       'num' : '230',
@@ -1608,6 +1837,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'iron tail' : {
       'num' : '231',
@@ -1615,6 +1845,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'metal claw' : {
       'num' : '232',
@@ -1622,6 +1853,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'vital throw' : {
       'num' : '233',
@@ -1629,6 +1861,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 70,
+      'priority' : -1,
    },
    'morning sun' : {
       'num' : '234',
@@ -1636,6 +1869,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'synthesis' : {
       'num' : '235',
@@ -1643,6 +1877,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'moonlight' : {
       'num' : '236',
@@ -1650,6 +1885,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'hidden power' : {
       'num' : '237',
@@ -1657,6 +1893,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'cross chop' : {
       'num' : '238',
@@ -1664,6 +1901,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'twister' : {
       'num' : '239',
@@ -1671,6 +1909,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'rain dance' : {
       'num' : '240',
@@ -1678,6 +1917,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sunny day' : {
       'num' : '241',
@@ -1685,6 +1925,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'crunch' : {
       'num' : '242',
@@ -1692,6 +1933,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'mirror coat' : {
       'num' : '243',
@@ -1699,6 +1941,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 0,
+      'priority' : -5,
    },
    'psych up' : {
       'num' : '244',
@@ -1706,6 +1949,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'extreme speed' : {
       'num' : '245',
@@ -1713,6 +1957,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 80,
+      'priority' : 2,
    },
    'ancient power' : {
       'num' : '246',
@@ -1720,6 +1965,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'shadow ball' : {
       'num' : '247',
@@ -1727,6 +1973,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'future sight' : {
       'num' : '248',
@@ -1734,6 +1981,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'rock smash' : {
       'num' : '249',
@@ -1741,6 +1989,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'whirlpool' : {
       'num' : '250',
@@ -1748,6 +1997,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 35,
+      'priority' : 0,
    },
    'beat up' : {
       'num' : '251',
@@ -1755,6 +2005,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'fake out' : {
       'num' : '252',
@@ -1762,6 +2013,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 40,
+      'priority' : 3,
    },
    'uproar' : {
       'num' : '253',
@@ -1769,6 +2021,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'stockpile' : {
       'num' : '254',
@@ -1776,6 +2029,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'spit up' : {
       'num' : '255',
@@ -1783,6 +2037,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'swallow' : {
       'num' : '256',
@@ -1790,6 +2045,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'heat wave' : {
       'num' : '257',
@@ -1797,6 +2053,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 95,
+      'priority' : 0,
    },
    'hail' : {
       'num' : '258',
@@ -1804,6 +2061,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'torment' : {
       'num' : '259',
@@ -1811,6 +2069,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'flatter' : {
       'num' : '260',
@@ -1818,6 +2077,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'will-o-wisp' : {
       'num' : '261',
@@ -1825,6 +2085,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'memento' : {
       'num' : '262',
@@ -1832,6 +2093,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'facade' : {
       'num' : '263',
@@ -1839,6 +2101,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'focus punch' : {
       'num' : '264',
@@ -1846,6 +2109,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 150,
+      'priority' : -3,
    },
    'smelling salts' : {
       'num' : '265',
@@ -1853,6 +2117,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'follow me' : {
       'num' : '266',
@@ -1860,6 +2125,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 3,
    },
    'nature power' : {
       'num' : '267',
@@ -1867,6 +2133,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'charge' : {
       'num' : '268',
@@ -1874,6 +2141,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'taunt' : {
       'num' : '269',
@@ -1881,6 +2149,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'helping hand' : {
       'num' : '270',
@@ -1888,6 +2157,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 5,
    },
    'trick' : {
       'num' : '271',
@@ -1895,6 +2165,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'role play' : {
       'num' : '272',
@@ -1902,6 +2173,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'wish' : {
       'num' : '273',
@@ -1909,6 +2181,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'assist' : {
       'num' : '274',
@@ -1916,6 +2189,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'ingrain' : {
       'num' : '275',
@@ -1923,6 +2197,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'superpower' : {
       'num' : '276',
@@ -1930,6 +2205,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'magic coat' : {
       'num' : '277',
@@ -1937,6 +2213,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 4,
    },
    'recycle' : {
       'num' : '278',
@@ -1944,6 +2221,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'revenge' : {
       'num' : '279',
@@ -1951,6 +2229,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 60,
+      'priority' : -4,
    },
    'brick break' : {
       'num' : '280',
@@ -1958,6 +2237,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'yawn' : {
       'num' : '281',
@@ -1965,6 +2245,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'knock off' : {
       'num' : '282',
@@ -1972,6 +2253,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'endeavor' : {
       'num' : '283',
@@ -1979,6 +2261,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'eruption' : {
       'num' : '284',
@@ -1986,6 +2269,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 150,
+      'priority' : 0,
    },
    'skill swap' : {
       'num' : '285',
@@ -1993,6 +2277,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'imprison' : {
       'num' : '286',
@@ -2000,6 +2285,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'refresh' : {
       'num' : '287',
@@ -2007,6 +2293,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'grudge' : {
       'num' : '288',
@@ -2014,6 +2301,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'snatch' : {
       'num' : '289',
@@ -2021,6 +2309,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 4,
    },
    'secret power' : {
       'num' : '290',
@@ -2028,6 +2317,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'dive' : {
       'num' : '291',
@@ -2035,6 +2325,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'arm thrust' : {
       'num' : '292',
@@ -2042,6 +2333,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'camouflage' : {
       'num' : '293',
@@ -2049,6 +2341,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'tail glow' : {
       'num' : '294',
@@ -2056,6 +2349,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'luster purge' : {
       'num' : '295',
@@ -2063,6 +2357,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 70,
+      'priority' : 0,
    },
    'mist ball' : {
       'num' : '296',
@@ -2070,6 +2365,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 70,
+      'priority' : 0,
    },
    'feather dance' : {
       'num' : '297',
@@ -2077,6 +2373,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'teeter dance' : {
       'num' : '298',
@@ -2084,6 +2381,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'blaze kick' : {
       'num' : '299',
@@ -2091,6 +2389,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 85,
+      'priority' : 0,
    },
    'mud sport' : {
       'num' : '300',
@@ -2098,6 +2397,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'ice ball' : {
       'num' : '301',
@@ -2105,6 +2405,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 30,
+      'priority' : 0,
    },
    'needle arm' : {
       'num' : '302',
@@ -2112,6 +2413,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'slack off' : {
       'num' : '303',
@@ -2119,6 +2421,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'hyper voice' : {
       'num' : '304',
@@ -2126,6 +2429,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'poison fang' : {
       'num' : '305',
@@ -2133,6 +2437,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'crush claw' : {
       'num' : '306',
@@ -2140,6 +2445,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'blast burn' : {
       'num' : '307',
@@ -2147,6 +2453,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 150,
+      'priority' : 0,
    },
    'hydro cannon' : {
       'num' : '308',
@@ -2154,6 +2461,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 150,
+      'priority' : 0,
    },
    'meteor mash' : {
       'num' : '309',
@@ -2161,6 +2469,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'astonish' : {
       'num' : '310',
@@ -2168,6 +2477,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 0,
       'power' : 30,
+      'priority' : 0,
    },
    'weather ball' : {
       'num' : '311',
@@ -2175,6 +2485,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'aromatherapy' : {
       'num' : '312',
@@ -2182,6 +2493,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'fake tears' : {
       'num' : '313',
@@ -2189,6 +2501,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'air cutter' : {
       'num' : '314',
@@ -2196,6 +2509,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'overheat' : {
       'num' : '315',
@@ -2203,6 +2517,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 130,
+      'priority' : 0,
    },
    'odor sleuth' : {
       'num' : '316',
@@ -2210,6 +2525,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'rock tomb' : {
       'num' : '317',
@@ -2217,6 +2533,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'silver wind' : {
       'num' : '318',
@@ -2224,6 +2541,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'metal sound' : {
       'num' : '319',
@@ -2231,6 +2549,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'grass whistle' : {
       'num' : '320',
@@ -2238,6 +2557,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'tickle' : {
       'num' : '321',
@@ -2245,6 +2565,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'cosmic power' : {
       'num' : '322',
@@ -2252,6 +2573,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'water spout' : {
       'num' : '323',
@@ -2259,6 +2581,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 150,
+      'priority' : 0,
    },
    'signal beam' : {
       'num' : '324',
@@ -2266,6 +2589,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 1,
       'power' : 75,
+      'priority' : 0,
    },
    'shadow punch' : {
       'num' : '325',
@@ -2273,6 +2597,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'extrasensory' : {
       'num' : '326',
@@ -2280,6 +2605,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'sky uppercut' : {
       'num' : '327',
@@ -2287,6 +2613,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 85,
+      'priority' : 0,
    },
    'sand tomb' : {
       'num' : '328',
@@ -2294,6 +2621,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 35,
+      'priority' : 0,
    },
    'sheer cold' : {
       'num' : '329',
@@ -2301,6 +2629,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'muddy water' : {
       'num' : '330',
@@ -2308,6 +2637,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'bullet seed' : {
       'num' : '331',
@@ -2315,6 +2645,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 25,
+      'priority' : 0,
    },
    'aerial ace' : {
       'num' : '332',
@@ -2322,6 +2653,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'icicle spear' : {
       'num' : '333',
@@ -2329,6 +2661,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 25,
+      'priority' : 0,
    },
    'iron defense' : {
       'num' : '334',
@@ -2336,6 +2669,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'block' : {
       'num' : '335',
@@ -2343,6 +2677,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'howl' : {
       'num' : '336',
@@ -2350,6 +2685,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'dragon claw' : {
       'num' : '337',
@@ -2357,6 +2693,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'frenzy plant' : {
       'num' : '338',
@@ -2364,6 +2701,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 150,
+      'priority' : 0,
    },
    'bulk up' : {
       'num' : '339',
@@ -2371,6 +2709,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'bounce' : {
       'num' : '340',
@@ -2378,6 +2717,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 85,
+      'priority' : 0,
    },
    'mud shot' : {
       'num' : '341',
@@ -2385,6 +2725,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 1,
       'power' : 55,
+      'priority' : 0,
    },
    'poison tail' : {
       'num' : '342',
@@ -2392,6 +2733,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'covet' : {
       'num' : '343',
@@ -2399,6 +2741,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'volt tackle' : {
       'num' : '344',
@@ -2406,6 +2749,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'magical leaf' : {
       'num' : '345',
@@ -2413,6 +2757,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'water sport' : {
       'num' : '346',
@@ -2420,6 +2765,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'calm mind' : {
       'num' : '347',
@@ -2427,6 +2773,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'leaf blade' : {
       'num' : '348',
@@ -2434,6 +2781,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'dragon dance' : {
       'num' : '349',
@@ -2441,6 +2789,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'rock blast' : {
       'num' : '350',
@@ -2448,6 +2797,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 25,
+      'priority' : 0,
    },
    'shock wave' : {
       'num' : '351',
@@ -2455,6 +2805,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'water pulse' : {
       'num' : '352',
@@ -2462,6 +2813,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'doom desire' : {
       'num' : '353',
@@ -2469,6 +2821,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 1,
       'power' : 140,
+      'priority' : 0,
    },
    'psycho boost' : {
       'num' : '354',
@@ -2476,6 +2829,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 140,
+      'priority' : 0,
    },
    'roost' : {
       'num' : '355',
@@ -2483,6 +2837,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'gravity' : {
       'num' : '356',
@@ -2490,6 +2845,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'miracle eye' : {
       'num' : '357',
@@ -2497,6 +2853,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'wake-up slap' : {
       'num' : '358',
@@ -2504,6 +2861,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'hammer arm' : {
       'num' : '359',
@@ -2511,6 +2869,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'gyro ball' : {
       'num' : '360',
@@ -2518,6 +2877,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'healing wish' : {
       'num' : '361',
@@ -2525,6 +2885,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'brine' : {
       'num' : '362',
@@ -2532,6 +2893,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'natural gift' : {
       'num' : '363',
@@ -2539,6 +2901,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'feint' : {
       'num' : '364',
@@ -2546,6 +2909,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 30,
+      'priority' : 2,
    },
    'pluck' : {
       'num' : '365',
@@ -2553,6 +2917,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'tailwind' : {
       'num' : '366',
@@ -2560,6 +2925,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'acupressure' : {
       'num' : '367',
@@ -2567,6 +2933,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'metal burst' : {
       'num' : '368',
@@ -2574,6 +2941,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'u-turn' : {
       'num' : '369',
@@ -2581,6 +2949,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'close combat' : {
       'num' : '370',
@@ -2588,6 +2957,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'payback' : {
       'num' : '371',
@@ -2595,6 +2965,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'assurance' : {
       'num' : '372',
@@ -2602,6 +2973,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'embargo' : {
       'num' : '373',
@@ -2609,6 +2981,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'fling' : {
       'num' : '374',
@@ -2616,6 +2989,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'psycho shift' : {
       'num' : '375',
@@ -2623,6 +2997,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'trump card' : {
       'num' : '376',
@@ -2630,6 +3005,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'heal block' : {
       'num' : '377',
@@ -2637,6 +3013,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'wring out' : {
       'num' : '378',
@@ -2644,6 +3021,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'power trick' : {
       'num' : '379',
@@ -2651,6 +3029,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'gastro acid' : {
       'num' : '380',
@@ -2658,6 +3037,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'lucky chant' : {
       'num' : '381',
@@ -2665,6 +3045,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'me first' : {
       'num' : '382',
@@ -2672,6 +3053,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'copycat' : {
       'num' : '383',
@@ -2679,6 +3061,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'power swap' : {
       'num' : '384',
@@ -2686,6 +3069,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'guard swap' : {
       'num' : '385',
@@ -2693,6 +3077,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'punishment' : {
       'num' : '386',
@@ -2700,6 +3085,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'last resort' : {
       'num' : '387',
@@ -2707,6 +3093,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 140,
+      'priority' : 0,
    },
    'worry seed' : {
       'num' : '388',
@@ -2714,6 +3101,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sucker punch' : {
       'num' : '389',
@@ -2721,6 +3109,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 80,
+      'priority' : 1,
    },
    'toxic spikes' : {
       'num' : '390',
@@ -2728,6 +3117,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'heart swap' : {
       'num' : '391',
@@ -2735,6 +3125,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'aqua ring' : {
       'num' : '392',
@@ -2742,6 +3133,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'magnet rise' : {
       'num' : '393',
@@ -2749,6 +3141,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'flare blitz' : {
       'num' : '394',
@@ -2756,6 +3149,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'force palm' : {
       'num' : '395',
@@ -2763,6 +3157,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'aura sphere' : {
       'num' : '396',
@@ -2770,6 +3165,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'rock polish' : {
       'num' : '397',
@@ -2777,6 +3173,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'poison jab' : {
       'num' : '398',
@@ -2784,6 +3181,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'dark pulse' : {
       'num' : '399',
@@ -2791,6 +3189,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'night slash' : {
       'num' : '400',
@@ -2798,6 +3197,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'aqua tail' : {
       'num' : '401',
@@ -2805,6 +3205,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'seed bomb' : {
       'num' : '402',
@@ -2812,6 +3213,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'air slash' : {
       'num' : '403',
@@ -2819,6 +3221,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 1,
       'power' : 75,
+      'priority' : 0,
    },
    'x-scissor' : {
       'num' : '404',
@@ -2826,6 +3229,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'bug buzz' : {
       'num' : '405',
@@ -2833,6 +3237,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'dragon pulse' : {
       'num' : '406',
@@ -2840,6 +3245,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 1,
       'power' : 85,
+      'priority' : 0,
    },
    'dragon rush' : {
       'num' : '407',
@@ -2847,6 +3253,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'power gem' : {
       'num' : '408',
@@ -2854,6 +3261,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'drain punch' : {
       'num' : '409',
@@ -2861,6 +3269,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'vacuum wave' : {
       'num' : '410',
@@ -2868,6 +3277,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 1,
       'power' : 40,
+      'priority' : 1,
    },
    'focus blast' : {
       'num' : '411',
@@ -2875,6 +3285,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'energy ball' : {
       'num' : '412',
@@ -2882,6 +3293,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'brave bird' : {
       'num' : '413',
@@ -2889,6 +3301,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'earth power' : {
       'num' : '414',
@@ -2896,6 +3309,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 1,
       'power' : 90,
+      'priority' : 0,
    },
    'switcheroo' : {
       'num' : '415',
@@ -2903,6 +3317,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'giga impact' : {
       'num' : '416',
@@ -2910,6 +3325,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 150,
+      'priority' : 0,
    },
    'nasty plot' : {
       'num' : '417',
@@ -2917,6 +3333,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'bullet punch' : {
       'num' : '418',
@@ -2924,6 +3341,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 40,
+      'priority' : 1,
    },
    'avalanche' : {
       'num' : '419',
@@ -2931,6 +3349,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 60,
+      'priority' : -4,
    },
    'ice shard' : {
       'num' : '420',
@@ -2938,6 +3357,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 40,
+      'priority' : 1,
    },
    'shadow claw' : {
       'num' : '421',
@@ -2945,6 +3365,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'thunder fang' : {
       'num' : '422',
@@ -2952,6 +3373,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'ice fang' : {
       'num' : '423',
@@ -2959,6 +3381,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'fire fang' : {
       'num' : '424',
@@ -2966,6 +3389,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'shadow sneak' : {
       'num' : '425',
@@ -2973,6 +3397,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 0,
       'power' : 40,
+      'priority' : 1,
    },
    'mud bomb' : {
       'num' : '426',
@@ -2980,6 +3405,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'psycho cut' : {
       'num' : '427',
@@ -2987,6 +3413,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'zen headbutt' : {
       'num' : '428',
@@ -2994,6 +3421,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'mirror shot' : {
       'num' : '429',
@@ -3001,6 +3429,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'flash cannon' : {
       'num' : '430',
@@ -3008,6 +3437,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'rock climb' : {
       'num' : '431',
@@ -3015,6 +3445,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'defog' : {
       'num' : '432',
@@ -3022,6 +3453,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'trick room' : {
       'num' : '433',
@@ -3029,6 +3461,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : -7,
    },
    'draco meteor' : {
       'num' : '434',
@@ -3036,6 +3469,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 1,
       'power' : 130,
+      'priority' : 0,
    },
    'discharge' : {
       'num' : '435',
@@ -3043,6 +3477,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'lava plume' : {
       'num' : '436',
@@ -3050,6 +3485,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'leaf storm' : {
       'num' : '437',
@@ -3057,6 +3493,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 130,
+      'priority' : 0,
    },
    'power whip' : {
       'num' : '438',
@@ -3064,6 +3501,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'rock wrecker' : {
       'num' : '439',
@@ -3071,6 +3509,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 150,
+      'priority' : 0,
    },
    'cross poison' : {
       'num' : '440',
@@ -3078,6 +3517,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'gunk shot' : {
       'num' : '441',
@@ -3085,6 +3525,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'iron head' : {
       'num' : '442',
@@ -3092,6 +3533,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'magnet bomb' : {
       'num' : '443',
@@ -3099,6 +3541,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'stone edge' : {
       'num' : '444',
@@ -3106,6 +3549,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'captivate' : {
       'num' : '445',
@@ -3113,6 +3557,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'stealth rock' : {
       'num' : '446',
@@ -3120,6 +3565,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'grass knot' : {
       'num' : '447',
@@ -3127,6 +3573,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'chatter' : {
       'num' : '448',
@@ -3134,6 +3581,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'judgment' : {
       'num' : '449',
@@ -3141,6 +3589,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'bug bite' : {
       'num' : '450',
@@ -3148,6 +3597,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'charge beam' : {
       'num' : '451',
@@ -3155,6 +3605,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'wood hammer' : {
       'num' : '452',
@@ -3162,6 +3613,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'aqua jet' : {
       'num' : '453',
@@ -3169,6 +3621,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 40,
+      'priority' : 1,
    },
    'attack order' : {
       'num' : '454',
@@ -3176,6 +3629,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'defend order' : {
       'num' : '455',
@@ -3183,6 +3637,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'heal order' : {
       'num' : '456',
@@ -3190,6 +3645,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'head smash' : {
       'num' : '457',
@@ -3197,6 +3653,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 150,
+      'priority' : 0,
    },
    'double hit' : {
       'num' : '458',
@@ -3204,6 +3661,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 35,
+      'priority' : 0,
    },
    'roar of time' : {
       'num' : '459',
@@ -3211,6 +3669,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 1,
       'power' : 150,
+      'priority' : 0,
    },
    'spacial rend' : {
       'num' : '460',
@@ -3218,6 +3677,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'lunar dance' : {
       'num' : '461',
@@ -3225,6 +3685,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'crush grip' : {
       'num' : '462',
@@ -3232,6 +3693,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'magma storm' : {
       'num' : '463',
@@ -3239,6 +3701,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'dark void' : {
       'num' : '464',
@@ -3246,6 +3709,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'seed flare' : {
       'num' : '465',
@@ -3253,6 +3717,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'ominous wind' : {
       'num' : '466',
@@ -3260,6 +3725,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'shadow force' : {
       'num' : '467',
@@ -3267,6 +3733,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'hone claws' : {
       'num' : '468',
@@ -3274,6 +3741,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'wide guard' : {
       'num' : '469',
@@ -3281,6 +3749,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 2,
       'power' : 0,
+      'priority' : 3,
    },
    'guard split' : {
       'num' : '470',
@@ -3288,6 +3757,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'power split' : {
       'num' : '471',
@@ -3295,6 +3765,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'wonder room' : {
       'num' : '472',
@@ -3302,6 +3773,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : -7,
    },
    'psyshock' : {
       'num' : '473',
@@ -3309,6 +3781,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'venoshock' : {
       'num' : '474',
@@ -3316,6 +3789,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'autotomize' : {
       'num' : '475',
@@ -3323,6 +3797,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'rage powder' : {
       'num' : '476',
@@ -3330,6 +3805,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 3,
    },
    'telekinesis' : {
       'num' : '477',
@@ -3337,6 +3813,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'magic room' : {
       'num' : '478',
@@ -3344,6 +3821,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : -7,
    },
    'smack down' : {
       'num' : '479',
@@ -3351,6 +3829,7 @@ var MOVE_DATA = {
       'type' : 12,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'storm throw' : {
       'num' : '480',
@@ -3358,6 +3837,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'flame burst' : {
       'num' : '481',
@@ -3365,6 +3845,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 70,
+      'priority' : 0,
    },
    'sludge wave' : {
       'num' : '482',
@@ -3372,6 +3853,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 95,
+      'priority' : 0,
    },
    'quiver dance' : {
       'num' : '483',
@@ -3379,6 +3861,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'heavy slam' : {
       'num' : '484',
@@ -3386,6 +3869,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'synchronoise' : {
       'num' : '485',
@@ -3393,6 +3877,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'electro ball' : {
       'num' : '486',
@@ -3400,6 +3885,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'soak' : {
       'num' : '487',
@@ -3407,6 +3893,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'flame charge' : {
       'num' : '488',
@@ -3414,6 +3901,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'coil' : {
       'num' : '489',
@@ -3421,6 +3909,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'low sweep' : {
       'num' : '490',
@@ -3428,6 +3917,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'acid spray' : {
       'num' : '491',
@@ -3435,6 +3925,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'foul play' : {
       'num' : '492',
@@ -3442,6 +3933,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 95,
+      'priority' : 0,
    },
    'simple beam' : {
       'num' : '493',
@@ -3449,6 +3941,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'entrainment' : {
       'num' : '494',
@@ -3456,6 +3949,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'after you' : {
       'num' : '495',
@@ -3463,6 +3957,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'round' : {
       'num' : '496',
@@ -3470,6 +3965,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'echoed voice' : {
       'num' : '497',
@@ -3477,6 +3973,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'chip away' : {
       'num' : '498',
@@ -3484,6 +3981,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'clear smog' : {
       'num' : '499',
@@ -3491,6 +3989,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'stored power' : {
       'num' : '500',
@@ -3498,6 +3997,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 20,
+      'priority' : 0,
    },
    'quick guard' : {
       'num' : '501',
@@ -3505,6 +4005,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 2,
       'power' : 0,
+      'priority' : 3,
    },
    'ally switch' : {
       'num' : '502',
@@ -3512,6 +4013,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 1,
    },
    'scald' : {
       'num' : '503',
@@ -3519,6 +4021,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'shell smash' : {
       'num' : '504',
@@ -3526,6 +4029,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'heal pulse' : {
       'num' : '505',
@@ -3533,6 +4037,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'hex' : {
       'num' : '506',
@@ -3540,6 +4045,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'sky drop' : {
       'num' : '507',
@@ -3547,6 +4053,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'shift gear' : {
       'num' : '508',
@@ -3554,6 +4061,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'circle throw' : {
       'num' : '509',
@@ -3561,6 +4069,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 60,
+      'priority' : -6,
    },
    'incinerate' : {
       'num' : '510',
@@ -3568,6 +4077,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'quash' : {
       'num' : '511',
@@ -3575,6 +4085,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'acrobatics' : {
       'num' : '512',
@@ -3582,6 +4093,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 0,
       'power' : 55,
+      'priority' : 0,
    },
    'reflect type' : {
       'num' : '513',
@@ -3589,6 +4101,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'retaliate' : {
       'num' : '514',
@@ -3596,6 +4109,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 70,
+      'priority' : 0,
    },
    'final gambit' : {
       'num' : '515',
@@ -3603,6 +4117,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 1,
       'power' : 0,
+      'priority' : 0,
    },
    'bestow' : {
       'num' : '516',
@@ -3610,6 +4125,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'inferno' : {
       'num' : '517',
@@ -3617,6 +4133,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'water pledge' : {
       'num' : '518',
@@ -3624,6 +4141,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'fire pledge' : {
       'num' : '519',
@@ -3631,6 +4149,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'grass pledge' : {
       'num' : '520',
@@ -3638,6 +4157,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'volt switch' : {
       'num' : '521',
@@ -3645,6 +4165,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 70,
+      'priority' : 0,
    },
    'struggle bug' : {
       'num' : '522',
@@ -3652,6 +4173,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'bulldoze' : {
       'num' : '523',
@@ -3659,6 +4181,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'frost breath' : {
       'num' : '524',
@@ -3666,6 +4189,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 60,
+      'priority' : 0,
    },
    'dragon tail' : {
       'num' : '525',
@@ -3673,6 +4197,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 0,
       'power' : 60,
+      'priority' : -6,
    },
    'work up' : {
       'num' : '526',
@@ -3680,6 +4205,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'electroweb' : {
       'num' : '527',
@@ -3687,6 +4213,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 55,
+      'priority' : 0,
    },
    'wild charge' : {
       'num' : '528',
@@ -3694,6 +4221,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'drill run' : {
       'num' : '529',
@@ -3701,6 +4229,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'dual chop' : {
       'num' : '530',
@@ -3708,6 +4237,7 @@ var MOVE_DATA = {
       'type' : 14,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'heart stamp' : {
       'num' : '531',
@@ -3715,6 +4245,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 0,
       'power' : 60,
+      'priority' : 0,
    },
    'horn leech' : {
       'num' : '532',
@@ -3722,6 +4253,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'sacred sword' : {
       'num' : '533',
@@ -3729,6 +4261,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'razor shell' : {
       'num' : '534',
@@ -3736,6 +4269,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 75,
+      'priority' : 0,
    },
    'heat crash' : {
       'num' : '535',
@@ -3743,6 +4277,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 0,
+      'priority' : 0,
    },
    'leaf tornado' : {
       'num' : '536',
@@ -3750,6 +4285,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'steamroller' : {
       'num' : '537',
@@ -3757,6 +4293,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 65,
+      'priority' : 0,
    },
    'cotton guard' : {
       'num' : '538',
@@ -3764,6 +4301,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'night daze' : {
       'num' : '539',
@@ -3771,6 +4309,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 1,
       'power' : 85,
+      'priority' : 0,
    },
    'psystrike' : {
       'num' : '540',
@@ -3778,6 +4317,7 @@ var MOVE_DATA = {
       'type' : 10,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'tail slap' : {
       'num' : '541',
@@ -3785,6 +4325,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 25,
+      'priority' : 0,
    },
    'hurricane' : {
       'num' : '542',
@@ -3792,6 +4333,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 1,
       'power' : 110,
+      'priority' : 0,
    },
    'head charge' : {
       'num' : '543',
@@ -3799,6 +4341,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 0,
       'power' : 120,
+      'priority' : 0,
    },
    'gear grind' : {
       'num' : '544',
@@ -3806,6 +4349,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 0,
       'power' : 50,
+      'priority' : 0,
    },
    'searing shot' : {
       'num' : '545',
@@ -3813,6 +4357,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'techno blast' : {
       'num' : '546',
@@ -3820,6 +4365,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'relic song' : {
       'num' : '547',
@@ -3827,6 +4373,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 75,
+      'priority' : 0,
    },
    'secret sword' : {
       'num' : '548',
@@ -3834,6 +4381,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 1,
       'power' : 85,
+      'priority' : 0,
    },
    'glaciate' : {
       'num' : '549',
@@ -3841,6 +4389,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'bolt strike' : {
       'num' : '550',
@@ -3848,6 +4397,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 130,
+      'priority' : 0,
    },
    'blue flare' : {
       'num' : '551',
@@ -3855,6 +4405,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 130,
+      'priority' : 0,
    },
    'fiery dance' : {
       'num' : '552',
@@ -3862,6 +4413,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'freeze shock' : {
       'num' : '553',
@@ -3869,6 +4421,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 140,
+      'priority' : 0,
    },
    'ice burn' : {
       'num' : '554',
@@ -3876,6 +4429,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 140,
+      'priority' : 0,
    },
    'snarl' : {
       'num' : '555',
@@ -3883,6 +4437,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 1,
       'power' : 55,
+      'priority' : 0,
    },
    'icicle crash' : {
       'num' : '556',
@@ -3890,6 +4445,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 0,
       'power' : 85,
+      'priority' : 0,
    },
    'v-create' : {
       'num' : '557',
@@ -3897,6 +4453,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 0,
       'power' : 180,
+      'priority' : 0,
    },
    'fusion flare' : {
       'num' : '558',
@@ -3904,6 +4461,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 100,
+      'priority' : 0,
    },
    'fusion bolt' : {
       'num' : '559',
@@ -3911,6 +4469,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 100,
+      'priority' : 0,
    },
    'flying press' : {
       'num' : '560',
@@ -3918,6 +4477,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 80,
+      'priority' : 0,
    },
    'mat block' : {
       'num' : '561',
@@ -3925,6 +4485,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'belch' : {
       'num' : '562',
@@ -3932,6 +4493,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 1,
       'power' : 120,
+      'priority' : 0,
    },
    'rototiller' : {
       'num' : '563',
@@ -3939,6 +4501,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'sticky web' : {
       'num' : '564',
@@ -3946,6 +4509,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'fell stinger' : {
       'num' : '565',
@@ -3953,6 +4517,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 0,
       'power' : 30,
+      'priority' : 0,
    },
    'phantom force' : {
       'num' : '566',
@@ -3960,6 +4525,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'trick-or-treat' : {
       'num' : '567',
@@ -3967,6 +4533,7 @@ var MOVE_DATA = {
       'type' : 13,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'noble roar' : {
       'num' : '568',
@@ -3974,6 +4541,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'ion deluge' : {
       'num' : '569',
@@ -3981,6 +4549,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'parabolic charge' : {
       'num' : '570',
@@ -3988,6 +4557,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'forest\'s curse' : {
       'num' : '571',
@@ -3995,6 +4565,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'petal blizzard' : {
       'num' : '572',
@@ -4002,6 +4573,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'freeze-dry' : {
       'num' : '573',
@@ -4009,6 +4581,7 @@ var MOVE_DATA = {
       'type' : 5,
       'category' : 1,
       'power' : 70,
+      'priority' : 0,
    },
    'disarming voice' : {
       'num' : '574',
@@ -4016,6 +4589,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'parting shot' : {
       'num' : '575',
@@ -4023,6 +4597,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'topsy-turvy' : {
       'num' : '576',
@@ -4030,6 +4605,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'draining kiss' : {
       'num' : '577',
@@ -4037,6 +4613,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 1,
       'power' : 50,
+      'priority' : 0,
    },
    'crafty shield' : {
       'num' : '578',
@@ -4044,6 +4621,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'flower shield' : {
       'num' : '579',
@@ -4051,6 +4629,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'grassy terrain' : {
       'num' : '580',
@@ -4058,6 +4637,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'misty terrain' : {
       'num' : '581',
@@ -4065,6 +4645,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'electrify' : {
       'num' : '582',
@@ -4072,6 +4653,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'play rough' : {
       'num' : '583',
@@ -4079,6 +4661,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'fairy wind' : {
       'num' : '584',
@@ -4086,6 +4669,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 1,
       'power' : 40,
+      'priority' : 0,
    },
    'moonblast' : {
       'num' : '585',
@@ -4093,6 +4677,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 1,
       'power' : 95,
+      'priority' : 0,
    },
    'boomburst' : {
       'num' : '586',
@@ -4100,6 +4685,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 1,
       'power' : 140,
+      'priority' : 0,
    },
    'fairy lock' : {
       'num' : '587',
@@ -4107,6 +4693,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'king\'s shield' : {
       'num' : '588',
@@ -4114,6 +4701,7 @@ var MOVE_DATA = {
       'type' : 16,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'play nice' : {
       'num' : '589',
@@ -4121,6 +4709,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'confide' : {
       'num' : '590',
@@ -4128,6 +4717,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'water shuriken' : {
       'num' : '594',
@@ -4135,6 +4725,7 @@ var MOVE_DATA = {
       'type' : 2,
       'category' : 0,
       'power' : 15,
+      'priority' : 0,
    },
    'mystical fire' : {
       'num' : '595',
@@ -4142,6 +4733,7 @@ var MOVE_DATA = {
       'type' : 1,
       'category' : 1,
       'power' : 65,
+      'priority' : 0,
    },
    'spiky shield' : {
       'num' : '596',
@@ -4149,6 +4741,7 @@ var MOVE_DATA = {
       'type' : 4,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'aromatic mist' : {
       'num' : '597',
@@ -4156,6 +4749,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'eerie impulse' : {
       'num' : '598',
@@ -4163,6 +4757,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'venom drench' : {
       'num' : '599',
@@ -4170,6 +4765,7 @@ var MOVE_DATA = {
       'type' : 7,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'powder' : {
       'num' : '600',
@@ -4177,6 +4773,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'geomancy' : {
       'num' : '601',
@@ -4184,6 +4781,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'magnetic flux' : {
       'num' : '602',
@@ -4191,6 +4789,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'electric terrain' : {
       'num' : '604',
@@ -4198,6 +4797,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'dazzling gleam' : {
       'num' : '605',
@@ -4205,6 +4805,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'baby-doll eyes' : {
       'num' : '608',
@@ -4212,6 +4813,7 @@ var MOVE_DATA = {
       'type' : 17,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'nuzzle' : {
       'num' : '609',
@@ -4219,6 +4821,7 @@ var MOVE_DATA = {
       'type' : 3,
       'category' : 0,
       'power' : 20,
+      'priority' : 0,
    },
    'infestation' : {
       'num' : '611',
@@ -4226,6 +4829,7 @@ var MOVE_DATA = {
       'type' : 11,
       'category' : 1,
       'power' : 20,
+      'priority' : 0,
    },
    'power-up punch' : {
       'num' : '612',
@@ -4233,6 +4837,7 @@ var MOVE_DATA = {
       'type' : 6,
       'category' : 0,
       'power' : 40,
+      'priority' : 0,
    },
    'oblivion wing' : {
       'num' : '613',
@@ -4240,6 +4845,7 @@ var MOVE_DATA = {
       'type' : 9,
       'category' : 1,
       'power' : 80,
+      'priority' : 0,
    },
    'land\'s wrath' : {
       'num' : '616',
@@ -4247,6 +4853,7 @@ var MOVE_DATA = {
       'type' : 8,
       'category' : 0,
       'power' : 90,
+      'priority' : 0,
    },
    'celebrate' : {
       'num' : '???',
@@ -4254,6 +4861,7 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
    'happy hour' : {
       'num' : '???',
@@ -4261,5 +4869,6 @@ var MOVE_DATA = {
       'type' : 0,
       'category' : 2,
       'power' : 0,
+      'priority' : 0,
    },
 };

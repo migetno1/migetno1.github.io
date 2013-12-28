@@ -14,7 +14,9 @@ $(document).ready(function() {
          'nu' : true,
       },
       boostedSweepers : false,
+      enablePriority : false,
       outSpeed : 0,
+      level : 100,
    };
 
    // initiate sliders
@@ -37,11 +39,15 @@ $(document).ready(function() {
    // initialise tooltip
    $('#bSweepersTooltip').tooltip({
       placement: 'top',
-      title: 'This assumes Pokemon with boosting moves use them once.',
+      title: 'This assumes Pokemon with boosting moves use them once',
+   });
+   $('#priorityTooltip').tooltip({
+      placement: 'top',
+      title: 'Attackers use a priority move if they are slower than the defending pokemon',
    });
    $('#outspeedTooltip').tooltip({
       placement: 'top',
-      title: 'This filters out Pokemon that do not outspeed at least this many Pokemon on your team.',
+      title: 'This filters out Pokemon that do not outspeed at least this many Pokemon on your team',
    });
    $('.cHPTooltip').tooltip({
       placement: 'top',
@@ -145,6 +151,9 @@ $(document).ready(function() {
             };
             if (setData.item) {
                pokemon.changeItem(setData.item);
+            };
+            if (tierOptions.level) {
+               pokemon.changeLevel(tierOptions.level);
             };
             if (typeof setData.moves !== 'undefined') {
                for (var moveNum = 0; moveNum < 4; moveNum++) {
@@ -304,13 +313,16 @@ $(document).ready(function() {
       tierOptions.tiers.uu = $('#uu').prop('checked');
       tierOptions.tiers.ru = $('#ru').prop('checked');
       tierOptions.tiers.nu = $('#nu').prop('checked');
-      tierOptions.boostedSweepers = $('#boostedsweeper').prop('checked');
+      tierOptions.boostedSweepers = $('#boostedSweeper').prop('checked');
+      tierOptions.enablePriority = $('#enablePriority').prop('checked');
       tierOptions.outSpeed = parseInt($('#outspeed').val());
       updateUpdateTableButton(true);
    });
 
    // on level change
    $("#setLevels").on('change', function() {
+      // change environment level.
+      tierOptions.level = parseInt($(this).val());
       for (var i = 0; i < environment.pokemons.length; i++) {
          for (var j = 0; j < environment.pokemons[i].length; j++) {
             // update form
@@ -788,11 +800,8 @@ $(document).ready(function() {
                continue;
             };
             var results;
-            if (tierOptions.boostedSweepers) {
-               results = getAttackResults(attacker, target, environment, true);
-            } else {
-               results = getAttackResults(attacker, target, environment, false);
-            };
+            results = getAttackResults(attacker, target, environment, 
+                  tierOptions.boostedSweepers, tierOptions.enablePriority);
             var percentage_min = results.attacks[0].damagePercentage[0];
             if (typeof percentage_min !== 'number') {
                // do nothing

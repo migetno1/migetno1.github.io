@@ -586,7 +586,7 @@ var POKEMON_SETS = {
          nature : 'Adamant',
          ability : 'Huge Power',
          item : 'Mystic Water',
-         moves : [ 'Aqua Jet', 'Play Rough', 'Belly Drum', '', ],
+         moves : [ 'Aqua Jet', 'Play Rough', 'Belly Drum', 'Waterfall', ],
          ev : [ 252, 252, 4, 0, 0, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 6, 0, 0, 0, 0, ],
@@ -3250,7 +3250,7 @@ var POKEMON_SETS = {
    'Ho-Oh' : [
       {
          name : 'Most Common',
-         tier : 'uu',
+         tier : 'uber',
          nature : 'Adamant',
          ability : 'Regenerator',
          item : 'Leftovers',
@@ -4494,7 +4494,7 @@ var POKEMON_SETS = {
    'Mewtwo' : [
       {
          name : 'Most Common',
-         tier : 'uu',
+         tier : 'uber',
          nature : 'Timid',
          ability : 'Pressure',
          item : '',

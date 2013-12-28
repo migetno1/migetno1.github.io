@@ -1584,7 +1584,7 @@ function attackerStrikeFirst(attacker, target, environment) {
   * @param target Target Pokemon object
   * @return a list of results with percentage damage dealt and move used
   */
-function getAttackResults(attacker, target, environment, attackerStatBoosts) {
+function getAttackResults(attacker, target, environment, attackerStatBoosts, enablePriority) {
    if (attacker.hasNoMoves()) {
       return null;
    };
@@ -1609,10 +1609,6 @@ function getAttackResults(attacker, target, environment, attackerStatBoosts) {
       result.move = moveName;
       var move = MOVE_DATA[moveName];
 
-      /*console.log(attacker.name);
-      if (attacker.name === null) {
-         console.log(JSON.stringify(attacker, null, '\t'));
-      };*/
       description.attackerName = POKEMON_DATA[attacker.name].name;
       description.moveName = move.name;
       description.defenderName = POKEMON_DATA[target.name].name;
@@ -1657,10 +1653,47 @@ function getAttackResults(attacker, target, environment, attackerStatBoosts) {
       } else if (b.damagePercentage[0] === '-') {
          return -1;
       } else {
+         // check priority if attacker does not strike first.
+         if (enablePriority && ! results.attackerStrikeFirst) {
+            // we need to take into account priority
+            var priorityA = MOVE_DATA[a.move].priority;
+            // take into account gale wings
+            if (attacker.ability === 'gale wings' && 
+                  MOVE_DATA[a.move].type === TYPE_NAME_TO_ID.Flying) {
+               priorityA ++;
+            };
+            var priorityB = MOVE_DATA[b.move].priority;
+            // take into account gale wings
+            if (attacker.ability === 'gale wings' && 
+                  MOVE_DATA[b.move].type === TYPE_NAME_TO_ID.Flying) {
+               priorityB ++;
+            };
+            if (priorityA > priorityB && a.damagePercentage[0] != 0) {
+               return -1;
+            } else if (priorityB > priorityA && b.damagePercentage[0] != 0) {
+               return 1;
+            };
+         };
          return b.damagePercentage[0] - a.damagePercentage[0];
       }
    });
    results.description = results.attacks[0].description;
+   if (enablePriority) {
+      // determine attackerStrikeFirst based on priority
+      var priority = MOVE_DATA[results.attacks[0].move].priority;
+      // take into account gale wings
+      if (attacker.ability === 'gale wings' && 
+            MOVE_DATA[results.attacks[0].move].type === TYPE_NAME_TO_ID.Flying) {
+         priority ++;
+      };
+      if (priority > 0) {
+         // we have a priority move
+         results.attackerStrikeFirst = true;
+      } else if (priority < 0) {
+         results.attackerStrikeFirst = false;
+      };
+   };
+   // revert attackStatBoosts
    if (! attackerStatBoosts) {
       for (var i = 0; i < 6; i++) {
          attacker.statBoost[i] = attackerOriginalStatBoosts[i];
