@@ -1473,7 +1473,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
 
    var preSturdyDamage = baseDamage;
    // sturdy
-   if (target.ability === 'sturdy' &&
+   if ((target.ability === 'sturdy' || target.item === 'focus sash') &&
          baseDamage >= getStat(target, STAT_HP) &&
          target.currentHP === getStat(target, STAT_HP)) {
       baseDamage = getStat(target, STAT_HP) - 1;

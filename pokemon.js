@@ -133,6 +133,8 @@ Pokemon.prototype.changeLevel = function(level) {
       return;
    };
    this.level = level;
+   // we have changed the level so we must change current HP
+   this.changeCurrentHP(getStat(this, STAT_HP));
 };
 
 /**
