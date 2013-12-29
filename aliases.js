@@ -79,6 +79,8 @@ var ALIAS_POKEMON = {
    'mega garchomp' : 'Garchomp-Mega',
    'mega lucario' : 'Lucario-Mega',
    'mega abomasnow' : 'Abomasnow-Mega',
+   'keldeo-resolute' : 'Keldeo',
+   'keldeo-r' : 'Keldeo',
 };
 
 var ALIAS_MOVES = {
