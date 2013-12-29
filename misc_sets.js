@@ -145,6 +145,7 @@ var DAMAGE_REDUCING_BERRIES = {
    'colbur berry' : TYPE_NAME_TO_ID.Dark,
    'haban berry' : TYPE_NAME_TO_ID.Dragon,
    'chilan berry' : TYPE_NAME_TO_ID.Normal,
+   'roseli berry' : TYPE_NAME_TO_ID.Fairy,
 };
 
 var SHEER_FORCE_MOVES = {
