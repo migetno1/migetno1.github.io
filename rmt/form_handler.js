@@ -9,9 +9,9 @@ $(document).ready(function() {
       tiers: {
          'uber' : false,
          'ou' : true,
-         'uu' : true,
-         'ru' : true,
-         'nu' : true,
+         'uu' : false,
+         'ru' : false,
+         'nu' : false,
       },
       boostedSweepers : false,
       enablePriority : false,
