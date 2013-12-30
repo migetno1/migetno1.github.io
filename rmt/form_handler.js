@@ -677,8 +677,6 @@ $(document).ready(function() {
          // error
          return;
       };
-      // determine if attacker or target.
-      var team = res[1];
       // pokemonName is the key.
       var pokemonName = POKEMON_DATA[pokemon.name].name;
       var setsInput = pokemonData.find('.input-set');
@@ -686,12 +684,6 @@ $(document).ready(function() {
       setsInput.find('option').remove();
       // add blank set
       setsInput.append("<option value=''> </option>");
-      // add default attacker/target sets
-      if (team == 0) {
-         team = 'ATTACKER';
-      } else {
-         team = 'TARGET';
-      };
       // add the pokemon specific sets
       if (typeof POKEMON_SETS[pokemonName] !== 'undefined') {
          for (var i = 0; i < POKEMON_SETS[pokemonName].length; i++) {
@@ -699,9 +691,13 @@ $(document).ready(function() {
                   POKEMON_SETS[pokemonName][i].name + "</option>");
          };
       };
-      for (var i = 0; i < DEFAULT_POKEMON_SETS[team].length; i++) {
-         setsInput.append('<option value="' + team + ':' + i + '">' +
-               DEFAULT_POKEMON_SETS[team][i].name + "</option>");
+      for (var i = 0; i < DEFAULT_POKEMON_SETS['ATTACKER'].length; i++) {
+         setsInput.append('<option value="ATTACKER:' + i + '">' +
+               DEFAULT_POKEMON_SETS['ATTACKER'][i].name + "</option>");
+      };
+      for (var i = 0; i < DEFAULT_POKEMON_SETS['TARGET'].length; i++) {
+         setsInput.append('<option value="TARGET:' + i + '">' +
+               DEFAULT_POKEMON_SETS['TARGET'][i].name + "</option>");
       };
       // set value to blank
       setsInput.val('');
