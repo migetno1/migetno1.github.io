@@ -46,12 +46,12 @@ var DEFAULT_POKEMON_SETS = {
       {
          name : 'Specially Defensive (generic)',
          nature : 'Calm',
-         ev : [ 252, 0, 252, 0, 4, 0 ],
+         ev : [ 252, 0, 4, 0, 252, 0 ],
       },
       {
          name : 'Bulky (generic)',
          nature : 'Hardy',
-         ev : [ 252, 0, 252, 0, 4, 0 ],
+         ev : [ 252, 0, 0, 0, 0, 0 ],
       },
    ],
 };
