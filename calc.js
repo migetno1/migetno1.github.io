@@ -1170,7 +1170,7 @@ function applyFinalModifiers(baseDamage, description, attacker, target, move, en
    };
    // TODO friend guard in double battles...
    // TODO sniper ability and crit hits...
-   if ((attacker.ability === 'solid rock' || attacker.ability === 'filter')
+   if ((target.ability === 'solid rock' || target.ability === 'filter')
          && getMoveEffectiveness(description, attacker, target, move, environment) >
             EFFECTIVENESS_NORMAL) {
       description.attackerAbility = ABILITIES[attacker.ability].name;
