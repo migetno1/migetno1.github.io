@@ -17,6 +17,7 @@ $(document).ready(function() {
       enablePriority : false,
       outSpeed : 0,
       level : 100,
+      wmt : false,
    };
 
    // initiate sliders
@@ -315,7 +316,9 @@ $(document).ready(function() {
       tierOptions.tiers.nu = $('#nu').prop('checked');
       tierOptions.boostedSweepers = $('#boostedSweeper').prop('checked');
       tierOptions.enablePriority = $('#enablePriority').prop('checked');
-      tierOptions.outSpeed = parseInt($('#outspeed').val());
+      if (! tierOptions.wmt) {
+         tierOptions.outSpeed = parseInt($('#outspeed').val());
+      };
       updateUpdateTableButton(true);
    });
 
@@ -780,28 +783,49 @@ $(document).ready(function() {
       var infoArray = [];
       // iterate through user Pokemon
       for (var i = 0; i < environment.pokemons[0].length; i++) {
-         var attacker = environment.pokemons[0][i];
-         if (! attacker.valid || attacker.hasNoMoves()) {
+         var attacker;
+         var target;
+         if (!tierOptions.wmt) {
+            attacker = environment.pokemons[0][i];
+         } else {
+            target = environment.pokemons[0][i];
+         };
+         if (!tierOptions.wmt && (! attacker.valid || attacker.hasNoMoves())) {
             // invalid pokemon
             continue;
          };
+         if (tierOptions.wmt && ! target.valid) {
+            continue;
+         };
          var info = {};
-         info.attacker = attacker;
+         if (!tierOptions.wmt) {
+            info.attacker = attacker;
+         } else {
+            info.target = target;
+         };
          info.total = 0;
          info.outSpeeds = 0;
          // array of results - 6 results objects
          info.resultsArray = [];
          // iterate through opponent Pokemon
          for (var j = 0; j < environment.pokemons[1].length; j++) {
-            var target = environment.pokemons[1][j];
-            if (! target.valid) {
+            if (!tierOptions.wmt) {
+               target = environment.pokemons[1][j];
+            } else {
+               attacker = environment.pokemons[1][j];
+            };
+            if (!tierOptions.wmt && ! target.valid) {
                // invalid pokemon
+               info.resultsArray.push(null);
+               continue;
+            };
+            if (tierOptions.wmt && (! attacker.valid || attacker.hasNoMoves())) {
                info.resultsArray.push(null);
                continue;
             };
             var results;
             results = getAttackResults(attacker, target, environment, 
-                  tierOptions.boostedSweepers, tierOptions.enablePriority);
+                  tierOptions.boostedSweepers, tierOptions.enablePriority, tierOptions.wmt);
             var percentage_min = results.attacks[0].damagePercentage[0];
             if (typeof percentage_min !== 'number') {
                // do nothing
@@ -821,12 +845,21 @@ $(document).ready(function() {
       };
       // sort the infoArray
       infoArray.sort(function (a, b) {
-         return (b.total - a.total);
+         if (!tierOptions.wmt) {
+            return (b.total - a.total);
+         } else {
+            return (a.total - b.total);
+         };
       });
       //console.log(JSON.stringify(infoArray, null, '\t'));
 
       for (var i = 0; i < infoArray.length; i++) {
-         var pokemon = infoArray[i].attacker;
+         var pokemon;
+         if (!tierOptions.wmt) {
+            pokemon = infoArray[i].attacker;
+         } else {
+            pokemon = infoArray[i].target;
+         };
          var cell_id = '#pokeman-0-' + i;
          if (pokemon.valid && isValidPokemonName(pokemon.name)) {
             $(cell_id).html(POKEMON_DATA[pokemon.name].name + '<br />(' + 
@@ -932,12 +965,22 @@ $(document).ready(function() {
      * @return colour that corresponds to the percentage.
      */
    function getCellColor(percentage) {
-      if (percentage <= 50 || typeof percentage !== 'number') {
-         return '#dff0d8';
-      } else if (percentage < 100) {
-         return '#fcf8e3';
+      if (!tierOptions.wmt) {
+         if (percentage <= 50 || typeof percentage !== 'number') {
+            return '#dff0d8';
+         } else if (percentage < 100) {
+            return '#fcf8e3';
+         } else {
+            return '#f2dede';
+         };
       } else {
-         return '#f2dede';
+         if (percentage < 50 || typeof percentage !== 'number') {
+            return '#f2dede';
+         } else if (percentage < 100) {
+            return '#fcf8e3';
+         } else {
+            return '#dff0d8';
+         };
       };
    };
 
@@ -969,21 +1012,51 @@ $(document).ready(function() {
    //Expand and collapse buttons
    $('#collapseTier').on('shown.bs.collapse', function () {
       $("#expandTier").html('Collapse');
-   })
+   });
    $('#collapseTier').on('hidden.bs.collapse', function () {
       $("#expandTier").html('Expand');
-   })
+   });
    $('#team1').on('shown.bs.collapse', function () {
       if ($("#team1").hasClass('in') || $("#team1").hasClass('collapsing')){
          $("#collapseTeam1").html('Collapse');
          $("#collapseTeam1").removeClass('btn-info').addClass('btn-primary');
       };
-   })
+   });
    $('#team1').on('hidden.bs.collapse', function () {
       if ($("#team1").hasClass('collapsing') || $("#team1").hasClass('collapse')){
          $("#collapseTeam1").html('Expand');
          $("#collapseTeam1").removeClass('btn-primary').addClass('btn-info');
       };
-   })
+   });
+   
+   //WallMyTeam Button
+   $('#switchFunction').on('click', function () {
+      if ($('#switchFunction').hasClass('break')){
+         // now in WMT mode
+         tierOptions.wmt = true;
+         tierOptions.outSpeed = 0;
+         updateTable();
+         saveData();
+
+         //change button
+         $('#switchFunction').removeClass('break btn-success').addClass('wall btn-danger');
+         $('#switchFunction').html('bReakMyTeam');
+         $('#mainHeading').html('WallMyTeam <em>(Beta)</em>');
+         $('#outspeed').prop('disabled', 'disabled');
+         
+      } else {
+         // now in BMT mode
+         tierOptions.wmt = false;
+         tierOptions.outSpeed = $('#outspeed').val();
+         updateTable();
+         saveData();
+         
+         //change button
+         $('#switchFunction').removeClass('wall btn-danger').addClass('break btn-success');
+         $('#switchFunction').html('WallMyTeam');
+         $('#mainHeading').html('bReakMyTeam <em>(Beta)</em>');
+         $('#outspeed').prop('disabled', false);
+      };
+   });
    
 });

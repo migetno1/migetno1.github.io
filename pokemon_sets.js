@@ -4065,7 +4065,7 @@ var POKEMON_SETS = {
    'Lugia' : [
       {
          name : 'Most Common',
-         tier : 'uu',
+         tier : 'ubers',
          nature : 'Bold',
          ability : 'Multiscale',
          item : 'Leftovers',

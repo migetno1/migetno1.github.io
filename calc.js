@@ -1584,17 +1584,26 @@ function attackerStrikeFirst(attacker, target, environment) {
   * @param target Target Pokemon object
   * @return a list of results with percentage damage dealt and move used
   */
-function getAttackResults(attacker, target, environment, attackerStatBoosts, enablePriority) {
+function getAttackResults(attacker, target, environment, attackerStatBoosts, enablePriority, wmt) {
    if (attacker.hasNoMoves()) {
       return null;
    };
    var attackerOriginalStatBoosts = [];
-   if (! attackerStatBoosts) {
+   var targetOriginalStatBoosts = [];
+   if (! attackerStatBoosts && !wmt) {
       for (var i = 0; i < 6; i++) {
          attackerOriginalStatBoosts.push(attacker.statBoost[i]);
       };
       for (var i = 0; i < 6; i++) {
          attacker.statBoost[i] = 0;
+      };
+   };
+   if (! attackerStatBoosts && wmt) {
+      for (var i = 0; i < 6; i++) {
+         targetOriginalStatBoosts.push(target.statBoost[i]);
+      };
+      for (var i = 0; i < 6; i++) {
+         target.statBoost[i] = 0;
       };
    };
    var results = {};
@@ -1694,9 +1703,14 @@ function getAttackResults(attacker, target, environment, attackerStatBoosts, ena
       };
    };
    // revert attackStatBoosts
-   if (! attackerStatBoosts) {
+   if (! attackerStatBoosts && !wmt) {
       for (var i = 0; i < 6; i++) {
          attacker.statBoost[i] = attackerOriginalStatBoosts[i];
+      };
+   };
+   if (! attackerStatBoosts && wmt) {
+      for (var i = 0; i < 6; i++) {
+         target.statBoost[i] = targetOriginalStatBoosts[i];
       };
    };
    if (debug) console.log(JSON.stringify(results, null, '\t'));
