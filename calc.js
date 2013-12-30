@@ -1173,7 +1173,7 @@ function applyFinalModifiers(baseDamage, description, attacker, target, move, en
    if ((target.ability === 'solid rock' || target.ability === 'filter')
          && getMoveEffectiveness(description, attacker, target, move, environment) >
             EFFECTIVENESS_NORMAL) {
-      description.defenderAbility = ABILITIES[defender.ability].name;
+      description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0xC00);
    };
    // TODO metronome ability
