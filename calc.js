@@ -758,8 +758,8 @@ function getDefence(description, attacker, target, move, environment) {
 */
 function applySandstormModifier(defence, description, attacker, target, move, environment) {
    if (environment.weather === ENVIRONMENT_SAND) {
-      for (var i = 0; i < POKEMON_DATA[attacker.name].type.length; i++) {
-         var type = POKEMON_DATA[attacker.name].type[i];
+      for (var i = 0; i < POKEMON_DATA[target.name].type.length; i++) {
+         var type = POKEMON_DATA[target.name].type[i];
          if (type === TYPE_NAME_TO_ID.Rock && 
                move.category === MOVE_SPECIAL) {
             description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
