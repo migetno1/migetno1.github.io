@@ -3,10 +3,16 @@ var debug = false;
   * Gets the base stat of a Pokemon.
   * @param pokemon Name of the Pokemon
   * @param stat Base stat to be determined
+  * @param attacker True if pokemon is the attacker, or false otherwise.
   * @return the base stat of the Pokemon.
 */
-function getBaseStat(pokemon, stat) {
+function getBaseStat(pokemon, stat, attacker) {
    if (pokemon == null) { return 0 };
+   if (pokemon === 'aegislash' && attacker) {
+      if (stat === STAT_ATT || stat === STAT_SPA) {
+         return 150;
+      };
+   };
    return POKEMON_DATA[pokemon].stats[stat];
 };
 
@@ -102,15 +108,16 @@ function isSpecialToPhysicalMove(move) {
   * Gets the stat of a Pokemon (no modifications)
   * @param pokemon Pokemon object
   * @param stat Stat to calculate (ATK, DEF, etc.)
+  * @param attacker True if pokemon is the attacker, or false otherwise.
   * @return the stat of the Pokemon.
 */
-function getStat(pokemon, stat) {
+function getStat(pokemon, stat, attacker) {
    if (!isValidStat(stat)) {
       return;
    };
    var pokeStat;
    var evMod = Math.floor(pokemon.ev[stat] / 4);
-   var baseStat = getBaseStat(pokemon.name, stat);
+   var baseStat = getBaseStat(pokemon.name, stat, attacker);
    var iv = pokemon.iv[stat];
    
    var stage1 = Math.floor(2 * baseStat + iv + evMod);
@@ -284,7 +291,7 @@ function getBasePower(description, attacker, target, move, environment) {
    } else if (move.name === 'Beat Up') {
       // TODOn check if correct (or if anyone cares)
       power = 0;
-      var basePower = Math.floor(getStat(attacker, STAT_ATT) / 10) + 5;
+      var basePower = Math.floor(getStat(attacker, STAT_ATT, true) / 10) + 5;
       for (i = 0; i < 6; i++) {
          if (environment.pokemons[0][i].currentHP > 0) {
             power += basePower;
@@ -542,7 +549,7 @@ function getAttack(description, attacker, target, move, environment) {
       stat = STAT_SPA;
    };
 
-   attack = getStat(statPokemon, stat);
+   attack = getStat(statPokemon, stat, true);
 
    // for description
    description.attackEVs = statPokemon.ev[stat];

@@ -103,4 +103,5 @@ var ALIAS_MOVES = {
    'thunderpunch' : 'Thunder Punch',
    'thundershock' : 'Thunder Shock',
    'vicegrip' : 'Vice Grip',
+   'freeze dry' : 'Freeze-Dry',
 };
