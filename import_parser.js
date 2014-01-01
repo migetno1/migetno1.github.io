@@ -6,9 +6,12 @@
   * @param text text to parse
   * @return an array of pokemon
   */
-function importTeam(text) {
+function importTeam(text, defaultLevel) {
    var pokemons = [new Pokemon(), new Pokemon(), new Pokemon(), 
             new Pokemon(), new Pokemon(), new Pokemon()];
+   for (var i = 0; i < pokemons.length; i++) {
+      pokemons[i].changeLevel(defaultLevel);
+   };
    var textArray = text.split('\n');
    var i = 0, pokemonNum = 0;
    while (i < textArray.length && pokemonNum < 6) {
@@ -20,7 +23,7 @@ function importTeam(text) {
       if (i >= textArray.length) break; // not found pokemon
       // we have found the start
       if (i - 1 < 0) continue; // we have found ability on line 0 without name
-      pokemons[pokemonNum] = importPokemon(textArray, i - 1);
+      pokemons[pokemonNum] = importPokemon(textArray, i - 1, defaultLevel);
       i++;
       pokemonNum++;
    };
@@ -57,9 +60,12 @@ function exportTeam(pokemonTeam) {
   * @param i the current index
   * @return a Pokemon object
   */
-function importPokemon(textArray, i) {
+function importPokemon(textArray, i, defaultLevel) {
    var debug = false;
    var pokemon = new Pokemon();
+   if (defaultLevel) {
+      pokemon.changeLevel(defaultLevel);
+   };
    pokemon.valid = true;
    var pokemonName = null;
    var item = null;
@@ -136,6 +142,11 @@ function importPokemon(textArray, i) {
          ability = null;
       };
       i++;
+   };
+   // check for mega evo
+   if (pokemonName && typeof MEGA_EVOS2[pokemonName.toLowerCase()] !== 'undefined') {
+      // we have a mega. Force it to have its proper ability
+      ability = MEGA_EVOS2[pokemonName.toLowerCase()].ability;
    };
    if (debug) console.log('Ability: ' + ability);
 

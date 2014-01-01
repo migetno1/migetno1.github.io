@@ -27,6 +27,17 @@ var POKEMON_SETS = {
    ],
    'Abra' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Magic Guard',
+         item : 'Focus Sash',
+         moves : [ 'Shadow Ball', 'Psychic', 'Hidden Power', 'Protect', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Timid',
@@ -245,6 +256,17 @@ var POKEMON_SETS = {
    ],
    'Aipom' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Skill Link',
+         item : 'Life Orb',
+         moves : [ 'Fake Out', 'U-turn', 'Return', 'Brick Break', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Jolly',
@@ -375,6 +397,17 @@ var POKEMON_SETS = {
    ],
    'Anorith' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Battle Armor',
+         item : 'Eviolite',
+         moves : [ 'Brick Break', 'Rapid Spin', 'Stealth Rock', 'X-Scissor', ],
+         ev : [ 0, 236, 36, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -413,6 +446,17 @@ var POKEMON_SETS = {
       },
    ],
    'Archen' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Defeatist',
+         item : 'Flying Gem',
+         moves : [ 'Acrobatics', 'U-turn', 'Earthquake', 'Rock Slide', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -479,6 +523,17 @@ var POKEMON_SETS = {
    ],
    'Aron' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Rock Head',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Head Smash', 'Iron Head', 'Stealth Rock', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -544,6 +599,17 @@ var POKEMON_SETS = {
    ],
    'Axew' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Mold Breaker',
+         item : 'Eviolite',
+         moves : [ 'Outrage', 'Aqua Tail', 'Dragon Dance', 'Superpower', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -594,6 +660,17 @@ var POKEMON_SETS = {
    ],
    'Azurill' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Huge Power',
+         item : 'Leftovers',
+         moves : [ 'Waterfall', 'Return', 'Bounce', 'Toxic', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -607,6 +684,17 @@ var POKEMON_SETS = {
    ],
    'Bagon' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Rock Head',
+         item : 'Eviolite',
+         moves : [ 'Dragon Claw', 'Fire Fang', 'Dragon Dance', 'Rock Slide', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -619,6 +707,17 @@ var POKEMON_SETS = {
       },
    ],
    'Baltoy' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hardy',
+         ability : 'Levitate',
+         item : 'Eviolite',
+         moves : [ 'Rapid Spin', 'Toxic', 'Stealth Rock', 'Earthquake', ],
+         ev : [ 196, 36, 236, 0, 36, 4, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -672,6 +771,17 @@ var POKEMON_SETS = {
    ],
    'Barboach' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hardy',
+         ability : 'Anticipation',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Waterfall', 'Dragon Dance', 'Return', ],
+         ev : [ 36, 212, 12, 0, 28, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -698,6 +808,17 @@ var POKEMON_SETS = {
    ],
    'Beldum' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Clear Body',
+         item : 'Leftovers',
+         moves : [ 'Iron Head', 'Zen Headbutt', 'Headbutt', 'Iron Defense', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -710,6 +831,17 @@ var POKEMON_SETS = {
       },
    ],
    'Bellsprout' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Rash',
+         ability : 'Chlorophyll',
+         item : 'Miracle Seed',
+         moves : [ 'Giga Drain', 'Solar Beam', 'Sunny Day', 'Weather Ball', ],
+         ev : [ 0, 4, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -736,6 +868,17 @@ var POKEMON_SETS = {
       },
    ],
    'Bidoof' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Simple',
+         item : '',
+         moves : [ 'Curse', 'Aqua Tail', 'Quick Attack', 'Return', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -841,6 +984,17 @@ var POKEMON_SETS = {
    ],
    'Blitzle' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Sap Sipper',
+         item : 'Life Orb',
+         moves : [ 'Flame Charge', 'Wild Charge', 'Volt Switch', 'Quick Attack', ],
+         ev : [ 72, 196, 0, 0, 0, 228, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Hasty',
@@ -853,6 +1007,17 @@ var POKEMON_SETS = {
       },
    ],
    'Bonsly' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Rock Head',
+         item : 'Leftovers',
+         moves : [ 'Sucker Punch', 'Brick Break', 'Rock Slide', 'Double-Edge', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -919,6 +1084,17 @@ var POKEMON_SETS = {
    ],
    'Bronzor' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Levitate',
+         item : 'Eviolite',
+         moves : [ 'Toxic', 'Stealth Rock', 'Psychic', 'Flash Cannon', ],
+         ev : [ 252, 0, 0, 4, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -931,6 +1107,17 @@ var POKEMON_SETS = {
       },
    ],
    'Budew' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Poison Point',
+         item : 'Eviolite',
+         moves : [ 'Giga Drain', 'Sludge Bomb', 'Spikes', 'Sleep Powder', ],
+         ev : [ 0, 0, 76, 196, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -945,6 +1132,17 @@ var POKEMON_SETS = {
    ],
    'Buizel' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Swift Swim',
+         item : 'Eviolite',
+         moves : [ 'Aqua Jet', 'Ice Punch', 'Waterfall', 'Brick Break', ],
+         ev : [ 76, 0, 0, 0, 196, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Adamant',
@@ -958,6 +1156,17 @@ var POKEMON_SETS = {
    ],
    'Bulbasaur' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Overgrow',
+         item : 'Choice Scarf',
+         moves : [ 'Sludge Bomb', 'Giga Drain', 'Sleep Powder', 'Leech Seed', ],
+         ev : [ 252, 0, 0, 4, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Modest',
@@ -970,6 +1179,17 @@ var POKEMON_SETS = {
       },
    ],
    'Buneary' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Limber',
+         item : 'Life Orb',
+         moves : [ 'Fake Out', 'Ice Punch', 'Return', 'Fire Punch', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -996,6 +1216,17 @@ var POKEMON_SETS = {
       },
    ],
    'Cacnea' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Water Absorb',
+         item : 'Eviolite',
+         moves : [ 'Sucker Punch', 'Seed Bomb', 'Swords Dance', 'Drain Punch', ],
+         ev : [ 36, 236, 0, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1074,6 +1305,17 @@ var POKEMON_SETS = {
       },
    ],
    'Caterpie' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Careful',
+         ability : 'Shield Dust',
+         item : 'Choice Band',
+         moves : [ 'Tackle', 'Electroweb', 'Bug Bite', 'String Shot', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1177,6 +1419,17 @@ var POKEMON_SETS = {
    ],
    'Charmander' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Mild',
+         ability : 'Blaze',
+         item : 'Leftovers',
+         moves : [ 'Flamethrower', 'Dragon Pulse', 'Thunder Punch', 'Fire Blast', ],
+         ev : [ 0, 112, 0, 200, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Modest',
@@ -1197,6 +1450,19 @@ var POKEMON_SETS = {
          item : 'Focus Sash',
          moves : [ 'Chatter', 'Boomburst', 'Nasty Plot', 'Substitute', ],
          ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
+   'Cherubi' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Chlorophyll',
+         item : 'Oran Berry',
+         moves : [ 'Weather Ball', 'Solar Beam', 'Sunny Day', 'Morning Sun', ],
+         ev : [ 0, 0, 0, 20, 252, 236, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
@@ -1229,6 +1495,17 @@ var POKEMON_SETS = {
    ],
    'Chikorita' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Overgrow',
+         item : 'Light Clay',
+         moves : [ 'Giga Drain', 'Synthesis', 'Toxic', 'Light Screen', ],
+         ev : [ 252, 0, 0, 4, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -1241,6 +1518,17 @@ var POKEMON_SETS = {
       },
    ],
    'Chimchar' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Blaze',
+         item : 'Focus Sash',
+         moves : [ 'Fake Out', 'Stealth Rock', 'Overheat', 'Fire Punch', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1255,6 +1543,17 @@ var POKEMON_SETS = {
    ],
    'Chinchou' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Volt Absorb',
+         item : 'Eviolite',
+         moves : [ 'Volt Switch', 'Ice Beam', 'Scald', 'Heal Bell', ],
+         ev : [ 0, 0, 52, 232, 0, 224, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Modest',
@@ -1267,6 +1566,17 @@ var POKEMON_SETS = {
       },
    ],
    'Chingling' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Levitate',
+         item : 'Light Clay',
+         moves : [ 'Light Screen', 'Reflect', 'Wish', 'Heal Bell', ],
+         ev : [ 236, 0, 116, 0, 116, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -1293,6 +1603,17 @@ var POKEMON_SETS = {
       },
    ],
    'Clamperl' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Shell Armor',
+         item : 'DeepSeaTooth',
+         moves : [ 'Surf', 'Ice Beam', 'Shell Smash', 'Hidden Power', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1359,6 +1680,17 @@ var POKEMON_SETS = {
    ],
    'Cleffa' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Magic Guard',
+         item : 'Eviolite',
+         moves : [ 'Light Screen', 'Shadow Ball', 'Wish', 'Psychic', ],
+         ev : [ 196, 0, 52, 0, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Bold',
@@ -1409,6 +1741,19 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Combee' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hasty',
+         ability : 'Honey Gather',
+         item : 'Flying Gem',
+         moves : [ 'Tailwind', 'Air Cutter', 'Bug Bite', 'Endeavor', ],
+         ev : [ 0, 4, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Conkeldurr' : [
       {
          name : 'Most Common',
@@ -1424,6 +1769,17 @@ var POKEMON_SETS = {
    ],
    'Corphish' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Adaptability',
+         item : 'Leftovers',
+         moves : [ 'Dragon Dance', 'Crunch', 'Crabhammer', 'Superpower', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -1436,6 +1792,17 @@ var POKEMON_SETS = {
       },
    ],
    'Cottonee' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Prankster',
+         item : 'Eviolite',
+         moves : [ 'Leech Seed', 'Substitute', 'Encore', 'Stun Spore', ],
+         ev : [ 36, 0, 196, 0, 196, 80, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1462,6 +1829,17 @@ var POKEMON_SETS = {
       },
    ],
    'Cranidos' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Sheer Force',
+         item : 'Choice Scarf',
+         moves : [ 'Earthquake', 'Head Smash', 'Fire Punch', 'Crunch', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -1501,6 +1879,17 @@ var POKEMON_SETS = {
       },
    ],
    'Croagunk' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Dry Skin',
+         item : 'Eviolite',
+         moves : [ 'Drain Punch', 'Sucker Punch', 'Fake Out', 'Vacuum Wave', ],
+         ev : [ 212, 28, 116, 0, 116, 36, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -1554,6 +1943,17 @@ var POKEMON_SETS = {
    ],
    'Cubchoo' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Snow Cloak',
+         item : 'Oran Berry',
+         moves : [ 'Surf', 'Superpower', 'Avalanche', 'Ice Beam', ],
+         ev : [ 0, 196, 116, 0, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -1567,6 +1967,17 @@ var POKEMON_SETS = {
    ],
    'Cubone' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Rock Head',
+         item : 'Thick Club',
+         moves : [ 'Fire Punch', 'Earthquake', 'Double-Edge', 'Bonemerang', ],
+         ev : [ 36, 200, 0, 0, 36, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -1579,6 +1990,17 @@ var POKEMON_SETS = {
       },
    ],
    'Cyndaquil' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Blaze',
+         item : 'Choice Scarf',
+         moves : [ 'Eruption', 'Nature Power', 'Fire Blast', 'Hidden Power', ],
+         ev : [ 44, 24, 0, 200, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1619,6 +2041,17 @@ var POKEMON_SETS = {
    ],
    'Darumaka' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Hustle',
+         item : 'Choice Band',
+         moves : [ 'Flare Blitz', 'Superpower', 'Rock Slide', 'U-turn', ],
+         ev : [ 116, 196, 0, 0, 0, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Jolly',
@@ -1645,6 +2078,17 @@ var POKEMON_SETS = {
    ],
    'Deerling' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Sap Sipper',
+         item : 'Eviolite',
+         moves : [ 'Seed Bomb', 'Jump Kick', 'Baton Pass', 'Agility', ],
+         ev : [ 36, 0, 196, 0, 40, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Timid',
@@ -1657,6 +2101,17 @@ var POKEMON_SETS = {
       },
    ],
    'Deino' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Hustle',
+         item : 'Choice Scarf',
+         moves : [ 'Crunch', 'Outrage', 'Fire Fang', 'Superpower', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1795,6 +2250,17 @@ var POKEMON_SETS = {
    ],
    'Diglett' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Arena Trap',
+         item : 'Life Orb',
+         moves : [ 'Earthquake', 'Sucker Punch', 'Rock Slide', 'Substitute', ],
+         ev : [ 0, 236, 0, 0, 36, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -1820,6 +2286,17 @@ var POKEMON_SETS = {
       },
    ],
    'Doduo' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Early Bird',
+         item : 'Eviolite',
+         moves : [ 'Quick Attack', 'Brave Bird', 'Return', 'Pursuit', ],
+         ev : [ 0, 236, 0, 0, 36, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1899,6 +2376,17 @@ var POKEMON_SETS = {
    ],
    'Dratini' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Shed Skin',
+         item : 'Eviolite',
+         moves : [ 'Dragon Dance', 'Outrage', 'Extreme Speed', 'Aqua Tail', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -1925,6 +2413,17 @@ var POKEMON_SETS = {
    ],
    'Drifloon' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Unburden',
+         item : 'Flying Gem',
+         moves : [ 'Shadow Ball', 'Acrobatics', 'Destiny Bond', 'Thunderbolt', ],
+         ev : [ 116, 0, 4, 200, 8, 120, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Modest',
@@ -1938,6 +2437,17 @@ var POKEMON_SETS = {
    ],
    'Drilbur' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Sand Rush',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Rock Slide', 'Shadow Claw', 'Rapid Spin', ],
+         ev : [ 0, 236, 36, 0, 0, 212, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -1950,6 +2460,17 @@ var POKEMON_SETS = {
       },
    ],
    'Drowzee' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Insomnia',
+         item : 'Choice Scarf',
+         moves : [ 'Psychic', 'Zen Headbutt', 'Thunder Punch', 'Ice Punch', ],
+         ev : [ 116, 212, 0, 0, 0, 180, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -1976,6 +2497,17 @@ var POKEMON_SETS = {
       },
    ],
    'Ducklett' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Big Pecks',
+         item : 'Eviolite',
+         moves : [ 'Roost', 'Air Slash', 'Feather Dance', 'Toxic', ],
+         ev : [ 180, 0, 196, 4, 116, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -2042,6 +2574,17 @@ var POKEMON_SETS = {
    ],
    'Duskull' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Levitate',
+         item : 'Eviolite',
+         moves : [ 'Will-O-Wisp', 'Pain Split', 'Substitute', 'Shadow Sneak', ],
+         ev : [ 196, 0, 196, 0, 116, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -2054,6 +2597,17 @@ var POKEMON_SETS = {
       },
    ],
    'Dwebble' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Sturdy',
+         item : 'Oran Berry',
+         moves : [ 'Rock Blast', 'Stealth Rock', 'X-Scissor', 'Spikes', ],
+         ev : [ 36, 236, 0, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -2081,6 +2635,17 @@ var POKEMON_SETS = {
    ],
    'Eevee' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Adaptability',
+         item : 'Choice Band',
+         moves : [ 'Quick Attack', 'Return', 'Bite', 'Iron Tail', ],
+         ev : [ 0, 236, 36, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Adamant',
@@ -2093,6 +2658,17 @@ var POKEMON_SETS = {
       },
    ],
    'Ekans' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Shed Skin',
+         item : 'Eviolite',
+         moves : [ 'Gunk Shot', 'Coil', 'Sucker Punch', 'Rest', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -2120,6 +2696,17 @@ var POKEMON_SETS = {
    ],
    'Electrike' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Lightning Rod',
+         item : 'Choice Specs',
+         moves : [ 'Thunderbolt', 'Volt Switch', 'Flamethrower', 'Switcheroo', ],
+         ev : [ 0, 0, 0, 240, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Timid',
@@ -2146,6 +2733,17 @@ var POKEMON_SETS = {
    ],
    'Elekid' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Naive',
+         ability : 'Static',
+         item : 'Life Orb',
+         moves : [ 'Ice Punch', 'Cross Chop', 'Thunderbolt', 'Fire Punch', ],
+         ev : [ 0, 252, 0, 16, 0, 240, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Timid',
@@ -2158,6 +2756,17 @@ var POKEMON_SETS = {
       },
    ],
    'Elgyem' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Analytic',
+         item : 'Eviolite',
+         moves : [ 'Psychic', 'Thunderbolt', 'Recover', 'Calm Mind', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -2263,6 +2872,17 @@ var POKEMON_SETS = {
    ],
    'Exeggcute' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Harvest',
+         item : 'Oran Berry',
+         moves : [ 'Giga Drain', 'Psychic', 'Substitute', 'Sleep Powder', ],
+         ev : [ 0, 0, 196, 76, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Bold',
@@ -2301,6 +2921,17 @@ var POKEMON_SETS = {
       },
    ],
    'Feebas' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Adaptability',
+         item : '',
+         moves : [ 'Scald', 'Confuse Ray', 'Toxic', 'Dragon Pulse', ],
+         ev : [ 252, 0, 0, 4, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -2341,6 +2972,17 @@ var POKEMON_SETS = {
    ],
    'Ferroseed' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Relaxed',
+         ability : 'Iron Barbs',
+         item : 'Eviolite',
+         moves : [ 'Leech Seed', 'Spikes', 'Stealth Rock', 'Protect', ],
+         ev : [ 164, 0, 188, 0, 148, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Relaxed',
@@ -2361,6 +3003,19 @@ var POKEMON_SETS = {
          item : 'Leftovers',
          moves : [ 'Leech Seed', 'Stealth Rock', 'Power Whip', 'Gyro Ball', ],
          ev : [ 252, 4, 252, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
+   'Finneon' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Swift Swim',
+         item : 'Water Gem',
+         moves : [ 'Ice Beam', 'Signal Beam', 'Surf', 'Aurora Beam', ],
+         ev : [ 0, 0, 0, 204, 76, 228, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
@@ -2445,6 +3100,17 @@ var POKEMON_SETS = {
    ],
    'Foongus' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Regenerator',
+         item : 'Eviolite',
+         moves : [ 'Spore', 'Giga Drain', 'Stun Spore', 'Clear Smog', ],
+         ev : [ 124, 0, 156, 76, 76, 76, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Bold',
@@ -2470,6 +3136,17 @@ var POKEMON_SETS = {
       },
    ],
    'Frillish' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Water Absorb',
+         item : 'Eviolite',
+         moves : [ 'Shadow Ball', 'Recover', 'Scald', 'Will-O-Wisp', ],
+         ev : [ 0, 0, 0, 236, 76, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -2601,6 +3278,17 @@ var POKEMON_SETS = {
    ],
    'Gastly' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Levitate',
+         item : 'Choice Scarf',
+         moves : [ 'Shadow Ball', 'Sludge Bomb', 'Thunderbolt', 'Giga Drain', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Timid',
@@ -2666,6 +3354,17 @@ var POKEMON_SETS = {
    ],
    'Geodude' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Sturdy',
+         item : 'Custap Berry',
+         moves : [ 'Earthquake', 'Stone Edge', 'Sucker Punch', 'Fire Punch', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -2678,6 +3377,17 @@ var POKEMON_SETS = {
       },
    ],
    'Gible' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Lonely',
+         ability : 'Rough Skin',
+         item : 'Life Orb',
+         moves : [ 'Earthquake', 'Dragon Claw', 'Stone Edge', 'Outrage', ],
+         ev : [ 252, 252, 0, 4, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -2744,6 +3454,17 @@ var POKEMON_SETS = {
    ],
    'Glameow' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Limber',
+         item : 'Life Orb',
+         moves : [ 'Sucker Punch', 'U-turn', 'Fake Out', 'Hypnosis', ],
+         ev : [ 0, 236, 0, 0, 36, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Jolly',
@@ -2796,6 +3517,17 @@ var POKEMON_SETS = {
    ],
    'Goldeen' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Lightning Rod',
+         item : 'Eviolite',
+         moves : [ 'Megahorn', 'Waterfall', 'Drill Run', 'Knock Off', ],
+         ev : [ 0, 220, 36, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -2821,6 +3553,17 @@ var POKEMON_SETS = {
       },
    ],
    'Golett' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Iron Fist',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Ice Punch', 'Drain Punch', 'Stealth Rock', ],
+         ev : [ 44, 8, 196, 0, 196, 64, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -2886,6 +3629,17 @@ var POKEMON_SETS = {
       },
    ],
    'Gothita' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Frisk',
+         item : 'Mind Plate',
+         moves : [ 'Psychic', 'Mirror Coat', 'Reflect', 'Light Screen', ],
+         ev : [ 252, 0, 0, 4, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -2978,6 +3732,17 @@ var POKEMON_SETS = {
    ],
    'Grimer' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Poison Touch',
+         item : 'Eviolite',
+         moves : [ 'Shadow Sneak', 'Fire Punch', 'Poison Jab', 'Gunk Shot', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -3004,6 +3769,17 @@ var POKEMON_SETS = {
    ],
    'Growlithe' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Careful',
+         ability : 'Intimidate',
+         item : 'Eviolite',
+         moves : [ 'Wild Charge', 'Flare Blitz', 'Morning Sun', 'Close Combat', ],
+         ev : [ 0, 116, 156, 0, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Bold',
@@ -3016,6 +3792,17 @@ var POKEMON_SETS = {
       },
    ],
    'Gulpin' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Liquid Ooze',
+         item : 'Black Sludge',
+         moves : [ 'Stockpile', 'Pain Split', 'Ice Beam', 'Toxic', ],
+         ev : [ 252, 0, 252, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -3055,6 +3842,17 @@ var POKEMON_SETS = {
       },
    ],
    'Happiny' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Natural Cure',
+         item : 'Eviolite',
+         moves : [ 'Aromatherapy', 'Toxic', 'Thunder Wave', 'Counter', ],
+         ev : [ 252, 0, 0, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -3184,6 +3982,17 @@ var POKEMON_SETS = {
    ],
    'Hippopotas' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Sand Stream',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Slack Off', 'Stealth Rock', 'Whirlwind', ],
+         ev : [ 132, 20, 212, 0, 100, 20, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Impish',
@@ -3288,6 +4097,17 @@ var POKEMON_SETS = {
    ],
    'Hoothoot' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Insomnia',
+         item : 'Eviolite',
+         moves : [ 'Roost', 'Heat Wave', 'Psycho Shift', 'Air Slash', ],
+         ev : [ 0, 0, 0, 52, 228, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Timid',
@@ -3301,6 +4121,17 @@ var POKEMON_SETS = {
    ],
    'Hoppip' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Careful',
+         ability : 'Infiltrator',
+         item : 'Focus Sash',
+         moves : [ 'U-turn', 'Energy Ball', 'Acrobatics', 'Encore', ],
+         ev : [ 0, 36, 0, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Timid',
@@ -3313,6 +4144,17 @@ var POKEMON_SETS = {
       },
    ],
    'Horsea' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Swift Swim',
+         item : 'Grass Gem',
+         moves : [ 'Ice Beam', 'Hydro Pump', 'Hidden Power', 'Dragon Pulse', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -3353,6 +4195,17 @@ var POKEMON_SETS = {
    ],
    'Houndour' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Lonely',
+         ability : 'Flash Fire',
+         item : 'Life Orb',
+         moves : [ 'Sucker Punch', 'Dark Pulse', 'Fire Blast', 'Flamethrower', ],
+         ev : [ 0, 196, 0, 36, 36, 240, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Lonely',
@@ -3378,6 +4231,17 @@ var POKEMON_SETS = {
       },
    ],
    'Igglybuff' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Cute Charm',
+         item : 'Leftovers',
+         moves : [ 'Light Screen', 'Wish', 'Thunder Wave', 'Reflect', ],
+         ev : [ 252, 0, 0, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -3457,6 +4321,17 @@ var POKEMON_SETS = {
    ],
    'Joltik' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Unnerve',
+         item : 'Choice Scarf',
+         moves : [ 'Bug Buzz', 'Thunderbolt', 'Volt Switch', 'Energy Ball', ],
+         ev : [ 36, 0, 0, 220, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Modest',
@@ -3495,6 +4370,17 @@ var POKEMON_SETS = {
       },
    ],
    'Kabuto' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Naughty',
+         ability : 'Battle Armor',
+         item : 'Life Orb',
+         moves : [ 'Waterfall', 'Rock Slide', 'Aqua Jet', 'Rapid Spin', ],
+         ev : [ 172, 252, 36, 4, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -3547,6 +4433,17 @@ var POKEMON_SETS = {
       },
    ],
    'Karrablast' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'No Guard',
+         item : 'Eviolite',
+         moves : [ 'Megahorn', 'Return', 'Aerial Ace', 'Counter', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -3626,6 +4523,17 @@ var POKEMON_SETS = {
    ],
    'Klink' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Sassy',
+         ability : 'Minus',
+         item : 'Flame Orb',
+         moves : [ 'Wild Charge', 'Facade', 'Return', 'Substitute', ],
+         ev : [ 0, 4, 196, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -3638,6 +4546,17 @@ var POKEMON_SETS = {
       },
    ],
    'Koffing' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Levitate',
+         item : 'Eviolite',
+         moves : [ 'Pain Split', 'Clear Smog', 'Will-O-Wisp', 'Sludge Bomb', ],
+         ev : [ 36, 0, 236, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -3652,6 +4571,17 @@ var POKEMON_SETS = {
    ],
    'Krabby' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Sheer Force',
+         item : 'Life Orb',
+         moves : [ 'Crabhammer', 'Rock Slide', 'X-Scissor', 'Superpower', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -3659,6 +4589,19 @@ var POKEMON_SETS = {
          item : 'Life Orb',
          moves : [ 'Crabhammer', 'Rock Slide', 'X-Scissor', 'Agility', ],
          ev : [ 0, 236, 0, 0, 76, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
+   'Kricketot' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Lonely',
+         ability : 'Shed Skin',
+         item : 'Focus Sash',
+         moves : [ 'Endeavor', 'Mud-Slap', 'Bug Bite', 'Bide', ],
+         ev : [ 252, 252, 0, 4, 0, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
@@ -3782,6 +4725,17 @@ var POKEMON_SETS = {
    ],
    'Larvesta' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Flame Body',
+         item : 'Eviolite',
+         moves : [ 'Flare Blitz', 'U-turn', 'Wild Charge', 'Morning Sun', ],
+         ev : [ 76, 236, 156, 0, 0, 36, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -3794,6 +4748,17 @@ var POKEMON_SETS = {
       },
    ],
    'Larvitar' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Guts',
+         item : 'Flame Orb',
+         moves : [ 'Earthquake', 'Dragon Dance', 'Stone Edge', 'Crunch', ],
+         ev : [ 0, 244, 0, 0, 76, 188, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -3860,6 +4825,17 @@ var POKEMON_SETS = {
    ],
    'Ledyba' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Rattled',
+         item : 'Eviolite',
+         moves : [ 'Baton Pass', 'Agility', 'Swords Dance', 'Encore', ],
+         ev : [ 196, 0, 196, 0, 116, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -3885,6 +4861,17 @@ var POKEMON_SETS = {
       },
    ],
    'Lickitung' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Careful',
+         ability : 'Own Tempo',
+         item : 'Eviolite',
+         moves : [ 'Dragon Tail', 'Wish', 'Protect', 'Heal Bell', ],
+         ev : [ 252, 4, 0, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -3912,6 +4899,17 @@ var POKEMON_SETS = {
    ],
    'Lileep' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Storm Drain',
+         item : 'Eviolite',
+         moves : [ 'Recover', 'Giga Drain', 'Ancient Power', 'Toxic', ],
+         ev : [ 228, 0, 220, 0, 60, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -3932,6 +4930,19 @@ var POKEMON_SETS = {
          item : 'Leftovers',
          moves : [ 'Quiver Dance', 'Sleep Powder', 'Giga Drain', 'Petal Dance', ],
          ev : [ 0, 0, 0, 252, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
+   'Lillipup' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Vital Spirit',
+         item : '',
+         moves : [ 'Crunch', 'Fire Fang', 'Wild Charge', 'Ice Fang', ],
+         ev : [ 100, 100, 76, 0, 0, 208, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
@@ -3964,6 +4975,17 @@ var POKEMON_SETS = {
    ],
    'Litwick' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Flash Fire',
+         item : 'Life Orb',
+         moves : [ 'Shadow Ball', 'Energy Ball', 'Fire Blast', 'Flamethrower', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Modest',
@@ -3989,6 +5011,17 @@ var POKEMON_SETS = {
       },
    ],
    'Lotad' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Swift Swim',
+         item : 'Life Orb',
+         moves : [ 'Giga Drain', 'Ice Beam', 'Rain Dance', 'Surf', ],
+         ev : [ 0, 0, 36, 196, 36, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -4103,6 +5136,17 @@ var POKEMON_SETS = {
    ],
    'Machop' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'No Guard',
+         item : 'Choice Scarf',
+         moves : [ 'Dynamic Punch', 'Ice Punch', 'Payback', 'Bullet Punch', ],
+         ev : [ 0, 196, 0, 0, 76, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -4116,6 +5160,17 @@ var POKEMON_SETS = {
    ],
    'Magby' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hasty',
+         ability : 'Flame Body',
+         item : 'Life Orb',
+         moves : [ 'Thunder Punch', 'Flare Blitz', 'Overheat', 'Mach Punch', ],
+         ev : [ 0, 236, 0, 20, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -4128,6 +5183,17 @@ var POKEMON_SETS = {
       },
    ],
    'Magikarp' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Naughty',
+         ability : 'Swift Swim',
+         item : 'Focus Sash',
+         moves : [ 'Splash', '', 'Flail', 'Tackle', ],
+         ev : [ 0, 252, 0, 4, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -4154,6 +5220,17 @@ var POKEMON_SETS = {
       },
    ],
    'Magnemite' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Magnet Pull',
+         item : 'Eviolite',
+         moves : [ 'Flash Cannon', 'Volt Switch', 'Thunderbolt', 'Hidden Power', ],
+         ev : [ 156, 0, 36, 240, 76, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -4193,6 +5270,17 @@ var POKEMON_SETS = {
       },
    ],
    'Makuhita' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Brave',
+         ability : 'Guts',
+         item : 'Oran Berry',
+         moves : [ 'Ice Punch', 'Close Combat', 'Bullet Punch', 'Belly Drum', ],
+         ev : [ 180, 196, 36, 0, 66, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -4285,6 +5373,17 @@ var POKEMON_SETS = {
    ],
    'Mankey' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Vital Spirit',
+         item : 'Choice Scarf',
+         moves : [ 'Close Combat', 'Ice Punch', 'U-turn', 'Punishment', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -4298,6 +5397,17 @@ var POKEMON_SETS = {
    ],
    'Mantyke' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Water Absorb',
+         item : 'Eviolite',
+         moves : [ 'Air Slash', 'Rest', 'Ice Beam', 'Sleep Talk', ],
+         ev : [ 252, 0, 196, 4, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Modest',
@@ -4310,6 +5420,17 @@ var POKEMON_SETS = {
       },
    ],
    'Mareep' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Static',
+         item : 'Life Orb',
+         moves : [ 'Thunderbolt', 'Thunder Wave', 'Signal Beam', 'Toxic', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -4454,6 +5575,17 @@ var POKEMON_SETS = {
    ],
    'Meowth' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Technician',
+         item : 'Normal Gem',
+         moves : [ 'Fake Out', 'Bite', 'Covet', 'U-turn', ],
+         ev : [ 0, 236, 76, 0, 0, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Jolly',
@@ -4532,6 +5664,17 @@ var POKEMON_SETS = {
    ],
    'Mienfoo' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Regenerator',
+         item : 'Eviolite',
+         moves : [ 'U-turn', 'Fake Out', 'Drain Punch', 'Knock Off', ],
+         ev : [ 0, 236, 36, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -4584,6 +5727,17 @@ var POKEMON_SETS = {
    ],
    'Mime Jr.' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Mild',
+         ability : 'Technician',
+         item : 'Focus Sash',
+         moves : [ 'Psychic', 'Thunderbolt', 'Fake Out', 'Shadow Ball', ],
+         ev : [ 40, 4, 0, 252, 0, 212, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -4597,6 +5751,17 @@ var POKEMON_SETS = {
    ],
    'Minccino' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Skill Link',
+         item : 'Life Orb',
+         moves : [ 'Tail Slap', 'U-turn', 'Aqua Tail', 'Knock Off', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -4609,6 +5774,17 @@ var POKEMON_SETS = {
       },
    ],
    'Misdreavus' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Levitate',
+         item : 'Eviolite',
+         moves : [ 'Shadow Ball', 'Nasty Plot', 'Thunderbolt', 'Will-O-Wisp', ],
+         ev : [ 0, 0, 0, 240, 0, 240, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -4662,6 +5838,17 @@ var POKEMON_SETS = {
    ],
    'Mudkip' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Torrent',
+         item : 'Eviolite',
+         moves : [ 'Ice Beam', 'Waterfall', 'Earth Power', 'Superpower', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Modest',
@@ -4688,6 +5875,17 @@ var POKEMON_SETS = {
    ],
    'Munchlax' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Thick Fat',
+         item : 'Eviolite',
+         moves : [ 'Return', 'Earthquake', 'Fire Punch', 'Rest', ],
+         ev : [ 0, 236, 36, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -4701,6 +5899,17 @@ var POKEMON_SETS = {
    ],
    'Munna' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Synchronize',
+         item : 'Eviolite',
+         moves : [ 'Signal Beam', 'Psychic', 'Hypnosis', 'Psyshock', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Calm',
@@ -4713,6 +5922,17 @@ var POKEMON_SETS = {
       },
    ],
    'Murkrow' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Prankster',
+         item : 'Eviolite',
+         moves : [ 'Brave Bird', 'Sucker Punch', 'Roost', 'Substitute', ],
+         ev : [ 36, 236, 20, 0, 20, 188, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -4739,6 +5959,17 @@ var POKEMON_SETS = {
       },
    ],
    'Natu' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Magic Bounce',
+         item : 'Eviolite',
+         moves : [ 'Roost', 'Psychic', 'U-turn', 'Hidden Power', ],
+         ev : [ 0, 0, 0, 200, 108, 200, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -4779,6 +6010,17 @@ var POKEMON_SETS = {
    ],
    'Nidoran-F' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Naughty',
+         ability : 'Poison Point',
+         item : 'Eviolite',
+         moves : [ 'Poison Jab', 'Sucker Punch', 'Shadow Claw', 'Thunderbolt', ],
+         ev : [ 0, 220, 0, 92, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -4792,6 +6034,17 @@ var POKEMON_SETS = {
    ],
    'Nidoran-M' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Hustle',
+         item : 'Life Orb',
+         moves : [ 'Poison Jab', 'Sucker Punch', 'Head Smash', 'Hone Claws', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -4799,6 +6052,19 @@ var POKEMON_SETS = {
          item : 'Life Orb',
          moves : [ 'Poison Jab', 'Sucker Punch', 'Hone Claws', 'Head Smash', ],
          ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
+   'Nincada' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hardy',
+         ability : 'Compound Eyes',
+         item : 'Insect Plate',
+         moves : [ 'Aerial Ace', 'Bug Buzz', 'Night Slash', 'Toxic', ],
+         ev : [ 100, 152, 36, 29, 29, 100, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
@@ -4857,6 +6123,17 @@ var POKEMON_SETS = {
    ],
    'Nosepass' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Sturdy',
+         item : 'Eviolite',
+         moves : [ 'Stealth Rock', 'Stone Edge', 'Thunder Wave', 'Fire Punch', ],
+         ev : [ 76, 0, 236, 0, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Careful',
@@ -4869,6 +6146,17 @@ var POKEMON_SETS = {
       },
    ],
    'Numel' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Simple',
+         item : 'Eviolite',
+         moves : [ 'Flame Charge', 'Earthquake', 'Stockpile', 'Howl', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -4883,6 +6171,17 @@ var POKEMON_SETS = {
    ],
    'Oddish' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Chlorophyll',
+         item : 'Heat Rock',
+         moves : [ 'Sludge Bomb', 'Sunny Day', 'Solar Beam', 'Hidden Power', ],
+         ev : [ 0, 0, 0, 240, 0, 200, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Modest',
@@ -4895,6 +6194,17 @@ var POKEMON_SETS = {
       },
    ],
    'Omanyte' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Shell Armor',
+         item : 'Eviolite',
+         moves : [ 'Spikes', 'Scald', 'Stealth Rock', 'Earth Power', ],
+         ev : [ 236, 0, 36, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -4922,6 +6232,17 @@ var POKEMON_SETS = {
    ],
    'Onix' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Sturdy',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Stealth Rock', 'Stone Edge', 'Dragon Tail', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -4934,6 +6255,17 @@ var POKEMON_SETS = {
       },
    ],
    'Oshawott' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Lonely',
+         ability : 'Torrent',
+         item : 'Eviolite',
+         moves : [ 'Aqua Jet', 'Swords Dance', 'X-Scissor', 'Grass Knot', ],
+         ev : [ 252, 252, 0, 4, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -4985,7 +6317,31 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Panpour' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Torrent',
+         item : 'Leftovers',
+         moves : [ 'Ice Beam', 'Substitute', 'Nasty Plot', 'Surf', ],
+         ev : [ 0, 0, 0, 252, 212, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Pansage' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Overgrow',
+         item : 'Focus Sash',
+         moves : [ 'Leaf Storm', 'Nasty Plot', 'Energy Ball', 'Hidden Power', ],
+         ev : [ 3, 3, 0, 252, 3, 244, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -4998,7 +6354,31 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Pansear' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Blaze',
+         item : 'Focus Sash',
+         moves : [ 'Solar Beam', 'Sunny Day', 'Nasty Plot', 'Flamethrower', ],
+         ev : [ 40, 0, 0, 252, 4, 212, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Paras' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Dry Skin',
+         item : 'Oran Berry',
+         moves : [ 'Spore', 'Bug Bite', 'X-Scissor', 'Seed Bomb', ],
+         ev : [ 0, 196, 76, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5026,6 +6406,17 @@ var POKEMON_SETS = {
    ],
    'Pawniard' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Defiant',
+         item : 'Eviolite',
+         moves : [ 'Iron Head', 'Sucker Punch', 'Swords Dance', 'Brick Break', ],
+         ev : [ 0, 236, 36, 0, 36, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Adamant',
@@ -5052,6 +6443,17 @@ var POKEMON_SETS = {
    ],
    'Petilil' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Chlorophyll',
+         item : 'Eviolite',
+         moves : [ 'Sleep Powder', 'Solar Beam', 'Sunny Day', 'Hidden Power', ],
+         ev : [ 0, 0, 36, 200, 36, 200, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Modest',
@@ -5064,6 +6466,17 @@ var POKEMON_SETS = {
       },
    ],
    'Phanpy' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Pickup',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Ice Shard', 'Stealth Rock', 'Knock Off', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5091,6 +6504,17 @@ var POKEMON_SETS = {
    ],
    'Pichu' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Static',
+         item : 'Focus Sash',
+         moves : [ 'Fake Out', 'Thunderbolt', 'Iron Tail', 'Volt Tackle', ],
+         ev : [ 0, 0, 0, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -5117,6 +6541,17 @@ var POKEMON_SETS = {
    ],
    'Pidgey' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Keen Eye',
+         item : 'Choice Band',
+         moves : [ 'Brave Bird', 'U-turn', 'Return', 'Roost', ],
+         ev : [ 44, 236, 0, 0, 0, 228, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -5129,6 +6564,17 @@ var POKEMON_SETS = {
       },
    ],
    'Pidove' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Super Luck',
+         item : 'Leftovers',
+         moves : [ 'Roost', 'U-turn', 'Fly', 'Steel Wing', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'uu',
@@ -5155,6 +6601,17 @@ var POKEMON_SETS = {
       },
    ],
    'Pineco' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Sturdy',
+         item : 'Custap Berry',
+         moves : [ 'Stealth Rock', 'Rapid Spin', 'Toxic Spikes', 'Spikes', ],
+         ev : [ 252, 4, 196, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5195,6 +6652,17 @@ var POKEMON_SETS = {
    ],
    'Piplup' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Torrent',
+         item : 'Eviolite',
+         moves : [ 'Scald', 'Ice Beam', 'Stealth Rock', 'Hydro Pump', ],
+         ev : [ 0, 0, 252, 28, 228, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -5220,6 +6688,17 @@ var POKEMON_SETS = {
       },
    ],
    'Poliwag' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Water Absorb',
+         item : 'Oran Berry',
+         moves : [ 'Waterfall', 'Hypnosis', 'Belly Drum', 'Return', ],
+         ev : [ 184, 44, 36, 0, 36, 208, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5247,6 +6726,17 @@ var POKEMON_SETS = {
    ],
    'Ponyta' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Flash Fire',
+         item : 'Eviolite',
+         moves : [ 'Flare Blitz', 'Wild Charge', 'Morning Sun', 'Flame Charge', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -5260,6 +6750,17 @@ var POKEMON_SETS = {
    ],
    'Poochyena' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Quick Feet',
+         item : 'Toxic Orb',
+         moves : [ 'Fire Fang', 'Crunch', 'Sucker Punch', 'Foul Play', ],
+         ev : [ 0, 236, 0, 0, 36, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Jolly',
@@ -5272,6 +6773,17 @@ var POKEMON_SETS = {
       },
    ],
    'Porygon' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Trace',
+         item : 'Eviolite',
+         moves : [ 'Tri Attack', 'Recover', 'Shadow Ball', 'Thunder Wave', ],
+         ev : [ 236, 0, 196, 0, 76, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5338,6 +6850,17 @@ var POKEMON_SETS = {
    ],
    'Psyduck' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Lonely',
+         ability : 'Cloud Nine',
+         item : 'Eviolite',
+         moves : [ 'Aqua Tail', 'Yawn', 'Ice Punch', 'Zen Headbutt', ],
+         ev : [ 0, 184, 52, 0, 36, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Lonely',
@@ -5402,6 +6925,17 @@ var POKEMON_SETS = {
       },
    ],
    'Purrloin' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Careful',
+         ability : 'Prankster',
+         item : 'Eviolite',
+         moves : [ 'Thunder Wave', 'Foul Play', 'Swagger', 'Substitute', ],
+         ev : [ 252, 4, 0, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -5468,6 +7002,17 @@ var POKEMON_SETS = {
    ],
    'Ralts' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Relaxed',
+         ability : 'Synchronize',
+         item : 'Focus Sash',
+         moves : [ 'Psychic', 'Destiny Bond', 'Trick Room', 'Will-O-Wisp', ],
+         ev : [ 0, 0, 236, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Calm',
@@ -5506,6 +7051,17 @@ var POKEMON_SETS = {
       },
    ],
    'Rattata' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Guts',
+         item : 'Flame Orb',
+         moves : [ 'Sucker Punch', 'Facade', 'Quick Attack', 'Flame Wheel', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5585,6 +7141,17 @@ var POKEMON_SETS = {
    ],
    'Remoraid' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Mild',
+         ability : 'Sniper',
+         item : 'Mystic Water',
+         moves : [ 'Fire Blast', 'Ice Beam', 'Water Spout', 'Seed Bomb', ],
+         ev : [ 0, 4, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Modest',
@@ -5624,6 +7191,17 @@ var POKEMON_SETS = {
    ],
    'Rhyhorn' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Rock Head',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Megahorn', 'Rock Blast', 'Rock Polish', ],
+         ev : [ 36, 236, 0, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Jolly',
@@ -5650,6 +7228,17 @@ var POKEMON_SETS = {
    ],
    'Riolu' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Prankster',
+         item : 'Eviolite',
+         moves : [ 'Drain Punch', 'Copycat', 'Crunch', 'Roar', ],
+         ev : [ 196, 0, 196, 0, 116, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -5662,6 +7251,17 @@ var POKEMON_SETS = {
       },
    ],
    'Roggenrola' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Sturdy',
+         item : 'Hard Stone',
+         moves : [ 'Stone Edge', 'Stealth Rock', 'Earthquake', 'Explosion', ],
+         ev : [ 252, 4, 236, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -5741,6 +7341,17 @@ var POKEMON_SETS = {
    ],
    'Rufflet' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Sheer Force',
+         item : 'White Herb',
+         moves : [ 'U-turn', 'Aerial Ace', 'Return', 'Superpower', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Jolly',
@@ -5793,6 +7404,17 @@ var POKEMON_SETS = {
    ],
    'Sandile' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Moxie',
+         item : 'Choice Scarf',
+         moves : [ 'Earthquake', 'Stone Edge', 'Fire Fang', 'Crunch', ],
+         ev : [ 0, 180, 76, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -5805,6 +7427,17 @@ var POKEMON_SETS = {
       },
    ],
    'Sandshrew' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Sand Rush',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Rock Slide', 'Rapid Spin', 'Night Slash', ],
+         ev : [ 116, 236, 0, 0, 36, 116, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5923,6 +7556,17 @@ var POKEMON_SETS = {
    ],
    'Scraggy' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Moxie',
+         item : 'Eviolite',
+         moves : [ 'Drain Punch', 'Crunch', 'Dragon Dance', 'Ice Punch', ],
+         ev : [ 0, 236, 0, 0, 60, 212, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -5947,7 +7591,31 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Seedot' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Naive',
+         ability : 'Chlorophyll',
+         item : 'Life Orb',
+         moves : [ 'Explosion', 'Leech Seed', 'Growth', 'Seed Bomb', ],
+         ev : [ 30, 30, 0, 200, 24, 200, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Seel' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Ice Body',
+         item : 'Eviolite',
+         moves : [ 'Aqua Jet', 'Drill Run', 'Toxic', 'Protect', ],
+         ev : [ 0, 236, 236, 0, 36, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -5975,6 +7643,17 @@ var POKEMON_SETS = {
    ],
    'Sentret' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Keen Eye',
+         item : 'Quick Claw',
+         moves : [ 'Toxic', 'U-turn', 'Knock Off', 'Trick', ],
+         ev : [ 252, 252, 4, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Careful',
@@ -6000,6 +7679,17 @@ var POKEMON_SETS = {
       },
    ],
    'Sewaddle' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Overcoat',
+         item : 'Choice Specs',
+         moves : [ 'Bug Buzz', 'Air Slash', 'Giga Drain', 'Calm Mind', ],
+         ev : [ 0, 0, 116, 196, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6066,6 +7756,17 @@ var POKEMON_SETS = {
    ],
    'Shellder' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Skill Link',
+         item : 'Eviolite',
+         moves : [ 'Icicle Spear', 'Rock Blast', 'Shell Smash', 'Ice Shard', ],
+         ev : [ 0, 236, 0, 0, 76, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -6078,6 +7779,17 @@ var POKEMON_SETS = {
       },
    ],
    'Shellos' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Storm Drain',
+         item : 'Eviolite',
+         moves : [ 'Recover', 'Toxic', 'Clear Smog', 'Scald', ],
+         ev : [ 228, 0, 132, 0, 100, 48, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6092,6 +7804,17 @@ var POKEMON_SETS = {
    ],
    'Shelmet' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Shell Armor',
+         item : 'Eviolite',
+         moves : [ 'Spikes', 'Recover', 'Bug Buzz', 'Acid Armor', ],
+         ev : [ 116, 0, 156, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Calm',
@@ -6104,6 +7827,17 @@ var POKEMON_SETS = {
       },
    ],
    'Shieldon' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Relaxed',
+         ability : 'Sturdy',
+         item : 'Leftovers',
+         moves : [ 'Ice Beam', 'Metal Burst', 'Protect', 'Stealth Rock', ],
+         ev : [ 136, 116, 52, 0, 128, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6131,6 +7865,17 @@ var POKEMON_SETS = {
    ],
    'Shinx' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Intimidate',
+         item : 'Flame Orb',
+         moves : [ 'Wild Charge', 'Ice Fang', 'Crunch', 'Fire Fang', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -6143,6 +7888,17 @@ var POKEMON_SETS = {
       },
    ],
    'Shroomish' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Poison Heal',
+         item : 'Toxic Orb',
+         moves : [ 'Spore', 'Giga Drain', 'Leech Seed', 'Substitute', ],
+         ev : [ 0, 0, 0, 116, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6169,6 +7925,17 @@ var POKEMON_SETS = {
       },
    ],
    'Shuppet' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Relaxed',
+         ability : 'Cursed Body',
+         item : 'Eviolite',
+         moves : [ 'Shadow Sneak', 'Destiny Bond', 'Taunt', 'Trick Room', ],
+         ev : [ 4, 0, 236, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6222,6 +7989,17 @@ var POKEMON_SETS = {
    ],
    'Skitty' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Cute Charm',
+         item : 'Life Orb',
+         moves : [ 'Fake Out', 'Return', 'Sucker Punch', 'Zen Headbutt', ],
+         ev : [ 0, 236, 0, 0, 76, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -6234,6 +8012,17 @@ var POKEMON_SETS = {
       },
    ],
    'Skorupi' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Sniper',
+         item : 'Eviolite',
+         moves : [ 'Toxic Spikes', 'Cross Poison', 'X-Scissor', 'Knock Off', ],
+         ev : [ 36, 196, 36, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6285,6 +8074,19 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Slakoth' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Truant',
+         item : 'Choice Band',
+         moves : [ 'Hammer Arm', 'Sucker Punch', 'Retaliate', 'Fire Punch', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Slowbro' : [
       {
          name : 'Most Common',
@@ -6313,6 +8115,17 @@ var POKEMON_SETS = {
    ],
    'Slowpoke' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Regenerator',
+         item : 'Eviolite',
+         moves : [ 'Slack Off', 'Psychic', 'Scald', 'Thunder Wave', ],
+         ev : [ 196, 0, 156, 36, 116, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Bold',
@@ -6325,6 +8138,17 @@ var POKEMON_SETS = {
       },
    ],
    'Slugma' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Flame Body',
+         item : 'Eviolite',
+         moves : [ 'Lava Plume', 'Recover', 'Toxic', 'Stockpile', ],
+         ev : [ 252, 0, 0, 4, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6365,6 +8189,17 @@ var POKEMON_SETS = {
    ],
    'Smoochum' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Forewarn',
+         item : 'Choice Scarf',
+         moves : [ 'Shadow Ball', 'Psychic', 'Ice Beam', 'Blizzard', ],
+         ev : [ 0, 0, 0, 240, 0, 240, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Timid',
@@ -6390,6 +8225,17 @@ var POKEMON_SETS = {
       },
    ],
    'Snivy' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Gentle',
+         ability : 'Overgrow',
+         item : 'Light Clay',
+         moves : [ 'Giga Drain', 'Leaf Storm', 'Leech Seed', 'Substitute', ],
+         ev : [ 252, 4, 0, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6417,6 +8263,17 @@ var POKEMON_SETS = {
    ],
    'Snorunt' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hardy',
+         ability : 'Ice Body',
+         item : 'Life Orb',
+         moves : [ 'Ice Shard', 'Crunch', 'Hidden Power', 'Ice Beam', ],
+         ev : [ 116, 156, 0, 156, 0, 80, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Timid',
@@ -6429,6 +8286,17 @@ var POKEMON_SETS = {
       },
    ],
    'Snover' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hasty',
+         ability : 'Snow Warning',
+         item : 'Choice Scarf',
+         moves : [ 'Blizzard', 'Giga Drain', 'Hidden Power', 'Ice Shard', ],
+         ev : [ 36, 24, 0, 184, 36, 200, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6443,6 +8311,17 @@ var POKEMON_SETS = {
    ],
    'Snubbull' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Intimidate',
+         item : 'Eviolite',
+         moves : [ 'Return', 'Close Combat', 'Thunder Wave', 'Crunch', ],
+         ev : [ 0, 196, 116, 0, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -6455,6 +8334,17 @@ var POKEMON_SETS = {
       },
    ],
    'Solosis' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Magic Guard',
+         item : 'Life Orb',
+         moves : [ 'Psychic', 'Shadow Ball', 'Recover', 'Calm Mind', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6469,6 +8359,17 @@ var POKEMON_SETS = {
    ],
    'Spearow' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Keen Eye',
+         item : 'Choice Band',
+         moves : [ 'Drill Peck', 'Double-Edge', 'U-turn', 'Pursuit', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -6482,6 +8383,17 @@ var POKEMON_SETS = {
    ],
    'Spheal' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Ice Body',
+         item : 'Leftovers',
+         moves : [ 'Substitute', 'Protect', 'Surf', 'Ice Beam', ],
+         ev : [ 248, 0, 0, 8, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Calm',
@@ -6494,6 +8406,17 @@ var POKEMON_SETS = {
       },
    ],
    'Spinarak' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Sniper',
+         item : 'Life Orb',
+         moves : [ 'X-Scissor', 'Cross Poison', 'Agility', 'Sucker Punch', ],
+         ev : [ 0, 196, 0, 0, 116, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6534,6 +8457,17 @@ var POKEMON_SETS = {
    ],
    'Spoink' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Thick Fat',
+         item : 'Light Clay',
+         moves : [ 'Psychic', 'Thunder Wave', 'Reflect', 'Light Screen', ],
+         ev : [ 196, 0, 76, 4, 36, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Calm',
@@ -6559,6 +8493,17 @@ var POKEMON_SETS = {
       },
    ],
    'Squirtle' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Torrent',
+         item : 'Eviolite',
+         moves : [ 'Rapid Spin', 'Ice Beam', 'Aqua Jet', 'Scald', ],
+         ev : [ 252, 0, 236, 4, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6586,6 +8531,17 @@ var POKEMON_SETS = {
    ],
    'Starly' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Keen Eye',
+         item : 'Choice Scarf',
+         moves : [ 'Brave Bird', 'U-turn', 'Return', 'Pursuit', ],
+         ev : [ 36, 236, 36, 0, 0, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Jolly',
@@ -6611,6 +8567,17 @@ var POKEMON_SETS = {
       },
    ],
    'Staryu' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Natural Cure',
+         item : 'Eviolite',
+         moves : [ 'Rapid Spin', 'Thunderbolt', 'Recover', 'Surf', ],
+         ev : [ 36, 0, 0, 200, 0, 240, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6664,6 +8631,17 @@ var POKEMON_SETS = {
    ],
    'Stunky' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Naive',
+         ability : 'Aftermath',
+         item : 'Choice Scarf',
+         moves : [ 'Sucker Punch', 'Crunch', 'Pursuit', 'Fire Blast', ],
+         ev : [ 0, 252, 0, 12, 0, 244, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Careful',
@@ -6688,7 +8666,31 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Sunkern' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Chlorophyll',
+         item : 'Focus Sash',
+         moves : [ 'Earth Power', 'Sunny Day', 'Solar Beam', 'Toxic', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Surskit' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hardy',
+         ability : 'Swift Swim',
+         item : 'Life Orb',
+         moves : [ 'Signal Beam', 'Hydro Pump', 'Giga Drain', 'Hidden Power', ],
+         ev : [ 0, 0, 0, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6702,6 +8704,17 @@ var POKEMON_SETS = {
       },
    ],
    'Swablu' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Careful',
+         ability : 'Natural Cure',
+         item : 'Eviolite',
+         moves : [ 'Cotton Guard', 'Toxic', 'Roost', 'Return', ],
+         ev : [ 236, 36, 0, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6742,6 +8755,17 @@ var POKEMON_SETS = {
    ],
    'Swinub' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Thick Fat',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Stealth Rock', 'Ice Shard', 'Icicle Crash', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -6780,6 +8804,17 @@ var POKEMON_SETS = {
       },
    ],
    'Taillow' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Guts',
+         item : 'Toxic Orb',
+         moves : [ 'Brave Bird', 'U-turn', 'Facade', 'Quick Attack', ],
+         ev : [ 36, 236, 0, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6868,6 +8903,17 @@ var POKEMON_SETS = {
    ],
    'Teddiursa' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Quick Feet',
+         item : 'Toxic Orb',
+         moves : [ 'Facade', 'Close Combat', 'Crunch', 'Swords Dance', ],
+         ev : [ 0, 196, 0, 0, 116, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -6880,6 +8926,17 @@ var POKEMON_SETS = {
       },
    ],
    'Tentacool' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Liquid Ooze',
+         item : 'Eviolite',
+         moves : [ 'Scald', 'Toxic Spikes', 'Rapid Spin', 'Knock Off', ],
+         ev : [ 196, 0, 76, 0, 196, 36, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6906,6 +8963,17 @@ var POKEMON_SETS = {
       },
    ],
    'Tepig' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Blaze',
+         item : 'Fire Gem',
+         moves : [ 'Flame Charge', 'Wild Charge', 'Superpower', 'Flare Blitz', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -6959,6 +9027,17 @@ var POKEMON_SETS = {
    ],
    'Timburr' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Careful',
+         ability : 'Guts',
+         item : 'Eviolite',
+         moves : [ 'Drain Punch', 'Mach Punch', 'Bulk Up', 'Payback', ],
+         ev : [ 76, 196, 0, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Adamant',
@@ -6971,6 +9050,17 @@ var POKEMON_SETS = {
       },
    ],
    'Tirtouga' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Relaxed',
+         ability : 'Solid Rock',
+         item : 'Eviolite',
+         moves : [ 'Aqua Jet', 'Shell Smash', 'Stone Edge', 'Waterfall', ],
+         ev : [ 164, 52, 12, 16, 236, 20, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -6998,6 +9088,17 @@ var POKEMON_SETS = {
    ],
    'Togepi' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Calm',
+         ability : 'Serene Grace',
+         item : 'Leftovers',
+         moves : [ 'Toxic', 'Protect', '', 'Metronome', ],
+         ev : [ 252, 0, 0, 4, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Sassy',
@@ -7010,6 +9111,17 @@ var POKEMON_SETS = {
       },
    ],
    'Torchic' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Blaze',
+         item : 'Leftovers',
+         moves : [ 'Fire Blast', 'Substitute', 'Baton Pass', 'Protect', ],
+         ev : [ 0, 0, 36, 200, 36, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -7076,6 +9188,17 @@ var POKEMON_SETS = {
    ],
    'Totodile' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Torrent',
+         item : 'Life Orb',
+         moves : [ 'Ice Punch', 'Waterfall', 'Crunch', 'Dragon Dance', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -7102,6 +9225,17 @@ var POKEMON_SETS = {
    ],
    'Trapinch' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Arena Trap',
+         item : 'Life Orb',
+         moves : [ 'Crunch', 'Earthquake', 'Rock Slide', 'Quick Attack', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -7114,6 +9248,17 @@ var POKEMON_SETS = {
       },
    ],
    'Treecko' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hasty',
+         ability : 'Overgrow',
+         item : 'Eviolite',
+         moves : [ 'Giga Drain', 'Leaf Storm', 'Quick Attack', 'Hidden Power', ],
+         ev : [ 36, 0, 0, 240, 0, 200, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -7154,6 +9299,17 @@ var POKEMON_SETS = {
    ],
    'Trubbish' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Aftermath',
+         item : 'Eviolite',
+         moves : [ 'Toxic Spikes', 'Clear Smog', 'Explosion', 'Spikes', ],
+         ev : [ 252, 0, 180, 0, 60, 16, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Impish',
@@ -7167,6 +9323,17 @@ var POKEMON_SETS = {
    ],
    'Turtwig' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Overgrow',
+         item : 'Leftovers',
+         moves : [ 'Seed Bomb', 'Leech Seed', 'Light Screen', 'Stealth Rock', ],
+         ev : [ 252, 4, 244, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Impish',
@@ -7174,6 +9341,32 @@ var POKEMON_SETS = {
          item : 'Eviolite',
          moves : [ 'Seed Bomb', 'Leech Seed', 'Toxic', 'Stealth Rock', ],
          ev : [ 252, 252, 0, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
+   'Tympole' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Water Absorb',
+         item : 'Leftovers',
+         moves : [ 'Hydro Pump', 'Earth Power', 'Sludge Wave', 'Hidden Power', ],
+         ev : [ 0, 0, 40, 196, 196, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
+   'Tynamo' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Levitate',
+         item : 'Leftovers',
+         moves : [ 'Tackle', 'Thunder Wave', 'Spark', 'Charge Beam', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
@@ -7231,6 +9424,17 @@ var POKEMON_SETS = {
       },
    ],
    'Tyrogue' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Guts',
+         item : 'Eviolite',
+         moves : [ 'Fake Out', 'High Jump Kick', 'Toxic', 'Bullet Punch', ],
+         ev : [ 0, 236, 0, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -7297,6 +9501,17 @@ var POKEMON_SETS = {
    ],
    'Vanillite' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Modest',
+         ability : 'Ice Body',
+         item : 'Choice Scarf',
+         moves : [ 'Flash Cannon', 'Ice Beam', 'Water Pulse', 'Hidden Power', ],
+         ev : [ 0, 0, 0, 240, 20, 248, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Mild',
@@ -7323,6 +9538,17 @@ var POKEMON_SETS = {
    ],
    'Venipede' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hardy',
+         ability : 'Poison Point',
+         item : 'Poison Gem',
+         moves : [ 'Poison Jab', 'Steamroller', 'Protect', 'Hidden Power', ],
+         ev : [ 0, 0, 0, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -7348,6 +9574,17 @@ var POKEMON_SETS = {
       },
    ],
    'Venonat' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Compound Eyes',
+         item : 'Oran Berry',
+         moves : [ 'Sleep Powder', 'Agility', 'Baton Pass', 'Substitute', ],
+         ev : [ 248, 0, 0, 0, 8, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -7466,6 +9703,17 @@ var POKEMON_SETS = {
    ],
    'Voltorb' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Hasty',
+         ability : 'Static',
+         item : 'Air Balloon',
+         moves : [ 'Thunderbolt', 'Volt Switch', 'Explosion', 'Foul Play', ],
+         ev : [ 252, 4, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Timid',
@@ -7478,6 +9726,17 @@ var POKEMON_SETS = {
       },
    ],
    'Vullaby' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Overcoat',
+         item : 'Eviolite',
+         moves : [ 'Roost', 'Dark Pulse', 'Air Slash', 'Nasty Plot', ],
+         ev : [ 0, 0, 0, 236, 76, 196, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -7504,6 +9763,17 @@ var POKEMON_SETS = {
       },
    ],
    'Wailmer' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Water Veil',
+         item : 'Eviolite',
+         moves : [ 'Ice Beam', 'Surf', 'Water Spout', 'Rest', ],
+         ev : [ 36, 0, 236, 0, 236, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',
@@ -7555,6 +9825,19 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Weedle' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Naughty',
+         ability : 'Shield Dust',
+         item : 'Choice Band',
+         moves : [ 'Poison Sting', 'String Shot', 'Electroweb', 'Bug Bite', ],
+         ev : [ 252, 252, 0, 4, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Weezing' : [
       {
          name : 'Most Common',
@@ -7583,6 +9866,17 @@ var POKEMON_SETS = {
    ],
    'Whismur' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Quiet',
+         ability : 'Soundproof',
+         item : 'Life Orb',
+         moves : [ 'Hyper Voice', 'Fire Blast', 'Ice Beam', 'Shadow Ball', ],
+         ev : [ 244, 0, 12, 188, 12, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Modest',
@@ -7608,6 +9902,17 @@ var POKEMON_SETS = {
       },
    ],
    'Wingull' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Rain Dish',
+         item : 'Life Orb',
+         moves : [ 'Scald', 'Ice Beam', 'Hurricane', 'Rain Dance', ],
+         ev : [ 0, 0, 0, 252, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -7635,6 +9940,17 @@ var POKEMON_SETS = {
    ],
    'Woobat' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Timid',
+         ability : 'Simple',
+         item : 'Eviolite',
+         moves : [ 'Calm Mind', 'Air Slash', 'Roost', 'Psychic', ],
+         ev : [ 0, 0, 0, 252, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Timid',
@@ -7648,6 +9964,17 @@ var POKEMON_SETS = {
    ],
    'Wooper' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Impish',
+         ability : 'Water Absorb',
+         item : 'Eviolite',
+         moves : [ 'Earthquake', 'Recover', 'Toxic', 'Waterfall', ],
+         ev : [ 236, 116, 156, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Impish',
@@ -7659,7 +9986,31 @@ var POKEMON_SETS = {
          statBoost : [ 0, 0, 0, 0, 0, 0, ],
       },
    ],
+   'Wurmple' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Shield Dust',
+         item : 'Oran Berry',
+         moves : [ 'Electroweb', 'Bug Bite', 'Poison Sting', 'Tackle', ],
+         ev : [ 252, 136, 76, 0, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+   ],
    'Wynaut' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Bold',
+         ability : 'Shadow Tag',
+         item : 'Eviolite',
+         moves : [ 'Counter', 'Mirror Coat', 'Encore', 'Destiny Bond', ],
+         ev : [ 156, 0, 132, 0, 212, 8, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -7699,6 +10050,17 @@ var POKEMON_SETS = {
       },
    ],
    'Yamask' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Quiet',
+         ability : 'Mummy',
+         item : 'Eviolite',
+         moves : [ 'Shadow Ball', 'Will-O-Wisp', 'Nasty Plot', 'Hidden Power', ],
+         ev : [ 216, 0, 0, 160, 80, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'ru',
@@ -7791,6 +10153,17 @@ var POKEMON_SETS = {
    ],
    'Zigzagoon' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Adamant',
+         ability : 'Gluttony',
+         item : 'Oran Berry',
+         moves : [ 'Belly Drum', 'Extreme Speed', 'Seed Bomb', 'Substitute', ],
+         ev : [ 0, 196, 108, 0, 188, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'ru',
          nature : 'Adamant',
@@ -7817,6 +10190,17 @@ var POKEMON_SETS = {
    ],
    'Zorua' : [
       {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Mild',
+         ability : 'Illusion',
+         item : 'Life Orb',
+         moves : [ 'Dark Pulse', 'Extrasensory', 'U-turn', 'Sucker Punch', ],
+         ev : [ 252, 4, 0, 252, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
+      {
          name : 'Most Common',
          tier : 'nu',
          nature : 'Mild',
@@ -7829,6 +10213,17 @@ var POKEMON_SETS = {
       },
    ],
    'Zubat' : [
+      {
+         name : 'LC Common',
+         tier : 'lc',
+         nature : 'Jolly',
+         ability : 'Infiltrator',
+         item : 'Choice Scarf',
+         moves : [ 'Brave Bird', 'U-turn', 'Steel Wing', 'Pursuit', ],
+         ev : [ 36, 236, 0, 0, 0, 236, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+         statBoost : [ 0, 0, 0, 0, 0, 0, ],
+      },
       {
          name : 'Most Common',
          tier : 'nu',

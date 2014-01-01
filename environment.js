@@ -20,6 +20,7 @@ function Environment(numAttackers, numTargets, environment) {
       this.lightScreen = 0;
       this.reflect = 0;
       this.multiHit = MULTI_HIT_FULL;
+      this.defaultLevel = 100;
    } else {
       this.numAttackers = environment.numAttackers;
       this.numTargets = environment.numTargets;
@@ -29,6 +30,7 @@ function Environment(numAttackers, numTargets, environment) {
       this.lightScreen = environment.lightScreen;
       this.reflect = environment.reflect;
       this.multiHit = environment.multiHit;
+      this.defaultLevel = environment.defaultLevel;
       for (var i = 0; i < environment.pokemons.length; i++) {
          for (var j = 0; j < environment.pokemons[i].length; j++) {
             // retrieve the pokemon
@@ -53,7 +55,9 @@ Environment.prototype.resetTeam = function(teamNum) {
       numPokemon = this.numTargets;
    };
    for (var i = 0; i < numPokemon; i++) {
-      this.pokemons[teamNum].push(new Pokemon());
+      var pokemon = new Pokemon();
+      pokemon.changeLevel(this.defaultLevel);
+      this.pokemons[teamNum].push(pokemon);
    };
 };
 
