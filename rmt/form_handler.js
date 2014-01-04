@@ -12,7 +12,7 @@ $(document).ready(function() {
       tiers: {
          'uber' : false,
          'ou' : true,
-         'uu' : false,
+         'uu' : true,
          'ru' : false,
          'nu' : false,
          'lc' : false,
