@@ -35,7 +35,6 @@ $(document).ready(function() {
          pokemon.changeCurrentHP(ui.value);
          updateStaticData();
          updateUpdateTableButton(true);
-         //updateTable();
          saveData();
       }
    });
@@ -71,7 +70,6 @@ $(document).ready(function() {
    
    // on show results button click
    $("#showresults").on('click', function() {
-      updateUpdateTableButton(false);
       updateTable();
    });
 
@@ -164,7 +162,7 @@ function generateSweeperPokemon() {
          var setData = POKEMON_SETS[pokemonName][i];
          if (! tierOptions.tiers[setData.tier]) continue;
          // make new Pokemon
-         var pokemon = new Pokemon();
+         var pokemon = new Pokemon(6);
          pokemon.changeName(pokemonName);
          if (setData.nature) {
             pokemon.changeNature(setData.nature);
@@ -179,7 +177,7 @@ function generateSweeperPokemon() {
             pokemon.changeLevel(environment.defaultLevel);
          };
          if (typeof setData.moves !== 'undefined') {
-            for (var moveNum = 0; moveNum < 4; moveNum++) {
+            for (var moveNum = 0; moveNum < 6; moveNum++) {
                if (setData.moves[moveNum]) {
                   pokemon.changeMove(moveNum, setData.moves[moveNum]);
                };
@@ -199,12 +197,8 @@ function generateSweeperPokemon() {
                };
             };
          };
-         if (typeof setData.statBoost !== 'undefined') {
-            for (var stat = 0; stat < 6; stat++) {
-               if (isValidstatBoost(setData.statBoost[stat])) {
-                  pokemon.changeStatBoost(stat, setData.statBoost[stat]);
-               };
-            };
+         if (tierOptions.boostedSweepers) {
+            updateBoostedPokemon(pokemon);
          };
 
          pokemon.valid = true;
@@ -239,6 +233,8 @@ function updatePokemonSets(pokemon, pokemonData) {
    setsInput.find('option').remove();
    // add blank set
    setsInput.append("<option value=''> </option>");
+   // add none set
+   setsInput.append('<option value="NONE_SET:0">None</option>');
    // add the pokemon specific sets
    if (typeof POKEMON_SETS[pokemonName] !== 'undefined') {
       for (var i = 0; i < POKEMON_SETS[pokemonName].length; i++) {
@@ -311,8 +307,7 @@ function updateTable() {
             continue;
          };
          var results;
-         results = getAttackResults(attacker, target, environment, 
-               tierOptions.boostedSweepers, tierOptions.enablePriority, tierOptions.wmt);
+         results = getAttackResults(attacker, target, environment, tierOptions.enablePriority);
          var percentage_min = results.attacks[0].damagePercentage[0];
          if (typeof percentage_min !== 'number') {
             // do nothing
@@ -396,6 +391,8 @@ function updateTable() {
          updateCell(i, j, false);
       };
    };
+   // change the update table button
+   updateUpdateTableButton(false);
 };
 
 /**
@@ -491,3 +488,25 @@ function saveData() {
    //localStorage.setItem('sweeperCalcEnvironment', JSON.stringify(environment));
 };
 
+
+/**
+  * Gives Pokemon some boosts based on
+  * the moves it has.
+  */
+function updateBoostedPokemon(pokemon) {
+   // iterate through moves
+   for (var i = 0; i < pokemon.moves.length; i++) {
+      var moveName = pokemon.moves[i];
+      if (typeof STAT_BOOSTING_MOVES[moveName] !== 'undefined') {
+         // we have a stat boosting move
+         giveBoostToPokemon(pokemon, moveName);
+      };
+   };
+};
+
+function giveBoostToPokemon(pokemon, moveName) {
+   var statBoostArray = STAT_BOOSTING_MOVES[moveName];
+   for (var i = 0; i < 6; i++) {
+      pokemon.changeStatBoost(i, statBoostArray[i]);
+   };
+};

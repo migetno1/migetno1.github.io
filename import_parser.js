@@ -7,8 +7,9 @@
   * @return an array of pokemon
   */
 function importTeam(text, defaultLevel) {
-   var pokemons = [new Pokemon(), new Pokemon(), new Pokemon(), 
-            new Pokemon(), new Pokemon(), new Pokemon()];
+   var pokemons = [new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES), 
+         new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES), 
+         new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES)];
    for (var i = 0; i < pokemons.length; i++) {
       pokemons[i].changeLevel(defaultLevel);
    };
@@ -62,7 +63,7 @@ function exportTeam(pokemonTeam) {
   */
 function importPokemon(textArray, i, defaultLevel) {
    var debug = false;
-   var pokemon = new Pokemon();
+   var pokemon = new Pokemon(DEFAULT_NUM_MOVES);
    if (defaultLevel) {
       pokemon.changeLevel(defaultLevel);
    };

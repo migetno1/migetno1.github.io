@@ -5,14 +5,18 @@ function getDefaultNature() {
   * Initialises a blank Pokemon object.
   * @param pokemon a saved JSON pokemon object
   */
-function Pokemon(pokemon) {
+function Pokemon(numMoves, pokemon) {
    if (typeof(pokemon) === 'undefined') {
       // brand new pokemon
       this.name = null;
       this.iv = [31, 31, 31, 31, 31, 31];
       this.ev = [0, 0, 0, 0, 0, 0];
       this.statBoost = [0, 0, 0, 0, 0, 0];
-      this.moves = [null, null, null, null];
+      this.numMoves = numMoves;
+      this.moves = [];
+      for (var i = 0; i < numMoves; i++) {
+         this.moves.push(null);
+      };
       this.nature = getDefaultNature();
       this.level = 100;
       this.status = STATUS_NORMAL;
@@ -26,6 +30,7 @@ function Pokemon(pokemon) {
       this.iv = pokemon.iv;
       this.ev = pokemon.ev;
       this.statBoost = pokemon.statBoost;
+      this.numMoves = pokemon.numMoves;
       this.moves = pokemon.moves;
       this.nature = pokemon.nature;
       this.level = pokemon.level;
@@ -68,7 +73,7 @@ Pokemon.prototype.changeMove = function(moveNumber, move) {
       return;
    }
    move = move.toLowerCase();
-   if (!isValidMoveNumber(moveNumber)) {
+   if (moveNumber < 0 || moveNumber > this.moves.length) {
       // error
       return;
    };
@@ -240,7 +245,7 @@ Pokemon.prototype.validate = function() {
    if (! isValidPokemonName(this.name)) {
       isValid = false;
    };
-   for (var i = 0; i < 4; i++) {
+   for (var i = 0; i < this.moves.length; i++) {
       if (this.moves[i] !== null && ! isValidMoveName(this.moves[i])) {
          isValid = false;
       };

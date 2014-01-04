@@ -130,6 +130,8 @@ function updatePokemonSets(pokemon, pokemonData) {
    setsInput.find('option').remove();
    // add blank set
    setsInput.append("<option value=''> </option>");
+   // add none set
+   setsInput.append('<option value="NONE_SET:0">None</option>');
    // add default attacker/target sets
    if (team == 0) {
       team = 'ATTACKER';
@@ -182,7 +184,7 @@ function updateTable() {
             updateCell(i, j, false);
             continue;
          };
-         var results = getAttackResults(attacker, target, environment, true, false);
+         var results = getAttackResults(attacker, target, environment, false);
          printOuts['square-' + i + '-' + j] = results.description;
          if (!printOutDisplayed) {
             printOutDisplayed = true;

@@ -882,7 +882,7 @@ function applySpeedModifiers(speed, pokemon, environment) {
    if (ability === 'swift swim' && environment.weather === ENVIRONMENT_RAIN) {
       modifiers.push(0x2000);
    };
-   if (ability === 'unburden' && pokemon.item.match(/berry|gem/i)) {
+   if (ability === 'unburden' && pokemon.item && pokemon.item.match(/berry|gem/i)) {
       modifiers.push(0x2000);
    };
    if (item === 'choice scarf') {
@@ -1591,27 +1591,9 @@ function attackerStrikeFirst(attacker, target, environment) {
   * @param target Target Pokemon object
   * @return a list of results with percentage damage dealt and move used
   */
-function getAttackResults(attacker, target, environment, attackerStatBoosts, enablePriority, wmt) {
+function getAttackResults(attacker, target, environment, enablePriority) {
    if (attacker.hasNoMoves()) {
       return null;
-   };
-   var attackerOriginalStatBoosts = [];
-   var targetOriginalStatBoosts = [];
-   if (! attackerStatBoosts && !wmt) {
-      for (var i = 0; i < 6; i++) {
-         attackerOriginalStatBoosts.push(attacker.statBoost[i]);
-      };
-      for (var i = 0; i < 6; i++) {
-         attacker.statBoost[i] = 0;
-      };
-   };
-   if (! attackerStatBoosts && wmt) {
-      for (var i = 0; i < 6; i++) {
-         targetOriginalStatBoosts.push(target.statBoost[i]);
-      };
-      for (var i = 0; i < 6; i++) {
-         target.statBoost[i] = 0;
-      };
    };
    var results = {};
    results.attacks = [];
@@ -1707,17 +1689,6 @@ function getAttackResults(attacker, target, environment, attackerStatBoosts, ena
          results.attackerStrikeFirst = true;
       } else if (priority < 0) {
          results.attackerStrikeFirst = false;
-      };
-   };
-   // revert attackStatBoosts
-   if (! attackerStatBoosts && !wmt) {
-      for (var i = 0; i < 6; i++) {
-         attacker.statBoost[i] = attackerOriginalStatBoosts[i];
-      };
-   };
-   if (! attackerStatBoosts && wmt) {
-      for (var i = 0; i < 6; i++) {
-         target.statBoost[i] = targetOriginalStatBoosts[i];
       };
    };
    if (debug) console.log(JSON.stringify(results, null, '\t'));

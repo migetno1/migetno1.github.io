@@ -1,11 +1,12 @@
+var NONE_SET = {
+   name : 'None',
+   nature : 'Hardy',
+   item: '',
+   ev : [ 0, 0, 0, 0, 0, 0 ],
+};
+      
 var DEFAULT_POKEMON_SETS = {
    'ATTACKER' : [
-      {
-         name : 'None',
-         nature : 'Hardy',
-         item: '',
-         ev : [ 0, 0, 0, 0, 0, 0 ],
-      },
       {
          name : 'Physical Sweeper (generic)',
          nature : 'Hasty',
@@ -32,12 +33,6 @@ var DEFAULT_POKEMON_SETS = {
       },
    ],
    'TARGET' : [
-      {
-         name : 'None',
-         nature : 'Hardy',
-         item: '',
-         ev : [ 0, 0, 0, 0, 0, 0 ],
-      },
       {
          name : 'Physically Defensive (generic)',
          nature : 'Bold',

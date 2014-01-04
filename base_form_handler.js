@@ -243,7 +243,7 @@ function updatePokemonTeamForm(teamNum) {
       } else {
          pokemonFormData.find('.pokemon-name').val('');
       };
-      for (var moveNum = 0; moveNum < 4; moveNum++) {
+      for (var moveNum = 0; moveNum < DEFAULT_NUM_MOVES; moveNum++) {
          // update moves
          if (pokemon.moves[moveNum]) {
             pokemonFormData.find('.move-' + moveNum).val(
@@ -291,6 +291,8 @@ function handlePokemonSetChange(setsInput) {
    var setData;
    if (pokemonName == 'ATTACKER' || pokemonName == 'TARGET') {
       setData = DEFAULT_POKEMON_SETS[pokemonName][setID];
+   } else if (pokemonName === 'NONE_SET') {
+      setData = NONE_SET;
    } else {
       setData = POKEMON_SETS[pokemonName][setID];
    };
@@ -310,8 +312,9 @@ function handlePokemonSetChange(setsInput) {
       pokemonData.find('.pokemon-item').val('');
    };
    if (typeof setData.moves !== 'undefined') {
-      for (var i = 0; i < setData.moves.length; i++) {
-         if (setData.moves[i]) {
+      // we only want four moves.
+      for (var i = 0; i < DEFAULT_NUM_MOVES; i++) {
+         if (typeof setData.moves[i] !== 'undefined' && setData.moves[i]) {
             pokemonData.find('.move-' + i).val(setData.moves[i]);
          } else {
             pokemonData.find('.move-' + i).val('');
@@ -355,7 +358,7 @@ function validatePokemonData(pokemonData) {
       changeFormErrorState(nameInput, false);
    }
    // validate moves
-   for (var i = 0; i < 4; i++) {
+   for (var i = 0; i < DEFAULT_NUM_MOVES; i++) {
       var moveInput = pokemonData.find('.move-' + i);
       if (isDifferent(moveInput.val(), pokemon.moves[i])
             && !isValidMoveName(moveInput.val())
@@ -509,7 +512,7 @@ function updatePokemon(pokemonData, isValid) {
       updatePokemonSets(pokemon, pokemonData);
    };
    // update moves
-   for (var i = 0; i < 4; i++) {
+   for (var i = 0; i < DEFAULT_NUM_MOVES; i++) {
       if (isDifferent(pokemonData.find('.move-' + i).val(), pokemon.moves[i]))
          pokemon.changeMove(i, pokemonData.find('.move-' + i).val());
    };
@@ -571,6 +574,7 @@ function updateForm(rmt) {
    $('#trickRoom').prop('checked', environment.trickRoom);
    $('#lightScreen').prop('checked', environment.lightScreen);
    $('#reflect').prop('checked', environment.reflect);
+   $('#setLevels').val(environment.defaultLevel);
    if (!rmt) {
       $('#multihit').val(environment.multiHit);
    };
