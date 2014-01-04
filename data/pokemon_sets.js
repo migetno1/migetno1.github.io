@@ -1,5 +1,5 @@
 var POKEMON_SETS = {
-   'Abomasnow' : [
+   'Abomasnow-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
@@ -23,12 +23,12 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 30, 30, 30, 30, ],
       },
    ],
-   'Absol' : [
+   'Absol-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Jolly',
-         ability : 'Justified',
+         ability : 'Magic Bounce',
          item : 'Absolite',
          moves : [ 'Sucker Punch', 'Swords Dance', 'Play Rough', 'Night Slash', 'Psycho Cut', 'Fire Blast', ],
          ev : [ 0, 252, 0, 0, 4, 252, ],
@@ -48,16 +48,6 @@ var POKEMON_SETS = {
       },
    ],
    'Aegislash' : [
-      {
-         name : 'Autotomize',
-         tier : 'ou',
-         nature : 'Rash',
-         ability : 'Stance Change',
-         item : 'Life Orb',
-         moves : [ 'Sacred Sword', 'Shadow Ball', 'Hidden Power', 'Autotomize', 'Iron Head', '', ],
-         ev : [ 0, 88, 0, 252, 0, 168, ],
-         iv : [ 31, 30, 30, 31, 31, 31, ],
-      },
       {
          name : 'Double Dance',
          tier : 'ou',
@@ -89,16 +79,6 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       {
-         name : 'Mixed Attacker',
-         tier : 'ou',
-         nature : 'Quiet',
-         ability : 'Stance Change',
-         item : 'Spooky Plate',
-         moves : [ 'Shadow Ball', 'Shadow Sneak', 'Iron Head', 'Sacred Sword', '', '', ],
-         ev : [ 4, 252, 0, 252, 0, 0, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-      {
          name : 'Swords Dance',
          tier : 'ou',
          nature : 'Adamant',
@@ -108,11 +88,9 @@ var POKEMON_SETS = {
          ev : [ 252, 252, 0, 0, 0, 4, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
-   ],
-   'Aegislash-Blade' : [
       {
          name : 'Autotomize',
-         tier : 'uber',
+         tier : 'ou',
          nature : 'Rash',
          ability : 'Stance Change',
          item : 'Life Orb',
@@ -120,6 +98,18 @@ var POKEMON_SETS = {
          ev : [ 0, 88, 0, 252, 0, 168, ],
          iv : [ 31, 30, 30, 31, 31, 31, ],
       },
+      {
+         name : 'Mixed Attacker',
+         tier : 'ou',
+         nature : 'Quiet',
+         ability : 'Stance Change',
+         item : 'Spooky Plate',
+         moves : [ 'Shadow Ball', 'Shadow Sneak', 'Iron Head', 'Sacred Sword', '', '', ],
+         ev : [ 4, 252, 0, 252, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Aegislash-Blade' : [
       {
          name : 'Double Dance',
          tier : 'uber',
@@ -141,16 +131,6 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 0, ],
       },
       {
-         name : 'Mixed Attacker',
-         tier : 'uber',
-         nature : 'Quiet',
-         ability : 'Stance Change',
-         item : 'Spooky Plate',
-         moves : [ 'Shadow Ball', 'Shadow Sneak', 'Iron Head', 'Sacred Sword', '', '', ],
-         ev : [ 4, 252, 0, 252, 0, 0, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-      {
          name : 'Swords Dance',
          tier : 'uber',
          nature : 'Adamant',
@@ -160,25 +140,45 @@ var POKEMON_SETS = {
          ev : [ 252, 252, 0, 0, 0, 4, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
+      {
+         name : 'Autotomize',
+         tier : 'uber',
+         nature : 'Rash',
+         ability : 'Stance Change',
+         item : 'Life Orb',
+         moves : [ 'Sacred Sword', 'Shadow Ball', 'Hidden Power', 'Autotomize', 'Iron Head', '', ],
+         ev : [ 0, 88, 0, 252, 0, 168, ],
+         iv : [ 31, 30, 30, 31, 31, 31, ],
+      },
+      {
+         name : 'Mixed Attacker',
+         tier : 'uber',
+         nature : 'Quiet',
+         ability : 'Stance Change',
+         item : 'Spooky Plate',
+         moves : [ 'Shadow Ball', 'Shadow Sneak', 'Iron Head', 'Sacred Sword', '', '', ],
+         ev : [ 4, 252, 0, 252, 0, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
    ],
-   'Aerodactyl' : [
+   'Aerodactyl-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Jolly',
-         ability : 'Rock Head',
+         ability : 'Tough Claws',
          item : 'Aerodactylite',
          moves : [ 'Earthquake', 'Stone Edge', 'Taunt', 'Fire Fang', 'Stealth Rock', 'Rock Slide', ],
          ev : [ 4, 252, 0, 0, 0, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Aggron' : [
+   'Aggron-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Adamant',
-         ability : 'Sturdy',
+         ability : 'Filter',
          item : 'Aggronite',
          moves : [ 'Earthquake', 'Heavy Slam', 'Stealth Rock', 'Iron Head', 'Head Smash', 'Thunder Wave', ],
          ev : [ 252, 252, 0, 0, 4, 0, ],
@@ -269,12 +269,12 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Ampharos' : [
+   'Ampharos-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Modest',
-         ability : 'Static',
+         ability : 'Mold Breaker',
          item : 'Ampharosite',
          moves : [ 'Dragon Pulse', 'Thunderbolt', 'Focus Blast', 'Agility', 'Volt Switch', 'Heal Bell', ],
          ev : [ 252, 0, 0, 252, 4, 0, ],
@@ -313,6 +313,18 @@ var POKEMON_SETS = {
          ability : 'Intimidate',
          item : 'Leftovers',
          moves : [ 'Flare Blitz', 'Extreme Speed', 'Close Combat', 'Wild Charge', 'Morning Sun', 'Will-O-Wisp', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Arceus' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Adamant',
+         ability : 'Multitype',
+         item : 'Silk Scarf',
+         moves : [ 'Extreme Speed', 'Swords Dance', 'Shadow Claw', 'Earthquake', '', '', ],
          ev : [ 252, 252, 0, 0, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
@@ -473,16 +485,6 @@ var POKEMON_SETS = {
    ],
    'Azumarill' : [
       {
-         name : 'Belly Drum',
-         tier : 'ou',
-         nature : 'Adamant',
-         ability : 'Huge Power',
-         item : 'Mystic Water',
-         moves : [ 'Aqua Jet', 'Play Rough', 'Belly Drum', 'Waterfall', '', '', ],
-         ev : [ 252, 252, 4, 0, 0, 0, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-      {
          name : 'Choice Band',
          tier : 'ou',
          nature : 'Adamant',
@@ -490,6 +492,16 @@ var POKEMON_SETS = {
          item : 'Choice Band',
          moves : [ 'Aqua Jet', 'Play Rough', 'Waterfall', 'Superpower', '', '', ],
          ev : [ 212, 252, 0, 0, 0, 44, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+      {
+         name : 'Belly Drum',
+         tier : 'ou',
+         nature : 'Adamant',
+         ability : 'Huge Power',
+         item : 'Mystic Water',
+         moves : [ 'Aqua Jet', 'Play Rough', 'Belly Drum', 'Waterfall', '', '', ],
+         ev : [ 252, 252, 4, 0, 0, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       {
@@ -539,12 +551,12 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Banette' : [
+   'Banette-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Adamant',
-         ability : 'Insomnia',
+         ability : 'Prankster',
          item : 'Banettite',
          moves : [ 'Destiny Bond', 'Will-O-Wisp', 'Shadow Sneak', 'Shadow Claw', 'Taunt', 'Sucker Punch', ],
          ev : [ 252, 252, 0, 0, 4, 0, ],
@@ -731,15 +743,39 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Blastoise' : [
+   'Blastoise-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Modest',
-         ability : 'Torrent',
+         ability : 'Mega Launcher',
          item : 'Blastoisinite',
          moves : [ 'Rapid Spin', 'Aura Sphere', 'Dark Pulse', 'Water Pulse', 'Ice Beam', 'Scald', ],
          ev : [ 252, 0, 0, 252, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Blaziken' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Adamant',
+         ability : 'Speed Boost',
+         item : '',
+         moves : [ 'High Jump Kick', 'Flare Blitz', 'Protect', 'Swords Dance', '', '', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Blaziken-Mega' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Adamant',
+         ability : 'Speed Boost',
+         item : '',
+         moves : [ 'High Jump Kick', 'Flare Blitz', 'Protect', 'Swords Dance', '', '', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
@@ -1065,18 +1101,6 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Charizard' : [
-      {
-         name : 'Most Common',
-         tier : 'ou',
-         nature : 'Timid',
-         ability : 'Blaze',
-         item : 'Charizardite Y',
-         moves : [ 'Solar Beam', 'Dragon Dance', 'Roost', 'Air Slash', 'Dragon Claw', 'Flare Blitz', ],
-         ev : [ 4, 0, 0, 252, 0, 252, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-   ],
    'Charizard-Mega-X' : [
       {
          name : 'Dragon Dance',
@@ -1090,6 +1114,16 @@ var POKEMON_SETS = {
       },
    ],
    'Charizard-Mega-Y' : [
+      {
+         name : 'Most Common',
+         tier : 'ou',
+         nature : 'Timid',
+         ability : 'Drought',
+         item : 'Charizardite Y',
+         moves : [ 'Solar Beam', 'Dragon Dance', 'Roost', 'Air Slash', 'Dragon Claw', 'Flare Blitz', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
       {
          name : 'Mixed Attacker',
          tier : 'ou',
@@ -1681,6 +1715,30 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Deoxys' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Hasty',
+         ability : 'Pressure',
+         item : 'Focus Sash',
+         moves : [ 'Psycho Boost', 'Extreme Speed', 'Superpower', 'Ice Beam', '', '', ],
+         ev : [ 0, 4, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Deoxys-Attack' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Hasty',
+         ability : 'Pressure',
+         item : 'Focus Sash',
+         moves : [ 'Extreme Speed', 'Psycho Boost', 'Superpower', 'Ice Beam', '', '', ],
+         ev : [ 0, 252, 0, 4, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Deoxys-Defense' : [
       {
          name : 'Most Common',
@@ -1705,17 +1763,19 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Diggersby' : [
+   'Dialga' : [
       {
-         name : 'Agility',
-         tier : 'ou',
-         nature : 'Adamant',
-         ability : 'Huge Power',
-         item : 'Life Orb',
-         moves : [ 'Earthquake', 'Return', 'Wild Charge', 'Agility', '', '', ],
-         ev : [ 0, 252, 4, 0, 0, 252, ],
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Modest',
+         ability : 'Pressure',
+         item : 'Leftovers',
+         moves : [ 'Fire Blast', 'Draco Meteor', 'Dragon Pulse', 'Stealth Rock', '', '', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
+   ],
+   'Diggersby' : [
       {
          name : 'Choice Band',
          tier : 'ou',
@@ -1724,6 +1784,16 @@ var POKEMON_SETS = {
          item : 'Choice Band',
          moves : [ 'Earthquake', 'Quick Attack', 'Return', 'Wild Charge', '', '', ],
          ev : [ 0, 252, 4, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+      {
+         name : 'Most Common',
+         tier : 'uu',
+         nature : 'Adamant',
+         ability : 'Huge Power',
+         item : 'Choice Band',
+         moves : [ 'Earthquake', 'Return', 'Quick Attack', 'U-turn', 'Wild Charge', 'Stone Edge', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       {
@@ -1737,13 +1807,13 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       {
-         name : 'Most Common',
-         tier : 'uu',
+         name : 'Agility',
+         tier : 'ou',
          nature : 'Adamant',
          ability : 'Huge Power',
-         item : 'Choice Band',
-         moves : [ 'Earthquake', 'Return', 'Quick Attack', 'U-turn', 'Wild Charge', 'Stone Edge', ],
-         ev : [ 252, 252, 0, 0, 4, 0, ],
+         item : 'Life Orb',
+         moves : [ 'Earthquake', 'Return', 'Wild Charge', 'Agility', '', '', ],
+         ev : [ 0, 252, 4, 0, 0, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       {
@@ -2605,12 +2675,12 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Gardevoir' : [
+   'Gardevoir-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Timid',
-         ability : 'Trace',
+         ability : 'Pixilate',
          item : 'Gardevoirite',
          moves : [ 'Psychic', 'Moonblast', 'Shadow Ball', 'Hyper Voice', 'Calm Mind', 'Focus Blast', ],
          ev : [ 4, 0, 0, 252, 0, 252, ],
@@ -2665,6 +2735,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Gengar-Mega' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Shadow Tag',
+         item : '',
+         moves : [ 'Shadow Ball', 'Sludge Bomb', 'Focus Blast', 'Substitute', '', '', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Geodude' : [
       {
          name : 'LC Common',
@@ -2710,6 +2792,30 @@ var POKEMON_SETS = {
          item : 'Leftovers',
          moves : [ 'Calm Mind', 'Psychic', 'Baton Pass', 'Agility', 'Thunderbolt', 'Hyper Voice', ],
          ev : [ 252, 0, 152, 0, 104, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Giratina' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Careful',
+         ability : 'Pressure',
+         item : 'Leftovers',
+         moves : [ 'Will-O-Wisp', 'Rest', 'Sleep Talk', 'Roar', '', '', ],
+         ev : [ 252, 4, 0, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Giratina-Origin' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Modest',
+         ability : 'Levitate',
+         item : 'Griseous Orb',
+         moves : [ 'Shadow Sneak', 'Dragon Tail', 'Will-O-Wisp', 'Draco Meteor', '', '', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
@@ -3011,6 +3117,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Groudon' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Adamant',
+         ability : 'Drought',
+         item : 'Leftovers',
+         moves : [ 'Earthquake', 'Stealth Rock', 'Stone Edge', 'Thunder Wave', '', '', ],
+         ev : [ 252, 252, 0, 0, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Growlithe' : [
       {
          name : 'LC Common',
@@ -3047,12 +3165,12 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Gyarados' : [
+   'Gyarados-Mega' : [
       {
          name : 'Most Common',
          tier : 'ou',
          nature : 'Adamant',
-         ability : 'Intimidate',
+         ability : 'Mold Breaker',
          item : 'Gyaradosite',
          moves : [ 'Waterfall', 'Dragon Dance', 'Earthquake', 'Ice Fang', 'Substitute', 'Bounce', ],
          ev : [ 4, 252, 0, 0, 0, 252, ],
@@ -3187,19 +3305,17 @@ var POKEMON_SETS = {
          iv : [ 31, 30, 30, 31, 31, 31, ],
       },
    ],
-   'Heracross' : [
+   'Heracross-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Adamant',
-         ability : 'Moxie',
+         ability : 'Skill Link',
          item : 'Heracronite',
          moves : [ 'Pin Missile', 'Rock Blast', 'Close Combat', 'Bullet Seed', 'Megahorn', 'Arm Thrust', ],
          ev : [ 252, 252, 0, 0, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
-   ],
-   'Heracross-Mega' : [
       {
          name : 'Offensive',
          tier : 'ou',
@@ -3271,6 +3387,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Ho-Oh' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Adamant',
+         ability : 'Regenerator',
+         item : 'Leftovers',
+         moves : [ 'Sacred Fire', 'Brave Bird', 'Roost', 'Earthquake', '', '', ],
+         ev : [ 248, 176, 0, 0, 84, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Honchkrow' : [
       {
          name : 'Most Common',
@@ -3336,7 +3464,7 @@ var POKEMON_SETS = {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Timid',
-         ability : 'Flash Fire',
+         ability : 'Solar Power',
          item : 'Houndoominite',
          moves : [ 'Dark Pulse', 'Fire Blast', 'Nasty Plot', 'Flamethrower', 'Sucker Punch', 'Solar Beam', ],
          ev : [ 4, 0, 0, 252, 0, 252, ],
@@ -3535,12 +3663,12 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Kangaskhan' : [
+   'Kangaskhan-Mega' : [
       {
          name : 'Most Common',
-         tier : 'ou',
+         tier : 'uber',
          nature : 'Adamant',
-         ability : 'Scrappy',
+         ability : 'Parental Bond',
          item : 'Kangaskhanite',
          moves : [ 'Sucker Punch', 'Power-Up Punch', 'Return', 'Earthquake', 'Fake Out', 'Fire Punch', ],
          ev : [ 252, 252, 0, 0, 4, 0, ],
@@ -3679,6 +3807,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Kyogre' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Drizzle',
+         item : 'Choice Scarf',
+         moves : [ 'Thunder', 'Ice Beam', 'Water Spout', 'Surf', '', '', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Kyurem' : [
       {
          name : 'Most Common',
@@ -3700,6 +3840,18 @@ var POKEMON_SETS = {
          item : 'Leftovers',
          moves : [ 'Fusion Bolt', 'Ice Beam', 'Outrage', 'Dragon Claw', 'Earth Power', 'Substitute', ],
          ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Kyurem-White' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Modest',
+         ability : 'Turboblaze',
+         item : 'Choice Specs',
+         moves : [ 'Fusion Flare', 'Ice Beam', 'Draco Meteor', 'Earth Power', '', '', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
@@ -3993,16 +4145,6 @@ var POKEMON_SETS = {
    ],
    'Lucario' : [
       {
-         name : 'Most Common',
-         tier : 'ou',
-         nature : 'Jolly',
-         ability : 'Justified',
-         item : 'Lucarionite',
-         moves : [ 'Close Combat', 'Swords Dance', 'Bullet Punch', 'Flash Cannon', 'Aura Sphere', 'Nasty Plot', ],
-         ev : [ 0, 252, 0, 0, 4, 252, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-      {
          name : 'Physical Sweeper',
          tier : 'ou',
          nature : 'Jolly',
@@ -4014,6 +4156,16 @@ var POKEMON_SETS = {
       },
    ],
    'Lucario-Mega' : [
+      {
+         name : 'Most Common',
+         tier : 'ou',
+         nature : 'Jolly',
+         ability : 'Adaptability',
+         item : 'Lucarionite',
+         moves : [ 'Close Combat', 'Swords Dance', 'Bullet Punch', 'Flash Cannon', 'Aura Sphere', 'Nasty Plot', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
       {
          name : 'Mixed Wallbreaker',
          tier : 'ou',
@@ -4054,6 +4206,18 @@ var POKEMON_SETS = {
          item : 'Leftovers',
          moves : [ 'Giga Drain', 'Ice Beam', 'Rain Dance', 'Hydro Pump', 'Leech Seed', 'Scald', ],
          ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Lugia' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Bold',
+         ability : 'Multiscale',
+         item : 'Leftovers',
+         moves : [ 'Roost', 'Toxic', 'Whirlwind', 'Ice Beam', '', '', ],
+         ev : [ 252, 0, 176, 0, 80, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
@@ -4274,7 +4438,7 @@ var POKEMON_SETS = {
          name : 'Most Common',
          tier : 'uu',
          nature : 'Timid',
-         ability : 'Lightning Rod',
+         ability : 'Intimidate',
          item : 'Manectite',
          moves : [ 'Volt Switch', 'Thunderbolt', 'Hidden Power', 'Flamethrower', 'Overheat', 'Signal Beam', ],
          ev : [ 0, 0, 0, 252, 4, 252, ],
@@ -4370,7 +4534,7 @@ var POKEMON_SETS = {
          name : 'Most Common',
          tier : 'ou',
          nature : 'Adamant',
-         ability : 'Intimidate',
+         ability : 'Huge Power',
          item : 'Mawilite',
          moves : [ 'Play Rough', 'Sucker Punch', 'Swords Dance', 'Iron Head', 'Fire Fang', 'Substitute', ],
          ev : [ 252, 252, 0, 0, 4, 0, ],
@@ -4389,7 +4553,7 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Medicham' : [
+   'Medicham-Mega' : [
       {
          name : 'Most Common',
          tier : 'uu',
@@ -4506,6 +4670,42 @@ var POKEMON_SETS = {
          item : 'Leftovers',
          moves : [ 'Will-O-Wisp', 'Baton Pass', 'Defog', 'Psychic', 'Roost', 'Taunt', ],
          ev : [ 252, 0, 4, 0, 252, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Mewtwo' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Pressure',
+         item : '',
+         moves : [ 'Psystrike', 'Aura Sphere', 'Ice Beam', 'Drain Punch', '', '', ],
+         ev : [ 0, 0, 0, 252, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Mewtwo-Mega-X' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Steadfast',
+         item : '',
+         moves : [ 'Psystrike', 'Aura Sphere', 'Ice Beam', 'Drain Punch', '', '', ],
+         ev : [ 0, 0, 0, 252, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Mewtwo-Mega-Y' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Insomnia',
+         item : '',
+         moves : [ 'Psystrike', 'Aura Sphere', 'Ice Beam', 'Drain Punch', '', '', ],
+         ev : [ 0, 0, 0, 252, 4, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
@@ -5013,6 +5213,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Palkia' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Pressure',
+         item : 'Lustrous Orb',
+         moves : [ 'Spacial Rend', 'Fire Blast', 'Thunder', 'Hydro Pump', '', '', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Pancham' : [
       {
          name : 'LC Common',
@@ -5287,19 +5499,17 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Pinsir' : [
+   'Pinsir-Mega' : [
       {
          name : 'Most Common',
          tier : 'ou',
          nature : 'Jolly',
-         ability : 'Moxie',
+         ability : 'Aerilate',
          item : 'Pinsirite',
          moves : [ 'Quick Attack', 'Swords Dance', 'Earthquake', 'Return', 'X-Scissor', 'Close Combat', ],
          ev : [ 4, 252, 0, 0, 0, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
-   ],
-   'Pinsir-Mega' : [
       {
          name : 'Physical Sweeper',
          tier : 'ou',
@@ -5667,6 +5877,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Rayquaza' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Adamant',
+         ability : 'Air Lock',
+         item : 'Life Orb',
+         moves : [ 'Extreme Speed', 'V-create', 'Outrage', 'Dragon Dance', '', '', ],
+         ev : [ 0, 252, 0, 0, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Regice' : [
       {
          name : 'Most Common',
@@ -5737,6 +5959,18 @@ var POKEMON_SETS = {
          moves : [ 'Fire Blast', 'Ice Beam', 'Water Spout', 'Hydro Pump', 'Surf', 'Hidden Power', ],
          ev : [ 0, 0, 0, 240, 32, 236, ],
          iv : [ 31, 30, 31, 30, 31, 31, ],
+      },
+   ],
+   'Reshiram' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Modest',
+         ability : 'Turboblaze',
+         item : 'Leftovers',
+         moves : [ 'Blue Flare', 'Dragon Pulse', 'Draco Meteor', 'Roost', '', '', ],
+         ev : [ 252, 0, 0, 252, 4, 0, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
    'Reuniclus' : [
@@ -6049,7 +6283,7 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Scizor' : [
+   'Scizor-Mega' : [
       {
          name : 'Most Common',
          tier : 'ou',
@@ -6225,6 +6459,18 @@ var POKEMON_SETS = {
          ability : 'Natural Cure',
          item : 'Leftovers',
          moves : [ 'Seed Flare', 'Earth Power', 'Air Slash', 'Rest', 'Leech Seed', 'Aromatherapy', ],
+         ev : [ 0, 0, 0, 252, 4, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
+   'Shaymin-Sky' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Serene Grace',
+         item : 'Leftovers',
+         moves : [ 'Air Slash', 'Seed Flare', 'Earth Power', 'Leech Seed', '', '', ],
          ev : [ 0, 0, 0, 252, 4, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
@@ -7047,16 +7293,6 @@ var POKEMON_SETS = {
    ],
    'Talonflame' : [
       {
-         name : 'Bulk Up',
-         tier : 'ou',
-         nature : 'Careful',
-         ability : 'Gale Wings',
-         item : 'Leftovers',
-         moves : [ 'Brave Bird', 'Bulk Up', 'Roost', 'Substitute', '', '', ],
-         ev : [ 212, 0, 0, 0, 236, 60, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-      {
          name : 'Choice Band',
          tier : 'ou',
          nature : 'Adamant',
@@ -7074,6 +7310,16 @@ var POKEMON_SETS = {
          item : 'Choice Band',
          moves : [ 'Flare Blitz', 'Brave Bird', 'Roost', 'U-turn', '', 'Acrobatics', ],
          ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+      {
+         name : 'Bulk Up',
+         tier : 'ou',
+         nature : 'Careful',
+         ability : 'Gale Wings',
+         item : 'Leftovers',
+         moves : [ 'Brave Bird', 'Bulk Up', 'Roost', 'Substitute', '', '', ],
+         ev : [ 212, 0, 0, 0, 236, 60, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       {
@@ -7491,7 +7737,7 @@ var POKEMON_SETS = {
          iv : [ 31, 30, 31, 30, 31, 31, ],
       },
    ],
-   'Tyranitar' : [
+   'Tyranitar-Mega' : [
       {
          name : 'Most Common',
          tier : 'ou',
@@ -7659,12 +7905,12 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
-   'Venusaur' : [
+   'Venusaur-Mega' : [
       {
          name : 'Most Common',
          tier : 'ou',
          nature : 'Modest',
-         ability : 'Overgrow',
+         ability : 'Thick Fat',
          item : 'Venusaurite',
          moves : [ 'Giga Drain', 'Sludge Bomb', 'Synthesis', 'Leech Seed', 'Sleep Powder', 'Earthquake', ],
          ev : [ 252, 0, 0, 252, 4, 0, ],
@@ -8031,6 +8277,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
+   'Xerneas' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Timid',
+         ability : 'Fairy Aura',
+         item : 'Power Herb',
+         moves : [ 'Moonblast', 'Geomancy', 'Focus Blast', 'Flash Cannon', '', '', ],
+         ev : [ 4, 0, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Yamask' : [
       {
          name : 'LC Common',
@@ -8067,6 +8325,18 @@ var POKEMON_SETS = {
          iv : [ 31, 31, 31, 30, 30, 31, ],
       },
    ],
+   'Yveltal' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Hasty',
+         ability : 'Dark Aura',
+         item : 'Life Orb',
+         moves : [ 'Oblivion Wing', 'Dark Pulse', 'Sucker Punch', 'Focus Blast', '', '', ],
+         ev : [ 0, 4, 0, 252, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
+      },
+   ],
    'Zangoose' : [
       {
          name : 'Most Common',
@@ -8101,6 +8371,18 @@ var POKEMON_SETS = {
          moves : [ 'Wild Charge', 'Flame Charge', 'Overheat', 'Volt Switch', 'Thunderbolt', 'Hidden Power', ],
          ev : [ 0, 0, 0, 252, 4, 252, ],
          iv : [ 31, 30, 30, 31, 31, 31, ],
+      },
+   ],
+   'Zekrom' : [
+      {
+         name : 'Most Common',
+         tier : 'uber',
+         nature : 'Jolly',
+         ability : 'Teravolt',
+         item : 'Choice Scarf',
+         moves : [ 'Bolt Strike', 'Dragon Claw', 'Outrage', 'Volt Switch', '', '', ],
+         ev : [ 4, 252, 0, 0, 0, 252, ],
+         iv : [ 31, 31, 31, 31, 31, 31, ],
       },
    ],
    'Zigzagoon' : [
