@@ -1378,7 +1378,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    };
    // multitype and judgement
    if (attacker.ability === 'multitype' &&
-         move.name === 'Judgement' &&
+         move.name === 'Judgment' &&
          typeof MULTITYPE_PLATES[attacker.item] !== 'undefined') {
       description.attackerAbility = ABILITIES[attacker.ability].name;
       description.attackerItem = ITEMS[attacker.item].name;
