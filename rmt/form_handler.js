@@ -16,6 +16,7 @@ $(document).ready(function() {
          'ru' : false,
          'nu' : false,
          'lc' : false,
+         'vgc' : false,
       },
       boostedSweepers : false,
       enablePriority : false,
@@ -83,6 +84,25 @@ $(document).ready(function() {
 
    // on change in tier selection input
    $(".input-tier").on('change', function() {
+      /* If the thing that was just checked is VGC and it is checked on,
+         turn on doubles and uncheck all other tiers */
+      tierOptions.tiers.vgc = $('#vgc').prop('checked');
+      var id = $(this).attr('id');
+      if (id === 'vgc' && tierOptions.tiers.vgc) {
+         $('#doubles').prop('checked', true);
+         $('#uber').prop('checked', false);
+         $('#ou').prop('checked', false);
+         $('#uu').prop('checked', false);
+         $('#ru').prop('checked', false);
+         $('#nu').prop('checked', false);
+         $('#lc').prop('checked', false);
+         $('#setLevels').val(50);
+      } else if (id === 'uber' || id === 'ou' || id === 'uu' || id === 'ru' || id === 'lc') {
+         $('#doubles').prop('checked', false);
+         $('#vgc').prop('checked', false);
+         tierOptions.tiers.vgc = false;
+         $('#setLevels').val(100);
+      };
       // change tiers
       tierOptions.tiers.uber = $('#uber').prop('checked');
       tierOptions.tiers.ou = $('#ou').prop('checked');
@@ -95,6 +115,8 @@ $(document).ready(function() {
       if (! tierOptions.wmt) {
          tierOptions.outSpeed = parseInt($('#outspeed').val());
       };
+      $('#setLevels').trigger('change');
+      updateEnvironment(true);
       updateUpdateTableButton(true);
    });
 

@@ -916,10 +916,26 @@ function applySpeedModifiers(speed, pokemon, environment) {
   * @return the modified base damage.
 */
 function applyBaseModifiers(baseDamage, description, attacker, target, move, environment, random) {
-   // Multi target modifier (but this calc is for singles only atm...)
+   // Multi target modifier 
+   baseDamage = applyMultiTargetModifier(baseDamage, description, attacker, target, move, environment);
    baseDamage = applyWeatherModifier(baseDamage, description, attacker, target, move, environment);
    // todo??  Critical hits
    baseDamage = applyRandomFactor(baseDamage, random);
+   return baseDamage;
+};
+/**
+  * Apply multi target modifier to the damage
+  * @param baseDamage Current base damage
+  * @param attacker Pokemon attacker object
+  * @param target Pokemon target object
+  * @param move Move object that the attacker is using.
+  * @param environment Environment object
+  * @return the modified base damage.
+*/
+function applyMultiTargetModifier(baseDamage, description, attacker, target, move, environment) {
+   if (environment.doubles && MULTI_TARGET_MOVES[move.name]) {
+      baseDamage = applyModifier(baseDamage, 0xC00);
+   };
    return baseDamage;
 };
 

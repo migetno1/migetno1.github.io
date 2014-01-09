@@ -490,6 +490,7 @@ function updateEnvironment(rmt) {
    environment.trickRoom = $('#trickRoom').prop('checked');
    environment.lightScreen = $('#lightScreen').prop('checked');
    environment.reflect = $('#reflect').prop('checked');
+   environment.doubles = $('#doubles').prop('checked');
    if (!rmt) {
       environment.multiHit = parseInt($('#multihit').val());
    };

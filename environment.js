@@ -20,6 +20,7 @@ function Environment(numAttackers, numTargets, environment) {
       this.lightScreen = 0;
       this.reflect = 0;
       this.multiHit = MULTI_HIT_FULL;
+      this.doubles = false;
       this.defaultLevel = 100;
    } else {
       this.numAttackers = environment.numAttackers;
@@ -30,6 +31,7 @@ function Environment(numAttackers, numTargets, environment) {
       this.lightScreen = environment.lightScreen;
       this.reflect = environment.reflect;
       this.multiHit = environment.multiHit;
+      this.doubles = environment.doubles;
       this.defaultLevel = environment.defaultLevel;
       for (var i = 0; i < environment.pokemons.length; i++) {
          for (var j = 0; j < environment.pokemons[i].length; j++) {
