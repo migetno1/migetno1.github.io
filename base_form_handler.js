@@ -1,4 +1,89 @@
+function preloadImages(arrayOfImages) {
+   $(arrayOfImages).each(function() {
+      var src = './css/images/' + this;
+      $('<img/>')[0].src = src;
+   });
+};
+
 $(document).ready(function() {
+   // preload images
+   $('#loading').fadeIn(400, function() {
+      preloadImages([
+         'Boost_off.png',
+         'Boost_on.png',
+         'bRMT_off.png',
+         'bRMT_on.png',
+         'brmt-tl.png',
+         'doubles_off.png',
+         'doubles_on.png',
+         'dual_off.png',
+         'dual_on.png',
+         'hail_off.png',
+         'hail_on.png',
+         'Import.png',
+         'LC_off.png',
+         'LC_on.png',
+         'lightscreen_0_off.png',
+         'lightscreen_0_on.png',
+         'lightscreen_1_off.png',
+         'lightscreen_1_on.png',
+         'mode_hyb_off.png',
+         'mode_hyb_on.png',
+         'mode_ver_off.png',
+         'mode_ver_on.png',
+         'mode_vis_off.png',
+         'mode_vis_on.png',
+         'NU_off.png',
+         'NU_on.png',
+         'OS-1_off.png',
+         'OS-1_on.png',
+         'OS-1_top.png',
+         'OS-2_off.png',
+         'OS-2_on.png',
+         'OS-2_top.png',
+         'OS-3_off.png',
+         'OS-3_on.png',
+         'OS-3_top.png',
+         'OS-5_on.png',
+         'OS-5_top.png',
+         'OU_off.png',
+         'OU_on.png',
+         'Priority_off.png',
+         'Priority_on.png',
+         'rain_off.png',
+         'rain_on.png',
+         'reflect_0_off.png',
+         'reflect_0_on.png',
+         'reflect_1_off.png',
+         'reflect_1_on.png',
+         'Reset.png',
+         'RU_off.png',
+         'RU_on.png',
+         'sand_off.png',
+         'sand_on.png',
+         'setlevel_5_off.png',
+         'setlevel_5_on.png',
+         'setlevel_50_off.png',
+         'setlevel_50_on.png',
+         'setlevel_100_off.png',
+         'setlevel_100_on.png',
+         'swc-tl.png',
+         'trickroom_off.png',
+         'trickroom_on.png',
+         'Uber_off.png',
+         'Uber_on.png',
+         'UU_off.png',
+         'UU_on.png',
+         'VGC_off.png',
+         'VGC_on.png',
+         'WMT_off.png',
+         'WMT_on.png',
+         'wmt-tl.png',
+      ]);
+   });
+   $('#loading').fadeOut();
+
+
    // on change of sets input
    $('.input-set').on('change', function(event, ui) {
       // if blank set is chosen, do nothing
