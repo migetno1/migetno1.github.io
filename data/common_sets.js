@@ -1110,15 +1110,6 @@ var COMMON_SETS = {
          ev : [ 252, 252, 0, 0, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
-      'slaking' : {
-         name : 'UU Common',
-         nature : 'Jolly',
-         ability : 'Truant',
-         item : 'Choice Band',
-         moves : [ 'Earthquake', 'Fire Punch', 'Giga Impact', 'Pursuit', 'Return', 'Sucker Punch', ],
-         ev : [ 4, 252, 0, 0, 0, 252, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
       'cradily' : {
          name : 'UU Common',
          nature : 'Careful',
@@ -4746,15 +4737,6 @@ var COMMON_SETS = {
          item : 'Assault Vest',
          moves : [ 'Iron Head', 'Megahorn', 'Knock Off', 'Pursuit', 'Drill Run', 'Swords Dance', ],
          ev : [ 252, 252, 0, 0, 4, 0, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-      'slaking' : {
-         name : 'OU Common',
-         nature : 'Jolly',
-         ability : 'Truant',
-         item : 'Choice Band',
-         moves : [ 'Earthquake', 'Fire Punch', 'Giga Impact', 'Pursuit', 'Return', 'Sucker Punch', ],
-         ev : [ 4, 252, 0, 0, 0, 252, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       'cradily' : {
@@ -8537,15 +8519,6 @@ var COMMON_SETS = {
          item : 'Flame Orb',
          moves : [ 'Brave Bird', 'Facade', 'Quick Attack', 'Protect', 'U-turn', 'Roost', ],
          ev : [ 4, 252, 0, 0, 0, 252, ],
-         iv : [ 31, 31, 31, 31, 31, 31, ],
-      },
-      'slaking' : {
-         name : 'Ubers Common',
-         nature : 'Adamant',
-         ability : 'Truant',
-         item : 'Choice Band',
-         moves : [ 'Earthquake', 'Giga Impact', 'Sucker Punch', 'Hammer Arm', 'Fire Punch', 'Retaliate', ],
-         ev : [ 252, 252, 0, 0, 4, 0, ],
          iv : [ 31, 31, 31, 31, 31, 31, ],
       },
       'dunsparce' : {
