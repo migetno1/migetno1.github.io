@@ -68,6 +68,8 @@ $(document).ready(function() {
          'setlevel_100_off.png',
          'setlevel_100_on.png',
          'swc-tl.png',
+         'sun_on.png',
+         'sun_off.png',
          'trickroom_off.png',
          'trickroom_on.png',
          'Uber_off.png',
