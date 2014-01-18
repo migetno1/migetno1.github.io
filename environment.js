@@ -16,12 +16,14 @@ function Environment(numAttackers, numTargets, environment) {
          this.pokemons[1].push(new Pokemon(DEFAULT_NUM_MOVES));
       };
       this.weather = 0;
-      this.trickRoom = 0;
-      this.lightScreen = 0;
-      this.reflect = 0;
+      this.trickRoom = false;
+      this.lightScreen = [false, false];
+      this.reflect = [false, false];
       this.multiHit = MULTI_HIT_FULL;
       this.doubles = false;
       this.defaultLevel = 100;
+      this.displayOption = 'verbose';
+      this.dualMode = false;
    } else {
       this.numAttackers = environment.numAttackers;
       this.numTargets = environment.numTargets;
@@ -33,6 +35,8 @@ function Environment(numAttackers, numTargets, environment) {
       this.multiHit = environment.multiHit;
       this.doubles = environment.doubles;
       this.defaultLevel = environment.defaultLevel;
+      this.displayOption = environment.displayOption;
+      this.dualMode = environment.dualMode;
       for (var i = 0; i < environment.pokemons.length; i++) {
          for (var j = 0; j < environment.pokemons[i].length; j++) {
             // retrieve the pokemon

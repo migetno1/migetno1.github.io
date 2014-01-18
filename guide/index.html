@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>bReakMyTeam - Guide</title>
+      <meta name="description" content="A guide to bReakMyTeam">
+      <meta name="keywords" content="Pokemon,gen6,damage,calculator">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="../css/bootstrap.css">
+      <link rel="stylesheet" href="../css/bootstrap-theme.css">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+      <link href="breakmyteamlite.less" rel="stylesheet/less" type="text/css">
+      <script src="../css/less-1.5.0.min.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <script src='scroll.js'></script>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body data-spy="scroll" data-target=".guidenav">
+      <div id="loading">
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12 header">
+               <img src="../css/images/topbanner.png" class="img-responsive">
+            </div>
+         </div>
+         <div class="row">
+            <div class='col-xs-3'>
+               <div class="guidenav">
+                  <ul class="nav">
+                     <li><a href='#overview'>Overview</a></li>
+                     <li><a href='#quickstart'>Quick Start</a></li>
+                     <li><a href='#thetable'>The Table</a>
+                        <ul class='nav subnav'>
+                           <li><a href='#thecell'>The Cell</a></li>
+                           <li><a href='#threatordering'>Ordering</a></li>
+                           <li><a href='#outspeedtriangles'>Outspeeding</a></li>
+                           <li><a href='#popovers'>Popovers</a></li>
+                           <li><a href='#textoutput'>Text Output</a></li>
+                        </ul>
+                     </li>
+                     <li><a href='#displaymodes'>Display Modes</a>
+                        <ul class='nav subnav'>
+                           <li><a href='#verbose'>Verbose</a></li>
+                           <li><a href='#percent'>%</a></li>
+                           <li><a href='#visual'>Visual</a></li>
+                        </ul>
+                     </li>
+                     <li><a href='#dualmode'>Dual Mode</a></li>
+                     <li><a href='#boosted'>Boosted</a></li>
+                     <li><a href='#priority'>Priority</a></li>
+                     <li><a href='#outspeed'>Outspeed</a></li>
+                     <li><a href='#options'>Options</a>
+                        <ul class='nav subnav'>
+                           <li><a href='#doubles'>Doubles</a></li>
+                           <li><a href='#setlevels'>Set Levels</a></li>
+                           <li><a href='#screens'>Screens</a></li>
+                           <li><a href='#trickroom'>Trick Room</a></li>
+                           <li><a href='#weather'>Weather</a></li>
+                        </ul>
+                     </li>
+               </div>
+            </div>
+            <div class='col-xs-9'>
+               <h1 id='overview'>Overview</h1>
+                  <p>SweeperCalc is a Gen VI 6v6 damage calculator. It is primarily used during online competitive battles as a resource for determining how much damage you can do to your opponents and vice versa. SweeperCalc is useful because it provides a visual overview of all damage calculations by all Pokemon in the battle (and is much more efficient than looking at the calculations manually in a 1v1 calculator). SweeperCalc enables you to import your team as well as select Common Sets which can be used to predict what moves your opponent may have (statistically speaking, your opponent will run the most common set). SweeperCalc is also a great tool for team building in the case of looking at Pokemon sets that bReakMyTeam does not include.</p>
+                  <p>bReakMyTeam is a Gen VI team building calculator. It enables you to input your team and ‘break its team’ by displaying the top counters or sweepers to your team. There are two modes: bReakMyTeam which shows the opposing Pokemon that can best attack all your Pokemon, and WallMyTeam, which shows the opposing Pokemon that can best wall all your Pokemon. bReakMyTeam uses a similar colouring style to SweeperCalc to visually display the results of the calculations in a table format.</p>
+                  <h1 id='quickstart'>Quick Start</h1>
+                  <p>You can import your team straight away if it is in Pokemon Showdown format!</p>
+                  <p><img src='images/quickstart_import.png'></p>
+                  <p>Select your entire team and copy it from Pokemon Showdown.</p>
+                  <p><img src='../css/images/Import.png'></p>
+                  <p>Click the import button.</p>
+                  <p><img src='images/quickstart_import2.png'></p>
+                  <p>Paste your team and click Import to Target Team.</p>
+                  <p>The table will then load if there are no issues with the import.</p>
+               <h1 id='thetable'>The Table</h1>
+                  <p><img src='images/table_table.png'></p>
+                  <p>The table displays a lot of data so it can be pretty daunting to view at first. We'll cover some features that might not be apparant.</p>
+                  <h3 id='thecell'>The Cell</h3>
+                     <p><img src='images/table_cell.png'></p>
+                     <p>The move picked by bReakMyTeam for each threat is the one that does the most damage to its target.</p>
+                     <p>In this example, Exploud's Focus Blast hits Tyranitar hardest out of all its moves and hence, is the move shown.</p>
+                  <h3 id='threatordering'>Threat Ordering</h3>
+                     <p>The threats to your team are listed by the sum of its damage against your team, with a max of 100% against each individual Pokemon.</p>
+                     <p>For example, a Pokemon which 1HKOs 2 pokemon on your team has a score of 200 and a Pokemon which does 45% damage to all pokemon on your team would have a score of 270. A Pokemon which can 1HKO your entire team would score 600.</p>
+                  <h3 id='outspeedtriangles'>Outspeed Triangles</h3>
+                     <p><img src='images/table_outspeed.png'></p>
+                     <p>The triangles in the top right of a cell indicate that the attacking threat is faster than the defending threat.</p>
+                     <p>In this example, Exploud outspeeds Tyranitar but is outsped by Genesect.</p>
+                  <h3 id='popovers'>Popovers</h3>
+                     <p><img src='images/table_popover.png'></p>
+                     <p>Click on a cell and you'll see the damage calculations for the entire moveset of the offensive Pokemon.</p>
+                  <h3 id='textoutput'>Text Output</h3>
+                     <p><img src='images/table_textoutput.png'></p>
+                     <p>Click on a cell and you'll see the standard text output for that calculation.</p>
+               <h1 id='displaymodes'>Display Modes</h1>
+                  <h3 id='verbose'><img src='../css/images/mode_ver_on.png' alt='Verbose Mode'></h3>
+                     <p><img src='images/display_verbose.png' alt='Verbose Example'></p>
+                     <p>Verbose Mode is the default output mode. It shows min damage, max damage and the move name.</p>
+                  <h3 id='percent'><img src='../css/images/mode_hyb_on.png' alt='Percent Mode'></h3>
+                     <p><img src='images/display_percent.png' alt='Percent Example'></p>
+                     <p>% Mode shows the max damage of the highest damaging move.</p>
+                  <h3 id='visual'><img src='../css/images/mode_vis_on.png' alt='Visual Mode'></h3>
+                     <p><img src='images/display_visual.png' alt='Visual Example'></p>
+                     <p>Visual mode only displays the cell colour and the speed triangle.</p>
+               <h1 id='dualmode'>Dual Mode</h1>
+               <p><img src='../css/images/dual_on.png' alt='Dual Mode'></p>
+               <p>By default, bReakMyTeam only displays the damage that the threat does to the target pokemon.</p>
+               <p>If Dual Mode is selected, bReakMyTeam will also display the damage that the target does</p>
+               <h1 id='boosted'>Boosted</h1>
+                  <p><img src='../css/images/boost_on.png' alt='Boosted Mode'></p>
+                  <p>Boosted mode gives 1 stage of boosts to threats that have boosting moves.</p>
+                  <p>For example, Dragonite will receive +1 attack and +1 speed from Dragon Dance.</p>
+               <h1 id='priority'>Priority</h1>
+                  <p><img src='../css/images/priority_on.png' alt='Priority Mode'></p>
+                  <p>Priority mode changes the default output to show a priority move if the Pokemon is slower.</p>
+                  <p>The Pokemon's other moves are still shown in the popover when the cell is clicked.</p>
+               <h1 id='outspeed'>Outspeed</h1>
+                  <p><img src='images/outspeed.png' alt='Outspeed Selector'></p>
+                  <p>The Outspeed selector specifies the minimum number of target Pokemon that the threat must outspeed.</p>
+                  <p>For example, if 3 is selected, a threat must outspeed at least 3 Pokemon in the target team otherwise it will not be included in the output list</p>
+               <h1 id='options'>Options</h1>
+                  <h3 id='doubles'><img src='../css/images/doubles_on.png' alt='Doubles Mode'></h3>
+                     <p>Setting the doubles mode reduces the power of spread moves by 25% and reduces the effectiveness of Light Screen and Reflect.</p>
+                     <p>Selecting VGC mode automatically activates Doubles mode.</p>
+                  <h3 id='setlevels'><img src='../css/images/setlevel_5_on.png'></h3>
+                     <p>The Level selector changes all Pokemon to the indicated level.</p>
+                     <p>Damage proportions are different at different levels.</p>
+                  <h3 id='screens'><img src='images/options_screens.png' alt='Screens'></h3>
+                     <p>Light Screen reduces damage from special attacks by 50%.</p>
+                     <p>Reflect reduces damage from physical attacks by 50%.</p>
+                     <p>The left side corresponds with the threats and the right side corresponds with the target team.</p>
+                  <h3 id='trickroom'><img src='../css/images/trickroom_on.png' alt='Trick Room'></h3>
+                     <p>Trickroom reverses speed calculations.</p>
+                  <h3 id='weather'><img src='images/options_weather.png' alt='Weather'></h3>
+                     <p>Weather changes the typing of Weather Ball</p>
+                     <p>Solar Beam does half damage in Rain, Sand and Hail.</p>
+                     <p>Sun increases the damage of Fire type moves by 50%, reduces Water type moves by 50% and activates Chlorophyll for speed calculations.</p>
+                     <p>Rain increases the damage of Water type moves by 50%, reduces Fire type moves by 50% and activates Swift Swim for speed calculations.</p>
+                     <p>Sand increases the Special Defense of Rock type Pokemon by 50% and activates Sand Force and Sand Rush.</p>
+                     <p>Hail has no additional effects</p>
+            </div><!-- close col-xs-9 -->
+         </div><!-- close row -->
+      </div><!-- close container -->
+      <div class="bottom-menu">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <ul class="bottom-links">
+                     <li><a href='../swc/'>SweeperCalc</a></li>
+                     <li><a href='../rmt/'>bReakMyTeam</a></li>
+                     <li><a href="mailto:sweepercalc@gmail.com">Give Feedback</a></li>
+                     <li><a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
+                           <input type="hidden" name="cmd" value="_donations">
+                           <input type="hidden" name="business" value="sweepercalc@gmail.com">
+                           <input type="hidden" name="lc" value="AU">
+                           <input type="hidden" name="item_name" value="SweeperCalc">
+                           <input type="hidden" name="no_note" value="0">
+                           <input type="hidden" name="currency_code" value="AUD">
+                           <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+                        </form>
+                     </li>
+                     <li><a data-toggle="modal" data-target="#myModal2">About</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

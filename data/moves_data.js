@@ -1821,7 +1821,7 @@ var MOVE_DATA = {
       'type' : 15,
       'category' : 0,
       'power' : 40,
-      'priority' : 7,
+      'priority' : 0,
    },
    'rapid spin' : {
       'num' : '229',

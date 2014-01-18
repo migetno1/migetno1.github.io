@@ -1,5 +1,5 @@
 /**
-  * Converts a string into a Pokemon.
+  * Converts a string into a team.
   * the string is in standard showdown format.
   * It currently does not accept nicknames or
   * any strange additions.
@@ -7,6 +7,10 @@
   * @return an array of pokemon
   */
 function importTeam(text, defaultLevel) {
+   if (text.match(/^(\s*\w+s*:\s*)?(\w[\w.' -]+)(\s*\/\s*\w[\w.' -]+)*\s*$/)) {
+      console.log('simple import...');
+      return importTeamSimple(text, defaultLevel);
+   };
    var pokemons = [new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES), 
          new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES), 
          new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES)];
@@ -344,14 +348,8 @@ function exportPokemon(pokemon) {
    // EVs: 
    if (! isDefaultEVs(pokemon.ev)) {
       // export EVs
-      var evs = [];
-      for (var stat = 0; stat < 6; stat++) {
-         if (pokemon.ev[stat] !== 0) {
-            evs.push(pokemon.ev[stat] + ' ' + getShowdownStat(stat));
-         };
-      };
       text += 'EVs: ';
-      text += evs.join(' / ');
+      text += getEVSpread(pokemon);
       text += '\n';
    };
    // Bold Nature
@@ -422,6 +420,53 @@ function getShowdownStat(stat) {
    };
 };
 
+/**
+  * Converts a string e.g. 'OU Omastar / Cyndaquil / Ninetales'
+  * into a team with default common set teams.
+  * @param text text to parse
+  * @return an array of pokemon
+  */
+function importTeamSimple(text, defaultLevel) {
+   var pokemons = [new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES), 
+         new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES), 
+         new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES)];
+   for (var i = 0; i < pokemons.length; i++) {
+      pokemons[i].changeLevel(defaultLevel);
+   };
+   var regex = /^\s*(\w+)\s*:\s*(.*)$/;
+   var results = regex.exec(text);
+   var tier = TIER_TO_NUMBER['ou'];
+   if (results !== null) {
+      // we have a specific tier.
+      var tierName = results[1].toLowerCase();
+      if (typeof TIER_TO_NUMBER[tierName] !== 'undefined') {
+         tier = TIER_TO_NUMBER[tierName];
+      };
+      text = results[2];
+   };
+   var pokemonNames = text.split('/');
+   for (var i = 0; i < pokemonNames.length && i < 6; i++) {
+      pokemonNames[i] = pokemonNames[i].replace(/^\s+/,'');
+      pokemonNames[i] = pokemonNames[i].replace(/\s+$/,'');
+      // check for arceus
+      if (typeof ARCEUS[pokemonNames[i].toLowerCase()] !== 'undefined') {
+         pokemonNames[i] = 'Arceus';
+      };
+      // check for aliases
+      if (typeof ALIAS_POKEMON[pokemonNames[i].toLowerCase()] !== 'undefined') {
+         pokemonNames[i] = ALIAS_POKEMON[pokemonNames[i].toLowerCase()];
+      };
+      if (! isValidPokemonName(pokemonNames[i])) continue;
+      pokemonNames[i] = pokemonNames[i].toLowerCase();
+      if (typeof COMMON_SETS[tier][pokemonNames[i]] !== 'undefined') {
+         pokemons[i] = getSetPokemon(COMMON_SETS[tier][pokemonNames[i]], 
+               pokemonNames[i], pokemons[i]);
+      };
+   };
+   return pokemons;
+};
+
+
 /** 
   * Converts gender into the gender constant
   * @param gender M or F
@@ -476,4 +521,19 @@ function changeIVs(iv, newIV) {
       iv[i] = newIV[i];
    };
    return iv;
+};
+
+/**
+  * Get the export version of the EV spread.
+  * @param pokemon Pokemon object
+  * @return the export string.
+  */
+function getEVSpread(pokemon) {
+   var evs = [];
+   for (var stat = 0; stat < 6; stat++) {
+      if (pokemon.ev[stat] !== 0) {
+         evs.push(pokemon.ev[stat] + ' ' + getShowdownStat(stat));
+      };
+   };
+   return evs.join(' / ');
 };

@@ -1,3 +1,10 @@
+function setLiteMode() {
+   if (jQuery.browser.mobile) {
+      tierOptions.liteMode = true;
+   } else {
+      tierOptions.liteMode = false;
+   };
+};
 var environment;
 var printOuts;
 var tierOptions;
@@ -18,11 +25,16 @@ $(document).ready(function() {
          'lc' : false,
          'vgc' : false,
       },
+      tier : TIER_TO_NUMBER['ou'],
       boostedSweepers : false,
       enablePriority : false,
       outSpeed : 0,
       wmt : false,
+      liteMode : false,
    };
+   setLiteMode();
+   // check for importing from URL.
+   importFromUrl(environment, tierOptions);
 
    // initiate sliders
    $(".cHPSlider").slider({
@@ -60,23 +72,38 @@ $(document).ready(function() {
 
    initialiseAutocomplete();
 
-   // trigger a change to start off
-   $(".input-tier").trigger('change');
    generateSweeperPokemon();
    updateStaticData();
    updateForm(true);
+   // trigger a change to start off
+   $(".input-tier").trigger('change');
    updateTable();
    saveData();
 
    
    // on show results button click
-   $("#showresults").on('click', function() {
+   $(".breakMyTeam").on('click', function() {
+      tierOptions.wmt = false;
+      if ($('#topleftimage').html() !== '<img src="../css/images/brmt-tl.png">') {
+         $('#topleftimage').html('<img src="../css/images/brmt-tl.png">');
+      };
+      $('#topleftimage').css("background-color", COLOR_RED);
+      updateTable();
+   });
+
+   // on show results button click
+   $(".wallMyTeam").on('click', function() {
+      tierOptions.wmt = true;
+      if ($('#topleftimage').html() !== '<img src="../css/images/wmt-tl.png">') {
+         $('#topleftimage').html('<img src="../css/images/wmt-tl.png">');
+      };
+      $('#topleftimage').css("background-color", COLOR_GREEN);
       updateTable();
    });
 
    // on change in environment input
-   $(".input-enviro").on('change keyup keydown mouseup', function() {
-      updateEnvironment(true);
+   $(".input-enviro").on('click change keyup keydown mouseup', function() {
+      updateEnvironment(true, $(this));
       updateStaticData();
       updateUpdateTableButton(true);
       saveData();
@@ -84,36 +111,68 @@ $(document).ready(function() {
 
    // on change in tier selection input
    $(".input-tier").on('change', function() {
-      /* If the thing that was just checked is VGC and it is checked on,
-         turn on doubles and uncheck all other tiers */
-      tierOptions.tiers.vgc = $('#vgc').prop('checked');
-      var id = $(this).attr('id');
-      if (id === 'vgc' && tierOptions.tiers.vgc) {
+      var tier = parseInt($('input[name="tier"]:checked').val());
+      tierOptions.tier = tier;
+      if (tierOptions.tier <= 5) {
+         // We have a standard tier
+         // "Check" everything underneath the tier
+         for (var i = 0; i <= tierOptions.tier; i++) {
+            $('#tier-' + i).addClass('checked');
+         };
+         for (var i = tierOptions.tier + 1; i < NUM_TIERS; i++) {
+            $('#tier-' + i).removeClass('checked');
+         };
+      } else {
+         // We have a non-standard tier
+         for (var i = 0; i < NUM_TIERS; i++) {
+            if (i !== tierOptions.tier) {
+               $('#tier-' + i).removeClass('checked');
+            } else {
+               $('#tier-' + i).addClass('checked');
+            }
+         };
+      }
+      if (tierOptions.tier === TIER_TO_NUMBER['vgc']) {
+         // make doubles and set to level 50.
          $('#doubles').prop('checked', true);
-         $('#uber').prop('checked', false);
-         $('#ou').prop('checked', false);
-         $('#uu').prop('checked', false);
-         $('#ru').prop('checked', false);
-         $('#nu').prop('checked', false);
-         $('#lc').prop('checked', false);
-         $('#setLevels').val(50);
-      } else if (id === 'uber' || id === 'ou' || id === 'uu' || id === 'ru' || id === 'lc') {
+         // set levels to 50
+         $('#l50').prop('checked', true);
+      } else if (tierOptions.tier === TIER_TO_NUMBER['lc']) {
+         // set levels to 5
+         $('#l5').prop('checked', true);
          $('#doubles').prop('checked', false);
-         $('#vgc').prop('checked', false);
-         tierOptions.tiers.vgc = false;
-         $('#setLevels').val(100);
+      } else {
+         // set levels to 100
+         $('#l100').prop('checked', true);
+         // turn off doubles
+         $('#doubles').prop('checked', false);
       };
-      // change tiers
-      tierOptions.tiers.uber = $('#uber').prop('checked');
-      tierOptions.tiers.ou = $('#ou').prop('checked');
-      tierOptions.tiers.uu = $('#uu').prop('checked');
-      tierOptions.tiers.ru = $('#ru').prop('checked');
-      tierOptions.tiers.nu = $('#nu').prop('checked');
-      tierOptions.tiers.lc = $('#lc').prop('checked');
       tierOptions.boostedSweepers = $('#boostedSweeper').prop('checked');
       tierOptions.enablePriority = $('#enablePriority').prop('checked');
-      if (! tierOptions.wmt) {
-         tierOptions.outSpeed = parseInt($('#outspeed').val());
+      if ($(this).hasClass('outspeed')) {
+         // we have an outspeed change.
+         var number = parseInt($(this).attr('id').split('-')[1]);
+         if (number != tierOptions.outSpeed) {
+            // we are changing the speed to non-zero
+            tierOptions.outSpeed = number;
+         } else {
+            // we change the speed to zero.
+            tierOptions.outSpeed = 0;
+         };
+         // this for loop makes everything less than or equal to true but not highest
+         for (var i = 1; i <= tierOptions.outSpeed; i++) {
+            var id = '#outspeed-' + i;
+            $(id).prop('checked',true).removeClass('highest');
+         };
+         // this for loop mamkes everything higher false and not highest
+         for (var i = tierOptions.outSpeed + 1; i <= 6; i++) {
+            var id = '#outspeed-' + i;
+            $(id).prop('checked',false).removeClass('highest');
+         };
+         // this makes current node highest.
+         if (number == tierOptions.outSpeed) {
+            $(this).addClass('highest');
+         };
       };
       $('#setLevels').trigger('change');
       updateEnvironment(true);
@@ -126,37 +185,6 @@ $(document).ready(function() {
    $('#collapseTier').on('hidden.bs.collapse', function () {
       $("#expandTier").html('Expand');
    });
-   
-   //WallMyTeam Button
-   $('#switchFunction').on('click', function () {
-      if ($('#switchFunction').hasClass('break')){
-         // now in WMT mode
-         tierOptions.wmt = true;
-         tierOptions.outSpeed = 0;
-         updateTable();
-         saveData();
-
-         //change button
-         $('#switchFunction').removeClass('break btn-success').addClass('wall btn-danger');
-         $('#switchFunction').html('bReakMyTeam');
-         $('#mainHeading').html('WallMyTeam <em>(Beta)</em>');
-         $('#outspeed').prop('disabled', 'disabled');
-         
-      } else {
-         // now in BMT mode
-         tierOptions.wmt = false;
-         tierOptions.outSpeed = $('#outspeed').val();
-         updateTable();
-         saveData();
-         
-         //change button
-         $('#switchFunction').removeClass('wall btn-danger').addClass('break btn-success');
-         $('#switchFunction').html('WallMyTeam');
-         $('#mainHeading').html('bReakMyTeam <em>(Beta)</em>');
-         $('#outspeed').prop('disabled', false);
-      };
-   });
-   
 });
 
 function handlePokemonInputChange(inputDOM) {
@@ -179,242 +207,221 @@ function handlePokemonInputChange(inputDOM) {
 function generateSweeperPokemon() {
    // reset the team
    environment.resetTeam(0);
-   for (var pokemonName in POKEMON_SETS) {
-      for (var i = 0; i < POKEMON_SETS[pokemonName].length; i++) {
-         var setData = POKEMON_SETS[pokemonName][i];
-         if (! tierOptions.tiers[setData.tier]) continue;
+   var tier = tierOptions.tier;
+   var numPokemon = 0;
+   // get all custom sets
+   for (var pokemonName in CUSTOM_SETS[tier]) {
+      for (var i = 0; i < CUSTOM_SETS[tier][pokemonName].length; i++) {
+         var setData = CUSTOM_SETS[tier][pokemonName][i];
          // make new Pokemon
-         var pokemon = new Pokemon(6);
-         pokemon.changeName(pokemonName);
-         if (setData.nature) {
-            pokemon.changeNature(setData.nature);
-         };
-         if (setData.ability) {
-            pokemon.changeAbility(setData.ability);
-         };
-         if (setData.item) {
-            pokemon.changeItem(setData.item);
-         };
-         if (environment.defaultLevel) {
-            pokemon.changeLevel(environment.defaultLevel);
-         };
-         if (typeof setData.moves !== 'undefined') {
-            for (var moveNum = 0; moveNum < 6; moveNum++) {
-               if (setData.moves[moveNum]) {
-                  pokemon.changeMove(moveNum, setData.moves[moveNum]);
-               };
-            };
-         };
-         if (typeof setData.ev !== 'undefined') {
-            for (var stat = 0; stat < 6; stat++) {
-               if (isValidEV(setData.ev[stat])) {
-                  pokemon.changeEV(stat, setData.ev[stat]);
-               };
-            };
-         };
-         if (typeof setData.iv !== 'undefined') {
-            for (var stat = 0; stat < 6; stat++) {
-               if (isValidIV(setData.iv[stat])) {
-                  pokemon.changeIV(stat, setData.iv[stat]);
-               };
-            };
-         };
-         if (tierOptions.boostedSweepers) {
+         var pokemon = getSetPokemon(setData, pokemonName);
+         if (tierOptions.boostedSweepers && ! CHOICE_ITEMS[pokemon.item]) {
             updateBoostedPokemon(pokemon);
          };
-
-         pokemon.valid = true;
-         pokemon.setName = setData.name;
          if (pokemon.name === null) {
             console.log('pokemon name: ' + pokemonName);
             console.log('is valid name?' + isValidPokemonName(pokemonName));
             console.log(JSON.stringify(pokemon, null, '\t'));
          };
          environment.pokemons[0].push(pokemon);
+         numPokemon ++;
       };
    };
-};
-
-/**
-  * Updates the Pokemon sets dropdown menu.
-  * This is called upon change in Pokemon.
-  * @param pokemon the Pokemon object.
-  * @param pokemonData the DOM object corresponding to that Pokemon.
-  */
-function updatePokemonSets(pokemon, pokemonData) {
-   var id = pokemonData.attr('id');
-   var res = id.split('-');
-   if (res[0] != 'pokemon' || res.length !== 3) {
-      // error
-      return;
-   };
-   // pokemonName is the key.
-   var pokemonName = POKEMON_DATA[pokemon.name].name;
-   var setsInput = pokemonData.find('.input-set');
-   // remove current sets
-   setsInput.find('option').remove();
-   // add blank set
-   setsInput.append("<option value=''> </option>");
-   // add none set
-   setsInput.append('<option value="NONE_SET:0">None</option>');
-   // add the pokemon specific sets
-   if (typeof POKEMON_SETS[pokemonName] !== 'undefined') {
-      for (var i = 0; i < POKEMON_SETS[pokemonName].length; i++) {
-         setsInput.append('<option value="' + pokemonName + ':' + i + '">' + 
-               POKEMON_SETS[pokemonName][i].name + "</option>");
+   // get all most common sets
+   for (var i = 0; i < USAGE_LIST[tier].length; i++) {
+      var pokemonName = USAGE_LIST[tier][i];
+      // skip if common set is not defined
+      if (typeof COMMON_SETS[tier][pokemonName] === 'undefined') {
+         continue;
+      }
+      // skip if custom set is defined
+      if (typeof CUSTOM_SETS[tier][pokemonName] !== 'undefined') {
+         continue;
+      }
+      var setData = COMMON_SETS[tier][pokemonName];
+      // make new Pokemon
+      var pokemon = getSetPokemon(setData, pokemonName);
+      if (tierOptions.boostedSweepers && ! CHOICE_ITEMS[pokemon.item]) {
+         updateBoostedPokemon(pokemon);
       };
-   };
-   for (var i = 0; i < DEFAULT_POKEMON_SETS['ATTACKER'].length; i++) {
-      setsInput.append('<option value="ATTACKER:' + i + '">' +
-            DEFAULT_POKEMON_SETS['ATTACKER'][i].name + "</option>");
-   };
-   for (var i = 0; i < DEFAULT_POKEMON_SETS['TARGET'].length; i++) {
-      setsInput.append('<option value="TARGET:' + i + '">' +
-            DEFAULT_POKEMON_SETS['TARGET'][i].name + "</option>");
-   };
-   // set value to blank
-   setsInput.val('');
+      if (pokemon.name === null) {
+         console.log('pokemon name: ' + pokemonName);
+         console.log('is valid name?' + isValidPokemonName(pokemonName));
+         console.log(JSON.stringify(pokemon, null, '\t'));
+      };
+      environment.pokemons[0].push(pokemon);
+      numPokemon ++;
+      if (tierOptions.liteMode && numPokemon >= 200) break;
+   }
 };
 
 /**
   * Updates the table based on data in the model.
   */
 function updateTable() {
-   // update generateSweeperPokemon
-   generateSweeperPokemon();
-   printOuts = {};
-   $("#output").html('');
-   var printOutDisplayed = false;
-   var infoArray = [];
-   // iterate through user Pokemon
-   for (var i = 0; i < environment.pokemons[0].length; i++) {
-      var attacker;
-      var target;
-      if (!tierOptions.wmt) {
-         attacker = environment.pokemons[0][i];
-      } else {
-         target = environment.pokemons[0][i];
-      };
-      if (!tierOptions.wmt && (! attacker.valid || attacker.hasNoMoves())) {
-         // invalid pokemon
-         continue;
-      };
-      if (tierOptions.wmt && ! target.valid) {
-         continue;
-      };
-      var info = {};
-      if (!tierOptions.wmt) {
-         info.attacker = attacker;
-      } else {
-         info.target = target;
-      };
-      info.total = 0;
-      info.outSpeeds = 0;
-      // array of results - 6 results objects
-      info.resultsArray = [];
-      // iterate through opponent Pokemon
-      for (var j = 0; j < environment.pokemons[1].length; j++) {
-         if (!tierOptions.wmt) {
-            target = environment.pokemons[1][j];
-         } else {
-            attacker = environment.pokemons[1][j];
-         };
-         if (!tierOptions.wmt && ! target.valid) {
+   console.log('updating table...');
+   // put up loading screen
+   $('#loading').fadeIn(400, function() {
+      // update generateSweeperPokemon
+      generateSweeperPokemon();
+      printOuts = {};
+      $("#output").html('');
+      var printOutDisplayed = false;
+      var infoArray = [];
+      var noResults = true;
+      // iterate through user Pokemon
+      for (var i = 0; i < environment.pokemons[0].length; i++) {
+         var attacker = environment.pokemons[0][i];
+         if (! attacker.valid) {
             // invalid pokemon
-            info.resultsArray.push(null);
             continue;
          };
-         if (tierOptions.wmt && (! attacker.valid || attacker.hasNoMoves())) {
-            info.resultsArray.push(null);
-            continue;
+         var info = {};
+         info.attacker = attacker;
+         info.total = [];
+         info.total[0] = 0; // total for attacker vs target
+         info.total[1] = 0; // total for target vs attacker
+         info.outSpeeds = 0;
+         // array of results - 6 results objects
+         info.resultsArray = [];
+         // iterate through opponent Pokemon
+         for (var j = 0; j < environment.pokemons[1].length; j++) {
+            var target = environment.pokemons[1][j];
+            if (! target.valid) {
+               // invalid pokemon
+               info.resultsArray.push(null);
+               continue;
+            };
+            var results;
+            var tableMode;
+            if (environment.dualMode) {
+               tableMode = TABLEMODE_DUAL;
+            } else if (tierOptions.wmt) {
+               tableMode = TABLEMODE_WMT;
+            } else {
+               tableMode = TABLEMODE_BRMT;
+            };
+            results = getAttackResults(attacker, target, environment, tierOptions.enablePriority, tableMode);
+            if (results[0].attacks && results[0].attacks.length > 0) {
+               var percentage_min = results[0].attacks[0].damagePercentage[0];
+               if (typeof percentage_min !== 'number') {
+                  // do nothing
+               } else if (percentage_min > 100) {
+                  info.total[0] += 100;
+                  //console.log(100);
+               } else {
+                  info.total[0] += percentage_min;
+                  //console.log(percentage_min);
+               };
+               if (results[0].attackerStrikeFirst) {
+                  info.outSpeeds ++;
+               };
+            };
+            if (results[1].attacks && results[1].attacks.length > 0) {
+               var percentage_min = results[1].attacks[0].damagePercentage[0];
+               if (typeof percentage_min !== 'number') {
+                  // do nothing
+               } else if (percentage_min > 100) {
+                  info.total[1] += 100;
+               } else {
+                  info.total[1] += percentage_min;
+               };
+            };
+            info.resultsArray.push(results);
          };
-         var results;
-         results = getAttackResults(attacker, target, environment, tierOptions.enablePriority);
-         var percentage_min = results.attacks[0].damagePercentage[0];
-         if (typeof percentage_min !== 'number') {
-            // do nothing
-         } else if (percentage_min > 100) {
-            info.total += 100;
+         if (info.outSpeeds >= tierOptions.outSpeed || tierOptions.wmt) {
+            //console.log('Pokemon name: ' + info.attacker.name + ' set: ' + info.attacker.setName + ' score: ' + info.total[0]);
+            infoArray.push(info);
+         } else if (info.attacker.name === 'pinsir-mega') {
+            console.log('Why am I here?');
+            console.log('outspeeds: ' + info.outSpeeds);
+         };
+      };
+      // sort the infoArray
+      infoArray.sort(function (a, b) {
+         if (!tierOptions.wmt) {
+            // sort by damage dealt BY enemy descending.
+            return (b.total[0] - a.total[0]);
          } else {
-            info.total += percentage_min;
+            // sort by damage dealt to enemy ascending
+            return (a.total[1] - b.total[1]);
          };
-         if (results.attackerStrikeFirst) {
-            info.outSpeeds ++;
+      });
+
+      // fill out vertical names
+      for (var i = 0; i < infoArray.length; i++) {
+         var pokemon;
+         pokemon = infoArray[i].attacker;
+         var cell_id = '#pokeman-0-' + i;
+         if (pokemon.valid && isValidPokemonName(pokemon.name)) {
+            $(cell_id).html(POKEMON_DATA[pokemon.name].name + '<br />(' + 
+                  pokemon.setName + ')');
+         } else {
+            var num = i + 1;
+            $(cell_id).html(num + ':');
          };
-         info.resultsArray.push(results);
       };
-      if (info.outSpeeds >= tierOptions.outSpeed) {
-         infoArray.push(info);
+      // fill in rest of table with blank cells
+      for (var i = infoArray.length; i < RMT_TABLE_LENGTH; i++) {
+         var cell_id = '#pokeman-0-' + i;
+         if ($(cell_id).html() !== '<img src="../css/images/5_5_blank.png">') {
+            $(cell_id).html('<img src="../css/images/5_5_blank.png">');
+         };
       };
-   };
-   // sort the infoArray
-   infoArray.sort(function (a, b) {
-      if (!tierOptions.wmt) {
-         return (b.total - a.total);
-      } else {
-         return (a.total - b.total);
+
+      // fill out horizontal names
+      for (var i = 0; i < environment.pokemons[1].length; i++) {
+         var pokemon = environment.pokemons[1][i];
+         var cell_id = '#pokeman-1-' + i;
+         if (pokemon.valid && isValidPokemonName(pokemon.name)) {
+            if ($(cell_id).html() !== '<img src="../css/images/sprites/' + pokemon.name + '.png">') {
+               $(cell_id).html('<img src="../css/images/sprites/' + pokemon.name + '.png">');
+            };
+         } else {
+            if ($(cell_id).html() !== '<img src="../css/images/96_96_blank.png">') {
+               $(cell_id).html('<img src="../css/images/96_96_blank.png">');
+            };
+         };
+      };
+
+      // fill out squares
+      for (var i = 0; i < infoArray.length; i++) {
+         for (var j = 0; j < environment.pokemons[1].length; j++) {
+            var results = infoArray[i].resultsArray[j];
+            if (results === null) {
+               // invalid pokemon
+               updateCells(i, j, false);
+               continue;
+            };
+            printOuts['square-' + i + '-' + j] = results[0].description;
+            printOuts['square-' + i + '-' + j + '-b'] = results[1].description;
+            if (!printOutDisplayed) {
+               printOutDisplayed = true;
+               // TODO change 0??
+               $("#output").html(results[0].description);
+            };
+            updateCells(i, j, true, results);
+            noResults = false;
+         };
+      };
+      // fill in the rest of table with blank cells
+      for (var i = infoArray.length; i < 100; i++) {
+         for (var j = 0; j < environment.pokemons[1].length; j++) {
+            updateCells(i, j, false);
+         };
+      };
+      // change the update table button
+      updateUpdateTableButton(false);
+      // Update the link to results
+      if (noResults) {
+         $('.outputLink').addClass('hidden');
+      } else { 
+         $('.outputLink').removeClass('hidden');
+         $('.outputLink').attr('href', exportToUrl(environment, tierOptions));
       };
    });
-   //console.log(JSON.stringify(infoArray, null, '\t'));
-
-   for (var i = 0; i < infoArray.length; i++) {
-      var pokemon;
-      if (!tierOptions.wmt) {
-         pokemon = infoArray[i].attacker;
-      } else {
-         pokemon = infoArray[i].target;
-      };
-      var cell_id = '#pokeman-0-' + i;
-      if (pokemon.valid && isValidPokemonName(pokemon.name)) {
-         $(cell_id).html(POKEMON_DATA[pokemon.name].name + '<br />(' + 
-               pokemon.setName + ')');
-      } else {
-         var num = i + 1;
-         $(cell_id).html(num + ':');
-      };
-   };
-   // fill in rest of table with blank cells
-   for (var i = infoArray.length; i < 100; i++) {
-      var cell_id = '#pokeman-0-' + i;
-      var num = i + 1;
-      $(cell_id).html(num + ':');
-   };
-
-   for (var i = 0; i < environment.pokemons[1].length; i++) {
-      var pokemon = environment.pokemons[1][i];
-      var cell_id = '#pokeman-1-' + i;
-      if (pokemon.valid && isValidPokemonName(pokemon.name)) {
-         $(cell_id).html(POKEMON_DATA[pokemon.name].name);
-      } else {
-         var num = i + 1;
-         $(cell_id).html(num + ':');
-      };
-   };
-
-   for (var i = 0; i < infoArray.length; i++) {
-      for (var j = 0; j < environment.pokemons[1].length; j++) {
-         var results = infoArray[i].resultsArray[j];
-         if (results === null) {
-            // invalid pokemon
-            updateCell(i, j, false);
-            continue;
-         };
-         printOuts['square-' + i + '-' + j] = results.description;
-         if (!printOutDisplayed) {
-            printOutDisplayed = true;
-            $("#output").html(results.description);
-         };
-         updateCell(i, j, true, results);
-      };
-   };
-   // fill in the rest of table with blank cells
-   for (var i = infoArray.length; i < 100; i++) {
-      for (var j = 0; j < environment.pokemons[1].length; j++) {
-         updateCell(i, j, false);
-      };
-   };
-   // change the update table button
-   updateUpdateTableButton(false);
+   // get rid of loading sign
+   $('#loading').fadeOut();
 };
 
 /**
@@ -424,81 +431,53 @@ function updateTable() {
   * @param isValid true if the cell should be valid, or false otherwise.
   * @param results the results to be displayed in the cell.
   */
-function updateCell(row, col, isValid, results) {
-   var cell_id = '#square-' + row + '-' + col;
-   $(cell_id).popover('destroy');
-   if (!isValid) {
-      $(cell_id).css("background-color", '');
-      $(cell_id).removeClass("triangle");
-      $(cell_id).html("");
+function updateCells(row, col, isValid, results) {
+   var cellId = '#square-' + row + '-' + col;
+   var cellIdB = cellId + '-b';
+   var mainCellId, mainSubCell, secondaryCellId, secondarySubCell;
+   if (! tierOptions.wmt) {
+      mainCellId = cellId;
+      secondaryCellId = cellIdB;
+      mainSubCell = 0;
+      secondarySubCell = 1;
    } else {
-      var percentage_min = results.attacks[0].damagePercentage[0];
-      var percentage_max = results.attacks[0].damagePercentage[1];
-      var move = MOVE_DATA[results.attacks[0].move].name;
-      if (move === 'Hidden Power') {
-         move += ' ' + results.attacks[0].moveType;
-      };
-      $(cell_id).css("background-color", getCellColor(percentage_min));
-      $(cell_id).html(percentage_min + ' - ' + percentage_max + "%<br>" + move);
-      if (results.attackerStrikeFirst) {
-         $(cell_id).addClass("triangle");
-      } else {
-         $(cell_id).removeClass("triangle");
-      };
-      //initialise popovers attribute for content is data-content
-      var string = '';
-      for (var i = 0; i < results.attacks.length; i++) {
-         var percent_min = results.attacks[i].damagePercentage[0];
-         var percent_max = results.attacks[i].damagePercentage[1];
-         var mv = MOVE_DATA[results.attacks[i].move].name;
-         if (mv === 'Hidden Power') {
-            mv += ' ' + results.attacks[i].moveType;
-         };
-         string += mv + ': ' + percent_min + ' - ' + percent_max + '%<br>';
-      };
-      $(cell_id).popover({
-         placement: "auto top",
-         html: true,
-         content: string,
-         container: "body",
-      });
+      mainCellId = cellIdB;
+      secondaryCellId = cellId;
+      mainSubCell = 1;
+      secondarySubCell = 0;
    };
-};
-
-/**
-  * Get the appropriate cell color based on the damage percentage.
-  * @param percentage percentage damage
-  * @return colour that corresponds to the percentage.
-  */
-function getCellColor(percentage) {
-   if (!tierOptions.wmt) {
-      if (percentage <= 50 || typeof percentage !== 'number') {
-         return '#dff0d8';
-      } else if (percentage < 100) {
-         return '#fcf8e3';
+   $(mainCellId).removeClass('hidden');
+   $(mainCellId).popover('destroy');
+   updateCell(mainCellId, isValid, results, mainSubCell, true);
+   if (environment.dualMode) {
+      $(mainCellId).addClass('fifty');
+      $(secondaryCellId).addClass('fifty');
+      $(secondaryCellId).removeClass('hidden');
+      // fill in other subcell
+      $(secondaryCellId).popover('destroy');
+      if (mainSubCell === 1) {
+         updateCell(secondaryCellId, isValid, results, secondarySubCell, false);
       } else {
-         return '#f2dede';
+         updateCell(secondaryCellId, isValid, results, secondarySubCell, true);
       };
    } else {
-      if (percentage < 50 || typeof percentage !== 'number') {
-         return '#f2dede';
-      } else if (percentage < 100) {
-         return '#fcf8e3';
-      } else {
-         return '#dff0d8';
-      };
+      $(mainCellId).removeClass('fifty');
+      $(secondaryCellId).removeClass('fifty');
+      $(secondaryCellId).addClass('hidden');
    };
 };
 
 function updateUpdateTableButton(requireUpdate) {
    if (requireUpdate) {
-      $("#showresults").removeClass('btn-success').addClass('btn-warning');
-      $("#showresults").html('<span class="glyphicon glyphicon-exclamation-sign"></span>' +
-            ' Update Table');
+      $(".activate").removeClass('updated');
    } else {
-      $("#showresults").removeClass('btn-warning').addClass('btn-success');
-      $("#showresults").html('<span class="glyphicon glyphicon-ok"></span>' +
-            ' Up-to-date');
+      if (! tierOptions.wmt) {
+         $(".breakMyTeam").addClass('updated');
+         $(".wallMyTeam").removeClass('updated');
+      } else {
+         $(".wallMyTeam").addClass('updated');
+         $(".breakMyTeam").removeClass('updated');
+      };
    };
 };
 
@@ -532,3 +511,56 @@ function giveBoostToPokemon(pokemon, moveName) {
       pokemon.changeStatBoost(i, statBoostArray[i]);
    };
 };
+
+/**
+  * Get the appropriate cell color based on the damage percentage.
+  * @param attack the attack that the cell is representing
+  * @param attack the opposing attack
+  * @param subCell the top or bottom half of a cell
+  * @param attackerStrikeFirst true if the current attacker strikes first or false otherwise.
+  * @return colour that corresponds to the percentage.
+  */
+function getCellColor(attack, otherAttack, subCell, attackerStrikeFirst) {
+   if (! tierOptions.wmt) {
+      if (subCell === 0) {
+         if (attack.maxKONumber === 1) {
+            return COLOR_RED;
+         } else if (attack.maxKONumber === 2) {
+            return COLOR_ORANGE;
+         } else {
+            return COLOR_GREEN;
+         };
+      } else {
+         if (attackerStrikeFirst) {
+            if (attack.minKONumber === 1) {
+               return COLOR_GREEN_B;
+            } else {
+               return COLOR_ORANGE_B;
+            };
+         } else {
+            if (otherAttack.maxKONumber === 1) {
+               return COLOR_RED_B;
+            } else {
+               return COLOR_ORANGE_B;
+            }
+         }
+      };
+   } else {
+      if (subCell === 0) {
+         if (attack.maxKONumber > otherAttack.minKONumber) {
+            return COLOR_RED;
+         } else {
+            return COLOR_ORANGE;
+         }
+      } else {
+         if (attack.minKONumber === 1 || attack.minKONumber === 2) {
+            return COLOR_GREEN_B;
+         } else if (attack.minKONumber === 3) {
+            return COLOR_ORANGE_B;
+         } else {
+            return COLOR_RED_B;
+         };
+      }
+   }
+};
+

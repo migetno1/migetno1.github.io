@@ -45,4 +45,18 @@ var GENDER_GENDERLESS = 2;
 var MULTI_HIT_FULL = 0;
 var MULTI_HIT_SINGLE = 1;
 
-var DEFAULT_NUM_MOVES = 4;
+var DEFAULT_NUM_MOVES = 6;
+
+var RMT_TABLE_LENGTH = 100;
+
+var COLOR_RED        = "#e74c3c";
+var COLOR_ORANGE     = "#e67e22";
+var COLOR_GREEN      = "#27ae60";
+var COLOR_RED_B      = "#D04436";
+var COLOR_ORANGE_B   = "#CF711F";
+var COLOR_GREEN_B    = "#239D56";
+var COLOR_BLUE_GREY  = "#8eafc8";
+
+var TABLEMODE_BRMT = 0;
+var TABLEMODE_WMT = 1;
+var TABLEMODE_DUAL = 2;

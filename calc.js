@@ -409,7 +409,7 @@ function applyBasePowerModifiers(power, description, attacker, target, move, env
    };
    if (attacker.ability === 'analytic' && move.name !== 'Future Sight'
          && move.name !== 'Doom Desire'
-         && ! attackerStrikeFirst(attacker, target, environment)) {
+         && ! attackerStrikeFirst(description, attacker, target, environment)) {
       description.attackerAbility = ABILITIES[attacker.ability].name;
       modifiers.push(0x14CD);
    };
@@ -547,6 +547,15 @@ function getAttack(description, attacker, target, move, environment) {
       stat = STAT_ATT;
    } else {
       stat = STAT_SPA;
+   };
+
+   if (stat === STAT_ATT) {
+      if (description.defenderAbilityIfAtt) {
+         description.defenderAbility = description.defenderAbilityIfAtt;
+      };
+      if (description.attackerAbilityIfAtt) {
+         description.attackerAbility = description.attackerAbilityIfAtt;
+      };
    };
 
    attack = getStat(statPokemon, stat, true);
@@ -838,7 +847,7 @@ function applyDefenceModifiers(defence, description, attacker, target, move, env
   * @param environment Environment object
   * @return the modified speed.
 */
-function getSpeed(pokemon, environment) {
+function getSpeed(description, pokemon, environment, team) {
    var speed = getStat(pokemon, STAT_SPE);
    
    // apply stat boosts
@@ -846,7 +855,7 @@ function getSpeed(pokemon, environment) {
    speed = speed * getBoostNumerator(statboost);
    speed = speed / getBoostDenominator(statboost);
 
-   speed = applySpeedModifiers(speed, pokemon, environment);
+   speed = applySpeedModifiers(description, speed, pokemon, environment, team);
    // apply paralysis
    if (pokemon.status === STATUS_PARALYSE) {
       speed = applyModifier(speed, 0x400);
@@ -865,27 +874,35 @@ function getSpeed(pokemon, environment) {
   * @param environment Environment object
   * @return the new modified speed.
   */
-function applySpeedModifiers(speed, pokemon, environment) {
+function applySpeedModifiers(description, speed, pokemon, environment, team) {
    var modifiers = [];
    var ability = pokemon.ability;
    var item = pokemon.item;
    if (ability === 'chlorophyll' && environment.weather === ENVIRONMENT_SUN) {
+      description[team + 'Ability'] = ABILITIES[ability].name;
+      description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
       modifiers.push(0x2000);
    };
    if (ability === 'quick feet' && pokemon.status !== STATUS_NORMAL) {
+      description[team + 'Ability'] = ABILITIES[ability].name;
       modifiers.push(0x1800);
    };
    if (ability === 'slow start') {
       // in first 5 turns
+      description[team + 'Ability'] = ABILITIES[ability].name;
       modifiers.push(0x800);
    };
    if (ability === 'swift swim' && environment.weather === ENVIRONMENT_RAIN) {
+      description[team + 'Ability'] = ABILITIES[ability].name;
+      description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
       modifiers.push(0x2000);
    };
-   if (ability === 'unburden' && pokemon.item && pokemon.item.match(/berry|gem/i)) {
+   /*if (ability === 'unburden' && pokemon.item && pokemon.item.match(/berry|gem/i)) {
+      description[team + 'Ability'] = ABILITIES[ability].name;
       modifiers.push(0x2000);
-   };
+   };*/
    if (item === 'choice scarf') {
+      description[team + 'Item'] = ITEMS[item].name;
       modifiers.push(0x1800);
    };
    if (item === 'iron ball' ||
@@ -896,9 +913,11 @@ function applySpeedModifiers(speed, pokemon, environment) {
          item === 'power bracer' ||
          item === 'power lens' ||
          item === 'power weight') {
+      description[team + 'Item'] = ITEMS[item].name;
       modifiers.push(0x800);
    };
    if (item === 'quick powder' && pokemon.name === 'ditto') {
+      description[team + 'Item'] = ITEMS[item].name;
       modifiers.push(0x2000);
    };
    var modifier = chainMultipleModifiers(modifiers);
@@ -923,6 +942,7 @@ function applyBaseModifiers(baseDamage, description, attacker, target, move, env
    baseDamage = applyRandomFactor(baseDamage, random);
    return baseDamage;
 };
+
 /**
   * Apply multi target modifier to the damage
   * @param baseDamage Current base damage
@@ -1168,17 +1188,25 @@ function applyFinalModifiers(baseDamage, description, attacker, target, move, en
    if (attacker.ability === 'infiltrator') {
       description.attackerAbility = ABILITIES[attacker.ability].name;
    };
-   if (environment.reflect && move.category === MOVE_PHYSICAL &&
+   if (environment.reflectCurr && move.category === MOVE_PHYSICAL &&
          attacker.ability !== 'infiltrator') {
       // TODO critical mod if we ever implement crit
       // TODO change mod if it is a doubles battle...
       description.isReflect = true;
-      modifiers.push(0x800);
+      if (environment.doubles) {
+         modifiers.push(0xA8F);
+      } else {
+         modifiers.push(0x800);
+      };
    };
-   if (environment.lightScreen && move.category === MOVE_SPECIAL &&
+   if (environment.lightScreenCurr && move.category === MOVE_SPECIAL &&
          attacker.ability !== 'infiltrator') {
       description.isLightScreen = true;
-      modifiers.push(0x800);
+      if (environment.doubles) {
+         modifiers.push(0xA8F);
+      } else {
+         modifiers.push(0x800);
+      };
    };
    if (target.ability === 'multiscale' 
          && target.currentHP === getStat(target, STAT_HP)) {
@@ -1316,6 +1344,18 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    var attackerType = POKEMON_DATA[attacker.name].type.slice(0);
    var attackerItem = attacker.item;
    var targetType = POKEMON_DATA[target.name].type.slice(0);
+   var attackerStatBoost = attacker.statBoost.slice(0);
+   // intimidate
+   if (target.ability === 'intimidate') {
+      description.defenderAbilityIfAtt = ABILITIES[target.ability].name;
+      if (attacker.ability === 'contrary' ||
+            attacker.ability === 'defiant') {
+         description.attackerAbilityIfAtt = ABILITIES[attacker.ability].name;
+         attacker.changeStatBoost(attacker.statBoost[STAT_ATT] + 1);
+      } else {
+         attacker.changeStatBoost(attacker.statBoost[STAT_ATT] - 1);
+      };
+   };
    // klutz
    if (attacker.ability === 'klutz') {
       description.attackerAbility = ABILITIES[attacker.ability].name;
@@ -1482,11 +1522,13 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    // bulletproof immunity
    if (target.ability === 'bulletproof' &&
          typeof BULLETPROOF_MOVES[move.name] !== 'undefined') {
+      description.defenderAbility = target.ability;
       baseDamage = 0;
    };
    // soundproof immunity
    if (target.ability === 'soundproof' &&
          typeof SOUNDPROOF_MOVES[move.name] !== 'undefined') {
+      description.defenderAbility = target.ability;
       baseDamage = 0;
    };
    // synchronoise immunity
@@ -1499,6 +1541,11 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    if ((target.ability === 'sturdy' || target.item === 'focus sash') &&
          baseDamage >= getStat(target, STAT_HP) &&
          target.currentHP === getStat(target, STAT_HP)) {
+      if (target.ability === 'sturdy') {
+         description.defenderAbility = target.ability;
+      } else {
+         description.defenderItem = target.item;
+      };
       baseDamage = getStat(target, STAT_HP) - 1;
    };
 
@@ -1517,6 +1564,7 @@ function getDamageAmount(description, attacker, target, move, environment, rando
    // return normal item after calculation
    attacker.item = attackerItem;
    // return normal stat boosts
+   attacker.statBoost = attackerStatBoost.slice(0);
    
    baseDamage = applySpecialCases(baseDamage, description, attacker, target, move, environment);
    if (debug) {
@@ -1565,9 +1613,13 @@ function getDamagePercentage(description, attacker, target, move, environment, r
    if (random === RANDOM_MIN) {
       description.minDamage = damage;
       description.minPercent = Math.floor(percentage * 10) / 10;
+      // RANDOM HACK PLEASE CHANGE ME LATER !!!!!
+      description.minKONumber = getKONumber(damage, target, environment);
    } else if (random === RANDOM_MAX) {
       description.maxDamage = damage;
       description.maxPercent = Math.floor(percentage * 10) / 10;
+      // RANDOM HACK PLEASE CHANGE ME LATER !!!!!
+      description.maxKONumber = getKONumber(damage, target, environment);
    };
    return percentage;
 
@@ -1581,9 +1633,9 @@ function getDamagePercentage(description, attacker, target, move, environment, r
   * @param environment Environment object
   * @return true if the attacker will strike first, or false otherwise.
   */
-function attackerStrikeFirst(attacker, target, environment) {
-   var attackerSpeed = getSpeed(attacker, environment);
-   var targetSpeed = getSpeed(target, environment);
+function attackerStrikeFirst(description, attacker, target, environment) {
+   var attackerSpeed = getSpeed(description, attacker, environment, 'attacker');
+   var targetSpeed = getSpeed(description, target, environment, 'defender');
    if (attackerSpeed > targetSpeed) {
       if (environment.trickRoom) {
          return false;
@@ -1600,116 +1652,248 @@ function attackerStrikeFirst(attacker, target, environment) {
       return false;
    };
 };
-      
+
 /**
   * Determines the possible outcomes of attacker vs. target
   * @param attacker Attacker Pokemon object
   * @param target Target Pokemon object
   * @return a list of results with percentage damage dealt and move used
   */
-function getAttackResults(attacker, target, environment, enablePriority) {
-   if (attacker.hasNoMoves()) {
-      return null;
-   };
-   var results = {};
-   results.attacks = [];
-   results.attackerStrikeFirst = attackerStrikeFirst(attacker, target,
-         environment);
-   for (var moveNum = 0; moveNum < attacker.moves.length; moveNum++) {
-      var result = {};
-      var description = {};
-      moveName = attacker.moves[moveNum];
-      if (! moveName) continue;
-      result.move = moveName;
-      var move = MOVE_DATA[moveName];
-
-      description.attackerName = POKEMON_DATA[attacker.name].name;
-      description.moveName = move.name;
-      description.defenderName = POKEMON_DATA[target.name].name;
-      
-      if (move.category !== MOVE_PHYSICAL && move.category !== MOVE_SPECIAL) {
-         description.noDamage = true;
-         result.damagePercentage = ['-', '-'];
-      } else {
-         result.damagePercentage = [];
-         // min
-         result.damagePercentage.push(
-            Math.floor(getDamagePercentage(description, attacker, target, move, environment, RANDOM_MIN, true) * 10) / 10);
-         // max
-         result.damagePercentage.push(
-            Math.floor(getDamagePercentage(description, attacker, target, move, environment, RANDOM_MAX, true) * 10) / 10);
-         // multi-hit
-         if (typeof TWO_FIVE_STRIKE_MOVES[move.name] !== 'undefined' ||
-               typeof TWO_STRIKE_MOVES[move.name] !== 'undefined' ||
-               typeof THREE_STRIKE_MOVES[move.name] !== 'undefined') {
-            var description_dummy = {};
-            result.damagePercentageSingleHit = [];
-            // min single hit
-            result.damagePercentageSingleHit.push(
-               Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MIN, false) * 10 / 10)
-            );
-            // max single hit
-            result.damagePercentageSingleHit.push(
-               Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MAX, false) * 10 / 10)
-            );
+function getAttackResults(attacker, target, environment, enablePriority, tableMode) {
+   if (!attacker.valid || !target.valid) return null;
+   var results = [];
+   results[0] = {};
+   results[1] = {};
+   if (tableMode !== TABLEMODE_WMT) {
+      // change lightscreen and reflect
+      environment.lightScreenCurr = environment.lightScreen[1];
+      environment.reflectCurr = environment.reflect[1];
+      // include first set of results
+      results[0].attacks = [];
+      results[0].description = {};
+      results[0].attackerStrikeFirst = attackerStrikeFirst(
+            results[0].description, attacker, target, environment);
+      for (var moveNum = 0; moveNum < attacker.moves.length; moveNum++) {
+         var moveName = attacker.moves[moveNum];
+         if (!moveName) continue;
+         var result = getAttackResult(results[0].description, attacker, target, environment, moveName);
+         if (result) {
+            results[0].attacks.push(result);
          };
       };
-      if (typeof description.moveType !== 'undefined') {
-         // we should include this somewhere
-         result.moveType = description.moveType;
-      };
-      result.description = buildDescription(description);
-      results.attacks.push(result);
    };
-   results.attacks.sort(function(a, b) {
-      if (a.damagePercentage[0] === '-') {
-         return 1;
-      } else if (b.damagePercentage[0] === '-') {
-         return -1;
-      } else {
-         // check priority if attacker does not strike first.
-         if (enablePriority && ! results.attackerStrikeFirst) {
-            // we need to take into account priority
-            var priorityA = MOVE_DATA[a.move].priority;
-            // take into account gale wings
-            if (attacker.ability === 'gale wings' && 
-                  MOVE_DATA[a.move].type === TYPE_NAME_TO_ID.Flying) {
-               priorityA ++;
-            };
-            var priorityB = MOVE_DATA[b.move].priority;
-            // take into account gale wings
-            if (attacker.ability === 'gale wings' && 
-                  MOVE_DATA[b.move].type === TYPE_NAME_TO_ID.Flying) {
-               priorityB ++;
-            };
-            if (priorityA > priorityB && a.damagePercentage[0] != 0) {
-               return -1;
-            } else if (priorityB > priorityA && b.damagePercentage[0] != 0) {
+   if (tableMode !== TABLEMODE_BRMT) {
+      // change lightscreen and reflect
+      environment.lightScreenCurr = environment.lightScreen[0];
+      environment.reflectCurr = environment.reflect[0];
+      // include second set of results
+      results[1].attacks = [];
+      results[1].description = {};
+      results[1].attackerStrikeFirst = attackerStrikeFirst(
+            results[1].description, target, attacker, environment);
+      for (var moveNum = 0; moveNum < target.moves.length; moveNum++) {
+         var moveName = target.moves[moveNum];
+         if (!moveName) continue;
+         var result = getAttackResult(results[1].description, target, attacker, environment, moveName);
+         if (result) {
+            results[1].attacks.push(result);
+         };
+      };
+   };
+   // Sorting results
+   for (var i = 0; i < results.length; i++) {
+      if (results[i].attacks) {
+         results[i].attacks.sort(function(a, b) {
+            if (a.damagePercentage[0] === '-') {
                return 1;
-            };
-         };
-         return b.damagePercentage[0] - a.damagePercentage[0];
-      }
-   });
-   results.description = results.attacks[0].description;
-   if (enablePriority) {
-      // determine attackerStrikeFirst based on priority
-      var priority = MOVE_DATA[results.attacks[0].move].priority;
-      // take into account gale wings
-      if (attacker.ability === 'gale wings' && 
-            MOVE_DATA[results.attacks[0].move].type === TYPE_NAME_TO_ID.Flying) {
-         priority ++;
+            } else if (b.damagePercentage[0] === '-') {
+               return -1;
+            } else {
+               // check priority if attacker does not strike first.
+               if (enablePriority && ! results[i].attackerStrikeFirst) {
+                  // we need to take into account priority
+                  var priorityA = MOVE_DATA[a.move].priority;
+                  // take into account gale wings
+                  var currAttacker = attacker;
+                  if (i === 1) currAttacker = target;
+                  if (currAttacker.ability === 'gale wings' && 
+                        MOVE_DATA[a.move].type === TYPE_NAME_TO_ID.Flying) {
+                     priorityA ++;
+                  };
+                  var priorityB = MOVE_DATA[b.move].priority;
+                  // take into account gale wings
+                  if (attacker.ability === 'gale wings' && 
+                        MOVE_DATA[b.move].type === TYPE_NAME_TO_ID.Flying) {
+                     priorityB ++;
+                  };
+                  if (priorityA > priorityB && a.damagePercentage[0] != 0) {
+                     return -1;
+                  } else if (priorityB > priorityA && b.damagePercentage[0] != 0) {
+                     return 1;
+                  };
+               };
+               return b.damagePercentage[0] - a.damagePercentage[0];
+            }
+         });
       };
-      if (priority > 0) {
-         // we have a priority move
-         results.attackerStrikeFirst = true;
-      } else if (priority < 0) {
-         results.attackerStrikeFirst = false;
+   };
+   for (var i = 0; i < results.length; i++) {
+      if (results[i].attacks && results[i].attacks.length > 0) {
+         results[i].description = results[i].attacks[0].description;
+      } else {
+         results[i].description = '';
+      };
+   };
+   for (var i = 0; i < results.length; i++) {
+      if (enablePriority && results[i].attacks && results[i].attacks.length > 0) {
+         // determine attackerStrikeFirst based on priority
+         var priority = MOVE_DATA[results[i].attacks[0].move].priority;
+         // take into account gale wings
+         var currAttacker = attacker;
+         if (i === 1) currAttacker = target;
+         if (currAttacker.ability === 'gale wings' && 
+               MOVE_DATA[results[i].attacks[0].move].type === TYPE_NAME_TO_ID.Flying) {
+            priority ++;
+         };
+         if (priority > 0) {
+            // we have a priority move
+            results[i].attackerStrikeFirst = true;
+         } else if (priority < 0) {
+            results[i].attackerStrikeFirst = false;
+         };
       };
    };
    if (debug) console.log(JSON.stringify(results, null, '\t'));
    return results;
-}
+};
+
+function getAttackResult(templateDescription, attacker, target, environment, moveName) {
+   var result = {};
+   var description = {};
+   for (var key in templateDescription) {
+      if (templateDescription.hasOwnProperty(key)) {
+         description[key] = templateDescription[key];
+      };
+   };
+   if (! moveName) return null;
+   result.move = moveName;
+   var move = MOVE_DATA[moveName];
+
+   description.attackerName = POKEMON_DATA[attacker.name].name;
+   description.moveName = move.name;
+   description.defenderName = POKEMON_DATA[target.name].name;
+   
+   if (move.category !== MOVE_PHYSICAL && move.category !== MOVE_SPECIAL) {
+      description.noDamage = true;
+      result.damagePercentage = ['-', '-'];
+   } else {
+      result.damagePercentage = [];
+      // min
+      result.damagePercentage.push(
+         Math.floor(getDamagePercentage(description, attacker, target, move, environment, RANDOM_MIN, true) * 10) / 10);
+      // max
+      result.damagePercentage.push(
+         Math.floor(getDamagePercentage(description, attacker, target, move, environment, RANDOM_MAX, true) * 10) / 10);
+      // multi-hit
+      if (typeof TWO_FIVE_STRIKE_MOVES[move.name] !== 'undefined' ||
+            typeof TWO_STRIKE_MOVES[move.name] !== 'undefined' ||
+            typeof THREE_STRIKE_MOVES[move.name] !== 'undefined') {
+         var description_dummy = {};
+         result.damagePercentageSingleHit = [];
+         // min single hit
+         result.damagePercentageSingleHit.push(
+            Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MIN, false) * 10 / 10)
+         );
+         // max single hit
+         result.damagePercentageSingleHit.push(
+            Math.floor(getDamagePercentage(description_dummy, attacker, target, move, environment, RANDOM_MAX, false) * 10 / 10)
+         );
+      };
+   };
+   if (typeof description.moveType !== 'undefined') {
+      // we should include this somewhere
+      result.moveType = description.moveType;
+   };
+   result.minKONumber = description.minKONumber ? 
+      description.minKONumber : 0;
+   result.maxKONumber = description.maxKONumber ? 
+      description.maxKONumber : 0;
+   result.description = buildDescription(description);
+   return result;
+};
+
+/**
+  * Gets the number of hits it would take for a KO.
+  * @param damage damage amount
+  * @param target The target Pokemon
+  * @param environment The environment
+  */
+function getKONumber(damage, target, environment) {
+   if (damage <= 0) return 0;
+   var preDamage = 0;
+   var postDamage = 0;
+   var fullHP = getStat(target, STAT_HP);
+   // poison
+   if (target.status === STATUS_POISON &&
+      target.ability !== 'magic guard') {
+      if (target.ability === 'poison heal') {
+         postDamage += (fullHP >> 3);
+      } else {
+         postDamage -= (fullHP >> 3);
+      };
+   }
+   if (target.status === STATUS_BURN &&
+      target.ability !== 'magic guard') {
+      if (target.ability === 'heatproof') {
+         postDamage += (fullHP >> 4);
+      } else {
+         postDamage += (fullHP >> 3);
+      };
+   }
+   if (environment.stealthRock) {
+   };
+   if (environment.spikes) {
+   };
+   if (target.item === 'leftovers') {
+      postDamage -= (fullHP >> 4);
+   };
+   if (environment.weather === ENVIRONMENT_SAND &&
+      ! isPokemonType(target, TYPE_NAME_TO_ID.Rock) &&
+      ! isPokemonType(target, TYPE_NAME_TO_ID.Ground) &&
+      ! isPokemonType(target, TYPE_NAME_TO_ID.Steel) &&
+      target.ability !== 'magic guard' &&
+      target.ability !== 'overcoat' &&
+      target.ability !== 'sand force' &&
+      target.ability !== 'sand rush' &&
+      target.ability !== 'sand veil') {
+      postDamage += (fullHP >> 4);
+   };
+   if (environment.weather === ENVIRONMENT_HAIL &&
+      ! isPokemonType(target, TYPE_NAME_TO_ID.Ice) &&
+      target.ability !== 'ice body' &&
+      target.ability !== 'magic guard' &&
+      target.ability !== 'overcoat' &&
+      target.ability !== 'snow cloak') {
+      postDamage += (fullHP >> 4);
+   };
+   if (environment.weather === ENVIRONMENT_SUN &&
+      target.ability === 'solar power') {
+      postDamage += (fullHP >> 3);
+   };
+   if (postDamage < 0 && damage + postDamage <= 0) return 0;
+   var n = 1;
+   var currentHP = fullHP;
+   currentHP = currentHP - preDamage;
+   while (true) {
+      currentHP = currentHP - damage;
+      if (currentHP <= 0 || n > 4) {
+         return n;
+      }
+      n++;
+      currentHP = currentHP - postDamage;
+      i++;
+   };
+};
 
 /**
   * Gets the hidden power type for a Pokemon.
@@ -1789,6 +1973,21 @@ function isSameType(pokemon1, pokemon2) {
          var type2 = POKEMON_DATA[pokemon2.name].type[j];
          if (type1 === type2) return true;
       };
+   };
+   return false;
+};
+
+/**
+  * Determines if a Pokemon is a particular type.
+  * @param pokemon the Pokemon object
+  * @param type the type
+  * @return true if it is and false otherwise.
+  */
+function isPokemonType(pokemon, type) {
+   for (var i = 0; i < POKEMON_DATA[pokemon.name].type.length; i++) {
+      if (POKEMON_DATA[pokemon.name].type[i] === type) {
+         return true;
+      }
    };
    return false;
 };

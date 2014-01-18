@@ -515,6 +515,12 @@ var ARCEUS = {
    'arceus-fairy' : 'pixie plate',
 };
 
+var CHOICE_ITEMS = {
+   'choice band' : true,
+   'choice scarf' : true,
+   'choice specs' : true,
+};
+
 var MULTI_TARGET_MOVES = {
    'Acid': true,
    'Air Cutter': true,
