@@ -1,6 +1,6 @@
 function preloadImages(arrayOfImages) {
    $(arrayOfImages).each(function() {
-      var src = './css/images/' + this;
+      var src = '../css/images/' + this;
       $('<img/>')[0].src = src;
    });
 };
