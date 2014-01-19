@@ -15,7 +15,7 @@ function importFromUrl(environment, tierOptions) {
       if (i === 0 && pokemonImports[i].length !== 11) {
          console.log('i: ' + i + ' length: ' + pokemonImports[i].length);
          return;
-      } else if (i === 1 && pokemonImports[i].length !== 11) {
+      } else if (i === 1 && pokemonImports[i].length !== 5) {
          console.log('i: ' + i + ' length: ' + pokemonImports[i].length);
          return;
       } else if (i !== 0 && i !== 1 && pokemonImports[i].length !== 23) {
@@ -91,60 +91,29 @@ function importFromUrl(environment, tierOptions) {
    };
    // update tier options
    var tierImport = pokemonImports[1];
-   // uber
    if (tierImport[0] !== '') {
       tierImport[0] = parseInt(tierImport[0]);
-      tierOptions.tiers.uber = !! tierImport[0];
-   };
-   // ou
+      tierOptions.tier = tierImport[0];
+   }
+   // boosted sweepers
    if (tierImport[1] !== '') {
       tierImport[1] = parseInt(tierImport[1]);
-      tierOptions.tiers.ou = !! tierImport[1];
-   };
-   // uu
-   if (tierImport[2] !== '') {
-      tierImport[2] = parseInt(tierImport[2]);
-      tierOptions.tiers.uu = !! tierImport[2];
-   };
-   // ru
-   if (tierImport[3] !== '') {
-      tierImport[3] = parseInt(tierImport[3]);
-      tierOptions.tiers.ru = !! tierImport[3];
-   };
-   // nu
-   if (tierImport[4] !== '') {
-      tierImport[4] = parseInt(tierImport[4]);
-      tierOptions.tiers.nu = !! tierImport[4];
-   };
-   // lc
-   if (tierImport[5] !== '') {
-      tierImport[5] = parseInt(tierImport[5]);
-      tierOptions.tiers.lc = !! tierImport[5];
-   };
-   // vgc
-   if (tierImport[6] !== '') {
-      tierImport[6] = parseInt(tierImport[6]);
-      tierOptions.tiers.vgc = !! tierImport[6];
-   };
-   // boosted sweepers
-   if (tierImport[7] !== '') {
-      tierImport[7] = parseInt(tierImport[7]);
-      tierOptions.boostedSweepers = !! tierImport[7];
+      tierOptions.boostedSweepers = !! tierImport[1];
    };
    // enable priority
-   if (tierImport[8] !== '') {
-      tierImport[8] = parseInt(tierImport[8]);
-      tierOptions.enablePriority = !! tierImport[8];
+   if (tierImport[2] !== '') {
+      tierImport[2] = parseInt(tierImport[2]);
+      tierOptions.enablePriority = !! tierImport[2];
    };
    // outspeed
-   if (tierImport[9] !== '') {
-      tierImport[9] = parseInt(tierImport[9]);
-      tierOptions.outSpeed = tierImport[9];
+   if (tierImport[3] !== '') {
+      tierImport[3] = parseInt(tierImport[3]);
+      tierOptions.outSpeed = tierImport[3];
    };
    // wmt
-   if (tierImport[10] !== '') {
-      tierImport[10] = parseInt(tierImport[10]);
-      tierOptions.wmt = !! tierImport[10];
+   if (tierImport[4] !== '') {
+      tierImport[4] = parseInt(tierImport[4]);
+      tierOptions.wmt = !! tierImport[4];
    };
 
    // importing pokemon
@@ -269,40 +238,10 @@ function exportToUrl(environment, tierOptions) {
    exportText += ';';
    // export tier options
    if (! tierOptions) {
-      return ',,,,,,,,,,';
+      return ',,,,';
    } else {
-      if (tierOptions.tiers.uber !== false) {
-         var exportKey = tierOptions.tiers.uber ? 1 : 0;
-         exportText += exportKey;
-      };
-      exportText += ',';
-      if (tierOptions.tiers.ou !== true) {
-         var exportKey = tierOptions.tiers.ou ? 1 : 0;
-         exportText += exportKey;
-      };
-      exportText += ',';
-      if (tierOptions.tiers.uu !== true) {
-         var exportKey = tierOptions.tiers.uu ? 1 : 0;
-         exportText += exportKey;
-      };
-      exportText += ',';
-      if (tierOptions.tiers.ru !== false) {
-         var exportKey = tierOptions.tiers.ru ? 1 : 0;
-         exportText += exportKey;
-      };
-      exportText += ',';
-      if (tierOptions.tiers.nu !== false) {
-         var exportKey = tierOptions.tiers.nu ? 1 : 0;
-         exportText += exportKey;
-      };
-      exportText += ',';
-      if (tierOptions.tiers.lc !== false) {
-         var exportKey = tierOptions.tiers.lc ? 1 : 0;
-         exportText += exportKey;
-      };
-      exportText += ',';
-      if (tierOptions.tiers.vgc !== false) {
-         var exportKey = tierOptions.tiers.vgc ? 1 : 0;
+      if (tierOptions.tier !== TIER_TO_NUMBER['ou']) {
+         var exportKey = tierOptions.tier;
          exportText += exportKey;
       };
       exportText += ',';
