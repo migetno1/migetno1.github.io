@@ -143,6 +143,10 @@ function importFromUrl(environment, tierOptions) {
       if (pokemonImport[3] !== '') {
          pokemon.changeAbility(NUMBER_TO_ABILITY[parseInt(pokemonImport[3])]);
       };
+      // update the pokemon's level
+      if (environment.defaultLevel !== 100) {
+         pokemon.changeLevel(environment.defaultLevel);
+      };
       if (pokemonImport[4] !== '') {
          pokemon.changeLevel(parseInt(pokemonImport[4]));
       };
@@ -165,7 +169,9 @@ function importFromUrl(environment, tierOptions) {
          };
       };
 
+
       // update the Pokemon
+         
       environment.pokemons[1][num] = pokemon;
    };
 };
