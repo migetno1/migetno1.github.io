@@ -105,3 +105,8 @@ var ALIAS_MOVES = {
    'vicegrip' : 'Vice Grip',
    'freeze dry' : 'Freeze-Dry',
 };
+
+var ALIAS_ABILITIES = {
+   'compoundeyes' : 'Compound Eyes',
+   'lightningrod' : 'Lightning Rod',
+};

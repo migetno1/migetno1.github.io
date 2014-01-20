@@ -98,6 +98,8 @@ function importPokemon(textArray, i, defaultLevel) {
       };
    };
    pokemonName = match[1];
+   pokemonName = pokemonName.replace(/\s+$/,'');
+   pokemonName = pokemonName.replace(/^\s+/,'');
    // check for arceus
    if (typeof ARCEUS[pokemonName.toLowerCase()] !== 'undefined') {
       pokemonName = 'Arceus';
@@ -143,6 +145,9 @@ function importPokemon(textArray, i, defaultLevel) {
       // we have an ability.
       ability = match[2];
       ability = ability.replace(/\s+$/,'');
+      if (typeof ALIAS_ABILITIES[ability.toLowerCase()] !== 'undefiend') {
+         ability = ALIAS_ABILITIES[ability.toLowerCase()];
+      };
       if (! isValidAbility(ability)) {
          ability = null;
       };
