@@ -466,7 +466,10 @@ function importTeamSimple(text, defaultLevel) {
       if (typeof COMMON_SETS[tier][pokemonNames[i]] !== 'undefined') {
          pokemons[i] = getSetPokemon(COMMON_SETS[tier][pokemonNames[i]], 
                pokemonNames[i], pokemons[i]);
-      };
+      } else if (typeof MEGA_COMMON_SETS[tier][pokemonNames[i]] !== 'undefined') {
+         pokemons[i] = getSetPokemon(MEGA_COMMON_SETS[tier][pokemonNames[i]],
+               pokemonNames[i], pokemons[i]);
+      }
    };
    return pokemons;
 };

@@ -29,6 +29,32 @@
    <body data-spy="scroll" data-target=".guidenav">
       <div id="loading">
       </div>
+      <div class="bottom-menu">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <ul class="bottom-links">
+                     <li><a href='../swc/'>SweeperCalc</a></li>
+                     <li><a href='../rmt/'>bReakMyTeam</a></li>
+                     <li><a href='#' class='active'>Guide</a></li>
+                     <li><a href="mailto:sweepercalc@gmail.com">Give Feedback</a></li>
+                     <li><a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
+                           <input type="hidden" name="cmd" value="_donations">
+                           <input type="hidden" name="business" value="sweepercalc@gmail.com">
+                           <input type="hidden" name="lc" value="AU">
+                           <input type="hidden" name="item_name" value="SweeperCalc">
+                           <input type="hidden" name="no_note" value="0">
+                           <input type="hidden" name="currency_code" value="AUD">
+                           <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+                        </form>
+                     </li>
+                     <li><a data-toggle="modal" data-target="#myModal2">About</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div><!-- close bottom-menu -->
       <div class="container">
          <div class="row">
             <div class="col-xs-12 header">
@@ -154,30 +180,5 @@
             </div><!-- close col-xs-9 -->
          </div><!-- close row -->
       </div><!-- close container -->
-      <div class="bottom-menu">
-         <div class="container">
-            <div class="row">
-               <div class="col-xs-12">
-                  <ul class="bottom-links">
-                     <li><a href='../swc/'>SweeperCalc</a></li>
-                     <li><a href='../rmt/'>bReakMyTeam</a></li>
-                     <li><a href="mailto:sweepercalc@gmail.com">Give Feedback</a></li>
-                     <li><a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
-                           <input type="hidden" name="cmd" value="_donations">
-                           <input type="hidden" name="business" value="sweepercalc@gmail.com">
-                           <input type="hidden" name="lc" value="AU">
-                           <input type="hidden" name="item_name" value="SweeperCalc">
-                           <input type="hidden" name="no_note" value="0">
-                           <input type="hidden" name="currency_code" value="AUD">
-                           <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-                        </form>
-                     </li>
-                     <li><a data-toggle="modal" data-target="#myModal2">About</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
    </body>
 </html>

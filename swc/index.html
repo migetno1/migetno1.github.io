@@ -43,6 +43,7 @@
       <script src="../data/var_keys.js"></script>
       <script src="../data/tiers.js"></script>
       <script src="../data/common_sets.js"></script>
+      <script src="../data/mega_common_sets.js"></script>
       <script src="../data/custom_sets.js"></script>
       <script src="../data/usage_list.js"></script>
       <script src="../constants.js"></script>
@@ -65,6 +66,32 @@
    </head>
    <body>
       <div id="loading">
+      </div>
+      <div class="bottom-menu">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <ul class="bottom-links">
+                     <li><a href='../swc/' class='active'>SweeperCalc</a></li>
+                     <li><a href='../rmt/'>bReakMyTeam</a></li>
+                     <li><a href='../guide/'>Guide</a></li>
+                     <li><a href="mailto:sweepercalc@gmail.com">Give Feedback</a></li>
+                     <li><a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
+                           <input type="hidden" name="cmd" value="_donations">
+                           <input type="hidden" name="business" value="sweepercalc@gmail.com">
+                           <input type="hidden" name="lc" value="AU">
+                           <input type="hidden" name="item_name" value="SweeperCalc">
+                           <input type="hidden" name="no_note" value="0">
+                           <input type="hidden" name="currency_code" value="AUD">
+                           <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+                        </form>
+                     </li>
+                     <li><a data-toggle="modal" data-target="#myModal2">About</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
       <div class="container">
          <div>
@@ -4234,31 +4261,6 @@
             </div>
          </div>
       </div><!-- close container -->
-      <div class="bottom-menu">
-         <div class="container">
-            <div class="row">
-               <div class="col-xs-12">
-                  <ul class="bottom-links">
-                     <li><a href='../rmt/'>bReakMyTeam</a></li>
-                     <li><a href='../guide/'>Guide</a></li>
-                     <li><a href="mailto:sweepercalc@gmail.com">Give Feedback</a></li>
-                     <li><a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
-                           <input type="hidden" name="cmd" value="_donations">
-                           <input type="hidden" name="business" value="sweepercalc@gmail.com">
-                           <input type="hidden" name="lc" value="AU">
-                           <input type="hidden" name="item_name" value="SweeperCalc">
-                           <input type="hidden" name="no_note" value="0">
-                           <input type="hidden" name="currency_code" value="AUD">
-                           <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-                        </form>
-                     </li>
-                     <li><a data-toggle="modal" data-target="#myModal2">About</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
       <div class="modal fade" id="ModalTeam0" tabindex="-1" role="dialog" aria-labelledby="ModalLabelTeam0" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
