@@ -449,6 +449,8 @@ var CUSTOM_SETS = {
             ev : [ 0, 0, 4, 252, 0, 252, ],
             iv : [ 31, 31, 31, 31, 31, 31, ],
          },
+      ],
+      'lucario' : [
          {
             name : 'Swords Dance',
             nature : 'Adamant',
