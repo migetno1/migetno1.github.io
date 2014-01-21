@@ -539,8 +539,7 @@ function getAttack(description, attacker, target, move, environment) {
    var attack;
    var statPokemon = attacker;
    var stat;
-   if (attacker.ability === 'foul play') {
-      description.attackerAbility = ABILITIES[attacker.ability].name;
+   if (move.name === 'Foul Play') {
       statPokemon = target;
    };
    if (move.category == MOVE_PHYSICAL) {
