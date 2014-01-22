@@ -2,7 +2,7 @@ function setLiteMode() {
    if (jQuery.browser.mobile) {
       tierOptions.liteMode = true;
    } else {
-      tierOptions.liteMode = false;
+      tierOptions.liteMode = true;
    };
 };
 var environment;
