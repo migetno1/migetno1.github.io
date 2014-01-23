@@ -8,7 +8,6 @@
   */
 function importTeam(text, defaultLevel) {
    if (text.match(/^(\s*\w+s*:\s*)?(\w[\w.' -]+)(\s*\/\s*\w[\w.' -]+)*\s*$/)) {
-      console.log('simple import...');
       return importTeamSimple(text, defaultLevel);
    };
    var pokemons = [new Pokemon(DEFAULT_NUM_MOVES), new Pokemon(DEFAULT_NUM_MOVES), 
@@ -145,7 +144,7 @@ function importPokemon(textArray, i, defaultLevel) {
       // we have an ability.
       ability = match[2];
       ability = ability.replace(/\s+$/,'');
-      if (typeof ALIAS_ABILITIES[ability.toLowerCase()] !== 'undefined') {
+      if (typeof ALIAS_ABILITIES[ability.toLowerCase()] !== 'undefiend') {
          ability = ALIAS_ABILITIES[ability.toLowerCase()];
       };
       if (! isValidAbility(ability)) {
@@ -426,7 +425,7 @@ function getShowdownStat(stat) {
 };
 
 /**
-  * Converts a string e.g. 'OU Omastar / Cyndaquil / Ninetales'
+  * Converts a string e.g. 'OU: Omastar / Cyndaquil / Ninetales'
   * into a team with default common set teams.
   * @param text text to parse
   * @return an array of pokemon
@@ -469,6 +468,8 @@ function importTeamSimple(text, defaultLevel) {
       } else if (typeof MEGA_COMMON_SETS[tier][pokemonNames[i]] !== 'undefined') {
          pokemons[i] = getSetPokemon(MEGA_COMMON_SETS[tier][pokemonNames[i]],
                pokemonNames[i], pokemons[i]);
+      } else {
+         pokemons[i] = getSetPokemon(NONE_SET, pokemonNames[i], pokemons[i]);
       }
    };
    return pokemons;

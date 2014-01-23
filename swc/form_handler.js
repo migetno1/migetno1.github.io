@@ -39,6 +39,7 @@ $(document).ready(function() {
       environment = new Environment(6, 6,
             JSON.parse(localStorage.getItem('sweeperCalcEnvironment')));
    };
+   environment.dualMode = true;
    localStorage.setItem('sweeperCalcV2', 'updated');
    updateStaticData();
    updateForm();

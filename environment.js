@@ -77,4 +77,10 @@ Environment.prototype.switchTeams = function () {
    var tmp2 = this.numAttackers;
    this.numAttackers = this.numTargets;
    this.numTargets = tmp2;
+   var reflectTmp = this.reflect[0];
+   this.reflect[0] = this.reflect[1];
+   this.reflect[1] = reflectTmp;
+   var lightScreenTmp = this.lightScreen[0];
+   this.lightScreen[0] = this.lightScreen[1];
+   this.lightScreen[1] = lightScreenTmp;
 };

@@ -22,9 +22,7 @@ function getSetPokemon(setData, pokemonName, pokemon) {
    };
    if (typeof setData.moves !== 'undefined') {
       for (var moveNum = 0; moveNum < 6; moveNum++) {
-         if (setData.moves[moveNum]) {
-            pokemon.changeMove(moveNum, setData.moves[moveNum]);
-         };
+         pokemon.changeMove(moveNum, setData.moves[moveNum]);
       };
    };
    if (typeof setData.ev !== 'undefined') {

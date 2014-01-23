@@ -417,7 +417,7 @@ input[type=checkbox]{
    input{
       display:none;
    };
-   .col-xs-6, .col-xs-4, .col-xs-3, .col-xs-2{
+   .col-xs-12, .col-xs-6, .col-xs-4, .col-xs-3, .col-xs-2{
       padding:0px;
    };
    label {
@@ -713,7 +713,14 @@ input[type=checkbox]{
       background:url(../css/images/lightscreen_1_on.png);
    };
 }
-
+#ts-topThreats{
+   input + label {
+      background:url(../css/images/top_threats_off.png);
+   };
+   input:checked + label {
+      background:url(../css/images/top_threats_on.png);
+   };
+}
 .checkbox-buttons, .activate-container{
    input + label {
       background-size:100% 100% !important;
