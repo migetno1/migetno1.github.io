@@ -1,0 +1,184 @@
+//
+// Color Swatches
+// --------------------------------------------------
+
+@turquoise:     				#1abc9c;
+@green-sea:     				#16a085;
+
+@emerald:      				#2ecc71;
+@nephritis:     				#27ae60;
+
+@peter-river:   				#3498db;
+@belize-hole:   				#2980b9;
+
+@amethyst:      				#9b59b6;
+@wisteria:     				  #8e44ad;
+
+@wet-asphalt:   				#34495e;
+@midnight-blue: 				#2c3e50;
+
+@sun-flower:    				#f1c40f;
+@orange:        				#f39c12;
+
+@carrot:        				#e67e22;
+@pumpkin:       				#d35400;
+
+@alizarin:      				#e74c3c;
+@pomegranate:   				#c0392b;
+
+@clouds:        				#ecf0f1;
+@silver:        				#bdc3c7;
+
+@concrete:      				#95a5a6;
+@asbestos:      				#7f8c8d;
+
+// Grays
+// -------------------------
+
+@gray:            			@concrete;
+@gray-light:     			  @silver;
+@inverse:          			white;
+
+// Brand colors
+// -------------------------
+
+@brand-primary:         @wet-asphalt;
+@brand-secondary:       @belize-hole;
+@brand-success:         @emerald;
+@brand-warning:         @orange;
+@brand-danger:          @alizarin;
+@brand-info:            @silver;
+
+// Scaffolding
+// -------------------------
+
+@body-bg:               #fff;
+@text-color:            @brand-primary;
+
+// Links
+// -------------------------
+
+@link-color:       			@green-sea;
+@link-hover-color: 			@concrete;
+
+
+/* custom fonts*/
+@font-face{
+   font-family: 'run';
+   src: url('../../css/run.ttf');
+};
+
+
+
+/*banner*/
+.banner{
+   padding-top:5px;
+   padding-bottom:5px;
+}
+
+body{
+   background-color: @wet-asphalt;
+   color: white;
+}
+
+   
+
+
+
+
+
+/*bottom bar*/
+.bottom-menu {
+   background-color:@midnight-blue;
+   color: white;
+   font-family: 'run';
+   padding: 5px 0 5px;
+}
+.bottom-links{
+   margin:0;
+   padding:0;
+   list-style:none;
+   
+   li {
+      display:block;
+      float:left;
+      margin: 0 18px 0 0;
+   };
+   
+   a:hover {
+      text-decoration:none;
+      color: black;
+   };
+   a { 
+      color:white; 
+   };
+   .active {
+      color:@peter-river;
+   };
+}
+
+
+//side nav
+@media (min-width:1200px) {
+   .guidenav {
+      width:263px;
+   };
+};
+/*@media (min-width:992px) {
+   .guidenav {
+      top:15px;
+   };
+};*/
+
+
+
+
+.subnav {
+   display:none;
+   padding-left:20px;
+   font-size:90%;
+};
+
+.guidenav {
+   top:15px;
+   background-color:@midnight-blue;
+   padding: 10px 0px 10px 0px;
+   a {
+      color:white;
+      font-family: 'run';
+      font-size: 16px;
+   };
+
+};
+.nav > li > a {
+   padding:5px 20px;
+};
+.nav > li > a:hover, .nav > li > a:focus {
+   background-color:@asbestos;
+};
+
+.active > a:hover, .active > a:focus {
+   background:none !important;
+};
+.active > a {
+   color:@peter-river;
+   border-right:1px solid @peter-river;
+};
+.active {
+   .subnav {
+      display:block;
+   };
+};
+
+h1 {
+   font-family: 'run';
+   font-size:60px;
+};
+h3 {
+   font-family: 'run';
+   font-size:40px;
+};
+
+.col-xs-9 {
+   background-color:@midnight-blue;
+};
