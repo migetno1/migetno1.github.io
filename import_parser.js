@@ -144,7 +144,7 @@ function importPokemon(textArray, i, defaultLevel) {
       // we have an ability.
       ability = match[2];
       ability = ability.replace(/\s+$/,'');
-      if (typeof ALIAS_ABILITIES[ability.toLowerCase()] !== 'undefiend') {
+      if (typeof ALIAS_ABILITIES[ability.toLowerCase()] !== 'undefined') {
          ability = ALIAS_ABILITIES[ability.toLowerCase()];
       };
       if (! isValidAbility(ability)) {
