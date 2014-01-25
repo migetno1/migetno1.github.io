@@ -1,10 +1,3 @@
-function setLiteMode() {
-   if (jQuery.browser.mobile) {
-      tierOptions.liteMode = true;
-   } else {
-      tierOptions.liteMode = true;
-   };
-};
 var environment;
 var printOuts;
 var tierOptions;
@@ -30,9 +23,8 @@ $(document).ready(function() {
       enablePriority : false,
       outSpeed : 0,
       wmt : false,
-      liteMode : false,
+      liteMode : true,
    };
-   setLiteMode();
    // check for importing from URL.
    importFromUrl(environment, tierOptions);
 
@@ -149,6 +141,7 @@ $(document).ready(function() {
       };
       tierOptions.boostedSweepers = $('#boostedSweeper').prop('checked');
       tierOptions.enablePriority = $('#enablePriority').prop('checked');
+      tierOptions.liteMode = $('#topThreats').prop('checked');
       if ($(this).hasClass('outspeed')) {
          // we have an outspeed change.
          var number = parseInt($(this).attr('id').split('-')[1]);
