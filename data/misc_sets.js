@@ -65,7 +65,7 @@ var MOLD_BREAKER_ABILITIES = {
 };
 
 var TYPE_BOOSTING_ITEMS = {
-   'insect plate' : TYPE_NAME_TO_ID.Insect,
+   'insect plate' : TYPE_NAME_TO_ID.Bug,
    'zap plate' : TYPE_NAME_TO_ID.Electric,
    'fist plate' : TYPE_NAME_TO_ID.Fighting,
    'flame plate' : TYPE_NAME_TO_ID.Fire,
@@ -82,7 +82,7 @@ var TYPE_BOOSTING_ITEMS = {
    'dread plate' : TYPE_NAME_TO_ID.Dark,
    'draco plate' : TYPE_NAME_TO_ID.Dragon,
    'pixie plate' : TYPE_NAME_TO_ID.Fairy,
-   'silverpowder' : TYPE_NAME_TO_ID.Insect,
+   'silverpowder' : TYPE_NAME_TO_ID.Bug,
    'magnet' : TYPE_NAME_TO_ID.Electric,
    'black belt' : TYPE_NAME_TO_ID.Fighting,
    'charcoal' : TYPE_NAME_TO_ID.Fire,
@@ -107,7 +107,7 @@ var TYPE_BOOSTING_ITEMS = {
 };
 
 var GEMS = {
-   'bug gem' : TYPE_NAME_TO_ID.Insect,
+   'bug gem' : TYPE_NAME_TO_ID.Bug,
    'electric gem' : TYPE_NAME_TO_ID.Electric,
    'fighting gem' : TYPE_NAME_TO_ID.Fighting,
    'fire gem' : TYPE_NAME_TO_ID.Fire,
@@ -128,7 +128,7 @@ var GEMS = {
 };
 
 var DAMAGE_REDUCING_BERRIES = {
-   'tanga berry' : TYPE_NAME_TO_ID.Insect,
+   'tanga berry' : TYPE_NAME_TO_ID.Bug,
    'wacan berry' : TYPE_NAME_TO_ID.Electric,
    'chople berry' : TYPE_NAME_TO_ID.Fighting,
    'occa berry' : TYPE_NAME_TO_ID.Fire,
@@ -286,7 +286,7 @@ var SHEER_FORCE_MOVES = {
 };
 
 var MULTITYPE_PLATES = {
-   'insect plate' : TYPE_NAME_TO_ID.Insect,
+   'insect plate' : TYPE_NAME_TO_ID.Bug,
    'zap plate' : TYPE_NAME_TO_ID.Electric,
    'fist plate' : TYPE_NAME_TO_ID.Fighting,
    'flame plate' : TYPE_NAME_TO_ID.Fire,
