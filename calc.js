@@ -64,6 +64,7 @@ function chainMultipleModifiers(modifiers) {
    for (var i = 0; i < modifiers.length; i++) {
       newModifier = chainModifiers(newModifier, modifiers[i]);
    }
+   if (debug) console.log("newModifier: " + newModifier);
    return newModifier;
 };
 
@@ -192,7 +193,7 @@ function getBasePower(description, attacker, target, move, environment) {
       description.moveBP = power;
    // TODOn fury cutter
    } else if (move.name === 'Grass Knot' || move.name === 'Low Kick') {
-      var weight = getWeight(attacker);
+      var weight = getWeight(target);
       if (weight >= 200) {
          power = 120;
       } else if (weight >= 100) {
@@ -336,6 +337,7 @@ function getBasePower(description, attacker, target, move, environment) {
       description.moveBP = power;
    };
    // TODOn water pledge
+   if (debug) console.log("Base power before mods: " + power);
    power = applyBasePowerModifiers(power, description, attacker, target, move, environment);
    return power;
 };
