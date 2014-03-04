@@ -430,26 +430,6 @@ var CUSTOM_SETS = {
             iv : [ 31, 30, 31, 30, 31, 30, ],
          },
       ],
-      'lucario-mega' : [
-         {
-            name : 'Swords Dance',
-            nature : 'Jolly',
-            ability : 'Adaptability',
-            item : 'Lucarionite',
-            moves : [ 'Swords Dance', 'Close Combat', 'Earthquake', 'Bullet Punch', 'Extreme Speed', '', ],
-            ev : [ 0, 252, 4, 0, 0, 252, ],
-            iv : [ 31, 31, 31, 31, 31, 31, ],
-         },
-         {
-            name : 'Nasty Plot',
-            nature : 'Timid',
-            ability : 'Adaptability',
-            item : 'Lucarionite',
-            moves : [ 'Nasty Plot', 'Dark Pulse', 'Aura Sphere', 'Flash Cannon', 'Vacuum Wave', '', ],
-            ev : [ 0, 0, 4, 252, 0, 252, ],
-            iv : [ 31, 31, 31, 31, 31, 31, ],
-         },
-      ],
       'lucario' : [
          {
             name : 'Swords Dance',
