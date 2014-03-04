@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Usage Stats</title>
+      <meta name="description" content="Pokemon usage stats">
+      <meta name="keywords" content="Pokemon,gen6,damage,calculator">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="../css/bootstrap.css">
+      <link rel="stylesheet" href="../css/bootstrap-theme.css">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+      <link href="breakmyteamlite.less" rel="stylesheet/less" type="text/css">
+      <script src="../css/less-1.5.0.min.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <script src="../analytics.js"></script>
+      <script src="data/smogondoublesusagedata.js"></script>
+      <script src="data/smogondoubleslist.js"></script>
+      <script src="data/smogondoublesmoveset.js"></script>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <div id="loading">
+      </div>
+      <div class="bottom-menu">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <ul class="bottom-links">
+                     <li><a href='../swc/'>SweeperCalc</a></li>
+                     <li><a href='../rmt/'>bReakMyTeam</a></li>
+                     <li><a href='index.html' class='active'>Stats</a></li>
+                     <li><a href='index.html' class='active'>[</a></li>
+                     <li><a href='ou.html'>OU</a></li>
+                     <li><a href='uu.html'>UU</a></li>
+                     <li><a href='lc.html'>LC</a></li>
+                     <li><a href='vgc.html'>VGC</a></li>
+                     <li><a href='doubles.html' class='active'>Doubles</a></li>
+                     <li><a href='#' class='active'>]</a></li>
+                     <li><a href="mailto:sweepercalc@gmail.com">Give Feedback</a></li>
+                     <li><a href="javascript:;" onclick="document.getElementById('paypal').submit();">Donate</a>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal">
+                           <input type="hidden" name="cmd" value="_donations">
+                           <input type="hidden" name="business" value="sweepercalc@gmail.com">
+                           <input type="hidden" name="lc" value="AU">
+                           <input type="hidden" name="item_name" value="SweeperCalc">
+                           <input type="hidden" name="no_note" value="0">
+                           <input type="hidden" name="currency_code" value="AUD">
+                           <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+                        </form>
+                     </li>
+                     <li><a data-toggle="modal" data-target="#myModal2">About</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div><!-- close bottom-menu -->
+      <div class="container">
+         <div class="row">
+            <div class="col-xs-12 header">
+               <img src="../css/images/topbanner-stats.png" class="img-responsive">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xs-5">
+               <div id='top200'>Doubles - February</div>
+               <div id="ourankings">
+
+               </div>
+            </div><!-- close col-xs-5 -->
+            <div class='col-xs-7'>
+               <div class='row'>
+                  <div class='col-xs-3'>
+                     <img id='moveset-png' src='' />
+                  </div>
+                  <div class='col-xs-9'>
+                     <img src='../css/images/1_96_blank.png'/>
+                     <input type='text' value placeholder='Pokemon Name' class='form-control pokemon-name'/>
+                  </div>
+               </div>
+               <div id="stats">
+
+               </div><!-- close detailed-stats -->
+            </div><!-- close right column -->
+         </div><!-- close row -->
+      </div><!-- close container -->
+   </body>
+   <script src="ui.js"></script>
+</html>
