@@ -167,7 +167,7 @@ $(document).ready(function() {
             $(this).addClass('highest');
          };
       };
-      $('#setLevels').trigger('change');
+      $('input[name="setLevels"]').trigger('change');
       updateEnvironment(true);
       updateUpdateTableButton(true);
    });

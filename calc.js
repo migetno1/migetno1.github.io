@@ -124,7 +124,11 @@ function getStat(pokemon, stat, attacker) {
    var stage1 = Math.floor(2 * baseStat + iv + evMod);
    if (stat === STAT_HP) {
       // Calculate HP stat.
-      pokeStat = stage1 * pokemon.level / 100 + pokemon.level + 10;
+      if (pokemon.name === 'shedinja') {
+         pokeStat = 1;
+      } else {
+         pokeStat = stage1 * pokemon.level / 100 + pokemon.level + 10;
+      }
    } else {
       // Calculate other stat
       // getNatureMod returns either 9, 10 or 11. This prevents division too early.
@@ -800,20 +804,20 @@ function applyDefenceModifiers(defence, description, attacker, target, move, env
    var modifiers = [];
    if (target.ability === 'marvel scale' &&
          target.status !== STATUS_NORMAL &&
-         move.category === MOVE_PHYSICAL) {
+         (move.category === MOVE_PHYSICAL || isSpecialToPhysicalMove(move))) {
       description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x1800);
    };
    if (target.ability === 'flower gift' &&
          environment.weather === ENVIRONMENT_SUN &&
-         move.category === MOVE_SPECIAL) {
+         move.category === MOVE_SPECIAL && ! isSpecialToPhysicalMove(move)) {
       description.weather = ENVIRONMENT_ID_TO_NAME[environment.weather];
       description.defenderAbility = ABILITIES[target.ability].name;
       modifiers.push(0x1800);
    };
    if (target.name === 'clamperl' &&
          target.item === 'deep sea scale' &&
-         move.category === MOVE_SPECIAL) {
+         move.category === MOVE_SPECIAL && ! isSpecialToPhysicalMove(move)) {
       description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
@@ -829,12 +833,12 @@ function applyDefenceModifiers(defence, description, attacker, target, move, env
    };
    if ((target.name === 'latias' || target.name === 'latios') &&
          target.item === 'soul dew' &&
-         move.category === MOVE_SPECIAL) {
+         move.category === MOVE_SPECIAL && ! isSpecialToPhysicalMove(move)) {
       description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
    if (target.item === 'assault vest' && 
-         move.category === MOVE_SPECIAL) {
+         move.category === MOVE_SPECIAL && ! isSpecialToPhysicalMove(move)) {
       description.defenderItem = ITEMS[target.item].name;
       modifiers.push(0x1800);
    };
@@ -1518,7 +1522,9 @@ function getDamageAmount(description, attacker, target, move, environment, rando
          && basePower > 0) {
       baseDamage = 1;
    };
+   if (debug) console.log('Base damage.. after applying min damage = 1 modifier: ' + baseDamage);
    baseDamage = applyFinalModifiers(baseDamage, description, attacker, target, move, environment);
+   if (debug) console.log('Base damage.. after applying final modifiers: ' + baseDamage);
 
    // bulletproof immunity
    if (target.ability === 'bulletproof' &&
