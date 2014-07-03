@@ -126,9 +126,18 @@ function updateTable() {
             if ($(cell_id).html() !== '<img src="../css/images/sprites/' + pokemon.name + '.png">') {
                $(cell_id).html('<img src="../css/images/sprites/' + pokemon.name + '.png">');
             };
+            // Make row visible
+            if (i === 0) {
+               var table_row_id = '#table-row-' + j;
+               $(table_row_id).show();
+            };
          } else {
             if ($(cell_id).html() !== '<img src="../css/images/96_96_blank.png">') {
                $(cell_id).html('<img src="../css/images/96_96_blank.png">');
+            };
+            if (i == 0 && j !== 0) {
+               var table_row_id = '#table-row-' + j;
+               $(table_row_id).hide();
             };
          };
       }
