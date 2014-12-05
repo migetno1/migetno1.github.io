@@ -79,4 +79,70 @@ var MEGA_EVOS = {
    'abomasnow' : {
       'abomasite' : 'Abomasnow-Mega',
    },
+   'beedrill' : {
+      'beedrillite' : 'Beedrill-Mega',
+   },
+   'pidgeot' : {
+      'pidgeotite' : 'Pidgeot-Mega',
+   },
+   'slowbro' : {
+      'slobronite' : 'Slowbro-Mega',
+   },
+   'steelix' : {
+      'steelixite' : 'Steelix-Mega',
+   },
+   'sceptile' : {
+      'sceptilite' : 'Sceptile-Mega',
+   },
+   'swampert' : {
+      'swampertite' : 'Swampert-Mega',
+   },
+   'sableye' : {
+      'sablenite' : 'Sableye-Mega',
+   },
+   'sharpedo' : {
+      'sharpedonite' : 'Sharpedo-Mega',
+   },
+   'camerupt' : {
+      'cameruptite' : 'Camerupt-Mega',
+   },
+   'altaria' : {
+      'altarianite' : 'Altaria-Mega',
+   },
+   'glalie' : {
+      'glalitite' : 'Glalie-Mega',
+   },
+   'salamence' : {
+      'salamencite' : 'Salamence-Mega',
+   },
+   'metagross' : {
+      'metagrossite' : 'Metagross-Mega',
+   },
+   'latias' : {
+      'latiasite' : 'Latias-Mega',
+   },
+   'latios' : {
+      'latiosite' : 'Latios-Mega',
+   },
+   'rayquaza' : {
+      '' : 'Rayquaza-Mega',
+   },
+   'lopunny' : {
+      'lopunnite' : 'Lopunny-Mega',
+   },
+   'gallade' : {
+      'galladite' : 'Gallade-Mega',
+   },
+   'audino' : {
+      'audinite' : 'Audino-Mega',
+   },
+   'diancie' : {
+      'diancite' : 'Diancie-Mega',
+   },
+   'groudon' : {
+      'red orb' : 'Groudon-Primal',
+   },
+   'kyogre' : {
+      'blue orb' : 'Kyogre-Primal',
+   },
 };

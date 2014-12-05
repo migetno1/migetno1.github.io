@@ -139,4 +139,114 @@ var MEGA_EVOS2 = {
       'item' : 'Abomasite',
       'ability' : 'Snow Warning',
    },
+   'beedrill-mega' : {
+      'name' : 'Beedrill',
+      'item' : 'Beedrillite',
+      'ability' : 'Adaptability',
+   },
+   'pidgeot-mega' : {
+      'name' : 'Pidgeot',
+      'item' : 'Pidgeotite',
+      'ability' : 'No Guard',
+   },
+   'slowbro-mega' : {
+      'name' : 'Slowbro',
+      'item' : 'Slobronite',
+      'ability' : 'Shell Armor',
+   },
+   'steelix-mega' : {
+      'name' : 'Steelix',
+      'item' : 'Steelixite',
+      'ability' : 'Sand Force',
+   },
+   'sceptile-mega' : {
+      'name' : 'Sceptile',
+      'item' : 'Sceptilite',
+      'ability' : 'Lightning Rod',
+   },
+   'swampert-mega' : {
+      'name' : 'Swampert',
+      'item' : 'Swampertite',
+      'ability' : 'Swift Swim',
+   },
+   'sableye-mega' : {
+      'name' : 'Sableye',
+      'item' : 'Sablenite',
+      'ability' : 'Magic Bounce',
+   },
+   'sharpedo-mega' : {
+      'name' : 'Sharpedo',
+      'item' : 'Sharpedonite',
+      'ability' : 'Strong Jaw',
+   },
+   'camerupt-mega' : {
+      'name' : 'Camerupt',
+      'item' : 'Cameruptite',
+      'ability' : 'Sheer Force',
+   },
+   'altaria-mega' : {
+      'name' : 'Altaria',
+      'item' : 'Altarianite',
+      'ability' : 'Pixilate',
+   },
+   'glalie-mega' : {
+      'name' : 'Glalie',
+      'item' : 'Glalitite',
+      'ability' : 'Refrigerate',
+   },
+   'salamence-mega' : {
+      'name' : 'Salamence',
+      'item' : 'Salamencite',
+      'ability' : 'Aerilate',
+   },
+   'metagross-mega' : {
+      'name' : 'Metagross',
+      'item' : 'Metagrossite',
+      'ability' : 'Tough Claws',
+   },
+   'latias-mega' : {
+      'name' : 'Latias',
+      'item' : 'Latiasite',
+      'ability' : 'Levitate',
+   },
+   'latios-mega' : {
+      'name' : 'Latios',
+      'item' : 'Latiosite',
+      'ability' : 'Levitate',
+   },
+   'rayquaza-mega' : {
+      'name' : 'Rayquaza',
+      'item' : '',
+      'ability' : 'Delta Stream',
+   },
+   'lopunny-mega' : {
+      'name' : 'Lopunny',
+      'item' : 'Lopunnite',
+      'ability' : 'Scrappy',
+   },
+   'gallade-mega' : {
+      'name' : 'Gallade',
+      'item' : 'Galladite',
+      'ability' : 'Inner Focus',
+   },
+   'audino-mega' : {
+      'name' : 'Audino',
+      'item' : 'Audinite',
+      'ability' : 'Healer',
+   },
+   'diancie-mega' : {
+      'name' : 'Diancie',
+      'item' : 'Diancite',
+      'ability' : 'Magic Bounce',
+   },
+   'groudon-primal' : {
+      'name' : 'Groudon',
+      'item' : 'Red Orb',
+      'ability' : 'Primordial Sea',
+   },
+   'kyogre-primal' : {
+      'name' : 'Kyogre',
+      'item' : 'Blue Orb',
+      'ability' : 'Desolate Land',
+   },
 };

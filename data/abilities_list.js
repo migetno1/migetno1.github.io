@@ -187,4 +187,7 @@ var ABILITIES_LIST = [
     'Dark Aura',
     'Fairy Aura',
     'Aura Break',
+    'Primordial Sea',
+    'Desolate Land',
+    'Delta Stream',
 ];

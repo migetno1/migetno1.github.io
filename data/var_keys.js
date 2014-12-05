@@ -774,6 +774,29 @@ NUMBER_TO_NAME = {
    772 : "garchomp-mega",
    773 : "lucario-mega",
    774 : "abomasnow-mega",
+   775 : "beedrill-mega",
+   776 : "pidgeot-mega",
+   777 : "slowbro-mega",
+   778 : "steelix-mega",
+   779 : "sceptile-mega",
+   780 : "swampert-mega",
+   781 : "sableye-mega",
+   782 : "sharpedo-mega",
+   783 : "camerupt-mega",
+   784 : "altaria-mega",
+   785 : "glalie-mega",
+   786 : "salamence-mega",
+   787 : "metagross-mega",
+   788 : "latias-mega",
+   789 : "latios-mega",
+   790 : "rayquaza-mega",
+   791 : "lopunny-mega",
+   792 : "gallade-mega",
+   793 : "audino-mega",
+   794 : "diancie",
+   795 : "diancie-mega",
+   796 : "groudon-primal",
+   797 : "kyogre-primal",
 };
 
 NAME_TO_NUMBER = {
@@ -1552,6 +1575,29 @@ NAME_TO_NUMBER = {
    "garchomp-mega" : 772,
    "lucario-mega" : 773,
    "abomasnow-mega" : 774,
+   "beedrill-mega" : 775,
+   "pidgeot-mega" : 776,
+   "slowbro-mega" : 777,
+   "steelix-mega" : 778,
+   "sceptile-mega" : 779,
+   "swampert-mega" : 780,
+   "sableye-mega" : 781,
+   "sharpedo-mega" : 782,
+   "camerupt-mega" : 783,
+   "altaria-mega" : 784,
+   "glalie-mega" : 785,
+   "salamence-mega" : 786,
+   "metagross-mega" : 787,
+   "latias-mega" : 788,
+   "latios-mega" : 789,
+   "rayquaza-mega" : 790,
+   "lopunny-mega" : 791,
+   "gallade-mega" : 792,
+   "audino-mega" : 793,
+   "diancie" : 794,
+   "diancie-mega" : 795,
+   "groudon-primal" : 796,
+   "kyogre-primal" : 797,
 };
 
 NUMBER_TO_ITEM = {
@@ -1765,6 +1811,27 @@ NUMBER_TO_ITEM = {
    207 : "safety goggles",
    208 : "snowball",
    209 : "whipped dream",
+   210 : "beedrillite",
+   211 : "pidgeotite",
+   212 : "slobronite",
+   213 : "steelixite",
+   214 : "sceptilite",
+   215 : "swampertite",
+   216 : "sablenite",
+   217 : "sharpedonite",
+   218 : "cameruptite",
+   219 : "altarianite",
+   220 : "glalitite",
+   221 : "salamencite",
+   222 : "metagrossite",
+   223 : "latiasite",
+   224 : "latiosite",
+   225 : "lopunnite",
+   226 : "galladite",
+   227 : "audinite",
+   228 : "diancite",
+   229 : "red orb",
+   230 : "blue orb",
 };
 
 ITEM_TO_NUMBER = {
@@ -1978,6 +2045,27 @@ ITEM_TO_NUMBER = {
    "safety goggles" : 207,
    "snowball" : 208,
    "whipped dream" : 209,
+   "beedrillite" : 210,
+   "pidgeotite" : 211,
+   "slobronite" : 212,
+   "steelixite" : 213,
+   "sceptilite" : 214,
+   "swampertite" : 215,
+   "sablenite" : 216,
+   "sharpedonite" : 217,
+   "cameruptite" : 218,
+   "altarianite" : 219,
+   "glalitite" : 220,
+   "salamencite" : 221,
+   "metagrossite" : 222,
+   "latiasite" : 223,
+   "latiosite" : 224,
+   "lopunnite" : 225,
+   "galladite" : 226,
+   "audinite" : 227,
+   "diancite" : 228,
+   "red orb" : 229,
+   "blue orb" : 230,
 };
 
 NUMBER_TO_ABILITY = {
@@ -2170,6 +2258,9 @@ NUMBER_TO_ABILITY = {
    186 : "dark aura",
    187 : "fairy aura",
    188 : "aura break",
+   189 : "primordial sea",
+   190 : "desolate land",
+   191 : "delta stream",
 };
 
 ABILITY_TO_NUMBER = {
@@ -2362,6 +2453,9 @@ ABILITY_TO_NUMBER = {
    "dark aura" : 186,
    "fairy aura" : 187,
    "aura break" : 188,
+   "primordial sea" : 189,
+   "desolate land" : 190,
+   "delta stream" : 191,
 };
 
 NUMBER_TO_MOVE = {
@@ -2975,6 +3069,9 @@ NUMBER_TO_MOVE = {
    607 : "land's wrath",
    608 : "celebrate",
    609 : "happy hour",
+   610 : "precipice blades",
+   611 : "origin pulse",
+   612 : "dragon ascent",
 };
 
 MOVE_TO_NUMBER = {
@@ -3588,6 +3685,9 @@ MOVE_TO_NUMBER = {
    "land's wrath" : 607,
    "celebrate" : 608,
    "happy hour" : 609,
+   "precipice blades" : 610,
+   "origin pulse" : 611,
+   "dragon ascent" : 612,
 };
 
 NUMBER_TO_NATURE = {

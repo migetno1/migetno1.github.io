@@ -571,4 +571,6 @@ var MULTI_TARGET_MOVES = {
    'Teeter Dance': true,
    'Twister': true,
    'Water Spout': true,
+   'Precipice Blades': true,
+   'Origin Pulse': true,
 };

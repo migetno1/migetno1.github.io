@@ -608,4 +608,8 @@ var MOVES_LIST = [
     'Land\'s Wrath',
     'Celebrate',
     'Happy Hour',
+    'Precipice Blades',
+    'Origin Pulse',
+    'Dragon Ascent',
+    'Diamond Storm',
 ];
